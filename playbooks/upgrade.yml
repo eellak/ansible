@@ -1,0 +1,19 @@
+---
+- name: Upgrade
+  hosts: all
+  sudo: true
+  sudo_user: root
+  gather_facts: false
+
+  tasks:
+
+  - name: Ensure apt-python is installed
+    shell: apt-get install -qq python-apt
+    changed_when: false
+
+  - name: Update apt cache
+    apt: update_cache=yes cache_valid_time=3600
+
+  - name: Upgrade hosts
+    apt: upgrade=safe
+

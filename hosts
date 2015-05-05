@@ -20,6 +20,12 @@ guest1.ellak.gr
 [radio]
 ccradio.ellak.gr
 
+[mail]
+mail1.ellak.gr ansible_ssh_port=2022
+
+[maellak]
+ma.ellak.gr ansible_ssh_port=2223
+
 [guests]
 guest[1:4].ellak.gr
 guest6.ellak.gr
@@ -38,9 +44,9 @@ owncloud
 redmine
 radio
 
-[vima]
-ma.ellak.gr ansible_ssh_port=2223
-mail1.ellak.gr ansible_ssh_port=2022
+[vima:children]
+mail
+maellak
 
 [targets:children]
 vima

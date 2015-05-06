@@ -1,0 +1,38 @@
+---
+#################################################
+# Remove a user from all or some mailing lists  #
+#################################################
+##
+## Usage example:
+##
+## To remove a user from all mailing lists, run:
+##  ansible-playbook playbooks/add_to_list.yml -e "mail=mail@mail.com"
+##
+## For some mailing lists, provide a yaml file containing the lists names:
+##  ansible-playbook playbooks/add_to_list.yml -e "mail=mail@mail.com @list.yml"
+##
+## Where `mail` the e-mail to be removed and `list.yml` a yaml file
+## containing the mailing lists:
+##
+##  ---
+##  mainling_lists:
+##    - opengov
+##    - kainotomia
+##
+## NOTE: the `mailing_lists` line inside either json or yaml is needed as it is
+##       called by `with_items`.
+##
+## More info on using mlmmj: https://team.ellak.gr/projects/sitfn/wiki/Email-mlmmj
+##
+- hosts: mail1.ellak.gr
+  sudo: true
+  sudo_user: root
+
+  vars_files:
+    - ../vars/main.yml
+
+  tasks:
+
+  - name: Remove a user from all mailing lists
+    command: "sudo -u mlmmj /usr/bin/mlmmj-unsub -L /var/spool/mlmmj/ellak.gr/{{ item }} -a {{ mail }} -qs"
+    with_items: mailing_lists

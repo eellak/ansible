@@ -6,10 +6,10 @@
 ## Usage example:
 ##
 ## To remove a user from all mailing lists, run:
-##  ansible-playbook playbooks/add_to_list.yml -e "mail=mail@mail.com"
+##  ansible-playbook playbooks/rm_from_all_lists.yml -e "mail=mail@mail.com"
 ##
 ## For some mailing lists, provide a yaml file containing the lists names:
-##  ansible-playbook playbooks/add_to_list.yml -e "mail=mail@mail.com @list.yml"
+##  ansible-playbook playbooks/rm_from_all_lists.yml -e "mail=mail@mail.com @list.yml"
 ##
 ## Where `mail` the e-mail to be removed and `list.yml` a yaml file
 ## containing the mailing lists:
@@ -27,9 +27,10 @@
 - hosts: mail1.ellak.gr
   sudo: true
   sudo_user: root
+  gather_facts: false
 
   vars_files:
-    - ../vars/main.yml
+    - ../vars/lists.yml
 
   tasks:
 

@@ -28,12 +28,15 @@ ma.ellak.gr ansible_ssh_port=2223
 
 [guests]
 guest[1:4].ellak.gr
-guest6.ellak.gr
 
 [guests_unreachable]
-;guest5.ellak.gr
 ;guest7.ellak.gr
 ;guest8.ellak.gr
+
+# Access to developers
+[devaccess:children]
+web
+devvm
 
 [okeanos:children]
 web

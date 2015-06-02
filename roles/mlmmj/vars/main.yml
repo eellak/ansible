@@ -1,0 +1,31 @@
+---
+list_path: '/var/spool/mlmmj/ellak.gr'
+
+public_lists:
+  - { name: 'cyber-defence', desc: 'Ομάδα Εργασίας για θέματα Κυβερνοπολέμου' }
+  - { name: 'dms', desc: 'Διαχείριση Εγγράφων και Ψηφιακής Υπογραφής' }
+  - { name: 'edu', desc: 'Ανοιχτές Τεχνολογίες στην Εκπαίδευση' }
+  - { name: 'eellak-advisory', desc: 'Βήμα Δημόσιας Διαβούλευσης της ΕΕΛ/ΛΑΚ' }
+  - { name: 'epistimoniki-epitropi-ellak', desc: 'Επιστημονική Επιτροπή ΕΕΛ/ΛΑΚ' }
+  - { name: 'foss', desc: 'Ομάδα Εργασίας για το Ανοιχτό Λογισμικό' }
+  - { name: 'homergr', desc: 'Greek partners mailing list of the HOMER Project' }
+  - { name: 'imeres-sinergasias', desc: 'ΕΛ/ΛΑΚ και Επιχειρηματικότητα' }
+  - { name: 'kainotomia', desc: 'Επιχειρήσεις με R&D δραστηριότητα' }
+  - { name: 'ma-members', desc: 'Λίστα για τους εγγεγραμμένους χρήστες των Μονάδων Αριστείας' }
+  - { name: 'monades-aristeias', desc: 'Συνεργάτες Μονάδων Αριστείας' }
+  - { name: 'mycontent', desc: 'Προώθηση ανοικτού ελληνικού περιεχομένου' }
+  - { name: 'mycontent-epitropi', desc: 'Επιτροπή υποστήριξης της δράσης Ανοιχτού Περιεχομένου' }
+  - { name: 'open-source', desc: 'A general discussion list about the open-source movement in Greece' }
+  - { name: 'open_licenses', desc: 'Προώθηση των ανοιχτών αδειών' }
+  - { name: 'opencourses', desc: 'Ομάδα Εργασίας για τα Ανοιχτά Μαθήματα' }
+  - { name: 'opendata', desc: 'Δημόσια, Ανοικτά Δεδομένα' }
+  - { name: 'opengov', desc: 'Ομάδα Εργασίας για την Ανοιχτή Διακυβέρνηση (Open Governance)' }
+  - { name: 'openhardware', desc: 'Ομάδα Εργασίας για τις Ανοιχτές Τεχνολογίες Υλικού (Open Hardware)' }
+  - { name: 'openwifi', desc: 'Ανοιχτή ασύρματη πρόσβαση' }
+  - { name: 'organogramma', desc: 'Εφαρμογή Οργανογράμματος' }
+  - { name: 'press', desc: 'Ενημέρωση για τις δράσεις της ΕΕΛ/ΛΑΚ' }
+  - { name: 'privacy', desc: 'Ομάδα Εργασίας: Ασφάλεια Πληροφοριακών Συστημάτων' }
+  - { name: 'scriptum-users', desc: 'SCRIPTUM: εφαρμογή Ανοιχτού Λογισμικού για τήρηση πρωτοκόλλου & αναθέσης υποθέσεων' }
+  - { name: 'syntonistes_ma', desc: 'Συντονιστές Μονάδων Αριστείας Ανοιχτού Λογισμικού' }
+  - { name: 'wg-members', desc: 'Ομάδες ΕΕΛ/ΛΑΚ' }
+  - { name: 'testlist', desc: 'Δοκιμαστική λίστα' }

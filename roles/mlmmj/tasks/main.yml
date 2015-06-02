@@ -1,0 +1,11 @@
+---
+# tasks file for mlmmj
+
+- name: Copy footer message
+  template:
+    src: footer.j2
+    dest: "{{ list_path }}/{{ item.name }}/control/footer"
+    owner: mlmmj
+    group: mlmmj
+    mode: 0644
+  with_items: public_lists

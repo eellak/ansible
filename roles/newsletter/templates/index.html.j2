@@ -1,0 +1,328 @@
+<!-- {{ansible_managed }} -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <title>{{ title }}</title>
+
+<style>
+#navigation {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: #ffffff;
+  height: 35px;
+  text-align: center;
+  padding-top: 15px;
+  /* Adds shadow to the bottom of the bar */
+  -webkit-box-shadow: 0px 0px 8px 0px gray!important;
+  -moz-box-shadow: 0px 0px 8px 0px gray!important;
+  box-shadow: 0px 0px 8px 0px #000000;
+  /* Adds the transparent background */
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif!important;
+
+  background-color: rgba(0, 101, 165, 0.6);
+  background: rgba(0, 101, 165, 0.6);
+  color: rgba(0, 101, 165, 0.6);
+}
+
+#navigation a {
+  color:gray;
+  font-size:14px;
+  padding:10px;
+  text-decoration:none;
+  background-color: whitesmoke;
+}
+
+#navigation a:hover {
+  color: grey;
+}
+
+/* This just adds some style to the placeholder text */
+
+#content {
+  width: 600px;
+  padding-top: 70px;
+  padding-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#content img {
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+</style>
+
+  </head>
+
+<body style="margin: 0;padding: 0;background-color: #fff">
+  <div id="navigation">
+    <a href="https://newsletters.ellak.gr/?p=subscribe">Εγγραφή για ενημέρωση</a>  |
+    <a href="https://newsletters.ellak.gr/?p=unsubscribe">Απεγγραφή</a>  |
+    <a href="https://newsletters.ellak.gr/archives/newsletter_index.html">Όλα τα ενημερωτικά δελτία</a>
+  </div>
+  <br />
+  <br />
+  <br />
+  <table width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td align="center">
+    <table width="680" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="header" valign="bottom" align="middle" style="background-image: url(http://newsletter.ellak.gr/1406/header.jpg);background-repeat: no-repeat;background-position: top center;background-color: #b62e2e;height: 130px">
+      <img src="http://newsletter.ellak.gr/1406/header.jpg" alt="ΕΛΛΑΚ ΝΕΑ" width="680" height="130"/></td>
+        </tr><tr><td>
+        <!-- Left table -->
+        <table class="content" width="680" border="0" cellpadding="0" cellspacing="16" height="130" style="background-color: #f5f5f5"><tbody><tr><td class="sidebar" valign="top" width="192" align="left">
+
+<!-- +++++++   ΕΛ/ΛΑΚ  (start)  ++++++++ -->
+{% if ellak  %}
+          <h3 style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">ΕΛ/ΛΑΚ</h3>
+{% endif %}
+
+{% for item in ellak %}
+          <ul style="margin: 0 0 0 24px;padding: 0">
+            <li style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323">
+              <a href="{{ item.url }}" style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #a72323;text-decoration: none">
+                {{ item.desc }}
+              </a>
+            </li>
+          </ul>
+{% endfor %}
+
+<!-- +++++++   Creative Commons  (start)  +++++++ -->
+{% if cc %}
+          <h3 style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">Creative Commons Greece</h3>
+{% endif %}
+{% for item in cc %}
+          <ul style="margin: 0 0 0 24px;padding: 0">
+            <li style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323">
+              <a href="{{ item.url }}" style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #a72323;text-decoration: none">
+                {{ item.desc }}
+              </a>
+            </li>
+          </ul>
+{% endfor %}
+
+<!-- ++++++  Ανοιχτό Περιεχόμενο  (start)  +++++++ -->
+{% if mycontent %}
+          <h3 style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">Ανοιχτό Περιεχόμενο</h3>
+{% endif %}
+{% for item in mycontent %}
+          <ul style="margin: 0 0 0 24px;padding: 0">
+            <li style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323">
+              <a href="{{ item.url }}" style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #a72323;text-decoration: none">
+                {{ item.desc }}
+              </a>
+            </li>
+          </ul>
+{% endfor %}
+
+<!-- ++++++  Planet  (start)  +++++++++ -->
+          <h3 style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">Πλανήτης Ελληνικής Κοινότητας Ελεύθερου Λογισμικού</h3>
+{% for item in planet %}
+          <ul style="margin: 0 0 0 24px;padding: 0">
+            <li style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323">
+              <a href="{{ item.url }}" style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #a72323;text-decoration: none">
+                {{ item.desc }}
+              </a>
+            </li>
+          </ul>
+{% endfor %}
+
+<!-- +++++  Opengov  (start)  ++++++ -->
+          <h3 style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">Ανοιχτή Διακυβέρνηση</h3>
+
+{% for item in opengov %}
+          <ul style="margin: 0 0 0 24px;padding: 0">
+            <li style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323">
+              <a href="{{ item.url }}" style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #a72323;text-decoration: none">
+                {{ item.desc }}
+              </a>
+            </li>
+          </ul>
+{% endfor %}
+
+<!-- ++++++  OpenData  (start)  ++++++++ -->
+          <h3 style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">Ανοιχτά Δεδομένα</h3>
+
+{% for item in opendata %}
+          <ul style="margin: 0 0 0 24px;padding: 0">
+            <li style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323">
+              <a href="{{ item.url }}" style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #a72323;text-decoration: none">
+                {{ item.desc }}
+              </a>
+            </li>
+          </ul>
+{% endfor %}
+
+<!-- ++++   OpenDataInstitute  (start)  +++++ -->
+          <h3 style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">Open Data Institute – Athens Node</h3>
+
+{% for item in odi %}
+          <ul style="margin: 0 0 0 24px;padding: 0">
+            <li style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323">
+              <a href="{{ item.url }}" style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #a72323;text-decoration: none">
+                {{ item.desc }}
+              </a>
+            </li>
+          </ul>
+{% endfor %}
+
+<!-- +++++  OBS  (start)  ++++++ -->
+{% if obs %}
+          <h3 style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">Διεθνής συνεργασία για τους Ανοιχτούς Προϋπολογισμούς</h3>
+{% endif %}
+
+{% for item in obs %}
+          <ul style="margin: 0 0 0 24px;padding: 0">
+            <li style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323">
+              <a href="{{ item.url }}" style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #a72323;text-decoration: none">
+                {{ item.desc }}
+              </a>
+            </li>
+          </ul>
+{% endfor %}
+
+<!-- ++++++  EDU  (start)  +++++ -->
+          <h3 style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">Ανοιχτές τεχνολογίες στην εκπαίδευση</h3>
+
+{% for item in edu %}
+          <ul style="margin: 0 0 0 24px;padding: 0">
+            <li style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323">
+              <a href="{{ item.url }}" style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #a72323;text-decoration: none">
+                {{ item.desc }}
+              </a>
+            </li>
+          </ul>
+{% endfor %}
+
+<!-- +++++  OpenHardware  (start)  +++++ -->
+          <h3 style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">Ανοιχτές τεχνολογίες</h3>
+
+{% for item in openhardware %}
+          <ul style="margin: 0 0 0 24px;padding: 0">
+            <li style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323">
+              <a href="{{ item.url }}" style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #a72323;text-decoration: none">
+                {{ item.desc }}
+              </a>
+            </li>
+          </ul>
+{% endfor %}
+
+<!-- ++++++  OpenWiFi  (start)  +++++++ -->
+{% if openwifi %}
+          <h3 style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">OpenWiFi</h3>
+{% endif %}
+{% for item in openwifi %}
+          <ul style="margin: 0 0 0 24px;padding: 0">
+            <li style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323">
+              <a href="{{ item.url }}" style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #a72323;text-decoration: none">
+                {{ item.desc }}
+              </a>
+            </li>
+          </ul>
+{% endfor %}
+
+<!-- ++++++  Legal  (start)  ++++++ -->
+{% if legal %}
+          <h3 style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">Νομοθεσία</h3>
+{% endif %}
+{% for item in legal %}
+          <ul style="margin: 0 0 0 24px;padding: 0">
+            <li style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323">
+              <a href="{{ item.url }}" style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #a72323;text-decoration: none">
+                {{ item.desc }}
+              </a>
+            </li>
+          </ul>
+{% endfor %}
+
+<!-- +++++  Lists  (start)   ++++++ -->
+          <h3 style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">Λίστες Ταχυδρομείου</h3>
+
+          <ul style="margin: 0 0 0 24px;padding: 0">
+            <li style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323">
+              <a href="https://lists.ellak.gr/" style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #a72323;text-decoration: none">
+              Λίστες Ταχυδρομείου
+              </a>
+            </li>
+          </ul>
+
+          <br />
+          <br />
+
+<!-- ++++++  Weekly events  (start)  +++++++ -->
+
+          <h3 style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">Οι εκδηλώσεις του μήνα για τις ανοιχτές τεχνολογίες και την καινοτομία
+          </h3>
+          <ul style="margin: 0 0 0 24px;padding: 0">
+{% for item in events %}
+              <li style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323">
+                <a href="{{ item.url }}" style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #a72323;text-decoration: none">
+                    {{ item.desc }}
+                  </a>
+              </li>
+{% endfor %}
+          </ul>
+
+<!-- ++++++  Weekly events  (end)  +++++++ -->
+
+           </td>
+
+           <td class="border" width="2" style="border-right: 2px solid #e0e0e0"> </td>
+
+          <!-- Start right content -->
+           <td class="mainbar" valign="top" width="500" align="left">
+
+             <!-- Month -->
+             <h3 style="font-family: Georgia, serif;font-size: 16px;font-weight:bold;color: #333;margin: 10px 0 14px 0;padding: 0">{{ month }}</h3>
+
+             <!-- News with images -->
+             {% for item in main %}
+             <h2 style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #a72323;margin: 0 0 4px 0;padding: 0 0 4px 0;border-bottom: 1px solid #cbcbcb">
+              {{ item.title }}
+             </h2>
+
+             <p style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #333;margin: 0 0 16px 0;padding: 0">
+             <img src="{{ item.img }}" width="180" style="float: left; padding-right: 5px;"/>
+              {{ item.desc }}
+              <a href="{{ item.url }}" style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323;text-decoration: none">Περισσότερα »</a>
+             </p>
+             {% endfor %}
+
+             <br />
+             <br />
+
+                          <!-- Do not edit below this line! -->
+                          <center>
+                            <img src="http://newsletter.ellak.gr/images/hr-small.gif" alt="Small hr" width="192" height="28"/><ul style="margin: 0 0 0 24px;padding: 0"><li style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323;list-style-type:none;"><a href="http://newsletter.ellak.gr/newsletter_index.html" style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323;text-decoration: none;list-style-type:none;"><h2>Όλα τα ενημερωτικά δελτία</h2></a></li>
+                          </center>
+
+                          </ul>
+
+
+
+                        </td>
+
+                      </tr></tbody></table></td>
+
+              </tr></tbody></table><table width="750" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td>
+
+                      <img src="http://newsletter.ellak.gr/1406/footer-tail.jpg" alt="Footer" width="750" height="87"/></td>
+
+                  </tr><tr><td class="footer" align="center" style="padding: 20px 0 20px 0">
+                      <!--<p style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 8px;font-weight: normal;color: #151515">Αν δεν επιθυμείτε να λαμβάνετε ενημερώσεις μπορείτε να τροποποιήσετε τις ρυθμίσεις του προφίλ σας <a href="http://pommo.ellak.gr/pommo/login.php">εδώ</a><br/>-->
+
+                      </p>
+                      <p style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #151515">Το υλικό του ΕΛΛΑΚ ΝΕΑ διανέμεται με την άδεια χρήσης:<br/><img src="http://newsletter.ellak.gr/images/cc_BY.png" width="88"/><br/><a style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #a72323;text-decoration: none" href="http://creativecommons.org/licenses/by/3.0/gr/">Creative Commons Αναφορά προέλευσης 3.0 Ελλάδα</a>.
+
+                      </p>
+
+                    </td>
+
+                  </tr></tbody></table></td>
+
+      </tr></tbody></table>
+
+      </body>
+
+</html>

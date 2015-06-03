@@ -1,0 +1,36 @@
+---
+
+- include_vars: ellak_links.yml
+
+- name: Create monthly dir
+  file:
+    path: "{{ archive_path }}/{{ latest }}"
+    state: directory
+    owner: newsletters
+    group: newsletters
+    mode: 0755
+    recurse: yes
+
+- name: Copy newsletter index.html
+  template:
+    src: index.html.j2
+    dest: "{{ archive_path }}/{{ latest }}/index.html"
+    owner: newsletters
+    group: newsletters
+    mode: 0644
+
+- name: Copy index.php
+  template:
+    src: index.php.j2
+    dest: "{{ archive_path }}/index.php"
+    owner: newsletters
+    group: newsletters
+    mode: 0644
+
+- name: Copy archives index
+  copy:
+    src: newsletter_index.html
+    dest: "{{ archive_path }}/newsletter_index.html"
+    owner: newsletters
+    group: newsletters
+    mode: 0644

@@ -1,0 +1,6 @@
+---
+- hosts: www2.ellak.gr
+  gather_facts: false
+
+  roles:
+    - newsletter

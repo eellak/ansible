@@ -1,0 +1,351 @@
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <title>Αρχείο Εκδόσεων</title>
+   <style type="text/css" media="screen">
+      body {
+         margin: 0;
+         padding: 0;
+         background-color: #ffffff;
+      }
+
+      td.permission {
+         padding: 20px 0 20px 0;
+      }
+
+      td.permission p {
+         font-family: 'Lucida Grande', sans-serif;
+         font-size: 10px;
+         font-weight: normal;
+         color: #151515;
+      }
+
+      td.permission p a {
+         font-family: 'Lucida Grande', sans-serif;
+         font-size: 10px;
+         font-weight: normal;
+         color: #a72323;
+      }
+
+      td.header {
+         background-image: url('header.jpg');
+         background-repeat: no-repeat;
+         background-position: top center;
+         background-color: #b62e2e;
+         height: 130px;
+      }
+
+      td.header h1 {
+         font-family: Georgia, serif;
+         font-size: 30px;
+         font-weight: normal;
+         color: #333333;
+         margin-left: 50px;
+         margin-bottom: 24px;
+      }
+
+      table.content {
+         background-color: #f5f5f5;
+      }
+
+      td.sidebar a {
+         font-family: 'Lucida Grande', sans-serif;
+         font-size: 11px;
+         font-weight: normal;
+         color: #a72323;
+         text-decoration: none;
+      }
+
+      td.sidebar ul {
+         margin: 0 0 0 24px;
+         padding: 0;
+      }
+
+      td.sidebar ul li,
+      td.sidebar ul li a {
+         font-family: 'Lucida Grande', sans-serif;
+         font-size: 12px;
+         font-weight: normal;
+         color: #a72323;
+      }
+
+      td.sidebar h3 {
+         font-family: 'Lucida Grande', sans-serif;
+         font-size: 16px;
+         font-weight: bold;
+         color: #333333;
+         margin: 10px 0 14px 0;
+         padding: 0;
+      }
+
+      td.sidebar h3.buttons {
+         font-family: 'Lucida Grande', sans-serif;
+         font-size: 16px;
+         font-weight: bold;
+         color: #333333;
+         margin: 0 0 4px 0;
+         padding: 0;
+      }
+
+      td.sidebar h4 {
+         font-family: 'Lucida Grande', sans-serif;
+         font-size: 13px;
+         font-weight: bold;
+         color: #333333;
+         margin: 0 0 2px 0;
+         padding: 0;
+      }
+
+      td.sidebar p {
+         font-family: 'Lucida Grande', sans-serif;
+         font-size: 11px;
+         font-weight: normal;
+         color: #505050;
+         margin: 0 0 13px 0;
+         padding: 0;
+      }
+
+      td.sidebar p.buttons {
+         font-family: 'Lucida Grande', sans-serif;
+         font-size: 11px;
+         font-weight: normal;
+         color: #505050;
+         margin: 0 0 4px 0;
+         padding: 0;
+      }
+
+      td.border {
+         border-right: 2px solid #e0e0e0;
+      }
+
+      td.mainbar a {
+         font-family: 'Lucida Grande', sans-serif;
+         font-size: 12px;
+         font-weight: normal;
+         color: #a72323;
+         text-decoration: none;
+      }
+
+      td.mainbar h2 {
+         font-family: 'Lucida Grande', sans-serif;
+         font-size: 16px;
+         font-weight: bold;
+         color: #a72323;
+         margin: 0 0 4px 0;
+         padding: 0 0 4px 0;
+         border-bottom: 1px solid #cbcbcb;
+      }
+
+      td.mainbar h3 {
+         font-family: Georgia, serif;
+         font-size: 16px;
+         font-weight: normal;
+         color: #333333;
+         margin: 10px 0 14px 0;
+         padding: 0;
+      }
+
+      td.mainbar p {
+         font-family: 'Lucida Grande', sans-serif;
+         font-size: 12px;
+         font-weight: normal;
+         color: #333333;
+         margin: 0 0 16px 0;
+         padding: 0;
+      }
+
+      td.mainbar p.top {
+         font-family: 'Lucida Grande', sans-serif;
+         font-size: 10px;
+         font-weight: bold;
+         color: #a72323;
+         margin: 0 0 30px 0;
+         padding: 0;
+      }
+
+      td.mainbar p.top a {
+         font-family: 'Lucida Grande', sans-serif;
+         font-size: 10px;
+         font-weight: bold;
+         color: #a72323;
+      }
+
+      td.mainbar ul {
+         font-family: 'Lucida Grande', sans-serif;
+         font-size: 12px;
+         font-weight: normal;
+         color: #333333;
+         margin: 0 0 20px 24px;
+         padding: 0;
+      }
+
+      td.footer {
+         padding: 20px 0 20px 0;
+      }
+
+      td.footer p {
+         font-family: 'Lucida Grande', sans-serif;
+         font-size: 10px;
+         font-weight: normal;
+         color: #151515;
+      }
+.menuBar{
+    width:100%;
+    height:50px;
+    display:block;
+    position:absolute;
+    top:0;
+    left:0;
+    }
+.logo{
+    float:left;
+    }
+.nav{
+    float:right;
+    margin-right:10px;}
+.nav ul li{
+    list-style:none;
+    float:left;
+    }
+
+
+   </style>
+<style>
+  #navigation {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: #ffffff;
+  height: 35px;
+  text-align: center;
+  padding-top: 15px;
+  /* Adds shadow to the bottom of the bar */
+  -webkit-box-shadow: 0px 0px 8px 0px gray!important;
+  -moz-box-shadow: 0px 0px 8px 0px gray!important;
+  box-shadow: 0px 0px 8px 0px #000000;
+  /* Adds the transparent background */
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif!important;
+
+
+
+background-color: rgba(0, 101, 165, 0.6);
+background: rgba(0, 101, 165, 0.6);
+color: rgba(0, 101, 165, 0.6);
+}
+
+#navigation a {
+color:gray;
+  font-size:14px;
+  padding:10px;
+  text-decoration:none;
+  background-color: whitesmoke;
+}
+
+#navigation a:hover {
+  color: grey;
+}
+
+/* This just adds some style to the placeholder text */
+
+#content {
+  width: 600px;
+  padding-top: 70px;
+  padding-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#content img {
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+</style>
+</head>
+<body>
+<div id="navigation">
+    <a href="https://newsletters.ellak.gr/?p=subscribe">Εγγραφή για ενημέρωση</a>  |
+    <a href="https://newsletters.ellak.gr/?p=unsubscribe">Απεγγραφή</a>  |
+    <a href="https://newsletters.ellak.gr/archives/newsletter_index.html">Όλα τα ενημερωτικά δελτία</a>
+  </div>
+<br />
+<br />
+<br />
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+   <tr>
+      <td align="center">
+
+         <table width="580" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+               <td class="header" align="left" valign="bottom">
+                  <img src="https://newsletter.ellak.gr/1006/header.jpg" alt="Αρχείο Εκδόσεων" width="580" height="130" />
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  <table width="580" height="130" border="0" cellspacing="16" cellpadding="0" class="content">
+                     <tr>
+                        <td class="sidebar" align="left" valign="top">
+                           <h3>Αρχείο εκδόσεων</h3><br>
+                          <li><a href="https://newsletter.ellak.gr/1505/">Μάϊος 2015</li>
+                          <li><a href="https://newsletter.ellak.gr/1504/">Απρίλιος 2015</li>
+                          <li><a href="https://newsletter.ellak.gr/1503/">Μάρτιος 2015</li>
+                          <li><a href="https://newsletter.ellak.gr/1502/">Φεβρουάριος 2015</li>
+                          <li><a href="https://newsletter.ellak.gr/1501/">Ιανουάριος 2015</li>
+                          <li><a href="https://newsletter.ellak.gr/1412/">Δεκέμβριος 2014</li>
+                          <li><a href="https://newsletter.ellak.gr/1411/">Νοέμβριος 2014</li>
+                          <li><a href="https://newsletter.ellak.gr/1410/">Οκτώβριος 2014</li>
+                          <li><a href="https://newsletter.ellak.gr/1409/">Σεπτέμβριος 2014</li>
+                          <li><a href="https://newsletter.ellak.gr/1408/">Αύγουστος 2014</li>
+                          <li><a href="https://newsletter.ellak.gr/1407/">Ιούλιος 2014</li>
+                          <li><a href="https://newsletter.ellak.gr/1406/">Ιούνιος 2014</li>
+                          <li><a href="https://newsletter.ellak.gr/1405/">Μάιος 2014</li>
+                          <li><a href="https://newsletter.ellak.gr/1404/">Απρίλιος 2014</li>
+                          <li><a href="https://newsletter.ellak.gr/1403/">Μάρτιος 2014</li>
+                          <li><a href="https://newsletter.ellak.gr/1402/">Φεβρουάριος 2014</li>
+                          <li><a href="https://newsletter.ellak.gr/1401">Ιανουάριος 2014</li>
+                          <li><a href="https://newsletter.ellak.gr/1312">Δεκέμβριος 2013</li>
+                          <li><a href="https://newsletter.ellak.gr/1311">Νοέμβριος 2013</li>
+                          <li><a href="https://newsletter.ellak.gr/1310">Οκτώβριος 2013</li>
+                          <li><a href="https://newsletter.ellak.gr/1309">Σεπτέμβριος 2013</li>
+                          <li><a href="https://newsletter.ellak.gr/1305">Ιούλιος/Αύγουστος 2013</li>
+                          <li><a href="https://newsletter.ellak.gr/1306">Μάιος/Ιούνιος 2013</li>
+                          <li><a href="https://newsletter.ellak.gr/1304">Απρίλιος 2013</a></li>
+                          <li><a href="https://newsletter.ellak.gr/1303">Μάρτιος 2013</a></li>
+                          <li><a href="https://newsletter.ellak.gr/1302">Ιανουάριος/Φεβρουάριος 2013</a></li>
+                          <li><a href="https://newsletter.ellak.gr/1211">Νοέμβριος 2012</a></li>
+                          <li><a href="https://newsletter.ellak.gr/1210">Μάιος-Οκτώβριος 2012</a></li>
+                          <li><a href="https://newsletter.ellak.gr/1204">Μάρτιος-Απρίλιος 2012</a></li>
+                          <li><a href="https://newsletter.ellak.gr/1202">Φεβρουάριος 2012</a></li>
+                          <li><a href="https://newsletter.ellak.gr/1201">Ιανουάριος 2012</a></li>
+                          <li><a href="https://newsletter.ellak.gr/1112">Δεκέμβριος 2011</a></li>
+                          <li><a href="https://newsletter.ellak.gr/1111">Οκτώβριος-Νοέμβριος 2011</a></li>
+                          <li><a href="https://newsletter.ellak.gr/1109">Σεπτέμβριος 2011</a></li>
+                          <li><a href="https://newsletter.ellak.gr/1108">Ιούλιος-Αύγουστος 2011</a></li>
+                          <li><a href="https://newsletter.ellak.gr/1106">Ιούνιος 2011</a></li>
+                          <li><a href="https://newsletter.ellak.gr/1105">Μάϊος 2011</a></li>
+                          <li><a href="https://newsletter.ellak.gr/1104">Απρίλιος 2011</a></li>
+                          <li><a href="https://newsletter.ellak.gr/1103">Μάρτιος 2011</a></li>
+                          <li><a href="https://newsletter.ellak.gr/1101">Ιανουάριος 2011</a></li>
+                          <li><a href="https://newsletter.ellak.gr/1012">Δεκέμβριος 2010</a></li>
+                          <li><a href="https://newsletter.ellak.gr/1011">Νοέμβριος 2010</a></li>
+                          <li><a href="https://newsletter.ellak.gr/1010">Οκτώβριος 2010</a></li>
+                          <li><a href="https://newsletter.ellak.gr/1007">Ιούλιος 2010</a></li>
+                          <li><a href="https://newsletter.ellak.gr/1006">Ιούνιος 2010</a></li>
+                        </td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+         </table>
+         <table width="646" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+               <td><img src="footer-tail.jpg" alt="Footer" width="646" height="87" /></td>
+            </tr>
+         </table>
+      </td>
+   </tr>
+</table>
+
+
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!-- {{ansible_managed }} -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <title>{{ html_title }}</title>
+
+<style>
+
+body {
+  font: 300 13px/1.5 Arial, "Lucida Grande", "Roboto","Helvetica Neue",Helvetica,Arial,sans-serif;
+  background-color: #f5f5f5;
+}
+
+#navigation {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: #ffffff;
+  height: 35px;
+  text-align: center;
+  padding-top: 15px;
+  /* Adds shadow to the bottom of the bar */
+  -webkit-box-shadow: 0px 0px 8px 0px gray!important;
+  -moz-box-shadow: 0px 0px 8px 0px gray!important;
+  box-shadow: 0px 0px 8px 0px #000000;
+  /* Adds the transparent background */
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif!important;
+
+  background-color: rgba(0, 101, 165, 0.6);
+  background: rgba(0, 101, 165, 0.6);
+  color: rgba(0, 101, 165, 0.6);
+}
+
+#navigation a {
+  color:gray;
+  font-size:14px;
+  padding:10px;
+  text-decoration:none;
+  background-color: whitesmoke;
+}
+
+#navigation a:hover {
+  color: grey;
+}
+
+/* This just adds some style to the placeholder text */
+
+#content {
+  width: 900px;
+  padding-top: 0px;
+  padding-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#content img {
+  padding-top: 20px;
+  padding-bottom: 30px;
+}
+</style>
+
+  </head>
+
+<body style="margin: 0;padding: 0;background-color: #fff">
+  <div id="navigation">
+    <a href="https://newsletters.ellak.gr/?p=subscribe">Εγγραφή για ενημέρωση</a>  |
+    <a href="https://newsletters.ellak.gr/?p=unsubscribe">Απεγγραφή</a>  |
+    <a href="https://ma.ellak.gr/%CE%B5%CE%BD%CE%B7%CE%BC%CE%B5%CF%81%CF%89%CF%84%CE%B9%CE%BA%CE%AC-%CE%B4%CE%B5%CE%BB%CF%84%CE%AF%CE%B1-%CE%BC%CE%BF%CE%BD%CE%AC%CE%B4%CF%89%CE%BD-%CE%B1%CF%81%CE%B9%CF%83%CF%84%CE%B5%CE%AF%CE%B1/">Όλα τα ενημερωτικά δελτία</a>
+  </div>
+  <br />
+  <br />
+  <br />
+
+  <table width="100%" border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td align="center">
+         <table width="900" border="0" cellpadding="0" cellspacing="0">
+
+            <tbody>
+
+              <tr>
+                <td class="header" valign="bottom" align="middle">
+                  <img src="https://newsletters.ellak.gr/archives/monades_aristeias/images/maellak_header.png" alt="Νέα Μονάδων Αριστείας" width="900" height="150"/>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <table class="content" width="900" border="0" cellpadding="0" cellspacing="16" height="130" style="background-color: #f5f5f5">
+                  <tr>
+                  <td colspan="3">
+                    Οι <a href="https://ma.ellak.gr">Μονάδες Αριστείας</a> είναι ομάδες σε Πανεπιστημιακά Ιδρύματα και Ερευνητικά Κέντρα που υλοποιούν το έργο «Ηλεκτρονικές Υπηρεσίες για την Ανάπτυξη και Διάδοση του Ανοιχτού Λογισμικού» με ενέργειες εκπαίδευσης, ανάπτυξης, διάχυσης και προβολής μέσω εργαστηρίων, εκδηλώσεων και συνεδρίων έργων ανοιχτών τεχνολογιών σε δέκα θεματικές κατηγορίες.
+                  <center>
+                  <p style="font-family: Arial, &quot;Lucida Grande&quot;, sans-serif;font-size: 18px;font-weight: bold;">
+                  Οι Μονάδες Αριστείας έχουν κλείσει ένα χρόνο από την έναρξή τους! 
+                  </p>
+                  </center>
+                  <p style="font-family: Arial, &quot;Lucida Grande&quot;, sans-serif; padding: 0 30px;">
+                    Έως 31 Απριλίου 2015:
+                    <ul style="margin: 0 0 0 24px;" type="circle">
+                      <li>257 Εκδηλώσεις</li>
+                      <li>848 Μέλη</li>
+                      <li>217 βίντεο και 205 αρχεία για εκπαιδευτικό υλικό και</li>
+                      <li>έχουν αναπτυχθεί 123 έργα</li>
+                    </ul>
+                  </p>
+                  </td>
+                  </tr>
+
+            <tr>
+
+            <td class="sidebar" valign="top" width="400" align="left">
+        <!-- Left table -->
+        <img src="../images/thematikes/tourismos.png" width="70" style="float: left; padding-right: 15px;"/>
+        <h3 style="font-family: Arial, &quot;Lucida Grande&quot;, sans-serif;font-size: 18px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 10px 0">Τουρισμός</h3>
+        </br>
+{% for item in tourismos %}
+          <ul style="margin: 0 0 0 24px;padding: 0" type="circle">
+            <li>
+              <a href="{{ item.url }}" style="font-family: Arial, &quot;Lucida Grande&quot;, sans-serif;font-size: 15px;font-weight: bold;color: #57294C;text-decoration: none">
+                {{ item.title }}
+              </a>
+              </br>
+              {% if item.text %}
+              {{ item.text }}
+              {% endif %}
+            </li>
+          </ul>
+{% endfor %}
+
+        </br>
+        <img src="../images/thematikes/politismos.png" width="70" style="float: left; padding-right: 15px;"/>
+        <h3 style="font-family: Arial, &quot;Lucida Grande&quot;, sans-serif;font-size: 18px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 10px 0">Πολιτισμός</h3>
+        </br>
+{% for item in politismos %}
+          <ul style="margin: 0 0 0 24px;padding: 0" type="circle">
+            <li>
+              <a href="{{ item.url }}" style="font-family: Arial, &quot;Lucida Grande&quot;, sans-serif;font-size: 15px;font-weight: bold;color: #57294C;text-decoration: none">
+                {{ item.title }}
+              </a>
+              </br>
+              {% if item.text %}
+              {{ item.text }}
+              {% endif %}
+            </li>
+          </ul>
+{% endfor %}
+        </br>
+        <img src="../images/thematikes/geo.png" width="70" style="float: left; padding-right: 15px;"/>
+        <h3 style="font-family: Arial, &quot;Lucida Grande&quot;, sans-serif;font-size: 18px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 10px 0">Συστήματα γεωγραφικών πληροφοριών</h3>
+        </br>
+{% for item in geo %}
+          <ul style="margin: 0 0 0 24px;padding: 0" type="circle">
+            <li>
+              <a href="{{ item.url }}" style="font-family: Arial, &quot;Lucida Grande&quot;, sans-serif;font-size: 15px;font-weight: bold;color: #57294C;text-decoration: none">
+                {{ item.title }}
+              </a>
+              </br>
+              {% if item.text %}
+              {{ item.text }}
+              {% endif %}
+            </li>
+          </ul>
+{% endfor %}
+        </br>
+        <img src="../images/thematikes/agriculture.png" width="70" style="float: left; padding-right: 15px;"/>
+        <h3 style="font-family: Arial, &quot;Lucida Grande&quot;, sans-serif;font-size: 18px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 10px 0">Αγροτική ανάπτυξη-Περιβάλλον</h3>
+        </br>
+{% for item in agriculture %}
+          <ul style="margin: 0 0 0 24px;padding: 0" type="circle">
+            <li>
+              <a href="{{ item.url }}" style="font-family: Arial, &quot;Lucida Grande&quot;, sans-serif;font-size: 15px;font-weight: bold;color: #57294C;text-decoration: none">
+                {{ item.title }}
+              </a>
+              </br>
+              {% if item.text %}
+              {{ item.text }}
+              {% endif %}
+            </li>
+          </ul>
+{% endfor %}
+        </br>
+        <img src="../images/thematikes/tools.png" width="70" style="float: left; padding-right: 15px;"/>
+        <h3 style="font-family: Arial, &quot;Lucida Grande&quot;, sans-serif;font-size: 18px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 10px 0">Βασικές εφαρμογές/Εργαλεία ΕΛ/ΛΑΚ</h3>
+        </br>
+{% for item in tools %}
+          <ul style="margin: 0 0 0 24px;padding: 0" type="circle">
+            <li>
+              <a href="{{ item.url }}" style="font-family: Arial, &quot;Lucida Grande&quot;, sans-serif;font-size: 15px;font-weight: bold;color: #57294C;text-decoration: none">
+                {{ item.title }}
+              </a>
+              </br>
+              {% if item.text %}
+              {{ item.text }}
+              {% endif %}
+            </li>
+          </ul>
+{% endfor %}
+
+           </td>
+
+           <td class="border" width="2" style="border-right: 2px solid #e0e0e0"> </td>
+
+          <!-- Start right content -->
+           <td class="mainbar" valign="top" width="400" align="left">
+        <img src="../images/thematikes/health.png" width="70" style="float: left; padding-right: 15px;"/>
+        <h3 style="font-family: Arial, &quot;Lucida Grande&quot;, sans-serif;font-size: 18px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 10px 0">Πληροφοριακά συστήματα υγείας</h3>
+        </br>
+{% for item in health %}
+          <ul style="margin: 0 0 0 24px;padding: 0" type="circle">
+            <li>
+              <a href="{{ item.url }}" style="font-family: Arial, &quot;Lucida Grande&quot;, sans-serif;font-size: 15px;font-weight: bold;color: #57294C;text-decoration: none">
+                {{ item.title }}
+              </a>
+              </br>
+              {% if item.text %}
+              {{ item.text }}
+              {% endif %}
+            </li>
+          </ul>
+{% endfor %}
+        </br>
+        <img src="../images/thematikes/business.png" width="90" style="float: left; padding-right: 15px;"/>
+        <h3 style="font-family: Arial, &quot;Lucida Grande&quot;, sans-serif;font-size: 18px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 10px 0">Επιχειρηματικές εφαρμογές/Υπηρεσίες για μικρομεσαίες επιχειρήσεις</h3>
+        </br>
+{% for item in business %}
+          <ul style="margin: 0 0 0 24px;padding: 0" type="circle">
+            <li>
+              <a href="{{ item.url }}" style="font-family: Arial, &quot;Lucida Grande&quot;, sans-serif;font-size: 15px;font-weight: bold;color: #57294C;text-decoration: none">
+                {{ item.title }}
+              </a>
+              </br>
+              {% if item.text %}
+              {{ item.text }}
+              {% endif %}
+            </li>
+          </ul>
+{% endfor %}
+        </br>
+        <img src="../images/thematikes/edu.png" width="70" style="float: left; padding-right: 15px;"/>
+        <h3 style="font-family: Arial, &quot;Lucida Grande&quot;, sans-serif;font-size: 18px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 10px 0">Εκπαιδευτικό λογισμικό</h3>
+        </br>
+{% for item in edu %}
+          <ul style="margin: 0 0 0 24px;padding: 0" type="circle">
+            <li>
+              <a href="{{ item.url }}" style="font-family: Arial, &quot;Lucida Grande&quot;, sans-serif;font-size: 15px;font-weight: bold;color: #57294C;text-decoration: none">
+                {{ item.title }}
+              </a>
+              </br>
+              {% if item.text %}
+              {{ item.text }}
+              {% endif %}
+            </li>
+          </ul>
+{% endfor %}
+        </br>
+        <img src="../images/thematikes/ships.png" width="70" style="float: left; padding-right: 15px;"/>
+        <h3 style="font-family: Arial, &quot;Lucida Grande&quot;, sans-serif;font-size: 18px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 10px 0">Μεταφορές-Ναυτιλία</h3>
+        </br>
+{% for item in ships %}
+          <ul style="margin: 0 0 0 24px;padding: 0" type="circle">
+            <li>
+              <a href="{{ item.url }}" style="font-family: Arial, &quot;Lucida Grande&quot;, sans-serif;font-size: 15px;font-weight: bold;color: #57294C;text-decoration: none">
+                {{ item.title }}
+              </a>
+              </br>
+              {% if item.text %}
+              {{ item.text }}
+              {% endif %}
+            </li>
+          </ul>
+{% endfor %}
+        </br>
+        <img src="../images/thematikes/public.png" width="70" style="float: left; padding-right: 15px;"/>
+        <h3 style="font-family: Arial, &quot;Lucida Grande&quot;, sans-serif;font-size: 18px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 10px 0">Δημόσια διοίκηση και τοπική αυτοδιοίκηση</h3>
+        </br>
+{% for item in public %}
+          <ul style="margin: 0 0 0 24px;padding: 0" type="circle">
+            <li>
+              <a href="{{ item.url }}" style="font-family: Arial, &quot;Lucida Grande&quot;, sans-serif;font-size: 15px;font-weight: bold;color: #57294C;text-decoration: none">
+                {{ item.title }}
+              </a>
+              </br>
+              {% if item.text %}
+              {{ item.text }}
+              {% endif %}
+            </li>
+          </ul>
+{% endfor %}
+
+                        </td><!-- end left sidebar -->
+
+                      </tr>
+
+                      </tbody>
+
+            <tr>
+              <td colspan=3>
+                Δείτε τα: <a href="http://ma.ellak.gr/videopage/videolist/">Βίντεο των εκδηλώσεων</a>  και την <a href="http://ma.ellak.gr/list-files/">Βιβλιοθήκη αρχείων</a>
+                <ul style="margin: 0 0 0 24px;padding: 0" type="circle">
+                  <li>Μπορείτε να αναζητήσετε ανοιχτά <a href="https://ma.ellak.gr/search-software/">λογισμικά</a> σχετικά με την θεματική που σας ενδιαφέρει, να γράψετε την γνώμη σας (<a href="https://ma.ellak.gr/list-characteristics/">Γνωρίσματα</a>) και ίσως αλλάξουν!</li>
+                  <li>Εάν ασχολείστε με open source και θέλετε να προβληθεί η δουλειά σας μπορείτε να καταχωρήσετε το προφίλ σας <a href="https://ma.ellak.gr/search-profile/">εδώ</a>!</li>
+                  <li>Εάν αναζητάτε εθελοντές - επαγγελματίες που ασχολούνται με Open source μπορείτε να το καταχωρήσετε <a href="https://ma.ellak.gr/list-jobs/">εδώ</a>!</li>
+                </ul>
+                <center>
+                <ul style="margin: 0 0 0 24px;padding: 0" type="circle"><li style="font-family: Arial, &quot;Lucida Grande&quot;, sans-serif;font-size: 12px;font-weight: bold;color: #57294C;list-style-type:none;"><a href="https://ma.ellak.gr/%CE%B5%CE%BD%CE%B7%CE%BC%CE%B5%CF%81%CF%89%CF%84%CE%B9%CE%BA%CE%AC-%CE%B4%CE%B5%CE%BB%CF%84%CE%AF%CE%B1-%CE%BC%CE%BF%CE%BD%CE%AC%CE%B4%CF%89%CE%BD-%CE%B1%CF%81%CE%B9%CF%83%CF%84%CE%B5%CE%AF%CE%B1/" style="font-family: Arial, &quot;Lucida Grande&quot;, sans-serif;font-size: 12px;font-weight: bold;color: #57294C;text-decoration: none;list-style-type:none;"><h2>Όλα τα ενημερωτικά δελτία των Μονάδων Αριστείας</h2></a></li>
+                </ul>
+                </center>
+              </td>
+            </tr>
+       </table>
+    </td>
+  </tr>
+
+
+
+              </tbody>
+
+
+              </table>
+
+              <table width="750" border="0" cellpadding="0" cellspacing="0">
+                <tbody>
+                  <tr>
+                    <td>
+                      <img src="http://newsletter.ellak.gr/1406/footer-tail.jpg" alt="Footer" width="1000" height="87"/>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="footer" align="center" style="padding: 20px 0 20px 0">
+                      </p>
+                      <p style="font-family: Arial, &quot;Lucida Grande&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #151515">Το υλικό του ΕΛΛΑΚ ΝΕΑ διανέμεται με την άδεια χρήσης:<br/><img src="http://newsletter.ellak.gr/images/cc_BY.png" width="88"/><br/><a style="font-family: Arial, &quot;Lucida Grande&quot;, sans-serif;font-size: 10px;font-weight: bold;color: #57294C;text-decoration: none" href="http://creativecommons.org/licenses/by/3.0/gr/">Creative Commons Αναφορά προέλευσης 3.0 Ελλάδα</a>.
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+
+      </tr>
+      </tbody>
+      </table>
+      </body>
+</html>

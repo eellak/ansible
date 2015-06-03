@@ -1,8 +1,14 @@
 ---
 
 - include_vars: ellak_links.yml
+  tags:
+    - ellak
 
-- name: Create monthly dir
+- include_vars: maellak_links.yml
+  tags:
+    - maellak
+
+- name: ellak | Create monthly dir
   file:
     path: "{{ archive_path }}/{{ latest }}"
     state: directory
@@ -10,27 +16,56 @@
     group: newsletters
     mode: 0755
     recurse: yes
+  tags:
+    - ellak
 
-- name: Copy newsletter index.html
+- name: ellak | Copy newsletter index.html
   template:
-    src: index.html.j2
+    src: ellak_index.html.j2
     dest: "{{ archive_path }}/{{ latest }}/index.html"
     owner: newsletters
     group: newsletters
     mode: 0644
+  tags:
+    - ellak
 
-- name: Copy index.php
+- name: ellak | Copy index.php
   template:
     src: index.php.j2
     dest: "{{ archive_path }}/index.php"
     owner: newsletters
     group: newsletters
     mode: 0644
+  tags:
+    - ellak
 
-- name: Copy archives index
+- name: ellak | Copy archives index.html
   copy:
     src: newsletter_index.html
     dest: "{{ archive_path }}/newsletter_index.html"
     owner: newsletters
     group: newsletters
     mode: 0644
+  tags:
+    - ellak
+
+- name: maellak | Create monthly dir
+  file:
+    path: "{{ archive_path }}/monades_aristeias/{{ maellak_latest }}"
+    state: directory
+    owner: newsletters
+    group: newsletters
+    mode: 0755
+    recurse: yes
+  tags:
+    - maellak
+
+- name: maellak | Copy newsletter index.html
+  template:
+    src: maellak_index.html.j2
+    dest: "{{ archive_path }}/monades_aristeias/{{ maellak_latest }}/index.html"
+    owner: newsletters
+    group: newsletters
+    mode: 0644
+  tags:
+    - maellak

@@ -29,3 +29,4 @@ public_lists:
   - { name: 'syntonistes_ma', desc: 'Συντονιστές Μονάδων Αριστείας Ανοιχτού Λογισμικού' }
   - { name: 'wg-members', desc: 'Ομάδες ΕΕΛ/ΛΑΚ' }
   - { name: 'testlist', desc: 'Δοκιμαστική λίστα' }
+  - { name: 'smartcities', desc: 'Λίστα Ενημέρωσης για τις Ανοιχτές Τεχνολογίες για τη Σύγχρονη Πόλη (Smart Cities)' }

@@ -1,5 +1,5 @@
 ---
-- hosts: postinstall
+- hosts: all
   sudo: true
   sudo_user: root
 

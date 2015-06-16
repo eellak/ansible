@@ -2,31 +2,127 @@
 list_path: '/var/spool/mlmmj/ellak.gr'
 
 public_lists:
-  - { name: 'cyber-defence', desc: 'Ομάδα Εργασίας για θέματα Κυβερνοπολέμου' }
-  - { name: 'dms', desc: 'Διαχείριση Εγγράφων και Ψηφιακής Υπογραφής' }
-  - { name: 'edu', desc: 'Ανοιχτές Τεχνολογίες στην Εκπαίδευση' }
-  - { name: 'eellak-advisory', desc: 'Βήμα Δημόσιας Διαβούλευσης της ΕΕΛ/ΛΑΚ' }
-  - { name: 'epistimoniki-epitropi-ellak', desc: 'Επιστημονική Επιτροπή ΕΕΛ/ΛΑΚ' }
-  - { name: 'foss', desc: 'Ομάδα Εργασίας για το Ανοιχτό Λογισμικό' }
-  - { name: 'homergr', desc: 'Greek partners mailing list of the HOMER Project' }
-  - { name: 'imeres-sinergasias', desc: 'ΕΛ/ΛΑΚ και Επιχειρηματικότητα' }
-  - { name: 'kainotomia', desc: 'Επιχειρήσεις με R&D δραστηριότητα' }
-  - { name: 'ma-members', desc: 'Λίστα για τους εγγεγραμμένους χρήστες των Μονάδων Αριστείας' }
-  - { name: 'monades-aristeias', desc: 'Συνεργάτες Μονάδων Αριστείας' }
-  - { name: 'mycontent', desc: 'Προώθηση ανοικτού ελληνικού περιεχομένου' }
-  - { name: 'mycontent-epitropi', desc: 'Επιτροπή υποστήριξης της δράσης Ανοιχτού Περιεχομένου' }
-  - { name: 'open-source', desc: 'A general discussion list about the open-source movement in Greece' }
-  - { name: 'open_licenses', desc: 'Προώθηση των ανοιχτών αδειών' }
-  - { name: 'opencourses', desc: 'Ομάδα Εργασίας για τα Ανοιχτά Μαθήματα' }
-  - { name: 'opendata', desc: 'Δημόσια, Ανοικτά Δεδομένα' }
-  - { name: 'opengov', desc: 'Ομάδα Εργασίας για την Ανοιχτή Διακυβέρνηση (Open Governance)' }
-  - { name: 'openhardware', desc: 'Ομάδα Εργασίας για τις Ανοιχτές Τεχνολογίες Υλικού (Open Hardware)' }
-  - { name: 'openwifi', desc: 'Ανοιχτή ασύρματη πρόσβαση' }
-  - { name: 'organogramma', desc: 'Εφαρμογή Οργανογράμματος' }
-  - { name: 'press', desc: 'Ενημέρωση για τις δράσεις της ΕΕΛ/ΛΑΚ' }
-  - { name: 'privacy', desc: 'Ομάδα Εργασίας: Ασφάλεια Πληροφοριακών Συστημάτων' }
-  - { name: 'scriptum-users', desc: 'SCRIPTUM: εφαρμογή Ανοιχτού Λογισμικού για τήρηση πρωτοκόλλου & αναθέσης υποθέσεων' }
-  - { name: 'syntonistes_ma', desc: 'Συντονιστές Μονάδων Αριστείας Ανοιχτού Λογισμικού' }
-  - { name: 'wg-members', desc: 'Ομάδες ΕΕΛ/ΛΑΚ' }
-  - { name: 'testlist', desc: 'Δοκιμαστική λίστα' }
-  - { name: 'smartcities', desc: 'Λίστα Ενημέρωσης για τις Ανοιχτές Τεχνολογίες για τη Σύγχρονη Πόλη (Smart Cities)' }
+  - { name: 'dms',
+      shortdesc: 'Διαχείριση Εγγράφων και Ψηφιακής Υπογραφής',
+      longdesc: '<p>Λίστα για την Ομάδα Εργασίας για Σύστημα Διαχείρισης Εγγράφων και Ψηφιακής Υπογραφής.</p><p>Για επιπλέον πληροφορίες επισκεφτείτε στο WIKI της ΕΕΛ/ΛΑΚ την σελίδα της <a href="https://ellak.gr/wikis/%CF%87%CF%8E%CF%81%CE%BF%CF%82-%CF%83%CF%85%CE%BD%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82/%CE%BF%CE%BC%CE%AC%CE%B4%CE%B5%CF%82-%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B5%CF%82/omada-ergasias-gia-to-sistima-diachir/">Ομάδα Εργασίας για Σύστημα Διαχείρισης Εγγράφων και Ψηφιακής Υπογραφής</a>, καθώς και το <a href="http://dms.ellak.gr/">blog της Ομάδας Εργασίας για Σύστημα Διαχείρισης Εγγράφων και Ψηφιακής Υπογραφής</a>.</p>'}
+  - { name: 'edu',
+      shortdesc: 'Ανοιχτές Τεχνολογίες στην Εκπαίδευση',
+      longdesc: '<p>Λίστα για τις ανοιχτές τεχνολογίες στην εκπαίδευση. Επιπλέον πληροφορίες στο <a href="https://ellak.gr/edu/">https://ellak.gr/edu/</a>.</p>' }
+  - { name: 'eellak-advisory',
+      shortdesc: 'Βήμα Δημόσιας Διαβούλευσης της ΕΕΛ/ΛΑΚ',
+      longdesc: '<p>Η λίστα "eellak-advisory" είναι βήμα δημόσιας διαβούλευσης για όλες τις πρωτοβουλίες της ΕΕΛ/ΛΑΚ καθώς και των θεμάτων που προτείνεται να συζητηθούν στις συνεδριάσεις του Διοικητικού Συμβουλίου ή/και της Γενικής Συνέλευσης.</p><p>Περισσότερες πληροφορίες στην σχετική σελίδα στο <a href="http://www.ellak.gr/wikis/%CF%87%CF%8E%CF%81%CE%BF%CF%82-%CF%83%CF%85%CE%BD%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82/">WIKI της ΕΕΛΛΑΚ</a>.</p>' }
+  - { name: 'foss',
+      shortdesc: 'Ομάδα Εργασίας για το Ανοιχτό Λογισμικό',
+      longdesc: '<p>Λίστα για την Ομάδα Εργασίας για το Ανοιχτό Λογισμικό.</p><p>Για επιπλέον πληροφορίες επισκεφτείτε στο WIKI της ΕΕΛ/ΛΑΚ την σελίδα της <a href="https://ellak.gr/wikis/%CF%87%CF%8E%CF%81%CE%BF%CF%82-%CF%83%CF%85%CE%BD%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82/%CE%BF%CE%BC%CE%AC%CE%B4%CE%B5%CF%82-%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B5%CF%82/omada-ergasias-gia-to-anikto-logismi/">Ομάδας Εργασίας για το Ανοιχτό Λογισμικό</a>, καθώς και το <a href="https://opensource.ellak.gr/">blog της Ομάδας Εργασίας για το Ανοιχτό Λογισμικό</a>.</p>' }
+  - { name: 'homergr',
+      shortdesc: 'Greek partners mailing list of the HOMER Project',
+      longdesc: '<p>Greek partners mailing list of the HOMER Project.</p>' }
+  - { name: 'imeres-sinergasias',
+      shortdesc: 'ΕΛ/ΛΑΚ και Επιχειρηματικότητα',
+      longdesc: '<p>Η Εταιρεία Ελεύθερου Λογισμικού / Λογισμικού Ανοικτού Κώδικα, στο πλαίσιο των δράσεων της για συνεργασία όλων των φορέων που έχουν άμεσο ή έμμεσο ρόλο στη διάδοση, ανάπτυξη και χρήση ΕΛ/ΛΑΚ στην Ελλάδα, επιθυμεί να φέρει σε επαφή επιχειρήσεις που παρέχουν εφαρμογές ή υπηρεσίες Ανοιχτού Λογισμικού με εταιρείες και φορείς χρήστες.</p><p>Ο στόχος είναι να δημιουργηθεί μια κοινότητα από εταιρείες που παρέχουν υπηρεσίες ανοιχτού λογισμικού, ώστε να αναδειχθεί το εναλλακτικό μοντέλο επιχειρηματικότητας του Ανοιχτού Λογισμικού. Η δράση αυτή θα διοργανώνει σχετικές ημερίδες ή workshops για να αναδειχτούν λύσεις και καλές πρακτικές.</p><p>Εάν η εταιρεία σας παρέχει υπηρεσίες Ανοιχτού Λογισμικού μπορείτε να καταχωρίσετε τα βασικά στοιχεία του προφίλ σας στο WIKI στην σελίδα <a href="https://ellak.gr/wikis/%CF%87%CF%8E%CF%81%CE%BF%CF%82-%CF%83%CF%85%CE%BD%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82/eteries-pou-ipostirizoun-lisi/">Κατάλογος εταιριών που παρέχουν υπηρεσίες ΕΛ/ΛΑΚ</a>.</p><p>Περισσότερες πληροφορίες στην σχετική σελίδα στο  <a href="https://ellak.gr/wikis/%CF%87%CF%8E%CF%81%CE%BF%CF%82-%CF%83%CF%85%CE%BD%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82/">WIKI της ΕΕΛΛΑΚ</a>.</p>' }
+  - { name: 'kainotomia',
+      shortdesc: "<p>Επιχειρήσεις με R\\&D δραστηριότητα</p>",
+      longdesc: '<p>Λίστα της Εταιρείας Ελεύθερου Λογισμικού / Λογισμικού Ανοικτού Κώδικα, στο πλαίσιο των δράσεων της για συνεργασία και ενημέρωση όλων των φορέων και επιχειρήσεων που ενδιαφέρονται για δράσεις καινοτομίας που αφορούν τις ανοιχτές τεχνολογίες.</p><p>Εάν η εταιρεία σας παρέχει υπηρεσίες Ανοιχτού Λογισμικού μπορείτε να καταχωρίσετε τα βασικά στοιχεία του προφίλ σας στο WIKI στη σελίδα <a href="https://ellak.gr/wikis/%CF%87%CF%8E%CF%81%CE%BF%CF%82-%CF%83%CF%85%CE%BD%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82/eteries-pou-ipostirizoun-lisi/">Κατάλογος εταιριών που παρέχουν υπηρεσίες ΕΛ/ΛΑΚ</a><small>(απαιτείται να είστε <a href="https://ellak.gr/register/">εγγεγραμμένος</a> χρήστης του site της (<a href="https://ellak.gr">ΕΛ/ΛΑΚ</a>)</small>.</p>' }
+  - { name: 'mycontent',
+      shortdesc: 'Προώθηση ανοικτού ελληνικού περιεχομένου',
+      longdesc: '<p>Στην λίστα mycontent εγγράφονται όσοι ενδιαφέρονται να ενημερώνονται για δράσεις ανοιχτού περιεχομένου που υλοποιούνται στην Ελλάδα και διεθνώς. Περισσότερες πληροφορίες για την πρωτοβουλία στο δικτυακό τόπο <a href="https://mycontent.ellak.gr">https://mycontent.ellak.gr/</a>.</p>' }
+  - { name: 'open-source',
+      shortdesc: 'A general discussion list about the open-source movement in Greece',
+      longdesc: '<p>A general discussion list about the open-source movement in Greece. More information at <a href="https://ellak.gr">ellak.gr</a> (in Greek).</p>' }
+  - { name: 'open_licenses',
+      shortdesc: 'Προώθηση των ανοιχτών αδειών',
+      longdesc: '<p>Η λίστα απευθύνεται σε όσους ενδιαφέρονται να συμβάλουν στην προώθηση των ανοιχτών αδειών στην Ελλάδα.</p>
+      <p>Για επιπλέον πληροφορίες επισκεφτείτε στο WIKI της ΕΕΛ/ΛΑΚ την σελίδα της <a href="https://ellak.gr/wikis/%CF%87%CF%8E%CF%81%CE%BF%CF%82-%CF%83%CF%85%CE%BD%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82/%CE%BF%CE%BC%CE%AC%CE%B4%CE%B5%CF%82-%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B5%CF%82/omada-ergasias-gia-anichtes-adies-chr/">Ομάδας Εργασίας για Ανοιχτές Άδειες Χρήσης</a>, καθώς και το <a href="https://legal.ellak.gr/">blog της Ομάδας εργασίας για τις Ανοιχτές Άδειες Λογισμικού & Περιεχομένου</a>.</p>' }
+  - { name: 'opencourses',
+      shortdesc: 'Ομάδα Εργασίας για τα Ανοιχτά Μαθήματα',
+      longdesc: '<p>Λίστα για την Ομάδα Εργασίας για τα Ανοιχτά Μαθήματα.</p>
+
+<p>Για επιπλέον πληροφορίες επισκεφτείτε στο WIKI της ΕΕΛ/ΛΑΚ την σελίδα της <a href="https://ellak.gr/wikis/%CF%87%CF%8E%CF%81%CE%BF%CF%82-%CF%83%CF%85%CE%BD%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82/%CE%BF%CE%BC%CE%AC%CE%B4%CE%B5%CF%82-%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B5%CF%82/omada-ergasias-gia-anikta-mathimata/">Ομάδας Εργασίας για τα Ανοιχτά Μαθήματα</a>, καθώς και το <a href="http://opencourses.ellak.gr/">blog της Ομάδας Εργασίας για τα Ανοιχτά Μαθήματα</a>.</p>' }
+  - { name: 'opendata',
+      shortdesc: 'Δημόσια, Ανοικτά Δεδομένα',
+      longdesc: '<p>Η λίστα απευθύνεται σε όσους παράγουν ή χρησιμοποιούν ανοιχτά δεδομένα και επιθυμούν να ενημερώνονται για τις σχετικές δράσεις.</p>
+
+<p>Για επιπλέον πληροφορίες επισκεφτείτε στο WIKI της ΕΕΛ/ΛΑΚ την σελίδα της <a href="https://ellak.gr/wikis/%CF%87%CF%8E%CF%81%CE%BF%CF%82-%CF%83%CF%85%CE%BD%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82/%CE%BF%CE%BC%CE%AC%CE%B4%CE%B5%CF%82-%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B5%CF%82/omada-ergasias-gia-ta-anichta-dedomen/">Ομάδας εργασίας για τα Ανοιχτά Δεδομένα</a>, καθώς και το <a href="http://opendata.ellak.gr/">blog της Ομάδας εργασίας για τα Ανοιχτά Δεδομένα</a>.</p>' }
+  - { name: 'opengov',
+      shortdesc: 'Ομάδα Εργασίας για την Ανοιχτή Διακυβέρνηση (Open Governance)',
+      longdesc: '<p>Λίστα για την Ομάδα Εργασίας για την Ανοιχτή Διακυβέρνηση (Open Governance).</p>
+
+<p>Για επιπλέον πληροφορίες επισκεφτείτε στο WIKI της ΕΕΛ/ΛΑΚ την σελίδα της <a href="https://ellak.gr/wikis/%CF%87%CF%8E%CF%81%CE%BF%CF%82-%CF%83%CF%85%CE%BD%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82/%CE%BF%CE%BC%CE%AC%CE%B4%CE%B5%CF%82-%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B5%CF%82/omada-ergasias-gia-tin-anichti-diakiv/">Ομάδα Εργασίας για την Ανοιχτή Διακυβέρνηση (Open Governance)</a>καθώς και το <a href="https://opengov.ellak.gr/">blog της Ομάδας εργασίας για την Ανοιχτή Διακυβέρνηση (Open Governance)</a>.</p>' }
+  - { name: 'openhardware',
+      shortdesc: 'Ομάδα Εργασίας για τις Ανοιχτές Τεχνολογίες Υλικού (Open Hardware)',
+      longdesc: '<p>Λίστα για την Ομάδα Εργασίας για τις Ανοιχτές Τεχνολογίες Υλικού (Open Hardware).</p>
+
+<p>Για επιπλέον πληροφορίες επισκεφτείτε στο WIKI της ΕΕΛ/ΛΑΚ την σελίδα της <a href="https://ellak.gr/wikis/%CF%87%CF%8E%CF%81%CE%BF%CF%82-%CF%83%CF%85%CE%BD%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82/%CE%BF%CE%BC%CE%AC%CE%B4%CE%B5%CF%82-%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B5%CF%82/omada-ergasias-gia-tis-anichtes-techno/">Ομάδα Εργασίας για τις Ανοιχτές Τεχνολογίες Υλικού (Open Hardware)</a>, καθώς και το <a href="http://openhardware.ellak.gr/">blog της Ομάδας Εργασίας για τις Ανοιχτές Τεχνολογίες Υλικού (Open Hardware)</a>.</p>' }
+  - { name: 'openwifi',
+      shortdesc: 'Ανοιχτή ασύρματη πρόσβαση',
+      longdesc: '<p>Λίστα ανταλλαγής απόψεων και εμπειρίας για την υλοποίηση και προώθηση της δράσης της ΕΕΛΛΑΚ για ανοιχτή ασύρματη πρόσβαση σε ευρυζωνικά δίκτυα αξιοποιώντας εργαλεία και πλατφόρμες Ανοιχτού Λογισμικού και Aνοιχτού Yλικού (hardware).</p>
+
+<p>Αναλυτική πληροφόρηση στο <a href="http://www.openwifi.gr/">http://www.openwifi.gr/</a>.</p>' }
+  - { name: 'organogramma',
+      shortdesc: 'Εφαρμογή Οργανογράμματος',
+      longdesc: '<p>Λίστα γενικής συζήτησης για την Εφαρμογή Οργανογράμματος.</p>
+
+<p>Περισσότερα για την εφαρμογή μπορείτε να βρείτε στο <a href="https://github.com/eellak/orgchart/">https://github.com/eellak/orgchart</a>.</p>' }
+  - { name: 'press',
+      shortdesc: 'Ενημέρωση για τις δράσεις της ΕΕΛ/ΛΑΚ',
+      longdesc: '<p>Η λίστα απευθύνεται σε δημοσιογράφους, bloggers και όσους επιθυμούν να ενημερώνονται για τις δράσεις της Εταιρείας Ελεύθερου Λογισμικού / Λογισμικού Ανοικτού Κώδικα(ΕΕΛ/ΛΑΚ).</p>
+
+<p>Όλα τα δελτία τύπου είναι διαθέσιμα στην σελίδα <a href="https://ellak.gr/%CE%B5%CE%BD%CE%B7%CE%BC%CE%AD%CF%81%CF%89%CF%83%CE%B7/%CE%B4%CE%B5%CE%BB%CF%84%CE%AF%CE%B1-%CF%84%CF%8D%CF%80%CE%BF%CF%85/">Ενημέρωση</a>.</p>' }
+  - { name: 'privacy',
+      shortdesc: 'Ομάδα Εργασίας: Ασφάλεια Πληροφοριακών Συστημάτων',
+      longdesc: '<p>Λίστα για την Ομάδα Εργασίας για Ασφάλεια Πληροφοριακών Συστημάτων.</p>
+
+<p>Για επιπλέον πληροφορίες επισκεφτείτε στο WIKI της ΕΕΛ/ΛΑΚ την σελίδα της <a href="https://ellak.gr/wikis/%CF%87%CF%8E%CF%81%CE%BF%CF%82-%CF%83%CF%85%CE%BD%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82/%CE%BF%CE%BC%CE%AC%CE%B4%CE%B5%CF%82-%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B5%CF%82/omada-ergasias-gia-asfalia-plirofor/">Ομάδας Εργασίας για Ασφάλεια Πληροφοριακών Συστημάτων</a>, καθώς και το <a href="https://privacy.ellak.gr">blog της Ομάδας Εργασίας για Ασφάλεια Πληροφοριακών Συστημάτων</a>.</p>' }
+  - { name: 'scriptum-users',
+      shortdesc: "SCRIPTUM: εφαρμογή Ανοιχτού Λογισμικού για τήρηση πρωτοκόλλου και ανάθεσης υποθέσεων",
+      longdesc: '<p>Λίστα για όσους επιθυμούν να δοκιμάσουν και να βελτιώσουν το SCRIPTUM.</p>
+
+<p>Το SCRIPTUM είναι μια διαδικτυακή εφαρμογή Ανοιχτού Λογισμικού, που σκοπό έχει να μηχανογραφήσει τις εξής δύο βασικές λειτουργίες:</p>
+
+<ol>
+<li>Την τήρηση του βιβλίου πρωτοκόλλου στις Υπηρεσίες του Δημοσίου σύμφωνα με το Κανονισμό Επικοινωνίας Δημοσίων Υπηρεσιών του Υπουργείου Εσωτερικών, Αποκέντρωσης και Ηλεκτρονικής Διακυβέρνησης (2003).</li>
+<li>Την υλοποίηση ενός Συστήματος Αναθέσεων και Διαχείρισης Υποθέσεων.</li>
+</ol>
+
+<p>Επιπλέον πληροφορίες στο <a href="http://www.scriptum.gr/">www.scriptum.gr</a>.</p>' }
+  - { name: 'wg-members',
+      shortdesc: 'Ομάδες ΕΕΛ/ΛΑΚ',
+      longdesc: 'Λιστα για τα μελη των ομάδων εργασίας της ΕΕΛ/ΛΑΚ. Για επιπλέον πληροφορίες επισκεφτείτε το <a href="https://go.eellak.gr/omades-wiki">https://go.eellak.gr/omades-wiki</a>.' }
+  - { name: 'smartcities',
+      shortdesc: 'Λίστα Ενημέρωσης για τις Ανοιχτές Τεχνολογίες για τη Σύγχρονη Πόλη (Smart Cities)',
+      longdesc: 'Λίστα για τις Ανοιχτές Τεχνολογίες στην Πόλη. Για επιπλέον πληροφορίες επισκεφτείτε το <a href="https://smartcities.ellak.gr">https://smartcities.ellak.gr</a>.' }
+
+private_lists:
+  - { name: 'testlist',
+      shortdesc: 'Δοκιμαστική λίστα',
+      longdesc: '' }
+  - { name: 'cyber-defence',
+      shortdesc: 'Ομάδα Εργασίας για θέματα Κυβερνοπολέμου',
+      longdesc: '' }
+  - { name: 'epistimoniki-epitropi-ellak',
+      shortdesc: 'Επιστημονική Επιτροπή ΕΕΛ/ΛΑΚ',
+      longdesc: '' }
+  - { name: 'ma-members',
+      shortdesc: 'Λίστα για τους εγγεγραμμένους χρήστες των Μονάδων Αριστείας',
+      longdesc: '' }
+  - { name: 'monades-aristeias',
+      shortdesc: 'Συνεργάτες Μονάδων Αριστείας',
+      longdesc: '<p>Εσωτερική λίστα της ΕΕΛ/ΛΑΚ για τον συντονισμό των μελών της που συμμετέχουν στην υλοποίηση της δράσης Μονάδες Αριστείας.</p>' }
+  - { name: 'mycontent-epitropi',
+      shortdesc: 'Επιτροπή υποστήριξης της δράσης Ανοιχτού Περιεχομένου',
+      longdesc: '<p>Στο πλαίσιο της πρωτοβουλίας <a href="https://mycontent.ellak.gr">MyContent</a>, η ΕΕΛ/ΛΑΚ συγκρότησε η Πανελλαδική Επιτροπή Στήριξης της δράσης, η οποία περιλαμβάνει 2 άτομα από κάθε νομό της χώρας μας, με εξαίρεση την Αττική και τη Θεσσαλονίκη, που συμμετέχουν περισσότεροι.</p>
+
+      <p>Οι σκοποί της επιτροπής είναι:</p>
+
+      <ol>
+      <li>Υποστήριξη των δράσεων που θα γίνουν κατά τόπους, όπως σεμινάρια, παρουσιάσεις, επαναληπτικές εκδηλώσεις κλπ</li>
+      <li>Ανταλλαγή απόψεων, προτάσεων και ιδεών για την καλύτερη υποστήριξη του εγχειρήματος, αλλά και τη συνέχιση των δράσεων μετά από ένα σεμινάριο ή μία εκδήλωση, για να μη χάνεται η δυναμική που αναπτύσσεται.</li>
+      <li>Επαφές με εκπροσώπους ΟΤΑ (Περιφερειάρχες, Δημάρχους κλπ) και άλλων φορέων της περιοχής, που εκτιμούμε ότι μπορούν να συμβάλλουν.</li>
+      <li>Η παρακολούθηση, μέσω τηλεδιάσκεψης, των σεμιναρίων που γίνονται σε άλλο νομό ή πόλη, ώστε να μπορούν στη συνέχεια τα μέλη της Επιτροπής να οργανώσουν και να παρουσιάσουν σεμινάρια στην περιοχή τους.</li>
+      <li>Άλλες ιδέες και δράσεις που θα αναπτύξουμε στη συνέχεια.</li>
+      </ol>
+
+      <p>Περισσότερες πληροφορίες στο δικτυακό τόπο της δράσης <a href="https://mycontent.ellak.gr/">https://mycontent.ellak.gr/</a>.</p>' }
+  - { name: 'syntonistes_ma',
+      shortdesc: 'Συντονιστές Μονάδων Αριστείας Ανοιχτού Λογισμικού',
+      longdesc: '' }

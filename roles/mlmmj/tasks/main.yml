@@ -1,6 +1,48 @@
 ---
 # tasks file for mlmmj
 
+- name: Create archivist directory
+  file:
+    dest: "{{ list_path }}/{{ item.name }}/archivist/"
+    state: directory
+    owner: mlmmj
+    group: mlmmj
+    mode: 0755
+  with_items:
+    - "{{ public_lists }}"
+    - "{{ private_lists }}"
+
+- name: Hide private lists
+  file:
+    path: "{{ list_path }}/{{ item.name }}/archivist/homeless"
+    state: touch
+    owner: mlmmj
+    group: mlmmj
+    mode: 0644
+  with_items: private_lists
+
+- name: Add short description
+  template:
+    src: shortdesc.j2
+    dest: "{{ list_path }}/{{ item.name }}/archivist/shortdesc"
+    owner: mlmmj
+    group: mlmmj
+    mode: 0644
+  with_items:
+    - "{{ public_lists }}"
+    - "{{ private_lists }}"
+
+- name: Add long description
+  template:
+    src: longdesc.j2
+    dest: "{{ list_path }}/{{ item.name }}/archivist/longdesc"
+    owner: mlmmj
+    group: mlmmj
+    mode: 0644
+  with_items:
+    - "{{ public_lists }}"
+    - "{{ private_lists }}"
+
 - name: Copy footer message
   template:
     src: footer.j2
@@ -8,4 +50,6 @@
     owner: mlmmj
     group: mlmmj
     mode: 0644
-  with_items: public_lists
+  with_items:
+    - "{{ public_lists }}"
+    - "{{ private_lists }}"

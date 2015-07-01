@@ -67,8 +67,8 @@
   <br />
   <br />
   <table width="100%" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td align="center">
-    <table width="680" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="header" valign="bottom" align="middle" style="background-image: url(http://newsletter.ellak.gr/1406/header.jpg);background-repeat: no-repeat;background-position: top center;background-color: #b62e2e;height: 130px">
-      <img src="http://newsletter.ellak.gr/1406/header.jpg" alt="ΕΛΛΑΚ ΝΕΑ" width="680" height="130"/></td>
+    <table width="680" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="header" valign="bottom" align="middle" style="background-image: url(https://newsletter.ellak.gr/1406/header.jpg);background-repeat: no-repeat;background-position: top center;background-color: #b62e2e;height: 130px">
+      <img src="https://newsletter.ellak.gr/1406/header.jpg" alt="ΕΛΛΑΚ ΝΕΑ" width="680" height="130"/></td>
         </tr><tr><td>
         <!-- Left table -->
         <table class="content" width="680" border="0" cellpadding="0" cellspacing="16" height="130" style="background-color: #f5f5f5"><tbody><tr><td class="sidebar" valign="top" width="192" align="left">
@@ -117,7 +117,9 @@
 {% endfor %}
 
 <!-- ++++++  Planet  (start)  +++++++++ -->
+{% if planet %}
           <h3 style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">Πλανήτης Ελληνικής Κοινότητας Ελεύθερου Λογισμικού</h3>
+{% endif %}
 {% for item in planet %}
           <ul style="margin: 0 0 0 24px;padding: 0">
             <li style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323">
@@ -129,8 +131,9 @@
 {% endfor %}
 
 <!-- +++++  Opengov  (start)  ++++++ -->
+{% if opengov %}
           <h3 style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">Ανοιχτή Διακυβέρνηση</h3>
-
+{% endif %}
 {% for item in opengov %}
           <ul style="margin: 0 0 0 24px;padding: 0">
             <li style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323">
@@ -142,8 +145,9 @@
 {% endfor %}
 
 <!-- ++++++  OpenData  (start)  ++++++++ -->
+{% if opendata %}
           <h3 style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">Ανοιχτά Δεδομένα</h3>
-
+{% endif %}
 {% for item in opendata %}
           <ul style="margin: 0 0 0 24px;padding: 0">
             <li style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323">
@@ -155,8 +159,9 @@
 {% endfor %}
 
 <!-- ++++   OpenDataInstitute  (start)  +++++ -->
+{% if odi %}
           <h3 style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">Open Data Institute – Athens Node</h3>
-
+{% endif %}
 {% for item in odi %}
           <ul style="margin: 0 0 0 24px;padding: 0">
             <li style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323">
@@ -171,7 +176,6 @@
 {% if obs %}
           <h3 style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">Διεθνής συνεργασία για τους Ανοιχτούς Προϋπολογισμούς</h3>
 {% endif %}
-
 {% for item in obs %}
           <ul style="margin: 0 0 0 24px;padding: 0">
             <li style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323">
@@ -183,8 +187,9 @@
 {% endfor %}
 
 <!-- ++++++  EDU  (start)  +++++ -->
+{% if edu %}
           <h3 style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">Ανοιχτές τεχνολογίες στην εκπαίδευση</h3>
-
+{% endif %}
 {% for item in edu %}
           <ul style="margin: 0 0 0 24px;padding: 0">
             <li style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323">
@@ -196,8 +201,9 @@
 {% endfor %}
 
 <!-- +++++  OpenHardware  (start)  +++++ -->
+{% if openhardware %}
           <h3 style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">Ανοιχτές τεχνολογίες</h3>
-
+{% endif %}
 {% for item in openhardware %}
           <ul style="margin: 0 0 0 24px;padding: 0">
             <li style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323">
@@ -294,12 +300,10 @@
 
                           <!-- Do not edit below this line! -->
                           <center>
-                            <img src="http://newsletter.ellak.gr/images/hr-small.gif" alt="Small hr" width="192" height="28"/><ul style="margin: 0 0 0 24px;padding: 0"><li style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323;list-style-type:none;"><a href="http://newsletter.ellak.gr/newsletter_index.html" style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323;text-decoration: none;list-style-type:none;"><h2>Όλα τα ενημερωτικά δελτία</h2></a></li>
+                            <img src="https://newsletter.ellak.gr/images/hr-small.gif" alt="Small hr" width="192" height="28"/><ul style="margin: 0 0 0 24px;padding: 0"><li style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323;list-style-type:none;"><a href="https://newsletter.ellak.gr/newsletter_index.html" style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323;text-decoration: none;list-style-type:none;"><h2>Όλα τα ενημερωτικά δελτία</h2></a></li>
                           </center>
 
                           </ul>
-
-
 
                         </td>
 
@@ -307,13 +311,12 @@
 
               </tr></tbody></table><table width="750" border="0" cellpadding="0" cellspacing="0"><tbody><tr><td>
 
-                      <img src="http://newsletter.ellak.gr/1406/footer-tail.jpg" alt="Footer" width="750" height="87"/></td>
+                      <img src="https://newsletter.ellak.gr/1406/footer-tail.jpg" alt="Footer" width="750" height="87"/></td>
 
                   </tr><tr><td class="footer" align="center" style="padding: 20px 0 20px 0">
-                      <!--<p style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 8px;font-weight: normal;color: #151515">Αν δεν επιθυμείτε να λαμβάνετε ενημερώσεις μπορείτε να τροποποιήσετε τις ρυθμίσεις του προφίλ σας <a href="http://pommo.ellak.gr/pommo/login.php">εδώ</a><br/>-->
 
                       </p>
-                      <p style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #151515">Το υλικό του ΕΛΛΑΚ ΝΕΑ διανέμεται με την άδεια χρήσης:<br/><img src="http://newsletter.ellak.gr/images/cc_BY.png" width="88"/><br/><a style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #a72323;text-decoration: none" href="http://creativecommons.org/licenses/by/3.0/gr/">Creative Commons Αναφορά προέλευσης 3.0 Ελλάδα</a>.
+                      <p style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #151515">Το υλικό του ΕΛΛΑΚ ΝΕΑ διανέμεται με την άδεια χρήσης:<br/><img src="https://newsletter.ellak.gr/images/cc_BY.png" width="88"/><br/><a style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #a72323;text-decoration: none" href="https://creativecommons.org/licenses/by/3.0/gr/">Creative Commons Αναφορά προέλευσης 3.0 Ελλάδα</a>.
 
                       </p>
 

@@ -1,95 +1,68 @@
 ---
 
-month: "Μάϊος 2015"
-title: "ΕΛΛΑΚ ΝΕΑ - Μάϊος 2015"
+month: "Ιούνιος 2015"
+title: "ΕΛΛΑΚ ΝΕΑ - {{ month }}"
 
 ellak:
-  - { desc: "Ο οδηγός για το Scrum στα Ελληνικά", url: "https://ellak.gr/2015/05/odigos-gia-to-scrum-sta-ellinika/" }
-  - { desc: "Επιστολή της ΕΕΛ/ΛΑΚ για απόσυρση της τροπολογίας που αφορά τη Διαύγεια", url: "https://ellak.gr/2015/05/epistoli-tis-eellak-gia-aposirsi-tis-tropologias-pou-afora-ti-diaigia/" }
-  - { desc: "8 Μαϊου η προθεσμία των αιτήσεων για δωρεάν χρήση των υπηρεσιών του επιταχυντή του INNOVATHENS", url: "https://ellak.gr/2015/05/os-to-savvato-282-etisis-gia-dorean-chrisi-ton-ipiresion-tou-epitachinti/" }
-  - { desc: "Απάντηση της ΕΕΛ/ΛΑΚ για την τροπολογία που αφορά τη Διαύγεια", url: "https://ellak.gr/2015/05/epistoli-me-apantisi-tis-eellak-gia-tin-tropologias-pou-afora-ti-diaigia/" }
-  - { desc: "2ο πανελλήνιο συνέδριο για το Ελεύθερο Λογισμικό / Λογισμικό Ανοικτού Κώδικα (ΕΛ/ΛΑΚ) στην Εκπαίδευση (Χανιά, 8 έως 10 Μαΐου 2015)", url: "https://ellak.gr/2015/05/2o-panellinio-sinedrio-gia-to-elefthero-logismiko-logismiko-aniktou-kodika-ellak-stin-ekpedefsi-chania-8-eos-10-ma%CE%90ou-2015/" }
-  - { desc: "O Richard Stallman έρχεται στην Ελλάδα!", url: "https://ellak.gr/2015/05/richard-stallman-erchete-stin-ellada/" }
-  - { desc: "3o Φεστιβάλ των Κοινών (CommonsFest) στην Αθήνα", url: "https://ellak.gr/2015/05/3o-festival-ton-kinon-commonsfest-stin-athina/" }
-  - { desc: "Γιορτή Βικιπαίδειας!", url: "https://ellak.gr/2015/05/giorti-vikipedias/" }
-  - { desc: "Αναβάθμιση ψηφιακών υπηρεσιών στο Δήμο Λεβαδέων", url: "https://ellak.gr/2015/05/anavathmisi-psifiakon-ipiresion-sto-dimo-levadeon/" }
-  - { desc: "Μπορεί να βελτιωθεί η ασφάλεια του Ηλεκτρονικού Ταχυδρομείου;", url: "https://ellak.gr/2015/05/mpori-na-veltiothi-asfalia-tou-ilektronikou-tachidromiou/" }
-  - { desc: "Μπες και εσύ στον Επιχειρηματικό Επιταχυντή του INNOVATHENS, κάνε αίτηση!", url: "https://ellak.gr/2015/05/mpes-ke-esi-ston-epichirimatiko-epitachinti-tou-innovathens-kane-etisi/" }
-  - { desc: "O Richard Stallman στο INNOVATHENS!", url: "https://ellak.gr/2015/05/richard-stallman-sto-innovathens/" }
-  - { desc: "Απάντηση σε δήλωση του Πρωθυπουργού κ. Αλέξη Τσίπρα για τις ηλεκτρονικές ψηφοφορίες", url: "https://ellak.gr/2015/05/apantisi-se-dilosi-tou-prothipourgou-k-alexi-tsipra-gia-tis-ilektronikes-psifofories/" }
-  - { desc: "O Dr.Richard Stallman στο Ηράκλειο Κρήτης", url: "https://ellak.gr/2015/05/dr-richard-stallman-sto-iraklio-kritis/" }
-  - { desc: "Crowdhackathon #apodeiksi 13-14/06/2015", url: "https://ellak.gr/2015/05/crowdhackathon-apodeiksi-13-14062015/" }
-  - { desc: "Χρήση ελεύθερου λογισμικού GIS στις δασικές υπηρεσίες", url: "https://ellak.gr/2015/05/chrisi-eleftherou-logismikou-gis-stis-dasikes-ipiresies/" }
-  - { desc: "Κάλεσμα συμμετοχής σε ομάδες εργασίας της ΕΕΛ/ΛΑΚ", url: "https://ellak.gr/2015/05/kalesma-simmetochis-stis-omades-ergasias-tis-eellak/" }
-  - { desc: "Διανομή Ασφάλειας, ένα σύνολο εφαρμογών και εργαλείων, διαθέσιμα σαν debian package", url: "https://ellak.gr/2015/05/dianomi-asfalias-ena-sinolo-efarmogon-ke-ergalion-diathesima-san-debian-package/" }
-  - { desc: "Ξεκίνησαν οι αιτήσεις για τον 3ο κύκλο του επιχειρηματικού επιταχυντή", url: "https://ellak.gr/2015/05/xekinisan-etisis-gia-ton-3o-kiklo-tou-epichirimatikou-epitachinti/" }
-  - { desc: "Athens GovJam, 9-11/06/2015", url: "https://ellak.gr/2015/05/athens-govjam-9-11062015/" }
-  - { desc: "Adhocracy Από την κατασκευή αντικειμένων στη δημιουργία των κοινών", url: "https://ellak.gr/2015/05/adhocracy-apo-tin-kataskevi-antikimenon-sti-dimiourgia-ton-kinon" }
+  - { desc: "5o e-GOVERNMENT FORUM 2015", url: "https://ellak.gr/2015/06/5o-e-government-forum-2015/" }
+  - { desc: "7ο Green Connected World – The shape of cloud to come!", url: "https://ellak.gr/2015/06/7o-green-connected-world-the-shape-of-cloud-to-come/" }
+  - { desc: "Εισαγωγή στην Perl! Σεμινάριο από το GreekLUG", url: "https://ellak.gr/2015/06/isagogi-stin-perl-seminario-apo-to-greeklug/" }
+  - { desc: "Ελεύθερο λογισμικό και κοινωνική και αλληλέγγυα οικονομία", url: "https://ellak.gr/2015/06/elefthero-logismiko-ke-kinoniki-ke-allilengia-ikonomia-13062015/" }
+  - { desc: "Aνάπτυξη online στρατηγικής για την Μαστίχα!", url: "https://ellak.gr/2015/06/anaptixi-online-stratigikis-gia-tin-masticha/" }
+  - { desc: "2o Urban Design Fiction Hackathon στο πλαίσιο της έκθεσης Adhocracy: Από την κατασκευή αντικειμένων στη δημιουργία των κοινών", url: "https://ellak.gr/2015/06/2o-urban-design-fiction-hackathon-sto-plesio-tis-ekthesis-adhocracy-apo-tin-kataskevi-antikimenon-sti-dimiourgia-ton-kinon/" }
+  - { desc: "Μαραθώνιος Προγραμματισμού: ανοιχτά δεδομένα στις μεταφορές", url: "https://ellak.gr/2015/06/marathonios-programmatismou-anichta-dedomena-stis-metafores/" }
+  - { desc: "Το πρώτο Open water day στην Αθήνα, εκδημοκρατισμός στην παρακολούθηση της κατανάλωσης νερού", url: "https://ellak.gr/2015/06/to-proto-open-water-day-stin-athina-ekdimokratismos-stin-parakolouthisi-tis-katanalosis-nerou/" }
+  - { desc: "Οι 20 μεγαλύτεροι μύθοι περί (αν)ασφάλειας του Cloud", url: "https://ellak.gr/2015/06/20-megaliteri-mithi-peri-anasfalias-tou-cloud/" }
+  - { desc: "8ο Πανελλήνιο Συνέδριο των Εκπαιδευτικών για τις ΤΠΕ, Σύρος 26-28/06/2015", url: "https://ellak.gr/2015/06/8o-panellinio-sinedrio-ton-ekpedeftikon-gia-tis-tpe-siros-26-28062015" }
+  - { desc: "Η Πληροφορική μέσα και έξω από το Σχολείο, Χίος 26-28/06/2015", url: "https://ellak.gr/2015/06/pliroforiki-mesa-ke-exo-apo-to-scholio-chios-26-28062015/" }
 
 cc:
-  - { desc: "Εκδήλωση με θέμα: Άδειες Ανοιχτού Λογισμικού, Περιεχομένου και Δεδομένων στην πράξη", url: "http://creativecommons.gr/2015/05/14/%CE%B5%CE%BA%CE%B4%CE%AE%CE%BB%CF%89%CF%83%CE%B7-%CE%BC%CE%B5-%CE%B8%CE%AD%CE%BC%CE%B1-%CE%AC%CE%B4%CE%B5%CE%B9%CE%B5%CF%82-%CE%B1%CE%BD%CE%BF%CE%B9%CF%87%CF%84%CE%BF%CF%8D-%CE%BB%CE%BF%CE%B3%CE%B9/" }
+  - { desc: "Σώστε την μεταρρύθμιση των πνευματικών δικαιωμάτων! http://copywrongs.eu/", url: "http://creativecommons.gr/2015/06/05/%CF%83%CF%8E%CF%83%CF%84%CE%B5-%CF%84%CE%B7%CE%BD-%CE%BC%CE%B5%CF%84%CE%B1%CF%81%CF%81%CF%8D%CE%B8%CE%BC%CE%B9%CF%83%CE%B7-%CF%84%CF%89%CE%BD-%CF%80%CE%BD%CE%B5%CF%85%CE%BC%CE%B1%CF%84%CE%B9%CE%BA/" }
+  - { desc: "Ένα βίντεο για τις άδειες Commons από την Ε τάξη του Πρότυπου Πειραματικού Δημοτικού Σχολείου Φλώρινας", url: "http://creativecommons.gr/2015/06/30/%CE%AD%CE%BD%CE%B1-%CE%B2%CE%AF%CE%BD%CF%84%CE%B5%CE%BF-%CE%B3%CE%B9%CE%B1-%CF%84%CE%B9%CF%82-%CE%AC%CE%B4%CE%B5%CE%B9%CE%B5%CF%82-commons-%CE%B1%CF%80%CF%8C-%CF%84%CE%B7%CE%BD-%CE%B5-%CF%84%CE%AC/" }
 
 mycontent:
-  - { desc: "Γιορτή Βικιπαίδειας!", url: "https://mycontent.ellak.gr/archives/4461" }
-  - { desc: "3o Φεστιβάλ των Κοινών (CommonsFest) στην Αθήνα", url: "https://mycontent.ellak.gr/archives/4489" }
-  - { desc: "Value Talks: Ψηφιακή Αειφορία – Νέες Προοπτικές για Μουσεία και Πολιτιστικούς Οργανισμούς", url: "https://mycontent.ellak.gr/archives/4429" }
-  - { desc: "Ps value talks: Ψηφιακή Αειφορία / Νέες Προοπτικές για Μουσεία και Πολιτιστικούς Οργανισμούς, Απολογιστικό", url: "https://mycontent.ellak.gr/archives/4602" }
-  - { desc: "Τελετή λήξης για τη δράση «Μαραθώνιος Βικιπαίδειας για την 25η Μαρτίου με επίκεντρο το Εθνικό Ιστορικό Μουσείο»", url: "https://mycontent.ellak.gr/archives/4416" }
+  - { desc: "Σεμινάριο εξοικείωσης με τη Βικιπαίδεια στο Ηράκλειο στις 13/06", url: "https://mycontent.ellak.gr/archives/4679" }
+  - { desc: "oercommons.org μια ελεύθερη εκπαιδευτική ψηφιακή βιβλιοθήκη", url: "https://mycontent.ellak.gr/archives/4718" }
 
 planet:
-  - { desc: "Ubuntu 15.10 και το όνομα αυτής", url: "https://ellak.gr/2015/05/nea-apo-ton-planiti-planet-ellak-gr-ubuntu-15-10-ke-to-onoma-aftis/" }
-  - { desc: "Κατάργηση ηλεκτρονικών ψηφοφοριών και ψηφιακός αναλφαβητισμός", url: "https://ellak.gr/2015/05/nea-apo-ton-planiti-planet-ellak-gr-katargisi-ilektronikon-psifoforion-ke-psifiakos-analfavitismos/" }
-  - { desc: "Η πρόκληση του #100wikidays", url: "https://ellak.gr/2015/05/nea-apo-ton-planiti-planet-ellak-gr-proklisi-tou-100wikidays/" }
-  - { desc: "Κυκλοφορία της διανομής Fedora 22", url: "https://ellak.gr/2015/05/nea-apo-ton-planiti-planet-ellak-gr-kikloforia-tis-dianomis-fedora-22/" }
+  - { desc: "10 extensions για GNOME", url: "https://ellak.gr/2015/06/nea-apo-ton-planiti-planet-ellak-gr-10-extensions-gia-gnome/" }
+  - { desc: "Απολογισμός προφεστιβαλικής εκδήλωσης Ηρακλείου #CommonsFest", url: "https://ellak.gr/2015/06/nea-apo-ton-planiti-planet-ellak-gr-apologismos-profestivalikis-ekdilosis-irakliou-commonsfest/" }
+  - { desc: "Bράβευση των εκπαιδευόμενων του Σχολείου Δεύτερης Ευκαιρίας Κέρκυρας", url: "https://ellak.gr/2015/06/nea-apo-ton-planiti-planet-ellak-gr-bravefsi-ton-ekpedevomenon-tou-scholiou-defteris-efkerias-kerkiras/" }
 
 opengov:
-  - { desc: "Προτάσεις Πολιτικής για την αξιοποίηση των ανοιχτών τεχνολογιών", url: "https://opengov.ellak.gr/?p=427" }
-  - { desc: "Η θεσμοθέτηση του opengov θέλει πολιτική βούληση", url: "https://opengov.ellak.gr/?p=433" }
-  - { desc: "Αναβάθμιση ψηφιακών υπηρεσιών στο Δήμο Λεβαδέων", url: "https://opengov.ellak.gr/?p=439" }
+  - { desc: "Η σαρωτική μεταρρύθμιση που δεν εξετάζουν κυβέρνηση και θεσμοί και πώς μπορεί άμεσα να εφαρμοστεί", url: "https://opengov.ellak.gr/?p=447" }
 
 opendata:
-  - { desc: "Open Budget Survey Tracker – Διεθνής Πρωτοβουλία για Ανοιχτούς Προϋπολογισμούς – δράσεις ανοιχτών οικονομικών δεδομένων", url: "https://opendata.ellak.gr/?p=509" }
+  - { desc: "Κατάλογος με Ανοιχτά Σύνολα Δεδομένων", url: "https://opendata.ellak.gr/?p=527" }
+  - { desc: "Διαγωνισμός Copernicus Masters 2015", url: "https://opendata.ellak.gr/?p=518" }
 
 odi:
-  - { desc: "Open Data 500 (OD500)", url: "https://odi.ellak.gr/?p=228" }
-  - { desc: "Open Data στο G8", url: "https://odi.ellak.gr/?p=233" }
+  - { desc: "Θερμοκοιτίδα Ανοιχτών Δεδομένων της Ευρώπης – ODINE", url: "https://odi.ellak.gr/?p=238" }
 
 obs: []
 
 edu:
-  - { desc: "Προτάσεις Πολιτικής για την αξιοποίηση των ανοιχτών τεχνολογιών στην Παιδεία", url: "https://edu.ellak.gr/%CF%80%CF%81%CE%BF%CF%84%CE%AC%CF%83%CE%B5%CE%B9%CF%82-%CF%80%CE%BF%CE%BB%CE%B9%CF%84%CE%B9%CE%BA%CE%AE%CF%82-%CE%B3%CE%B9%CE%B1-%CF%84%CE%B7%CE%BD-%CE%B1%CE%BE%CE%B9%CE%BF%CF%80%CE%BF%CE%AF%CE%B7/" }
-  - { desc: "Ένα Μαζικό, Ελεύθερο, Διαδικτυακό, Μάθημα (Massive, Open, Online, Course – MOOC) για τη δευτεροβάθμια εκπαίδευση", url: "https://edu.ellak.gr/%CE%AD%CE%BD%CE%B1-%CE%BC%CE%B1%CE%B6%CE%B9%CE%BA%CF%8C-%CE%B5%CE%BB%CE%B5%CF%8D%CE%B8%CE%B5%CF%81%CE%BF-%CE%B4%CE%B9%CE%B1%CE%B4%CE%B9%CE%BA%CF%84%CF%85%CE%B1%CE%BA%CF%8C-%CE%BC%CE%AC%CE%B8%CE%B7/" }
-  - { desc: "Διανομή Edu-Preschool για εκπαιδευτικούς προσχολικής ηλικίας", url: "https://edu.ellak.gr/%CF%80%CE%B1%CF%81%CE%BF%CF%85%CF%83%CE%AF%CE%B1%CF%83%CE%B7-%CE%B4%CE%B9%CE%B1%CE%BD%CE%BF%CE%BC%CE%AE%CF%82-edu-preschool/" }
-  - { desc: "Συμπεράσματα και Προτάσεις 2ου συνεδρίου για το Ελεύθερο Λογισμικό / Λογισμικό Ανοικτού Κώδικα (ΕΛ/ΛΑΚ) στην Εκπαίδευση", url: "https://edu.ellak.gr/%CF%83%CF%85%CE%BC%CF%80%CE%B5%CF%81%CE%AC%CF%83%CE%BC%CE%B1%CF%84%CE%B1-%CE%BA%CE%B1%CE%B9-%CF%80%CF%81%CE%BF%CF%84%CE%AC%CF%83%CE%B5%CE%B9%CF%82-2%CE%BF%CF%85-%CF%83%CF%85%CE%BD%CE%B5%CE%B4%CF%81/" }
-  - { desc: "Ανοικτά Δεδομένα και Σημασιολογικός Ιστός με το ΕΛ/ΛΑΚ CMS Drupal στο Α.Π.Θ., εργαστήριο Η/Υ Τμ. Μαθηματικών, νέος ιστοχώρος Σ.Θ.Ε.", url: "https://edu.ellak.gr/%CE%B1%CE%BD%CE%BF%CE%B9%CE%BA%CF%84%CE%AC-%CE%B4%CE%B5%CE%B4%CE%BF%CE%BC%CE%AD%CE%BD%CE%B1-%CE%BA%CE%B1%CE%B9-%CF%83%CE%B7%CE%BC%CE%B1%CF%83%CE%B9%CE%BF%CE%BB%CE%BF%CE%B3%CE%B9%CE%BA%CF%8C%CF%82/" }
-  - { desc: "The Aiolos Project – Δημιουργώντας το Σχολικό Υπερ-υπολογιστή", url: "https://edu.ellak.gr/the-aiolos-project-%CE%B4%CE%B7%CE%BC%CE%B9%CE%BF%CF%85%CF%81%CE%B3%CF%8E%CE%BD%CF%84%CE%B1%CF%82-%CF%84%CE%BF-%CF%83%CF%87%CE%BF%CE%BB%CE%B9%CE%BA%CF%8C-%CF%85%CF%80%CE%B5%CF%81-%CF%85/" }
+  - { desc: "Ενα Διδακτικό Σενάριο για το Ελεύθερο Λογισμικό", url: "https://edu.ellak.gr/%CE%B5%CE%BD%CE%B1-%CE%B4%CE%B9%CE%B4%CE%B1%CE%BA%CF%84%CE%B9%CE%BA%CF%8C-%CF%83%CE%B5%CE%BD%CE%AC%CF%81%CE%B9%CE%BF-%CE%B3%CE%B9%CE%B1-%CF%84%CE%BF-%CE%B5%CE%BB%CE%B5%CF%8D%CE%B8%CE%B5%CF%81%CE%BF/" }
 
 openhardware:
-  - { desc: "Hubble open hardware laser cutter", url: "https://openhardware.ellak.gr/?p=191" }
-
+  - { desc: "Πιστοποίηση προσπαθειών ανοιχτού υλισμικού (Open Source Hardware Certification)", url: "https://openhardware.ellak.gr/?p=195" }
 
 openwifi: []
 
 legal: []
 
 events:
-  - { desc: "1η εβδομάδα", url: "https://ellak.gr/2015/05/ekdilosis-tis-evdomadas-gia-tis-anichtes-technologies-ke-tin-kenotomia-35/" }
-  - { desc: "2η εβδομάδα", url: "https://ellak.gr/2015/05/ekdilosis-tis-evdomadas-gia-tis-anichtes-technologies-ke-tin-kenotomia-36/" }
-  - { desc: "3η εβδομάδα", url: "https://ellak.gr/2015/05/ekdilosis-tis-evdomadas-gia-tis-anichtes-technologies-ke-tin-kenotomia-37/" }
-  - { desc: "4η εβδομάδα", url: "https://ellak.gr/2015/05/ekdilosis-tis-evdomadas-gia-tis-anichtes-technologies-ke-tin-kenotomia-39/" }
+  - { desc: "1η εβδομάδα", url: "https://ellak.gr/2015/06/ekdilosis-tis-evdomadas-gia-tis-anichtes-technologies-ke-tin-kenotomia-40/" }
+  - { desc: "2η εβδομάδα", url: "https://ellak.gr/2015/06/ekdilosis-tis-evdomadas-gia-tis-anichtes-technologies-ke-tin-kenotomia-41/" }
+  - { desc: "3η εβδομάδα", url: "https://ellak.gr/2015/06/ekdilosis-tis-evdomadas-gia-tis-anichtes-technologies-ke-tin-kenotomia-42/" }
+  - { desc: "4η εβδομάδα", url: "https://ellak.gr/2015/06/ekdilosis-tis-evdomadas-gia-tis-anichtes-technologies-ke-tin-kenotomia-43/" }
 
 main:
-  - { title: "Κάλεσμα Συμμετοχής στις ομάδες εργασίας της ΕΕΛ/ΛΑΚ", desc: "Γίνε μέλος στην ομάδα που σε εκφράζει!</br>
- - Ενδιαφέρεσαι για τα κοινά, το ανοιχτό λογισμικό, τις ανοιχτές τεχνολογίες, τα ανοιχτά δεδομένα και τις άδειες λογισμικού?</br>
-- Παρακολουθείς τις εξελίξεις γύρω από τις ανοιχτές τεχνολογίες ή τις δημιουργείς?</br>
-- Θέλεις να συμβάλλεις στην ανάπτυξη, προώθηση και διάδοση των κοινών?</br>
-- Σου αρέσει να μοιράζεσαι αυτά που ξέρεις?</br>
-- Έχεις διάθεση, όρεξη και χρόνο να οργανώνεις εκείνες τις δράσεις που θα ήθελες να δεις να υλοποιούνται (και δεν έχει βρεθεί κάποιος άλλος να το κάνει για σένα!)?", url: "https://ellak.gr/2015/05/kalesma-simmetochis-stis-omades-ergasias-tis-eellak/", img: "https://ellak.gr/wp-content/uploads/2015/04/volunteer_free_software_open_source_developer_linux_career_3.jpg" }
-  - { title: "Χρήση ελεύθερου λογισμικού GIS στις δασικές υπηρεσίες", desc: "H Εταιρεία Ελεύθερου Λογισμικού / Λογισμικού Ανοιχτού Κώδικα (ΕΕΛ/ΛΑΚ, www.eellak.gr) ενημερώνει για την απόφαση της Διεύθυνσης Πληροφορικής & Επικοινωνιών της Αποκεντρωμένης Διοίκησης Πελοποννήσου, Δυτικής Ελλάδας & Ιονίου (Α.Δ.Π.Δ.Ε.& Ι.), η οποία έστειλε έγγραφο στις δασικές, και όχι μόνο, υπηρεσίες της Αποκεντρωμένης αναφορικά με την καθιέρωση της χρήσης ελεύθερου λογισμικού Γεωγραφικών Συστημάτων Πληροφοριών Ανοιχτού Κώδικα.", url: "https://ellak.gr/2015/05/chrisi-eleftherou-logismikou-gis-stis-dasikes-ipiresies/", img: "https://ellak.gr/wp-content/uploads/2015/05/Geotecnologias-Livres.png" }
-  - { title: "Συμπεράσματα και Προτάσεις 2ου συνεδρίου για το Ελεύθερο Λογισμικό / Λογισμικό Ανοικτού Κώδικα (ΕΛ/ΛΑΚ) στην Εκπαίδευση", desc: "Στο «2ο πανελλήνιο συνέδριο ΕΛΛΑΚ για την εκπαίδευση» παρουσιάστηκε η ποιοτική και λειτουργική αξιοποίηση του ΕΛΛΑΚ στην εκπαιδευτική πραγματικότητα και καταγράφηκε η αυξανόμενη εφαρμογή του για την τεχνοικονομικά συμφέρουσα στήριξη και βελτίωση των εκπαιδευτικών, ερευνητικών και διοικητικών διαδικασιών της ελληνικών ακαδημαϊκών μονάδων. Φορείς αυτής της καινοτομίας είναι οι εκπαιδευτικοί της τάξης, εθελοντικές κοινότητες εκπαιδευτικών, ερευνητών κ.α στελεχών στο χώρο τις παιδείας, οι οποίοι βασιζόμενοι στο μεράκι τους, αξιοποίησαν υποδομές ΤΠΕ του ΠΣΔ, των ΚΕΠΛΗΝΕΤ, ΑΕΙ, ΤΕΙ, ΥΠΟΠΑΙΘ, στηριζόμενοι και από μια σειρά επιτυχημένες δράσεις για ανοικτές τεχνολογίες μέσω ευρωπαϊκών και εθνικών έργων.", url: "https://edu.ellak.gr/%CF%83%CF%85%CE%BC%CF%80%CE%B5%CF%81%CE%AC%CF%83%CE%BC%CE%B1%CF%84%CE%B1-%CE%BA%CE%B1%CE%B9-%CF%80%CF%81%CE%BF%CF%84%CE%AC%CF%83%CE%B5%CE%B9%CF%82-2%CE%BF%CF%85-%CF%83%CF%85%CE%BD%CE%B5%CE%B4%CF%81/", img: "https://edu.ellak.gr/wp-content/uploads/2015/05/afisa_sm-212x300.jpg" }
-  - { title: "Ps value talks: Ψηφιακή Αειφορία / Νέες Προοπτικές για Μουσεία και Πολιτιστικούς Οργανισμούς, Απολογιστικό", desc: "«Μια καταιγίδα ιδεών και ενημέρωσης για την εφαρμογή της τεχνολογίας στα μουσεία και τους πολιτιστικούς οργανισμούς» ήταν ο χαρακτηρισμός άρθρου της Καθημερινής για τη διημερίδα PS Value Talks: Ψηφιακή Αειφορία / Νέες προοπτικές για Μουσεία και Πολιτιστικούς Οργανισμούς που διοργάνωσε η PostScriptum σε συνεργασία με την Εταιρεία Ελεύθερου Λογισμικού/ Λογισμικού Ανοιχτού Κώδικα (ΕΕΛ/ΛΑΚ) και τον Κόμβο Καινοτομίας και Επιχειρηματικότητας της Τεχνόπολις του Δήμου Αθηναίων, INNOVATHENS.", url: "https://mycontent.ellak.gr/archives/4602", img: "https://mycontent.ellak.gr/wp-content/uploads/2015/05/21672_10152871917192405_4154567971656041694_n-e1432819054184-670x250.jpg" }
-  - { title: "Ξεκίνησαν οι αιτήσεις για τον 3ο κύκλο του επιχειρηματικού επιταχυντή", desc: "Το INNOVATHENS, ο Κόμβος Καινοτομίας και Επιχειρηματικότητας του Δήμου Αθηναίων υλοποιεί ένα δωρεάν τριμηνιαίο πρόγραμμα, τον «Επιχειρηματικό Επιταχυντή» με στόχο την ενίσχυση και στήριξη νεοφυών και υφισταμένων επιχειρήσεων, στο πλαίσιο των πολύμορφων δράσεών του για την προώθηση της καινοτομίας και της επιχειρηματικότητας.", url: "https://ellak.gr/2015/05/xekinisan-etisis-gia-ton-3o-kiklo-tou-epichirimatikou-epitachinti/", img: "https://ellak.gr/wp-content/uploads/2015/05/11230850_894291520636544_7920986576066591657_n.jpg" }
-  - { title: "Απάντηση της ΕΕΛ/ΛΑΚ για την τροπολογία που αφορά τη Διαύγεια", desc: "Η ΕΕΛ/ΛΑΚ σε συνέχεια της απάντησης που έδωσε ο αναπληρωτής υπουργός Οικονομικών κ. Μάρδας, απέστειλε εκ νέου επιστολή στους αρμόδιους υπουργούς οικονομικών και εσωτερικών και διοικητικής ανασυγκρότησης ζητώντας την απόσυρση της τροπολογίας και προτείνει να δοθεί προτεραιότητα στη διαλειτουργικότητα των πληροφοριακών συστημάτων των φορέων του δημοσίου ώστε να μειωθεί το διοικητικό κόστος που απαιτείται για τη χειρωνακτική ανάρτηση των αποφάσεων στη Διαύγεια.", url: "https://ellak.gr/2015/05/epistoli-me-apantisi-tis-eellak-gia-tin-tropologias-pou-afora-ti-diaigia/", img: "https://ellak.gr/wp-content/uploads/2015/05/ena.jpg" }
-  - { title: "Προτάσεις Πολιτικής για την αξιοποίηση των ανοιχτών τεχνολογιών στην Παιδεία", desc: "Tο ανοιχτό υλικό (open hardware) και το ανοιχτό περιεχόμενο μπορούν να αποτελέσουν βασικούς πυλώνες της εκπαιδευτικής διαδικασίας σε όλα τα επίπεδα (πρωτοβάθμια, δευτεροβάθμια, τριτοβάθμια) και να συνεισφέρουν ουσιαστικά στη βελτίωση του επιπέδου της εκπαίδευσης και της έρευνας  της χώρας μας. Η εμπειρία μας αποδεικνύει ότι κάτι τέτοιο είναι βιώσιμο και ενδυναμώνει διδάσκοντες και διδασκόμενους. Πλατφόρμες όπως π.χ. το Ψηφιακό Σχολείο (http://dschool.edu.gr/), τα Ανοιχτά Ψηφιακά Μαθήματα (http://opencourses.gr/), η Βικιπαίδεια, το Internet Archive, το Open Street Map, η Europeana, το OpenAire, κλπ μπορούν να λειτουργήσουν ως βασικά εκπαιδευτικά εργαλεία για την ενίσχυση των δραστηριοτήτων του ελληνικού δημόσιου σχολείου και πανεπιστημίου.", url: "https://edu.ellak.gr/%CF%80%CF%81%CE%BF%CF%84%CE%AC%CF%83%CE%B5%CE%B9%CF%82-%CF%80%CE%BF%CE%BB%CE%B9%CF%84%CE%B9%CE%BA%CE%AE%CF%82-%CE%B3%CE%B9%CE%B1-%CF%84%CE%B7%CE%BD-%CE%B1%CE%BE%CE%B9%CE%BF%CF%80%CE%BF%CE%AF%CE%B7/", img: "https://edu.ellak.gr/wp-content/uploads/2014/08/6005580301_1e6e318478_o-300x168.png" }
-  - { title: "Τελετή λήξης για τη δράση «Μαραθώνιος Βικιπαίδειας για την 25η Μαρτίου με επίκεντρο το Εθνικό Ιστορικό Μουσείο»", desc: "Σας προσκαλούμε στην τελετή λήξης της δράσης «Μαραθώνιος Βικιπαίδειας για την 25η Μαρτίου με επίκεντρο το Εθνικό Ιστορικό Μουσείο» που θα λάβει χώρα στο χώρο του Μουσείου, στο κτήριο της Παλαιάς Βουλής (Πλ. Κολοκοτρώνη, Σταδίου 13, Αθήνα 10561) τη Δευτέρα 18 Μαΐου στις 10:30πμ στο πλαίσιο του εορτασμού της Παγκόσμιας Ημέρας Μουσείων", url: "https://mycontent.ellak.gr/archives/4416", img: "https://mycontent.ellak.gr/wp-content/uploads/2015/04/wiki_web_c-300x295.jpg" }
-  - { title: "PS Value Talks: Ψηφιακή Αειφορία – Νέες Προοπτικές για Μουσεία και Πολιτιστικούς Οργανισμούς", desc: "Με αφορμή τον εορτασμό της Διεθνούς Ημέρας των Μουσείων 2015 με θέμα «Μουσεία για μια βιώσιμη κοινωνία» η εταιρία PostScriptum σε συνεργασία με την Εταιρεία Ελεύθερου Λογισμικού/ Λογισμικού Ανοιχτού Κώδικα (ΕEΛ/ΛΑΚ) και με τον κόμβο καινοτομίας και επιχειρηματικότητας, INNOVATHENS διοργανώνει τη διημερίδα Ψηφειακή Αειφορία/ Νέες Προοπτικές για Μουσεία και Πολιτιστικούς Οργανισμούς. Η διημερίδα θα πραγματοποιηθεί στις 22 και 23 Μαΐου 2015, στο κτήριο του INNOVATHENS στην Τεχνόπολη (Πειραιώς 100, Αθήνα, χάρτης, Αεριοφυλάκιο 2) του Δήμου Αθηναίων, εκεί όπου στεγάζεται και το Innovathens, και τελεί υπό την αιγίδα του Ελληνικού Τμήματος του ICOM (Διεθνές Συμβούλιο Μουσείων).", url: "https://mycontent.ellak.gr/archives/4429", img: "https://mycontent.ellak.gr/wp-content/uploads/2015/05/psvalue_site_background_logo_cropped-670x250.jpg" }
+  - { title: "Κατάλογος με Ανοιχτά Σύνολα Δεδομένων", desc: "Η ΕΕΛ/ΛΑΚ στο πλαίσιο των δράσεων της ομάδας εργασίας για τα ανοιχτά δεδομένα (https://opendata.ellak.gr/ ) έχει καταγράψει όλα τα σύνολα δεδομένων που είναι ανοιχτά στον παρακάτω πίνακα. Στο http://go.eellak.gr/datasets συντηρούνται προσωρινά όλα τα σύνολα δεδομένων που εχουν καταγραφεί έως σήμερα.  Όσοι έχουν νέα σύνολα δεδομένων να προτείνουν μπορούν να στείλουν email στο datasets@eellak.gr.", url: "https://opendata.ellak.gr/?p=527", img: "http://opendata.ellak.gr/wp-content/uploads/2015/06/opendata.jpg" }
+  - { title: "Οι 20 μεγαλύτεροι μύθοι περί (αν)ασφάλειας του Cloud", desc: "Ήδη από το 2011, το «σύννεφο» αποτελεί ένα από τα πιο συζητημένα θέματα όσον αφορά την ασφάλειά του. Το cloud μπορεί πριν από 4 χρόνια να ήταν απλά «νέα μόδα» αλλά σήμερα είναι πλέον ένα απαραίτητο επιχειρηματικό εργαλείο. Δυστυχώς, η σύγχυση σχετικά με την αποτελεσματική χρήση του έχει οδηγήσει σε μια σειρά από μύθους, δημιουργώντας ποικίλες ανησυχίες.</br>
+  Ποιοι είναι οι μύθοι για την ασφάλεια του σύννεφου που συνεχίζουν να κυκλοφορούν και ποιες οι αλήθειες;", url: "https://ellak.gr/2015/06/20-megaliteri-mithi-peri-anasfalias-tou-cloud/", img: "https://ellak.gr/wp-content/uploads/2015/06/msftone_cloudperspective2-100585117-primary.idge_.png" }
+  - { title: "Ένα βίντεο για τις άδειες Commons από την Ε τάξη του Πρότυπου Πειραματικού Δημοτικού Σχολείου Φλώρινας", desc: "Οι μαθητές/τριες της Ε΄ τάξης του Πρότυπου Πειραματικού Δημοτικού Σχολείου Φλώρινας με την συνεργασία του δασκάλου τους Κωνσταντίνου Σεχίδη και του καθηγητή πληροφορικής Γιάννη Αρβανιτάκη συμμετείχαν στο διαγωνισμό του Οργανισμού Πνευματικής Ιδιοκτησίας  και του Υπουργείου Πολιτισμού, Παιδείας και Θρησκευμάτων με την ταινία μικρού μήκους που δημιούργησαν, με τίτλο: «Αναμείξεις, μοιραζόμαστε τη δημιουργικότητα μας με τις άδειες Creative Commons» η οποία απέσπασε το Πρώτο Βραβείο στην κατηγορία video μεταξύ δεκάδων συμμετοχών.", url: "http://creativecommons.gr/2015/06/30/%CE%AD%CE%BD%CE%B1-%CE%B2%CE%AF%CE%BD%CF%84%CE%B5%CE%BF-%CE%B3%CE%B9%CE%B1-%CF%84%CE%B9%CF%82-%CE%AC%CE%B4%CE%B5%CE%B9%CE%B5%CF%82-commons-%CE%B1%CF%80%CF%8C-%CF%84%CE%B7%CE%BD-%CE%B5-%CF%84%CE%AC/", img: "http://creativecommons.gr/wp-content/uploads/2015/05/Tyler.stefanich_-_Creative_Commons_Swag_Contest_2007_2_by-300x200.jpg" }
+  - { title: "oercommons.org μια ελεύθερη εκπαιδευτική ψηφιακή βιβλιοθήκη", desc: "Το oercommons.org είναι ένα ολοκληρωμένο δίκτυο ανοιχτής μάθησης όπου οι εκπαιδευτικοί και οι μαθητές μπορούν να έχουν πρόσβαση σε πάνω από 70.000  πηγές ανοικτού εκπαιδευτικού περιεχομένου. Οι χρήστες μπορούν να αναζητήσουν, να περιηγηθούν, να συνεργαστούν, να συζητήσουν και να χρησιμοποιήσουν υλικό από όλες τις εκπαιδευτικές βαθμίδες και θέματα. Για παράδειγμα στο oercommons μπορείτε να βρείτε από πανεπιστημιακά μαθήματα και σημειώσεις , ψηφιακά βιβλία, εκπαιδευτικές εφαρμογές μέχρι και σχέδια μαθημάτων και δραστηριοτήτων για το νηπιαγωγείο.", url: "https://mycontent.ellak.gr/archives/4718", img: "https://mycontent.ellak.gr/wp-content/uploads/2015/06/Logo_OER-670x250.png" }
+  - { title: "Η σαρωτική μεταρρύθμιση που δεν εξετάζουν κυβέρνηση και θεσμοί και πώς μπορεί άμεσα να εφαρμοστεί", desc: "Πολλές φορές έχουμε ακούσει για τη βούληση της κυβέρνησης να προβεί σε «σαρωτικές μεταρρυθμίσεις». Αν αυτή η θέση είναι πραγματικά ειλικρινής, να μια μεταρρύθμιση που μπορεί να δώσει τεράστια ώθηση στη λειτουργία του κράτους, στην κοινωνία και στους θεσμούς μας χωρίς κανένα δημοσιονομικό κόστος. Αφορά στην ανοιχτή αξιοκρατική στελέχωση όλων των κρατικών θέσεων ευθύνης: γενικών γραμματέων, διοικητών οργανισμών, γενικών διευθυντών και διευθυντών.", url: "https://opengov.ellak.gr/?p=447", img: "http://opengov.ellak.gr/wp-content/uploads/2015/05/4459199503_01e571dc0e_o-300x168.png" }
+  - { title: "Ενα Διδακτικό Σενάριο για το Ελεύθερο Λογισμικό", desc: "Το ελεύθερο λογισμικό ως εργαλείο κατέχει ήδη σημαντική θέση στην ελληνική εκπαίδευση: Εκατοντάδες σχολεία χρησιμοποιούν τη λύση Ubuntu LTSP στα εργαστήριά τους, όπως εκατοντάδες είναι και τα διαθέσιμα ελεύθερα προγράμματα που χρησιμοποιούνται στα σχολικά εργαστήρια. Ένα μεγάλο μέρος του λογισμικού που περιλαμβάνεται στην επιμόρφωση Β’ Επιπέδου των εκπαιδευτικών είναι ελεύθερα, ενώ και οι υπηρεσίες του Πανελλήνιου Σχολικού Δικτύου στηρίζονται σχεδόν αποκλειστικά στο ελεύθερο λογισμικό.", url: "https://edu.ellak.gr/%CE%B5%CE%BD%CE%B1-%CE%B4%CE%B9%CE%B4%CE%B1%CE%BA%CF%84%CE%B9%CE%BA%CF%8C-%CF%83%CE%B5%CE%BD%CE%AC%CF%81%CE%B9%CE%BF-%CE%B3%CE%B9%CE%B1-%CF%84%CE%BF-%CE%B5%CE%BB%CE%B5%CF%8D%CE%B8%CE%B5%CF%81%CE%BF/", img: "ltsp.jpg" }
+  - { title: "Θερμοκοιτίδα Ανοιχτών Δεδομένων της Ευρώπης – ODINE", desc: "Η Ευρώπη στηρίζει την επόμενη γενιά των «ψηφιακών» επιχειρήσεων δημιουργώντας την  θερμοκοιτίδα Ανοιχτών Δεδομένων (<a href='https://opendataincubator.eu/'>Open Data Incubator for Europe – ODINE</a>). Σκοπός της ODINE είναι να βοηθήσει τους Ευρωπαίους πολίτες να ιδρύσουν βιώσιμες επιχειρήσεις χρησιμοποιώντας τα ανοιχτά δεδομένα. Η θερμοκοιτίδα ανοιχτών δεδομένων για την Ευρώπη θα προσφέρει μέχρι € 100.000 και θα δημιουργήσει ένα πανευρωπαϊκό δίκτυο με τη συμμετοχή επιχειρηματικών αγγέλων, VCs και φορέων χρηματοδότησης για τη στήριξη μικρομεσαίων και νεοσύστατων επιχειρήσεων στη δημιουργία εμπορικής αξίας από τα ανοικτά δεδομένα.", url: "https://odi.ellak.gr/?p=238", img: "odine.png" }

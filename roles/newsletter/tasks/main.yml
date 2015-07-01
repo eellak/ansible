@@ -10,19 +10,18 @@
 
 - name: ellak | Create monthly dir
   file:
-    path: "{{ archive_path }}/{{ latest }}"
+    path: "{{ archive_path }}/{{ ellak_latest }}"
     state: directory
     owner: newsletters
     group: newsletters
     mode: 0755
-    recurse: yes
   tags:
     - ellak
 
 - name: ellak | Copy newsletter index.html
   template:
     src: ellak_index.html.j2
-    dest: "{{ archive_path }}/{{ latest }}/index.html"
+    dest: "{{ archive_path }}/{{ ellak_latest }}/index.html"
     owner: newsletters
     group: newsletters
     mode: 0644

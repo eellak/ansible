@@ -46,6 +46,18 @@ radio
 wiki
 gitlab
 
+[ellak:children]
+web
+owncloud
+redmine
+radio
+mail
+maellak
+wiki
+gitlab
+adminvm
+devvm
+
 [vima:children]
 mail
 maellak

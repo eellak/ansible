@@ -1,0 +1,36 @@
+---
+- hosts: ma.ellak.gr
+  sudo: yes
+
+  tasks:
+  - name: Extract ma_users to file
+    shell: mysql -uroot maellakgr -e "select user_email from ma_users;" | grep -v user_email > /root/ma_users.txt
+    args:
+      chdir: '/root/'
+
+  - name: Download ma_users file
+    fetch:
+      src: '/root/ma_users.txt'
+      dest: '../files/tmp/'
+      validate_checksum: yes
+
+
+- hosts: mail1.ellak.gr
+  sudo: yes
+
+  tasks:
+    - name: Copy ma_users.txt to mail server
+      copy:
+        src: '../files/tmp/ma.ellak.gr/root/ma_users.txt'
+        dest: '/root/ma_users.txt'
+
+    - name: Add ma_users to ma-members list
+      shell: "for i in $(cat /root/ma_users.txt); do sudo -u mlmmj /usr/bin/mlmmj-sub -L /var/spool/mlmmj/ellak.gr/ma-members -a $i -q -f; done"
+      register: add_to_list
+
+    - name: Remove ma_users file
+      file:
+        dest: /root/ma_users.txt
+        state: absent
+      when: add_to_list|success
+

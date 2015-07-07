@@ -1,0 +1,15 @@
+---
+# The path where parsoid code will be cloned
+parsoid_path: /var/mediawiki-parsoid
+
+# You can set up multiple wikis using the same parsoid server.
+# More info: https://www.mediawiki.org/wiki/Parsoid/Setup#Configuration
+#
+#parsoid_api_endpoints:
+#  - uid: 'myid'
+#    uri: 'https://mywiki.org/api.php'
+parsoid_api_endpoints: []
+
+# Port that parsoid listens to
+parsoid_port: 8000
+parsoid_ip: 127.0.0.1

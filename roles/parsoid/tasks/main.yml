@@ -1,0 +1,41 @@
+---
+# tasks file for parsoid
+- name: Install nodejs
+  apt: name={{ item }} state=present
+  with_items:
+    - nodejs
+    - npm
+
+- name: Clone parsoid app
+  git:
+    dest: "{{ parsoid_path }}"
+    repo: https://gerrit.wikimedia.org/r/p/mediawiki/services/parsoid
+    accept_hostkey: yes
+    force: yes
+
+- name: Install npm packages
+  npm: path={{ parsoid_path}} state=present
+
+- name: Copy config templates
+  template:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+  with_items:
+    - { src: localsettings.js.j2,
+        dest: "{{ parsoid_path }}/api/localsettings.js"
+      }
+    - { src: parsoid.env.j2,
+        dest: "{{ parsoid_path }}/parsoid.env"
+      }
+
+- name: Copy systemd service
+  template:
+    src: parsoid.service.j2
+    dest: /etc/systemd/system/parsoid.service
+  notify:
+    - reload systemd
+    - restart parsoid
+
+- name: Enable parsoid service
+  service: name=parsoid state=started enabled=yes
+

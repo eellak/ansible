@@ -1,0 +1,19 @@
+## {{ ansible_managed }}
+[Unit]
+Description=Mediawiki Parsoid web service on node.js
+Documentation=https://mediawiki.org/wiki/Parsoid
+Wants=local-fs.target network.target
+After=local-fs.target network.target
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+Type=simple
+WorkingDirectory={{ parsoid_path }}
+EnvironmentFile=-{{ parsoid_path }}/parsoid.env
+ExecStart=/usr/bin/nodejs {{ parsoid_path }}/api/server.js
+KillMode=process
+Restart=on-success
+PrivateTmp=true
+StandardOutput=syslog

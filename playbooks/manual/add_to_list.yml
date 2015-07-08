@@ -32,8 +32,12 @@
   sudo_user: root
   gather_facts: false
 
+  vars_files:
+    #    - ../vars/wg-members.yml
+    - ../mlmmj/smartcities.yml
+
   tasks:
 
   - name: Add users to list
-    command: sudo -u mlmmj /usr/bin/mlmmj-sub -L /var/spool/mlmmj/ellak.gr/{{ list }} -a "{{ item }}" -sqf
+    command: sudo -u mlmmj /usr/bin/mlmmj-sub -L /var/spool/mlmmj/ellak.gr/{{ list }} -a {{ item }} -sqf
     with_items: emails

@@ -1,0 +1,88 @@
+---
+- name: Install packages
+  apt: name={{ item }} state=present update_cache=yes
+  with_items:
+    - git
+    - imagick
+    - xpdf-utils
+    - ghostscript
+  tags:
+    - install
+
+- name: Install composer
+  shell: curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+  args:
+    creates: /usr/local/bin/composer
+  tags:
+    - install
+    - composer
+
+- name: Install mediawiki
+  git:
+    accept_hostkey: yes
+    dest: "{{ mw_root_path }}"
+    repo: "{{ mw_git_link }}"
+    version: "{{ mw_git_branch }}"
+    update: yes
+  notify:
+    - run maintenance/update.php
+  tags:
+    - install
+
+- name: Copy composer.local.json
+  template:
+    src: composer.local.json.j2
+    dest: "{{ mw_root_path }}"
+    mode: 0644
+  tags:
+    - install
+    - composer
+
+- stat: path={{ mw_root_path}}/composer.lock
+  register: composer_lock
+
+- name: Install composer packages/extensions
+  composer: command=install working_dir="{{ mw_root_path }}"
+  when: composer_lock.stat.exists == false
+  notify:
+    - run maintenance/update.php
+  tags:
+    - extensions
+    - composer
+    - install
+
+- name: Update composer packages/extensions
+  composer: command=update working_dir="{{ mw_root_path }}"
+  when: composer_lock.stat.exists == true
+  notify:
+    - run maintenance/update.php
+  tags:
+    - extensions
+    - composer
+    - update
+
+- name: Install git extensions
+  git:
+    accept_hostkey: yes
+    dest: "{{ mw_root_path }}"
+    repo: https://gerrit.wikimedia.org/r/p/mediawiki/extensions/{{ item.name }}.git
+    version: "{{ mw_git_branch }}"
+    update: yes
+    track_submodules: yes
+  with_items:
+    - git_extensions
+  notify:
+    - run maintenance/update.php
+  tags:
+    - extensions
+    - git
+
+- name: Copy LocalSettings.php
+  template:
+    src: LocalSettings.php.j2
+    dest: "{{ mw_root_path }}/LocalSettings.php"
+    owner: root
+    group: root
+    mode: 0644
+  tags:
+    - localsettings

@@ -1,0 +1,7 @@
+{
+    "require": {
+{% for extension in composer_extensions %}
+      "{{ extension.name }}: "{{ extension.version }}"{% if not loop.last %},{% endif %}
+{% endfor %}
+    }
+}

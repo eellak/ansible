@@ -1,0 +1,260 @@
+<?php
+###############################################################################
+##
+## {{ ansible_managed }}
+##
+## See includes/DefaultSettings.php for all configurable settings
+## and their default values, but don't forget to make changes in _this_
+## file, not there.
+##
+## Further documentation for configuration settings may be found at:
+## http://www.mediawiki.org/wiki/Manual:Configuration_settings
+##
+##        How to make changes to this file
+##
+## Comments
+## --------
+##
+## Human comments are prefixed with double pounds (##) followed by a single space.
+## Commented pieces of variables or settings are prefixed with double slashes (//).
+## Short comments that explain certain functionality can go after a var declaration
+## prefixed with double slashes (//).
+##
+## Side wide changes
+## -----------------
+##
+## Any side wide changes are declared before the extensions section. Avoid having
+## commented out settings unless it is temporary.
+## UPO means this is also a user preference option.
+##
+## Extensions
+## ----------
+##
+## Declare new extensions after the EXTENSIONS section. Preferably all extensions
+## should be in wikimedia's git tree. See [link to extensions.git] if an extension
+## is already present. Then all you have to do is declare it. Use Mediawiki's
+## 1.25 declaration form where possible to load it: `wfLoadExtension( 'Cite' );`
+## Every extension should have comments with a short description and a link to
+## Mediawiki's extension directory. Place any other modifications related to an
+## extension right after its declaration. Try to comment why the change was needed.
+##
+## Extensions that are not in Wikimedia's git tree should be placed at the bottom
+## of extensions. Avoid to use them as we upgrade via git and they should be
+## checked manually.
+##
+## Semantic MediaWiki
+## ------------------
+##
+## Load any extensions that depend on Semantic MediaWiki under the Semantic
+## MediaWiki section. Same rules like extensions apply.
+##
+###############################################################################
+
+## Protect against web entry
+if ( !defined( 'MEDIAWIKI' ) ) {
+  exit;
+}
+
+## Uncomment to make read only.
+//$wgReadOnly = 'This wiki is currently being upgraded to a newer version.';
+
+## Require e-mail registration
+$wgEmailConfirmToEdit = true;
+
+## Uncomment this to disable output compression
+//$wgDisableOutputCompression = true;
+
+$wgSitename      = "{{ mw_sitename }}";
+$wgMetaNamespace = "{{ mw_meta_namespace}}";
+
+## The URL base path to the directory containing the wiki;
+## defaults for all runtime URL paths are based off of this.
+## For more information on customizing the URLs
+## (like /w/index.php/Page_title to /wiki/Page_title) please see:
+## https://www.mediawiki.org/wiki/Manual:Short_URL
+$wgScriptPath = "{{ mw_script_path }}";
+$wgScriptExtension  = ".php";
+
+## The protocol and server name to use in fully-qualified URLs
+$wgServer = "https://{{ fqdn }}";
+
+## The relative URL path to the skins directory
+$wgStylePath        = "$wgScriptPath/skins";
+$wgResourceBasePath = $wgScriptPath;
+
+## The relative URL path to the logo.  Make sure you change this from the default,
+## or else you'll overwrite your logo when you upgrade!
+$wgLogo    = "$wgScriptPath/resources/assets/logo.png";
+$wgFavicon = "$wgScriptPath/resources/assets/favicon.ico";
+
+$wgEnableEmail      = true;
+$wgEnableUserEmail  = true; // UPO
+
+$wgEmergencyContact = "{{ mw_emergency_contact }}";
+$wgPasswordSender   = "{{ mw_password_sender }}";
+
+$wgEnotifUserTalk      = false; // UPO
+$wgEnotifWatchlist     = false; // UPO
+$wgEmailAuthentication = true;
+
+## Database settings
+$wgDBtype           = "mysql";
+$wgDBserver         = "localhost:3306";
+$wgDBname           = "{{ mysql_databases[0].name }}";
+$wgDBuser           = "{{ mysql_users[0].name }}";
+$wgDBpassword       = "{{ mysql_users[0].password }}";
+
+## MySQL specific settings
+$wgDBprefix         = "{{ mw_db_prefix | default('') }}";
+
+## MySQL table options to use during installation or update
+$wgDBTableOptions   = "ENGINE=InnoDB, DEFAULT CHARSET=utf8";
+
+## Experimental charset support for MySQL 4.1/5.0.
+$wgDBmysql5 = false;
+
+## Shared memory settings
+$wgMainCacheType    = CACHE_NONE;
+$wgMemCachedServers = array();
+
+## Image Converter
+$wgSVGConverter = 'ImageMagick';
+
+## Image converter path
+$wgSVGConverterPath = '/usr/bin';
+
+## To enable image uploads, make sure the 'images' directory
+## is writable, then set this to true:
+$wgEnableUploads  = true;
+$wgUseImageMagick = true;
+$wgImageMagickConvertCommand = "/usr/bin/convert";
+
+## Path to jpegtran utility
+$wgJpegTran = '/usr/bin/';
+
+## Path to tidy utility binary
+$wgTidyBin = '/usr/bin/';
+
+## InstantCommons allows wiki to use images from http://commons.wikimedia.org
+$wgUseInstantCommons  = false;
+
+## If you use ImageMagick (or any other shell command) on a
+## Linux server, this will need to be set to the name of an
+## available UTF-8 locale
+$wgShellLocale = "en_US.utf8";
+
+## If you want to use image uploads under safe mode,
+## create the directories images/archive, images/thumb and
+## images/temp, and make them all writable. Then uncomment
+## this, if it's not already uncommented:
+//$wgHashedUploadDirectory = false;
+
+## If you have the appropriate support software installed
+## you can enable inline LaTeX equations:
+//$wgUseTeX = true;
+
+## Set $wgCacheDirectory to a writable directory on the web server
+## to make your wiki go slightly faster. The directory should not
+## be publically accessible from the web.
+//$wgCacheDirectory = "$IP/cache";
+
+##Site language code, should be one of the list in ./languages/Names.php
+$wgLanguageCode = "el";
+
+$wgGroupPermissions['*']['edit'] = false;
+$wgSecretKey = "{{ mw_secret_key }}";
+
+## For attaching licensing metadata to pages, and displaying an
+## appropriate copyright notice / icon. GNU Free Documentation
+## License and Creative Commons licenses are supported so far.
+//$wgEnableCreativeCommonsRdf = true;
+$wgRightsPage = ""; # Set to the title of a wiki page that describes your license/copyright
+$wgRightsUrl  = "https://creativecommons.org/licenses/by-sa/4.0/deed.el";
+$wgRightsText = "Creative Commons";
+$wgRightsIcon = "$wgScriptPath/resources/assets/cc-by-sa-88x311.png";
+
+## Path to the GNU diff3 utility. Used for conflict resolution.
+$wgDiff3 = "/usr/bin/diff3";
+
+## Default skin: you can change the default skin. Use the internal symbolic
+## names, ie 'standard', 'nostalgia', 'cologneblue', 'monobook', 'vector':
+$wgDefaultSkin = "vector";
+require_once "$IP/skins/Vector/Vector.php";
+
+## Query string length limit for ResourceLoader. You should only set this if
+## your web server has a query string length limit (then set it to that limit),
+## or if you have suhosin.get.max_value_length set in php.ini (then set it to
+## that value)
+$wgResourceLoaderMaxQueryLength = -1;
+
+## SMTP settings
+$wgSMTP = array(
+'host'     => "{{ mw_smtp_host }}",    // could also be an IP address. Where the SMTP server is located
+ 'IDHost'   => "{{ mw_smtp_id_host }}",     // Generally this will be the domain name of your website (aka mywiki.org)
+ 'port'     => {{ mw_smtp_port | default(587) }},                 // Port to use when connecting to the SMTP server
+ 'auth'     => {{ mw_smtp_auth | default(true) }},               // Should we use SMTP authentication (true or false)
+ 'username' => "{{ mw_smtp_username }}",  // Username to use for SMTP authentication (if being used)
+ 'password' => "{{ mw_smtp_password }}" // Password to use for SMTP authentication (if being used)
+);
+
+$wgArticlePath = "/$1";
+$wgUsePath     = true;
+
+## Override the default with a bundle of filetype extensions
+$wgFileExtensions = array(
+    'png', 'gif', 'jpg', 'jpeg', 'webm', 'pdf', 'svg',
+    'odt', 'odc', 'odp', 'odg', 'mp4', 'ogv'
+    );
+
+$wgPhpCli = "/usr/bin/php";
+
+##
+## Hide user preferences
+##
+## Disable language selection
+//$wgHiddenPrefs[] = 'language';
+$wgHiddenPrefs[] = 'variant';
+$wgHiddenPrefs[] = 'noconvertlink';
+
+################################################################################
+##                                                                            ##
+##                               EXTENSIONS                                   ##
+##                                                                            ##
+################################################################################
+##                                                                            ##
+## Most extensions are enabled by including the base extension file here      ##
+## but check specific extension documentation for more details.               ##
+##                                                                            ##
+## Semantic MediaWiki                                                         ##
+## More info: https://semantic-mediawiki.org/wiki/Help:Installation           ##
+## SemanticMediaWiki extensions MUST go after we declare `enableSemantics()`  ##
+##                                                                            ##
+## Add comments where necessary. Make future sysadmins life easier.           ##
+##                                                                            ##
+################################################################################
+
+enableSemantics('ellak.gr');
+
+{% for extension in git_extensions %}
+## {{ extension.name }}: {{ extension.description }}
+## More info: https://www.mediawiki.org/wiki/Extension:{{ extension.name }}
+{% if extension.comments is defined and extension.comments %}
+{{ extension.comments }}
+{% endif %}
+{% if extension.load_syntax == 'new' %}
+wfLoadExtension( '{{ extension.name }}' );
+{% elsif extension.load_syntax == 'old' %}
+require_once "$IP/extensions/{{ extension.name }}/{{ extension.name }}.php";
+{% endif %}
+{% if extension.options is defined and extension.options %}
+{{ extension.options }}
+{% endif %}
+{% end %}
+
+####################################################
+## Uncomment below lines for debugging purposes only
+//error_reporting( -1 );
+//ini_set( 'display_errors', 1 );
+//$wgShowSQLErrors = true;
+//$wgDebugDumpSql  = true;
+//$wgShowExceptionDetails = true;

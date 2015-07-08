@@ -1,0 +1,33 @@
+---
+mw_git_link: "https://gerrit.wikimedia.org/r/p/mediawiki/core.git"
+mw_git_branch: REL1_25
+
+## List all extensions to be installed by git. Make sure they exist in https://gerrit.wikimedia.org/r/#/admin/projects/
+##
+## `load_syntax` can take two values: `new` (for mediawiki 1.25+) or `old` (for mediawiki <1.25).
+##   - `new` uses the new load syntax: wfLoadExtension( 'ExtensionName' );
+##   - `old` uses the old load syntax: require_once "$IP/extensions/ExtensionName/ExtensionName.php";
+##
+## Example:
+## --------
+## git_extensions:
+##   - name: 'ParserFunctions'
+##     description: 'Enhances the wikitext parser with helpful functions.'
+##     comments: 'This is a comment.'
+##     load_syntax: new
+##     options: '$wgPFEnableStringFunctions = false;'
+git_extensions: []
+
+## List of all extensions that are installed by composer. Refer to each
+## extension's documentation for the supported version.
+##
+## This list populates `templates/composer.local.json`. We leverage the
+## benefits of https://github.com/wikimedia/composer-merge-plugin that is
+## included by default in Wikimedia's core composer.json.
+##
+## Example:
+## --------
+## composer_extensions:
+##   - name: 'mediawiki/validator'
+##     version: '2.0.*'
+composer_extensions: []

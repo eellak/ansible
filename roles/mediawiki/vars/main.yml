@@ -1,16 +1,16 @@
 ---
-mw_sitename: ''
-mw_meta_namespace: ''
-fqdn: ''
-mw_emergency_contact: ''
-mw_password_sender: ''
+#mw_sitename: ''
+#mw_meta_namespace: ''
+#fqdn: ''
+#mw_emergency_contact: ''
+#mw_password_sender: ''
 
 # https://www.mediawiki.org/wiki/Manual:$wgSecretKey
 # a 64-character random string
-mw_secret_key: ''
+#mw_secret_key: ''
 
 #mw_script_path: ''
-mw_db_prefix: ''
+#mw_db_prefix: ''
 
 ## SMTP settings
 #mw_smtp_host: ''

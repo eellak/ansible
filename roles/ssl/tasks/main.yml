@@ -1,0 +1,21 @@
+---
+- name: Create ssl directory
+  file:
+    dest: "{{ ssl_cert_path }}"
+    state: directory
+    owner: root
+    group: root
+    mode: 0755
+
+- name: Copy ssl files
+  copy:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    owner: root
+    group: root
+    mode: 0400
+  with_items:
+    - { src: 'ellak.gr-bundle.crt',
+        dest: "{{ ssl_cert_path }}/ssl.crt" }
+    - { src: 'ellak.gr.key',
+        dest: "{{ ssl_cert_path }}/ssl.key" }

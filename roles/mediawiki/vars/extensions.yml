@@ -91,9 +91,6 @@ git_extensions:
   - name: 'SemanticDrilldown'
     description: "provides a page for drilling down through a site's data, using categories and filters on semantic properties."
     load_syntax: 'old'
-  - name: 'SemanticExtraSpecialProperties'
-    description: 'adds some extra special properties to all content pages in the wiki.'
-    load_syntax: 'old'
   - name: 'SemanticImageInput'
     description: 'allows for automatic adding of images from Wikipedia pages via a Semantic Forms input.'
     load_syntax: 'old'

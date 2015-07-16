@@ -74,6 +74,8 @@ $wgMetaNamespace = "{{ mw_meta_namespace}}";
 ## https://www.mediawiki.org/wiki/Manual:Short_URL
 $wgScriptPath = "{{ mw_script_path }}";
 $wgScriptExtension  = ".php";
+$wgArticlePath = "{$wgScriptPath}/$1";
+$wgUsePathInfo = true;
 
 ## The protocol and server name to use in fully-qualified URLs
 $wgServer = "https://{{ fqdn }}";
@@ -197,9 +199,6 @@ $wgSMTP = array(
  'password' => "{{ mw_smtp_password }}" // Password to use for SMTP authentication (if being used)
 );
 
-$wgArticlePath = "/$1";
-$wgUsePath     = true;
-
 ## Override the default with a bundle of filetype extensions
 $wgFileExtensions = array(
     'png', 'gif', 'jpg', 'jpeg', 'webm', 'pdf', 'svg',
@@ -236,20 +235,21 @@ $wgHiddenPrefs[] = 'noconvertlink';
 enableSemantics('ellak.gr');
 
 {% for extension in git_extensions %}
-## {{ extension.name }}: {{ extension.description }}
+## {{ extension.name }}: {{ extension.description | default('No description') }}
 ## More info: https://www.mediawiki.org/wiki/Extension:{{ extension.name }}
 {% if extension.comments is defined and extension.comments %}
 {{ extension.comments }}
 {% endif %}
 {% if extension.load_syntax == 'new' %}
 wfLoadExtension( '{{ extension.name }}' );
-{% elsif extension.load_syntax == 'old' %}
+{% elif extension.load_syntax is not defined or extension.load_syntax == 'old' %}
 require_once "$IP/extensions/{{ extension.name }}/{{ extension.name }}.php";
 {% endif %}
 {% if extension.options is defined and extension.options %}
 {{ extension.options }}
 {% endif %}
-{% end %}
+
+{% endfor %}
 
 ####################################################
 ## Uncomment below lines for debugging purposes only
@@ -257,4 +257,4 @@ require_once "$IP/extensions/{{ extension.name }}/{{ extension.name }}.php";
 //ini_set( 'display_errors', 1 );
 //$wgShowSQLErrors = true;
 //$wgDebugDumpSql  = true;
-//$wgShowExceptionDetails = true;
+$wgShowExceptionDetails = true;

@@ -1,11 +1,15 @@
 ---
 - include_vars: extensions.yml
+  tags:
+    - composer
+    - localsettings
+    - extensions
 
 - name: Install packages
-  apt: name={{ item }} state=present update_cache=yes
+  apt: name={{ item }} state=present update_cache=yes cache_valid_time=3600
   with_items:
     - git
-    - imagick
+    - imagemagick
     - xpdf-utils
     - ghostscript
   tags:
@@ -26,15 +30,38 @@
     repo: "{{ mw_git_link }}"
     version: "{{ mw_git_branch }}"
     update: yes
+    force: yes
   notify:
     - run maintenance/update.php
   tags:
     - install
 
+- name: Install skins
+  git:
+    accept_hostkey: yes
+    dest: "{{ mw_root_path }}/skins/{{ item }}"
+    repo: "https://git.wikimedia.org/git/mediawiki/skins/{{ item }}.git"
+    update: yes
+  with_items:
+    - Vector
+  tags:
+    - skins
+    - install
+
+- name: Copy LocalSettings.php
+  template:
+    src: LocalSettings.php.j2
+    dest: "{{ mw_root_path }}/LocalSettings.php"
+    owner: root
+    group: root
+    mode: 0644
+  tags:
+    - localsettings
+
 - name: Copy composer.local.json
   template:
     src: composer.local.json.j2
-    dest: "{{ mw_root_path }}"
+    dest: "{{ mw_root_path }}/composer.local.json"
     mode: 0644
   tags:
     - install
@@ -42,6 +69,9 @@
 
 - stat: path={{ mw_root_path}}/composer.lock
   register: composer_lock
+  tags:
+    - extensions
+    - composer
 
 - name: Install composer packages/extensions
   composer: command=install working_dir="{{ mw_root_path }}"
@@ -63,28 +93,23 @@
     - composer
     - update
 
-- name: Install git extensions
+- name: Install extensions from git
   git:
     accept_hostkey: yes
-    dest: "{{ mw_root_path }}"
-    repo: https://gerrit.wikimedia.org/r/p/mediawiki/extensions/{{ item.name }}.git
+    dest: "{{ mw_root_path }}/extensions/{{ item.name }}"
+    repo: "https://gerrit.wikimedia.org/r/p/mediawiki/extensions/{{ item.name }}.git"
     version: "{{ mw_git_branch }}"
     update: yes
+    recursive: yes
     track_submodules: yes
-  with_items:
-    - git_extensions
+    force: yes
+  with_items: git_extensions
   notify:
     - run maintenance/update.php
   tags:
     - extensions
     - git
 
-- name: Copy LocalSettings.php
-  template:
-    src: LocalSettings.php.j2
-    dest: "{{ mw_root_path }}/LocalSettings.php"
-    owner: root
-    group: root
-    mode: 0644
-  tags:
-    - localsettings
+#- name: Run update.php
+#  shell: /usr/bin/php ./maintenance/update.php chdir="{{ mw_root_path }}"
+#  when: composer_lock.stat.exists == false

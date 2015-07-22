@@ -234,7 +234,7 @@ $wgHiddenPrefs[] = 'noconvertlink';
 
 enableSemantics('ellak.gr');
 
-{% for extension in git_extensions %}
+{% for extension in wikimedia_git_extensions %}
 ## {{ extension.name }}: {{ extension.description | default('No description') }}
 ## More info: https://www.mediawiki.org/wiki/Extension:{{ extension.name }}
 {% if extension.comments is defined and extension.comments %}
@@ -251,10 +251,27 @@ require_once "$IP/extensions/{{ extension.name }}/{{ extension.name }}.php";
 
 {% endfor %}
 
+{% for extension in extra_git_extensions %}
+## {{ extension.name }}: {{ extension.description | default('No description') }}
+## More info: https://www.mediawiki.org/wiki/Extension:{{ extension.name }}
+{% if extension.comments is defined and extension.comments %}
+{{ extension.comments }}
+{% endif %}
+{% if extension.load_syntax == 'new' %}
+wfLoadExtension( '{{ extension.name }}' );
+{% elif extension.load_syntax is not defined or extension.load_syntax == 'old' %}
+require_once "$IP/extensions/{{ extension.dir | default(extension.name) }}/{{ extension.name }}.php";
+{% endif %}
+{% if extension.options is defined and extension.options %}
+{{ extension.options }}
+{% endif %}
+
+{% endfor %}
+
 ####################################################
 ## Uncomment below lines for debugging purposes only
 //error_reporting( -1 );
 //ini_set( 'display_errors', 1 );
 //$wgShowSQLErrors = true;
 //$wgDebugDumpSql  = true;
-$wgShowExceptionDetails = true;
+//$wgShowExceptionDetails = true;

@@ -2,3 +2,5 @@ vault-passwd.txt
 *.sw[op]
 scripts/ellakssl*
 .vagrant/
+*.key
+*.csr

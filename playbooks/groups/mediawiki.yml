@@ -1,0 +1,7 @@
+---
+- hosts: wiki.ellak.gr:www2.ellak.gr
+  sudo: true
+
+  roles:
+#    - { role: php, tags: 'php' }
+    - { role: mediawiki, tags: 'mediawiki' }

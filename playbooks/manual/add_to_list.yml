@@ -5,12 +5,12 @@
 ##
 ## Usage example:
 ## For json formatted emails:
-##  ansible-playbook playbooks/add_to_list.yml -e "list=lista @list.json"
+##  ansible-playbook add_to_list.yml -e "path/to/list.json" -e "list=listname"
 ##
 ## For yaml formatted emails:
-##  ansible-playbook playbooks/add_to_list.yml -e "list=lista @list.yml"
+##  ansible-playbook add_to_list.yml -e "path/to/list.yml" -e "list=listname"
 ##
-## Where `lista` the name of the mailing list and `list.json` a json containing
+## Where `listname` the name of the mailing list and `list.json` a json containing
 ## the emails to be added:
 ##
 ##  { "emails": ["mail@example.com", "mail2@wtf.org", "mail3@hello.dev"]
@@ -25,19 +25,15 @@
 ## NOTE: the `emails` line inside either json or yaml is needed as it is called
 ##       by `with_items`.
 ##
-## More info on using mlmmj: https://team.ellak.gr/projects/sitfn/wiki/Email-mlmmj
+## More info:
+##  - https://team.ellak.gr/projects/sitfn/wiki/Email-mlmmj
+##  - http://mlmmj.org/docs/mlmmj-sub/
 ##
 - hosts: mail1.ellak.gr
   sudo: true
-  sudo_user: root
   gather_facts: false
 
-  vars_files:
-    #    - ../vars/wg-members.yml
-    - ../mlmmj/smartcities.yml
-
   tasks:
-
   - name: Add users to list
     command: sudo -u mlmmj /usr/bin/mlmmj-sub -L /var/spool/mlmmj/ellak.gr/{{ list }} -a {{ item }} -sqf
     with_items: emails

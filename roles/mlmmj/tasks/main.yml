@@ -53,3 +53,9 @@
   with_items:
     - "{{ public_lists }}"
     - "{{ private_lists }}"
+
+# Keep this task always last
+- name: Run mlmmj-archivist
+  command: sudo -u mlmmj /usr/local/bin/mlmmj-archivist
+  tags:
+    - archivist

@@ -1,0 +1,14 @@
+---
+- hosts: ma.ellak.gr
+  sudo: yes
+  sudo_user: www-data
+
+  tasks:
+    - name: Copy maellak theme
+      git:
+        accept_hostkey: yes
+        dest: /var/www/maellak/wp-content/themes/ma_ellak
+        force: yes
+        repo: https://github.com/eellak/wp-maellak-theme.git
+
+

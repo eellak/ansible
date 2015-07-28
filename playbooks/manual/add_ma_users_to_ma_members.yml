@@ -25,7 +25,7 @@
         dest: '/root/ma_users.txt'
 
     - name: Add ma_users to ma-members list
-      shell: "for i in $(cat /root/ma_users.txt); do sudo -u mlmmj /usr/bin/mlmmj-sub -L /var/spool/mlmmj/ellak.gr/ma-members -a $i -q -f; done"
+      shell: "for i in $(cat /root/ma_users.txt); do sudo -u mlmmj /usr/bin/mlmmj-sub -L /var/spool/mlmmj/ellak.gr/ma-members -a $i -qfs; done"
       register: add_to_list
 
     - name: Remove ma_users file

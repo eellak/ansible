@@ -26,14 +26,15 @@
 ##
 - hosts: mail1.ellak.gr
   sudo: true
-  sudo_user: root
   gather_facts: false
 
   vars_files:
-    - ../vars/lists.yml
+    - ../roles/mlmmj/vars/main.yml
 
   tasks:
 
   - name: Remove a user from all mailing lists
-    command: "sudo -u mlmmj /usr/bin/mlmmj-unsub -L /var/spool/mlmmj/ellak.gr/{{ item }} -a {{ mail }} -qs"
-    with_items: mailing_lists
+    command: "sudo -u mlmmj /usr/bin/mlmmj-unsub -L /var/spool/mlmmj/ellak.gr/{{ item.name }} -a {{ mail }} -qs"
+    with_items:
+      - "{{ public_lists }}"
+      - "{{ private_lists }}"

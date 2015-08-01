@@ -298,6 +298,7 @@
 
              <!-- News with images -->
              {% for item in main %}
+             <br />
              <h2 style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #a72323;margin: 0 0 4px 0;padding: 0 0 4px 0;border-bottom: 1px solid #cbcbcb">
               {{ item.title }}
              </h2>
@@ -307,7 +308,6 @@
               {{ item.desc }}
               <a href="{{ item.url }}" style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323;text-decoration: none">Περισσότερα »</a>
              </p>
-             <br />
              <br />
              {% endfor %}
 

@@ -200,6 +200,20 @@
           </ul>
 {% endfor %}
 
+<!-- +++++  OpenStandards  (start)  +++++ -->
+{% if openstandards %}
+          <h3 style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">OpenStandards</h3>
+{% endif %}
+{% for item in openstandards %}
+          <ul style="margin: 0 0 0 24px;padding: 0">
+            <li style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323">
+              <a href="{{ item.url }}" style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #a72323;text-decoration: none">
+                {{ item.desc }}
+              </a>
+            </li>
+          </ul>
+{% endfor %}
+
 <!-- +++++  OpenHardware  (start)  +++++ -->
 {% if openhardware %}
           <h3 style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">Ανοιχτές τεχνολογίες</h3>
@@ -293,6 +307,8 @@
               {{ item.desc }}
               <a href="{{ item.url }}" style="font-family: &quot;Lucida Grande&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323;text-decoration: none">Περισσότερα »</a>
              </p>
+             <br />
+             <br />
              {% endfor %}
 
              <br />

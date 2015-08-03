@@ -1,0 +1,26 @@
+---
+#
+# defaults file for mariadb
+# Note: don't use quotes around the password, because the mysql_user module
+# will include them in the password but the mysql client will not
+#
+mysql_user_home: /root
+mysql_root_username: root
+mysql_root_password: "{{ MYSQL_ROOT_PASSWD }}"
+mysql_datadir: '/var/lib/mysql'
+mysql_socket: '/var/lib/mysql/mysql.sock'
+mysql_error_log: '/var/log/mariadb/error.log'
+mysql_pidfile: '/var/run/mariadb/mariadb.pid'
+
+mysql_databases: []
+#mysql_databases:
+#  - name: ellak_gr
+#    collation: utf8_general_ci
+#    encoding: utf8
+
+mysql_users: []
+#mysql_users:
+#  - name: ellak_gr
+#    host: localhost
+#    password: kallee
+#    priv: "*.*:ALL"

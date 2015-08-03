@@ -1,0 +1,20 @@
+---
+- hosts: db1.ellak.gr
+  sudo: yes
+
+  vars_files:
+    - "{{ protected_storage }}/db1.ellak.gr/mariadb.yml"
+
+  tasks:
+    - name: Install required server packages
+      yum: name={{ item }} state=present
+      with_items:
+        - policycoreutils-python
+      tags:
+        - server
+
+  roles:
+    - { role: repo-epel,
+        tags: ['epel'] }
+    - { role: mariadb,
+        tags: ['mariadb', 'database'] }

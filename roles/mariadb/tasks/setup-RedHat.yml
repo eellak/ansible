@@ -1,0 +1,4 @@
+---
+- name: Install MariaDB
+  yum: name={{ item }} state=present
+  with_items: mariadb_packages

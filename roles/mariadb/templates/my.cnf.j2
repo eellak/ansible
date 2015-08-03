@@ -1,0 +1,41 @@
+###############
+# {{ ansible_managed }}
+###############
+[mysqld]
+bind-address={{ ansible_eth1.ipv4.address }}
+datadir={{ mysql_datadir }}
+socket={{ mysql_socket }}
+
+# Disabling symbolic-links is recommended to prevent assorted security risks
+symbolic-links=0
+
+# Increase the memory used my MariaDB. The defaul is 8M.
+innodb_buffer_pool_size = {{ (ansible_memtotal_mb * 0.2) | int }}M
+
+[mysqld]
+max_connections         = 100
+connect_timeout         = 5
+wait_timeout            = 6000
+max_allowed_packet      = 164M
+thread_cache_size       = 128
+sort_buffer_size        = 4M
+bulk_insert_buffer_size = 16M
+tmp_table_size          = 32M
+max_heap_table_size     = 32M
+
+[mysqldump]
+max_allowed_packet = 64M
+
+# Settings user and group are ignored when systemd is used.
+# If you need to run mysqld under a different user or group,
+# customize your systemd unit file for mariadb according to the
+# instructions in http://fedoraproject.org/wiki/Systemd
+
+[mysqld_safe]
+log-error={{ mysql_error_log }}
+pid-file={{ mysql_pidfile }}
+
+#
+# include all files from the config directory
+#
+!includedir /etc/my.cnf.d

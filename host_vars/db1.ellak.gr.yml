@@ -1,0 +1,14 @@
+---
+hostname: db1
+fqdn: db1.ellak.gr
+
+mysql_databases:
+  - name: ellakgr
+    collation: utf8_general_ci
+    encoding: utf8
+
+mysql_users:
+  - name: ellakgr
+    host: localhost
+    password: "{{ MYSQL_ELLAKGR_PASSWD }}"
+    priv: "*.*:ALL"

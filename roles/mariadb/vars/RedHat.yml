@@ -1,0 +1,6 @@
+---
+mariadb_packages:
+  - mariadb
+  - mariadb-server
+  - mariadb-devel
+  - MySQL-python

@@ -11,4 +11,8 @@ mysql_users:
   - name: ellakgr
     host: localhost
     password: "{{ MYSQL_ELLAKGR_PASSWD }}"
-    priv: "*.*:ALL"
+    priv: "ellakgr.*:ALL"
+  - name: ellakgr
+    host: db1.ellak.lan
+    password: "{{ MYSQL_ELLAKGR_PASSWD }}"
+    priv: "ellakgr.*:SELECT,DELETE,INSERT,UPDATE"

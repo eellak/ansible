@@ -1,2 +1,3 @@
 ---
 ssl_cert_path: '/etc/ssl/ellak'
+protected_storage: "{{ lookup('env', 'ELLAK_ANSIBLE_SECRETS') }}"

@@ -1,4 +1,4 @@
-Role Name
+php
 =========
 
 Install php and common dependencies.
@@ -11,6 +11,7 @@ Currently works only in Debian based distros.
 Role Variables
 --------------
 
+TODO: Add vars in `php.ini`.
 
 Dependencies
 ------------
@@ -19,8 +20,6 @@ None.
 
 Example Playbook
 ----------------
-
-Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
 
     - hosts: servers
       roles:

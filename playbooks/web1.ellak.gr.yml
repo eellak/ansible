@@ -1,0 +1,12 @@
+---
+- hosts: web1.ellak.gr
+  sudo: yes
+
+  vars_files:
+    - "{{ protected_storage }}/web1.ellak.gr/ufw.yml"
+
+  roles:
+    - ufw
+    - php
+    #    - apache
+    #    - wordpress

@@ -1,0 +1,6 @@
+---
+# ufw
+ufw_whitelisted_ports:
+  -  { port: 80,  protocol: tcp }
+  -  { port: 443,  protocol: tcp }
+  -  { port: "{{ SSH_PORT }}",  protocol: tcp }

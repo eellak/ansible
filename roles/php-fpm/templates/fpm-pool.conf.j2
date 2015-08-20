@@ -1,0 +1,36 @@
+; php-fpm pool configuration for {{ fqdn }}
+[{{ fqdn }}]
+
+; socket setup
+listen = /var/run/php5-fpm-{{ fqdn }}.sock
+listen.owner = ellakgr
+listen.group = ellakgr
+listen.mode = 0660
+
+; run as virtual host user
+user = ellakgr
+group = ellakgr
+
+; load processes on demand
+pm = ondemand
+
+; max processes to load
+pm.max_children = 10
+
+; max requestes per process
+pm.max_requests = 1000
+
+; environment vars
+env[TMP] = {{ app_root }}/{{ fqdn }}/tmp
+env[TMPDIR] = {{ app_root }}/{{ fqdn }}/tmp
+env[TEMP] = {{ app_root }}/{{ fqdn }}/tmp
+
+; upload tmp directory
+php_admin_value[upload_tmp_dir] = {{ app_root}}/{{ fqdn }}/tmp
+
+; script memory limit (increase this only if necessary)
+php_admin_value[memory_limit] = 128M
+
+; log errors on logfile
+php_admin_flag[log_errors] = on
+php_admin_value[error_log] = /var/log/nginx/{{ fqdn }}/php-error.log

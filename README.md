@@ -24,4 +24,4 @@ ansible-playbook targets playbooks/upgrade.yml -s -K
 
 ## TODOs
 
-* Document `how hosts_vars` works with `protected_secret`.
+* Document how `host_vars` works with `protected_secret`.

@@ -1,0 +1,14 @@
+; {{ ansible_managed }}
+; php options
+
+pid = {{ hhvm_pid }}
+
+; hhvm specific
+
+hhvm.server.file_socket = {{ hhvm_server_file_socket }}
+hhvm.server.type = fastcgi
+hhvm.server.default_document = index.php
+hhvm.log.use_log_file = true
+hhvm.log.file = {{ hhvm_log_file }}
+hhvm.log.header = true
+hhvm.repo.central.path = /var/run/hhvm/hhvm.hhbc

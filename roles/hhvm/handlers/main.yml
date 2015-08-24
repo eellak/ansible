@@ -1,0 +1,7 @@
+---
+# defaults file for roles/hhvm
+- name: hhvm reload
+  service: name=hhvm state=reloaded
+
+- name: hhvm restart
+  service: name=hhvm state=restarted

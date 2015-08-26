@@ -1,0 +1,25 @@
+---
+# tasks file for dnsmasq
+
+- name: Install dnsmasq
+  apt: name=dnsmasq state=present update_cache=yes
+
+- name: Copy config files
+  template:
+    src: "etc/{{ item.src }}"
+    dest: "{{ item.dest }}"
+    owner: root
+    group: root
+    mode: 0644
+  with_items:
+    - { src: dnsmasq.conf.j2,
+        dest: /etc/dnsmasq.conf }
+    - { src: hosts.j2,
+        dest: /etc/hosts }
+    - { src: resolv.conf.j2,
+        dest: /etc/resolv.conf }
+  notify:
+    - restart dnsmasq
+
+- name: Start and enable dnsmasq service
+  service: name=dnsmasq state=started enabled=yes

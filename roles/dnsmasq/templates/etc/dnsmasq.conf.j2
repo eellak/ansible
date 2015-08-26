@@ -1,0 +1,35 @@
+# never forward plain names (without a dot or domain part)
+domain-needed
+
+# never forward addresses in the non-routed address spaces.
+bogus-priv
+
+# local-only domain
+local=/ellak.lan/
+
+# listen only on the internal network interface
+interface=eth2
+bind-interfaces
+
+# append local domain automatically
+expand-hosts
+domain=ellak.lan
+
+# dhcp server for this range
+dhcp-range=eth2,10.19.91.100,10.19.91.200,4h
+
+# send static ip addresses to our VMs
+dhcp-host=aa:42:e5:b7:d2:9e,www1,10.19.91.2
+dhcp-host=aa:42:e5:9a:6f:ec,www2,10.19.91.3
+dhcp-host=aa:42:e0:7a:8d:2c,devvm,10.19.91.4
+dhcp-host=aa:42:e4:bd:0a:18,macloud,10.19.91.5
+dhcp-host=aa:42:e2:d2:77:61,team,10.19.91.6
+dhcp-host=aa:42:e1:6b:ee:43,radio,10.19.91.7
+dhcp-host=aa:42:e5:ad:4c:6d,guest1,10.19.91.8
+dhcp-host=aa:42:ea:53:03:f9,guest2,10.19.91.9
+dhcp-host=aa:42:e9:12:a4:2c,wiki,10.19.91.10
+dhcp-host=aa:42:e4:66:b2:be,code,10.19.91.11
+dhcp-host=aa:42:e7:c5:d1:f5,db1,10.19.91.12
+
+# send opendns servers along with ours as a fallback
+dhcp-option=6,10.19.91.1,208.67.222.222,208.67.220.220

@@ -1,0 +1,4 @@
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+# run the wikiel metadata crawler script daily
+15 1 * * * wikielcrawler /usr/local/bin/wikiel-metadata

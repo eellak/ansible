@@ -1,0 +1,38 @@
+---
+- name: Create user wikielcrawler
+  user:
+    name: wikielcrawler
+    groups: mlmmj
+    shell: /bin/false
+    home: /var/lib/wikieldata
+    comment: 'Crawler for cc-gr mailman list metadata'
+
+- name: Copy wikiel-metadata credentials conf
+  template:
+    src: wikiel.conf.j2
+    dest: '/var/lib/wikieldata/wikiel.conf'
+    owner: wikielcrawler
+    group: wikielcrawler
+    mode: 0600
+
+- name: Copy wikiel-metadata custom script
+  copy:
+    src: "bin/{{ item }}"
+    dest: "/usr/local/bin/{{ item }}"
+    owner: root
+    group: root
+    mode: 0755
+  with_items:
+    - wikiel-metadata
+
+- name: Copy cron files
+  copy:
+    src: "cron.d/{{ item }}"
+    dest: "/etc/cron.d/{{ item }}"
+    owner: root
+    group: root
+    mode: 0644
+  with_items:
+    - wikiel-metadata
+  tags:
+    - cron

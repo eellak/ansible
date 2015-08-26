@@ -1,0 +1,11 @@
+---
+- hosts: mail1.ellak.gr
+  sudo: true
+
+  vars_files:
+    - "{{ protected_storage }}/mail1.ellak.gr/postfix.yml"
+    - "{{ protected_storage }}/mail1.ellak.gr/mlmmj.yml"
+    - "{{ protected_storage }}/mail1.ellak.gr/private_lists.yml"
+
+  roles:
+    - mlmmj

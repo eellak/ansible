@@ -1,0 +1,15 @@
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+# run maintenance operations for all lists under /var/spool/mlmmj every 2 hours.
+# read mlmmj-maintd(1) for more information
+0 */2 * * * mlmmj /usr/bin/test -x /usr/bin/mlmmj-maintd && find /var/spool/mlmmj -mindepth 1 -maxdepth 1 -type d -exec /usr/bin/mlmmj-maintd -F -d {} \;
+#
+# notify about the moderation queue, at 9:20, 14:20 and 21:20
+# (after running mlmmj-maintd)
+20 9,14,21 * * * mlmmj /usr/local/bin/mlmmj-viewmods
+#
+# run the moderation action report script every minute
+* * * * * mlmmj /usr/local/bin/mlmmj-modspy
+#
+# generate web archives every 30 minutes
+5,35 * * * * mlmmj /usr/local/bin/mlmmj-archivist

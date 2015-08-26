@@ -1,0 +1,51 @@
+#!/bin/sh
+#
+# this script sends an e-mail to moderators of a list with the
+# contents of the moderation queue
+
+# the mlmmj spool
+_mspool="/var/spool/mlmmj"
+
+# loop over the moderated lists
+for _list in $(find "${_mspool}" -maxdepth 4 -name 'access' -exec /bin/sh -c \
+	"if grep -q moderate {};then dirname {} | sed -e 's:\/control::';fi" \;)
+do
+	if [ "$(ls -A ${_list}/moderation)" ]; then
+		# the listname
+		_listname="$(basename ${_list})"
+
+		# create a temp. file for the mail
+		if _tmpfile="$(mktemp /tmp/${_listname}_mods.XXXXXX)"; then
+			trap 'rm -f ${_tmpfile}; exit 1' 0 1 15
+		else
+			echo "temp file creation failed"
+			exit 1
+		fi
+
+		# introduction text
+		echo "Για τη λίστα ${_listname} υπάρχουν τα παρακάτω μηνύματα στο moderation queue:\n" >> ${_tmpfile}
+
+		for _mail in $(find ${_list}/moderation -type f); do
+			# the mail id
+			_mailid="$(basename ${_mail})"
+
+			# fill the temp. file with moderated mail metadata
+			formail -XDate: < ${_mail} >> ${_tmpfile}
+			formail -c -XFrom: < ${_mail} | rfc2047decoder.py >> ${_tmpfile}
+			formail -c -XSubject: < ${_mail} | rfc2047decoder.py >> ${_tmpfile}
+			echo "Approve: <${_listname}+release-${_mailid}@ellak.gr>" >> ${_tmpfile}
+			echo "Deny: <${_listname}+reject-${_mailid}@ellak.gr>\n" >> ${_tmpfile}
+
+			unset _mailid
+		done
+
+		# send the mail to the moderators
+		for _moderator in $(cat ${_list}/control/moderators); do
+			mail -s "[${_listname}] Moderation queue contents" \
+				"${_moderator}" < ${_tmpfile}
+		done
+
+		rm -f ${_tmpfile}
+		unset _tmpfile _moderator
+	fi
+done

@@ -1,0 +1,145 @@
+#!/bin/sh
+#
+# Copyright (c) 2015 Manolis Tzanidakis <mtzanidakis@gmail.com>
+#
+# Permission to use, copy, modify, and distribute this software for any
+# purpose with or without fee is hereby granted, provided that the above
+# copyright notice and this permission notice appear in all copies.
+#
+# THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL
+# WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED
+# WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE
+# AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL
+# DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR
+# PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
+# TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+# PERFORMANCE OF THIS SOFTWARE.
+#
+# This script does the following things:
+# - greps the required metadata from moderated mails and creates a file
+#   with the same id on the moderation.work directory in the top-level
+#   path.
+# - checks the released|rejected messages from the mlmmj log file, matches
+#   the metadata from the moderation.work directory (if the file exists
+#   there) and sends an e-mail to the moderation of that list.
+#
+# The script should run from cron -- ideally, every minute -- by the 'mlmmj'
+# system user.
+
+# the mlmmj spool
+_mspool="/var/spool/mlmmj"
+
+# loop over the moderated lists
+for _list in $(find "${_mspool}" -maxdepth 4 -name 'access' -exec /bin/sh -c \
+	"if grep -q moderate {};then dirname {} | sed -e 's:\/control::';fi" \;)
+do
+	# the list name
+	_listname="$(basename ${_list})"
+
+	# create the moderation workdir for the current list, if not available
+	_modwrk="${_list}/moderation.work"
+	test -d "${_modwrk}" || mkdir -p "${_modwrk}"
+
+	# if no timestamp is available, set the last date to 5 mins ago
+	test -f "${_modwrk}/.timestamp"                          \
+		&& _last_date=$(cat "${_modwrk}/.timestamp")     \
+		|| _last_date=$(date --date='5 minutes ago' '+%s')
+
+	# create a temp file for the current list for the mail report
+	if _tmpfile="$(mktemp /tmp/${_listname}_modspy.XXXXXX)"; then
+		trap 'rm -f ${_tmpfile}; exit 1' 0 1 15
+	else
+		echo "temp file creation failed"
+		exit 1
+	fi
+
+	# check if the list contains any moderated mails
+	if [ "$(ls -A ${_list}/moderation)" ]; then
+		# loop over the moderated mails
+		for _msg in $(find ${_list}/moderation -type f); do
+			# the file name of the message
+			_msgfile="$(basename ${_msg})"
+
+			# skip the message if it is already available in the
+			# workdir
+			test -f "${_modwrk}/${_msgfile}" && continue
+
+			# write the required metadata (name, date, subject) on a
+			# file with the same name as the original file in the
+			# moderation workdir
+			formail -XDate: < ${_msg} > "${_modwrk}/${_msgfile}"
+			formail -c -XFrom: < ${_msg}    | rfc2047decoder.py >> \
+				"${_modwrk}/${_msgfile}"
+			formail -c -XSubject: < ${_msg} | rfc2047decoder.py >> \
+				"${_modwrk}/${_msgfile}"
+		done
+	fi
+
+	# find released/rejected messages from the mlmmj operation log
+	egrep '(releas|reject)ed' "${_list}/mlmmj.operation.log" | \
+		while read _line; do
+			# convert the action date to unix time for easier
+			# comparisons with the last timestamp
+			_action_date=`date --date="$(echo ${_line} | \
+				cut -d ' ' -f -5)" '+%s'`
+
+			# skip actions older than the last date
+			[ ${_action_date} -lt ${_last_date} ] && continue
+
+			# the moderator address
+			_moderator="$(echo ${_line} | cut -d ' ' -f 6)"
+
+			# the moderation action
+			_action="$(echo ${_line} | cut -d ' ' -f 7)"
+
+			# the moderation date (converted back to RFC2822)
+			_action_date_rfc="$(date -R --date=@${_action_date})"
+
+			# the mlmmj msg id
+			_mlmmj_id="$(echo ${_line} | cut -d ' ' -f 8)"
+
+			# populate the temp file with the mail data
+			echo "Moderator: ${_moderator}" >> "${_tmpfile}"
+			echo "Moderation Date: ${_action_date_rfc}" >> \
+				"${_tmpfile}"
+			echo "Action: ${_action}" >> "${_tmpfile}"
+
+			# if the metadata file for the current message exists in
+			# the work dir..
+			if [ -f ${_modwrk}/${_mlmmj_id} ]; then
+				# ..parse each line, prepend it with 'Message '
+				# and add them to the output var..
+				while read _linewrk; do
+					echo "Message ${_linewrk}" >> \
+						"${_tmpfile}"
+				done < "${_modwrk}/${_mlmmj_id}"
+			else
+				# ..otherwise, just add the message id
+				echo "Message ID: ${_mlmmj_id}" >> "${_tmpfile}"
+			fi
+
+			# add a blank line, for readability
+			echo >> "${_tmpfile}"
+		done
+
+	# send the mail if the tmpfile contains data
+	if [ -s "${_tmpfile}" ]; then
+		for _moderat in $(cat ${_list}/control/moderators); do
+			mail -s "[${_listname}] Moderation actions report" \
+				"${_moderat}" < "${_tmpfile}"
+		done
+	fi
+
+	# remove the temp file
+	rm -f "${_tmpfile}"
+
+	# remove metadata files in moderation work dir if they are removed from
+	# the moderation queue directory
+	for _modwrkmsg in $(find ${_modwrk} -type f ! -name '.timestamp'); do
+		test -e "${_list}/moderation/$(basename ${_modwrkmsg})" || \
+			rm -f "${_modwrkmsg}"
+	done
+
+	# write the timestamp
+	date '+%s' > ${_modwrk}/.timestamp
+done

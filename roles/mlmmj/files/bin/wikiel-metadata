@@ -1,0 +1,76 @@
+#!/bin/sh
+#
+# Copyright (c) 2015 Manolis Tzanidakis <mtzanidakis@gmail.com>
+#
+# Permission to use, copy, modify, and distribute this software for any
+# purpose with or without fee is hereby granted, provided that the above
+# copyright notice and this permission notice appear in all copies.
+#
+# THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL
+# WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED
+# WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE
+# AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL
+# DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR
+# PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
+# TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+# PERFORMANCE OF THIS SOFTWARE.
+#
+# This script gets the subscribers & messages count from the wikiel mailing
+# list to builds u our mailing list archives home page.
+#
+# The script should run from cron in a daily basis, by a dedicated user.
+
+# load the mailing list credentials from the conf file
+_conf="$HOME/wikiel.conf"
+
+# data file
+_data="$HOME/wikiel.data"
+
+# wikiel remote url
+_wikimedia='https://lists.wikimedia.org'
+
+# abort on errors
+_error() {
+	echo "abort: ${@}."
+	exit 1
+}
+
+# load credentials from config file
+if [ -s ${_conf} ]; then
+	_user="$(awk '/username: / { print $2 }' ${_conf})"
+	_pass="$(awk '/password: / { print $2 }' ${_conf})"
+else
+	_error "no configuration file: ${_conf}"
+fi
+
+# the messages counter: loop over the archive months
+for _month in $(curl -s "${_wikimedia}/pipermail/wikiel/" | \
+	perl -M5.012 -ne '/\<A href="(.*)"\>\[ Thread \]/ && say $1')
+do
+	# get the number of messages for each month
+	_msg=$(curl -s "${_wikimedia}/pipermail/wikiel/${_month}" | \
+		perl -ne '/\<b\>Messages:\<\/b\> (\d+)/ && print $1')
+
+	# calculate the total number of messages
+	_msgtotal=$(( ${_msgtotal} + ${_msg} ))
+done
+
+# the subscribers counter
+_subscribers=$(curl -sd "roster-email=${_user}&roster-pw=${_pass}" \
+	"${_wikimedia}/mailman/roster/wikiel" | perl -nle \
+	'$total += $1 while ($_ =~ m/\<B\>\<FONT COLOR="#000000"\>(\d+)/g);
+	END { print $total}')
+
+# if the data file exists compare the number of messages to that stored on
+# the file. do not update the file if the number of messages is smaller
+if [ -s ${_data} ]; then
+	[ ${_msgtotal} -lt $(awk '/messages: / { print $2 }' ${_data}) ] &&
+		_error "the number of messages is smaller than the stored value"
+fi
+
+# write the data on the file
+cat > ${_data} << _EOF
+timestamp: $(date)
+messages: ${_msgtotal}
+subscribers: ${_subscribers}
+_EOF

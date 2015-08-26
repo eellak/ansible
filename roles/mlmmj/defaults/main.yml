@@ -1,2 +1,5 @@
 ---
 # defaults file for mlmmj
+mlmmj_spool: '/var/spool/mlmmj'
+list_path: "{{ mlmmj_spool }}/ellak.gr"
+postfix_mlmmj: '/etc/postfix/mlmmj'

@@ -1,4 +1,16 @@
 ---
+# Update ma.ellak.gr theme.
+# When no extra variable is provided it fetches the master branch.
+#
+# Examples
+# --------
+#
+# Deploy master branch:
+#   ansible-playbook playbooks/maellak_theme.yml
+#
+# Deploy other branch, tag, commit sha:
+#   ansible-playbook playbooks/maellak_theme.yml -e 'version=other_branch'
+#
 - hosts: ma.ellak.gr
   sudo: yes
   sudo_user: www-data
@@ -10,5 +22,4 @@
         dest: /var/www/maellak/wp-content/themes/ma_ellak
         force: yes
         repo: https://github.com/eellak/wp-maellak-theme.git
-
-
+        version: "{{ version | default('master') }}"

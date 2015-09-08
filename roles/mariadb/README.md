@@ -1,8 +1,5 @@
 ## MariaDB setup on CentOS7
 
-Copy `defaults/main.yml.example` to `defaults/main.yml` and edit to include
-the right password for root user and/or a regular one.
-
 The [secure_installation task](tasks/secure-installation.yml) checks if there
 is a `/root/.my.cnf` file containing the root credentials needed to perform
 mysql actions.

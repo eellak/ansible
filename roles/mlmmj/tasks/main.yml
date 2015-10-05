@@ -1,7 +1,8 @@
 ---
 # tasks file for mlmmj
-# the private_lists variable (hash) is in protected_storage/mail1.ellak.gr/private_lists.yml
 - include_vars: public_lists.yml
+  tags:
+    - desc
 
 - name: Create archivist directory
   file:
@@ -34,6 +35,8 @@
   with_items:
     - "{{ public_lists }}"
     - "{{ private_lists }}"
+  tags:
+    - desc
 
 - name: Add long description
   template:
@@ -45,6 +48,8 @@
   with_items:
     - "{{ public_lists }}"
     - "{{ private_lists }}"
+  tags:
+    - desc
 
 - name: Copy footer message
   template:
@@ -85,9 +90,9 @@
     - wikiel
 
 # Keep this task always last
-- name: Run mlmmj-archivist
-  shell: /usr/local/bin/mlmmj-archivist
-  sudo: yes
-  sudo_user: mlmmj
-  tags:
-    - archivist
+#- name: Run mlmmj-archivist
+#  shell: /usr/local/bin/mlmmj-archivist
+#  sudo: yes
+#  sudo_user: mlmmj
+#  tags:
+#    - archivist

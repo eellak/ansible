@@ -4,10 +4,10 @@ public_lists:
       shortdesc: 'Διαχείριση Εγγράφων και Ψηφιακής Υπογραφής',
       longdesc: '<p>Λίστα για την Ομάδα Εργασίας για Σύστημα Διαχείρισης Εγγράφων και Ψηφιακής Υπογραφής.</p><p>Για επιπλέον πληροφορίες επισκεφτείτε στο WIKI της ΕΕΛ/ΛΑΚ την σελίδα της <a href="https://ellak.gr/wikis/%CF%87%CF%8E%CF%81%CE%BF%CF%82-%CF%83%CF%85%CE%BD%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82/%CE%BF%CE%BC%CE%AC%CE%B4%CE%B5%CF%82-%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B5%CF%82/omada-ergasias-gia-to-sistima-diachir/">Ομάδα Εργασίας για Σύστημα Διαχείρισης Εγγράφων και Ψηφιακής Υπογραφής</a>, καθώς και το <a href="http://dms.ellak.gr/">blog της Ομάδας Εργασίας για Σύστημα Διαχείρισης Εγγράφων και Ψηφιακής Υπογραφής</a>.</p>'}
   - { name: 'edu',
-      shortdesc: 'Ανοιχτές Τεχνολογίες στην Εκπαίδευση',
+      shortdesc: 'Λίστα αλληλογραφίας και ενημέρωσης για τις Ανοιχτές Τεχνολογίες στην Εκπαίδευση',
       longdesc: '<p>Λίστα για τις ανοιχτές τεχνολογίες στην εκπαίδευση. Επιπλέον πληροφορίες στο <a href="https://ellak.gr/edu/">https://ellak.gr/edu/</a>.</p>' }
   - { name: 'eellak-advisory',
-      shortdesc: 'Βήμα Δημόσιας Διαβούλευσης της ΕΕΛ/ΛΑΚ',
+      shortdesc: 'Λίστα αλληλογραφίας και συζητήσεων για την δημόσια διαβούλευση και συμμετοχή στις συζητήσεις και αποφάσεις της ΕΕΛ\/ΛΑΚ',
       longdesc: '<p>Η λίστα "eellak-advisory" είναι βήμα δημόσιας διαβούλευσης για όλες τις πρωτοβουλίες της ΕΕΛ/ΛΑΚ καθώς και των θεμάτων που προτείνεται να συζητηθούν στις συνεδριάσεις του Διοικητικού Συμβουλίου ή/και της Γενικής Συνέλευσης.</p><p>Περισσότερες πληροφορίες στην σχετική σελίδα στο <a href="http://www.ellak.gr/wikis/%CF%87%CF%8E%CF%81%CE%BF%CF%82-%CF%83%CF%85%CE%BD%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82/">WIKI της ΕΕΛΛΑΚ</a>.</p>' }
   - { name: 'foss',
       shortdesc: 'Ομάδα Εργασίας για το Ανοιχτό Λογισμικό',
@@ -16,17 +16,17 @@ public_lists:
       shortdesc: 'Greek partners mailing list of the HOMER Project',
       longdesc: '<p>Greek partners mailing list of the HOMER Project.</p>' }
   - { name: 'imeres-sinergasias',
-      shortdesc: 'ΕΛ/ΛΑΚ και Επιχειρηματικότητα',
+      shortdesc: 'Λίστα αλληλογραφίας και συζητήσεων για το ΕΛ\/ΛΑΚ και την Επιχειρηματικότητα',
       longdesc: '<p>Η Εταιρεία Ελεύθερου Λογισμικού / Λογισμικού Ανοικτού Κώδικα, στο πλαίσιο των δράσεων της για συνεργασία όλων των φορέων που έχουν άμεσο ή έμμεσο ρόλο στη διάδοση, ανάπτυξη και χρήση ΕΛ/ΛΑΚ στην Ελλάδα, επιθυμεί να φέρει σε επαφή επιχειρήσεις που παρέχουν εφαρμογές ή υπηρεσίες Ανοιχτού Λογισμικού με εταιρείες και φορείς χρήστες.</p><p>Ο στόχος είναι να δημιουργηθεί μια κοινότητα από εταιρείες που παρέχουν υπηρεσίες ανοιχτού λογισμικού, ώστε να αναδειχθεί το εναλλακτικό μοντέλο επιχειρηματικότητας του Ανοιχτού Λογισμικού. Η δράση αυτή θα διοργανώνει σχετικές ημερίδες ή workshops για να αναδειχτούν λύσεις και καλές πρακτικές.</p><p>Εάν η εταιρεία σας παρέχει υπηρεσίες Ανοιχτού Λογισμικού μπορείτε να καταχωρίσετε τα βασικά στοιχεία του προφίλ σας στο WIKI στην σελίδα <a href="https://ellak.gr/wikis/%CF%87%CF%8E%CF%81%CE%BF%CF%82-%CF%83%CF%85%CE%BD%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82/eteries-pou-ipostirizoun-lisi/">Κατάλογος εταιριών που παρέχουν υπηρεσίες ΕΛ/ΛΑΚ</a>.</p><p>Περισσότερες πληροφορίες στην σχετική σελίδα στο  <a href="https://ellak.gr/wikis/%CF%87%CF%8E%CF%81%CE%BF%CF%82-%CF%83%CF%85%CE%BD%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82/">WIKI της ΕΕΛΛΑΚ</a>.</p>' }
   - { name: 'kainotomia',
       shortdesc: "<p>Επιχειρήσεις με R\\&D δραστηριότητα</p>",
       longdesc: '<p>Λίστα της Εταιρείας Ελεύθερου Λογισμικού / Λογισμικού Ανοικτού Κώδικα, στο πλαίσιο των δράσεων της για συνεργασία και ενημέρωση όλων των φορέων και επιχειρήσεων που ενδιαφέρονται για δράσεις καινοτομίας που αφορούν τις ανοιχτές τεχνολογίες.</p><p>Εάν η εταιρεία σας παρέχει υπηρεσίες Ανοιχτού Λογισμικού μπορείτε να καταχωρίσετε τα βασικά στοιχεία του προφίλ σας στο WIKI στη σελίδα <a href="https://ellak.gr/wikis/%CF%87%CF%8E%CF%81%CE%BF%CF%82-%CF%83%CF%85%CE%BD%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82/eteries-pou-ipostirizoun-lisi/">Κατάλογος εταιριών που παρέχουν υπηρεσίες ΕΛ/ΛΑΚ</a><small>(απαιτείται να είστε <a href="https://ellak.gr/register/">εγγεγραμμένος</a> χρήστης του site της (<a href="https://ellak.gr">ΕΛ/ΛΑΚ</a>)</small>.</p>' }
   - { name: 'mycontent',
-      shortdesc: 'Προώθηση ανοικτού ελληνικού περιεχομένου',
+      shortdesc: 'Λίστα αλληλογραφίας και συζητήσεων για την προώθηση ανοικτού ελληνικού περιεχομένου (wikipedia, openstreetmap, openglam)',
       longdesc: '<p>Στην λίστα mycontent εγγράφονται όσοι ενδιαφέρονται να ενημερώνονται για δράσεις ανοιχτού περιεχομένου που υλοποιούνται στην Ελλάδα και διεθνώς. Περισσότερες πληροφορίες για την πρωτοβουλία στο δικτυακό τόπο <a href="https://mycontent.ellak.gr">https://mycontent.ellak.gr/</a>.</p>' }
   - { name: 'open-source',
-      shortdesc: 'A general discussion list about the open-source movement in Greece',
-      longdesc: '<p>A general discussion list about the open-source movement in Greece. More information at <a href="https://ellak.gr">ellak.gr</a> (in Greek).</p>' }
+      shortdesc: 'Γενική λίστα αλληλογραφίας και συζητήσεων για το κίνημα του ελεύθερου και ανοικτού λογισμικού στην Ελλάδα - A general discussion list about the open-source movement in Greece',
+      longdesc: '<p>Γενική λίστα αλληλογραφίας και συζητήσεων για το κίνημα του ελεύθερου και ανοικτού λογισμικού στην Ελλάδα - A general discussion list about the open-source movement in Greece. More information at <a href="https://ellak.gr">ellak.gr</a> (in Greek).</p>' }
   - { name: 'open_licenses',
       shortdesc: 'Προώθηση των ανοιχτών αδειών',
       longdesc: '<p>Η λίστα απευθύνεται σε όσους ενδιαφέρονται να συμβάλουν στην προώθηση των ανοιχτών αδειών στην Ελλάδα.</p>
@@ -37,12 +37,12 @@ public_lists:
 
 <p>Για επιπλέον πληροφορίες επισκεφτείτε στο WIKI της ΕΕΛ/ΛΑΚ την σελίδα της <a href="https://ellak.gr/wikis/%CF%87%CF%8E%CF%81%CE%BF%CF%82-%CF%83%CF%85%CE%BD%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82/%CE%BF%CE%BC%CE%AC%CE%B4%CE%B5%CF%82-%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B5%CF%82/omada-ergasias-gia-anikta-mathimata/">Ομάδας Εργασίας για τα Ανοιχτά Μαθήματα</a>, καθώς και το <a href="http://opencourses.ellak.gr/">blog της Ομάδας Εργασίας για τα Ανοιχτά Μαθήματα</a>.</p>' }
   - { name: 'opendata',
-      shortdesc: 'Δημόσια, Ανοικτά Δεδομένα',
+      shortdesc: 'Γενική λίστα αλληλογραφίας και συζητήσεων για την προώθηση των δημόσιων και ανοικτών δεδομένων',
       longdesc: '<p>Η λίστα απευθύνεται σε όσους παράγουν ή χρησιμοποιούν ανοιχτά δεδομένα και επιθυμούν να ενημερώνονται για τις σχετικές δράσεις.</p>
 
 <p>Για επιπλέον πληροφορίες επισκεφτείτε στο WIKI της ΕΕΛ/ΛΑΚ την σελίδα της <a href="https://ellak.gr/wikis/%CF%87%CF%8E%CF%81%CE%BF%CF%82-%CF%83%CF%85%CE%BD%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82/%CE%BF%CE%BC%CE%AC%CE%B4%CE%B5%CF%82-%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B5%CF%82/omada-ergasias-gia-ta-anichta-dedomen/">Ομάδας εργασίας για τα Ανοιχτά Δεδομένα</a>, καθώς και το <a href="http://opendata.ellak.gr/">blog της Ομάδας εργασίας για τα Ανοιχτά Δεδομένα</a>.</p>' }
   - { name: 'opengov',
-      shortdesc: 'Ομάδα Εργασίας για την Ανοιχτή Διακυβέρνηση (Open Governance)',
+      shortdesc: 'Γενική λίστα αλληλογραφίας και συζητήσεων για την Ανοιχτή Διακυβέρνηση (Open Governance)',
       longdesc: '<p>Λίστα για την Ομάδα Εργασίας για την Ανοιχτή Διακυβέρνηση (Open Governance).</p>
 
 <p>Για επιπλέον πληροφορίες επισκεφτείτε στο WIKI της ΕΕΛ/ΛΑΚ την σελίδα της <a href="https://ellak.gr/wikis/%CF%87%CF%8E%CF%81%CE%BF%CF%82-%CF%83%CF%85%CE%BD%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82/%CE%BF%CE%BC%CE%AC%CE%B4%CE%B5%CF%82-%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B5%CF%82/omada-ergasias-gia-tin-anichti-diakiv/">Ομάδα Εργασίας για την Ανοιχτή Διακυβέρνηση (Open Governance)</a>καθώς και το <a href="https://opengov.ellak.gr/">blog της Ομάδας εργασίας για την Ανοιχτή Διακυβέρνηση (Open Governance)</a>.</p>' }
@@ -52,7 +52,7 @@ public_lists:
 
 <p>Για επιπλέον πληροφορίες επισκεφτείτε στο WIKI της ΕΕΛ/ΛΑΚ την σελίδα της <a href="https://ellak.gr/wikis/%CF%87%CF%8E%CF%81%CE%BF%CF%82-%CF%83%CF%85%CE%BD%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82/%CE%BF%CE%BC%CE%AC%CE%B4%CE%B5%CF%82-%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B5%CF%82/omada-ergasias-gia-tis-anichtes-techno/">Ομάδα Εργασίας για τις Ανοιχτές Τεχνολογίες Υλικού (Open Hardware)</a>, καθώς και το <a href="http://openhardware.ellak.gr/">blog της Ομάδας Εργασίας για τις Ανοιχτές Τεχνολογίες Υλικού (Open Hardware)</a>.</p>' }
   - { name: 'openwifi',
-      shortdesc: 'Ανοιχτή ασύρματη πρόσβαση',
+      shortdesc: 'Γενική λίστα αλληλογραφίας και συζητήσεων για την Ανοιχτή ασύρματη πρόσβαση',
       longdesc: '<p>Λίστα ανταλλαγής απόψεων και εμπειρίας για την υλοποίηση και προώθηση της δράσης της ΕΕΛΛΑΚ για ανοιχτή ασύρματη πρόσβαση σε ευρυζωνικά δίκτυα αξιοποιώντας εργαλεία και πλατφόρμες Ανοιχτού Λογισμικού και Aνοιχτού Yλικού (hardware).</p>
 
 <p>Αναλυτική πληροφόρηση στο <a href="http://www.openwifi.gr/">http://www.openwifi.gr/</a>.</p>' }
@@ -67,8 +67,8 @@ public_lists:
 
 <p>Όλα τα δελτία τύπου είναι διαθέσιμα στην σελίδα <a href="https://ellak.gr/%CE%B5%CE%BD%CE%B7%CE%BC%CE%AD%CF%81%CF%89%CF%83%CE%B7/%CE%B4%CE%B5%CE%BB%CF%84%CE%AF%CE%B1-%CF%84%CF%8D%CF%80%CE%BF%CF%85/">Ενημέρωση</a>.</p>' }
   - { name: 'privacy',
-      shortdesc: 'Ομάδα Εργασίας: Ασφάλεια Πληροφοριακών Συστημάτων',
-      longdesc: '<p>Λίστα για την Ομάδα Εργασίας για Ασφάλεια Πληροφοριακών Συστημάτων.</p>
+      shortdesc: 'Γενική λίστα αλληλογραφίας και συζητήσεων της κοινότητας που ασχολείται με θέματα ιδιωτικότητας',
+      longdesc: '<p>Γενική λίστα αλληλογραφίας και συζητήσεων της κοινότητας που ασχολείται με θέματα ιδιωτικότητας και για την Ασφάλεια Πληροφοριακών Συστημάτων.</p>
 
 <p>Για επιπλέον πληροφορίες επισκεφτείτε στο WIKI της ΕΕΛ/ΛΑΚ την σελίδα της <a href="https://ellak.gr/wikis/%CF%87%CF%8E%CF%81%CE%BF%CF%82-%CF%83%CF%85%CE%BD%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B1%CF%82/%CE%BF%CE%BC%CE%AC%CE%B4%CE%B5%CF%82-%CE%B5%CF%81%CE%B3%CE%B1%CF%83%CE%AF%CE%B5%CF%82/omada-ergasias-gia-asfalia-plirofor/">Ομάδας Εργασίας για Ασφάλεια Πληροφοριακών Συστημάτων</a>, καθώς και το <a href="https://privacy.ellak.gr">blog της Ομάδας Εργασίας για Ασφάλεια Πληροφοριακών Συστημάτων</a>.</p>' }
   - { name: 'scriptum-users',

@@ -7,6 +7,36 @@
     <title>ΕΛ/ΛΑΚ Νέα - {{ month }}</title>
 
 <style>
+
+h3 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  color: #333;
+  margin: 10px 0 14px 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0 0 0 24px;
+  padding: 0;
+}
+
+ul > li {
+  font-family: "Open Sans", sans-serif;
+  font-size: 10px;
+  font-weight: normal;
+  color: #a72323;
+}
+
+ul > li > a {
+ font-family: "Open Sans", sans-serif;
+ font-size: 11px;
+ font-weight: normal;
+ color: #a72323;
+ text-decoration: none;
+}
+
 #navigation {
   position: fixed;
   top: 0;
@@ -75,13 +105,13 @@
 
 <!-- +++++++   ΕΛ/ΛΑΚ  (start)  ++++++++ -->
 {% if ellak  %}
-          <h3 style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">ΕΛ/ΛΑΚ</h3>
+          <h3>ΕΛ/ΛΑΚ</h3>
 {% endif %}
 
 {% for item in ellak %}
-          <ul style="margin: 0 0 0 24px;padding: 0">
-            <li style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323">
-              <a href="{{ item.url }}" style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #a72323;text-decoration: none">
+          <ul>
+            <li>
+              <a href="{{ item.url }}">
                 {{ item.desc }}
               </a>
             </li>
@@ -90,12 +120,12 @@
 
 <!-- +++++++   Creative Commons  (start)  +++++++ -->
 {% if cc %}
-          <h3 style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">Creative Commons Greece</h3>
+          <h3>Creative Commons Greece</h3>
 {% endif %}
 {% for item in cc %}
-          <ul style="margin: 0 0 0 24px;padding: 0">
-            <li style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323">
-              <a href="{{ item.url }}" style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #a72323;text-decoration: none">
+          <ul>
+            <li>
+              <a href="{{ item.url }}">
                 {{ item.desc }}
               </a>
             </li>
@@ -104,12 +134,12 @@
 
 <!-- ++++++  Ανοιχτό Περιεχόμενο  (start)  +++++++ -->
 {% if mycontent %}
-          <h3 style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">Ανοιχτό Περιεχόμενο</h3>
+          <h3>Ανοιχτό Περιεχόμενο</h3>
 {% endif %}
 {% for item in mycontent %}
-          <ul style="margin: 0 0 0 24px;padding: 0">
-            <li style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323">
-              <a href="{{ item.url }}" style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #a72323;text-decoration: none">
+          <ul>
+            <li>
+              <a href="{{ item.url }}">
                 {{ item.desc }}
               </a>
             </li>
@@ -118,12 +148,12 @@
 
 <!-- ++++++  Planet  (start)  +++++++++ -->
 {% if planet %}
-          <h3 style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">Πλανήτης ΕΛ/ΛΑΚ</h3>
+          <h3>Πλανήτης ΕΛ/ΛΑΚ</h3>
 {% endif %}
 {% for item in planet %}
-          <ul style="margin: 0 0 0 24px;padding: 0">
-            <li style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323">
-              <a href="{{ item.url }}" style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #a72323;text-decoration: none">
+          <ul>
+            <li>
+              <a href="{{ item.url }}">
                 {{ item.desc }}
               </a>
             </li>
@@ -132,12 +162,12 @@
 
 <!-- +++++  Opengov  (start)  ++++++ -->
 {% if opengov %}
-          <h3 style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">Ανοιχτή Διακυβέρνηση</h3>
+          <h3>Ανοιχτή Διακυβέρνηση</h3>
 {% endif %}
 {% for item in opengov %}
-          <ul style="margin: 0 0 0 24px;padding: 0">
-            <li style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323">
-              <a href="{{ item.url }}" style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #a72323;text-decoration: none">
+          <ul>
+            <li>
+              <a href="{{ item.url }}">
                 {{ item.desc }}
               </a>
             </li>
@@ -146,12 +176,12 @@
 
 <!-- ++++++  OpenData  (start)  ++++++++ -->
 {% if opendata %}
-          <h3 style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">Ανοιχτά Δεδομένα</h3>
+          <h3>Ανοιχτά Δεδομένα</h3>
 {% endif %}
 {% for item in opendata %}
-          <ul style="margin: 0 0 0 24px;padding: 0">
-            <li style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323">
-              <a href="{{ item.url }}" style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #a72323;text-decoration: none">
+          <ul>
+            <li>
+              <a href="{{ item.url }}">
                 {{ item.desc }}
               </a>
             </li>
@@ -160,12 +190,12 @@
 
 <!-- ++++   OpenDataInstitute  (start)  +++++ -->
 {% if odi %}
-          <h3 style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">Open Data Institute – Athens Node</h3>
+          <h3>Open Data Institute – Athens Node</h3>
 {% endif %}
 {% for item in odi %}
-          <ul style="margin: 0 0 0 24px;padding: 0">
-            <li style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323">
-              <a href="{{ item.url }}" style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #a72323;text-decoration: none">
+          <ul>
+            <li>
+              <a href="{{ item.url }}">
                 {{ item.desc }}
               </a>
             </li>
@@ -174,12 +204,12 @@
 
 <!-- +++++  OBS  (start)  ++++++ -->
 {% if obs %}
-          <h3 style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">Διεθνής συνεργασία για τους Ανοιχτούς Προϋπολογισμούς</h3>
+          <h3>Διεθνής συνεργασία για τους Ανοιχτούς Προϋπολογισμούς</h3>
 {% endif %}
 {% for item in obs %}
-          <ul style="margin: 0 0 0 24px;padding: 0">
-            <li style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323">
-              <a href="{{ item.url }}" style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #a72323;text-decoration: none">
+          <ul>
+            <li>
+              <a href="{{ item.url }}">
                 {{ item.desc }}
               </a>
             </li>
@@ -188,12 +218,12 @@
 
 <!-- ++++++  EDU  (start)  +++++ -->
 {% if edu %}
-          <h3 style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">Ανοιχτές τεχνολογίες στην εκπαίδευση</h3>
+          <h3>Ανοιχτές τεχνολογίες στην εκπαίδευση</h3>
 {% endif %}
 {% for item in edu %}
-          <ul style="margin: 0 0 0 24px;padding: 0">
-            <li style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323">
-              <a href="{{ item.url }}" style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #a72323;text-decoration: none">
+          <ul>
+            <li>
+              <a href="{{ item.url }}">
                 {{ item.desc }}
               </a>
             </li>
@@ -202,12 +232,12 @@
 
 <!-- +++++  OpenStandards  (start)  +++++ -->
 {% if openstandards %}
-          <h3 style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">OpenStandards</h3>
+          <h3>OpenStandards</h3>
 {% endif %}
 {% for item in openstandards %}
-          <ul style="margin: 0 0 0 24px;padding: 0">
-            <li style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323">
-              <a href="{{ item.url }}" style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #a72323;text-decoration: none">
+          <ul>
+            <li>
+              <a href="{{ item.url }}">
                 {{ item.desc }}
               </a>
             </li>
@@ -216,12 +246,12 @@
 
 <!-- +++++  OpenHardware  (start)  +++++ -->
 {% if openhardware %}
-          <h3 style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">Ανοιχτές τεχνολογίες</h3>
+          <h3>Ανοιχτές τεχνολογίες</h3>
 {% endif %}
 {% for item in openhardware %}
-          <ul style="margin: 0 0 0 24px;padding: 0">
-            <li style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323">
-              <a href="{{ item.url }}" style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #a72323;text-decoration: none">
+          <ul>
+            <li>
+              <a href="{{ item.url }}">
                 {{ item.desc }}
               </a>
             </li>
@@ -230,12 +260,12 @@
 
 <!-- ++++++  OpenWiFi  (start)  +++++++ -->
 {% if openwifi %}
-          <h3 style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">OpenWiFi</h3>
+          <h3>OpenWiFi</h3>
 {% endif %}
 {% for item in openwifi %}
-          <ul style="margin: 0 0 0 24px;padding: 0">
-            <li style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323">
-              <a href="{{ item.url }}" style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #a72323;text-decoration: none">
+          <ul>
+            <li>
+              <a href="{{ item.url }}">
                 {{ item.desc }}
               </a>
             </li>
@@ -244,12 +274,12 @@
 
 <!-- ++++++  Legal  (start)  ++++++ -->
 {% if legal %}
-          <h3 style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">Νομοθεσία</h3>
+          <h3>Νομοθεσία</h3>
 {% endif %}
 {% for item in legal %}
-          <ul style="margin: 0 0 0 24px;padding: 0">
-            <li style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323">
-              <a href="{{ item.url }}" style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #a72323;text-decoration: none">
+          <ul>
+            <li>
+              <a href="{{ item.url }}">
                 {{ item.desc }}
               </a>
             </li>
@@ -258,17 +288,17 @@
 
 <hr>
 <!-- ++++++  Working groups  (start)  ++++++ -->
-<h3 style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">Ομάδες Εργασίας:</h3>
+<h3>Ομάδες Εργασίας:</h3>
 <!-- ++++++  Working groups  (stop)  ++++++ -->
 
 <!-- ++++++  WG-opengov  (start)  ++++++ -->
 {% if wg_opengov %}
-          <h3 style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">Ανοιχτής Διακυβέρνησης</h3>
+          <h3>Ανοιχτής Διακυβέρνησης</h3>
 {% endif %}
 {% for item in wg_opengov %}
-          <ul style="margin: 0 0 0 24px;padding: 0">
-            <li style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323">
-              <a href="{{ item.url }}" style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #a72323;text-decoration: none">
+          <ul>
+            <li>
+              <a href="{{ item.url }}">
                 {{ item.desc }}
               </a>
             </li>
@@ -277,12 +307,12 @@
 
 <!-- ++++++  WG-opendata  (start)  ++++++ -->
 {% if wg_opendata %}
-          <h3 style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">Ανοιχτών Δεδομένων</h3>
+          <h3>Ανοιχτών Δεδομένων</h3>
 {% endif %}
 {% for item in wg_opendata %}
-          <ul style="margin: 0 0 0 24px;padding: 0">
-            <li style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323">
-              <a href="{{ item.url }}" style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #a72323;text-decoration: none">
+          <ul>
+            <li>
+              <a href="{{ item.url }}">
                 {{ item.desc }}
               </a>
             </li>
@@ -291,12 +321,12 @@
 
 <!-- ++++++  WG-openstandards  (start)  ++++++ -->
 {% if wg_openstandards %}
-          <h3 style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">Για τα Ανοικτά πρότυπα και Άδειες</h3>
+          <h3>Για τα Ανοικτά πρότυπα και Άδειες</h3>
 {% endif %}
 {% for item in wg_openstandards %}
-          <ul style="margin: 0 0 0 24px;padding: 0">
-            <li style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323">
-              <a href="{{ item.url }}" style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #a72323;text-decoration: none">
+          <ul>
+            <li>
+              <a href="{{ item.url }}">
                 {{ item.desc }}
               </a>
             </li>
@@ -305,12 +335,12 @@
 
 <!-- ++++++  WG-openhardware  (start)  ++++++ -->
 {% if wg_openhardware %}
-          <h3 style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">Για το Ανοικτό hardware και τα Ασύρματα δίκτυα</h3>
+          <h3>Για το Ανοικτό hardware και τα Ασύρματα δίκτυα</h3>
 {% endif %}
 {% for item in wg_openhardware %}
-          <ul style="margin: 0 0 0 24px;padding: 0">
-            <li style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323">
-              <a href="{{ item.url }}" style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #a72323;text-decoration: none">
+          <ul>
+            <li>
+              <a href="{{ item.url }}">
                 {{ item.desc }}
               </a>
             </li>
@@ -319,12 +349,12 @@
 
 <!-- ++++++  WG-privacy  (start)  ++++++ -->
 {% if wg_privacy %}
-          <h3 style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">Για την Ασφάλεια Πληροφοριακών Συστημάτων και Προστασία Προσωπικών Δεδομένων</h3>
+          <h3>Για την Ασφάλεια και την Ιδιωτικότητα</h3>
 {% endif %}
 {% for item in wg_privacy %}
-          <ul style="margin: 0 0 0 24px;padding: 0">
-            <li style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323">
-              <a href="{{ item.url }}" style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #a72323;text-decoration: none">
+          <ul>
+            <li>
+              <a href="{{ item.url }}">
                 {{ item.desc }}
               </a>
             </li>
@@ -333,12 +363,12 @@
 
 <!-- ++++++  WG-foss  (start)  ++++++ -->
 {% if wg_foss %}
-          <h3 style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">Για το Ανοιχτό Λογισμικό</h3>
+          <h3>Για το Ανοιχτό Λογισμικό</h3>
 {% endif %}
 {% for item in wg_foss %}
-          <ul style="margin: 0 0 0 24px;padding: 0">
-            <li style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323">
-              <a href="{{ item.url }}" style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #a72323;text-decoration: none">
+          <ul>
+            <li>
+              <a href="{{ item.url }}">
                 {{ item.desc }}
               </a>
             </li>
@@ -347,12 +377,12 @@
 
 <!-- ++++++  WG-oer  (start)  ++++++ -->
 {% if wg_oer %}
-          <h3 style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">Για το Ανοιχτό Περιεχόμενο στην εκπαίδευση</h3>
+          <h3>Για το Ανοιχτό Περιεχόμενο στην εκπαίδευση</h3>
 {% endif %}
 {% for item in wg_oer %}
-          <ul style="margin: 0 0 0 24px;padding: 0">
-            <li style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323">
-              <a href="{{ item.url }}" style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #a72323;text-decoration: none">
+          <ul>
+            <li>
+              <a href="{{ item.url }}">
                 {{ item.desc }}
               </a>
             </li>
@@ -363,11 +393,11 @@
           <hr>
 <!-- ++++++  Weekly events  (start)  +++++++ -->
 
-          <h3 style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 16px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 0">Οι εκδηλώσεις του μήνα</h3>
-          <ul style="margin: 0 0 0 24px;padding: 0">
+          <h3>Οι εκδηλώσεις του μήνα</h3>
+          <ul>
 {% for item in events %}
-              <li style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323">
-                <a href="{{ item.url }}" style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #a72323;text-decoration: none">
+              <li>
+                <a href="{{ item.url }}">
                     {{ item.desc }}
                   </a>
               </li>
@@ -377,12 +407,12 @@
           <hr>
 
 <!-- +++++  Lists  (start)   ++++++ -->
-          <a href="https://lists.ellak.gr/" style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #a72323;text-decoration: none">
-          <h2>Λίστες Ταχυδρομείου</h2>
+          <a href="https://lists.ellak.gr/">
+          <h3>Λίστες Ταχυδρομείου</h3>
           </a>
 
           <br />
-          
+
 <!-- ++++++  Weekly events  (end)  +++++++ -->
 
            </td>
@@ -403,10 +433,12 @@
              </h2>
 
              <p style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #333;margin: 0 0 16px 0;padding: 0">
-             <img src="{{ item.img }}" width="180" style="float: left; padding-right: 5px;"/>
+             <img src="{{ item.img }}" width="160" style="float: left; padding-right: 5px;"/>
               {{ item.desc }}
               <a href="{{ item.url }}" style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323;text-decoration: none">Περισσότερα »</a>
              </p>
+             <br />
+             <br />
              <br />
              {% endfor %}
 
@@ -415,7 +447,7 @@
 
                           <!-- Do not edit below this line! -->
                           <center>
-                            <img src="https://newsletter.ellak.gr/images/hr-small.gif" alt="Small hr" width="192" height="28"/><ul style="margin: 0 0 0 24px;padding: 0"><li style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323;list-style-type:none;"><a href="https://newsletter.ellak.gr/newsletter_index.html" style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323;text-decoration: none;list-style-type:none;"><h2>Όλα τα ενημερωτικά δελτία</h2></a></li>
+                            <img src="https://newsletter.ellak.gr/images/hr-small.gif" alt="Small hr" width="192" height="28"/><ul><li style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323;list-style-type:none;"><a href="https://newsletter.ellak.gr/newsletter_index.html" style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323;text-decoration: none;list-style-type:none;"><h2>Όλα τα ενημερωτικά δελτία</h2></a></li>
                           </center>
 
                           </ul>
@@ -431,7 +463,7 @@
                   </tr><tr><td class="footer" align="center" style="padding: 20px 0 20px 0">
 
                       </p>
-                      <p style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #151515">Το υλικό του ΕΛΛΑΚ ΝΕΑ διανέμεται με την άδεια χρήσης:<br/><img src="https://newsletter.ellak.gr/images/cc_BY.png" width="88"/><br/><a style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #a72323;text-decoration: none" href="https://creativecommons.org/licenses/by/3.0/gr/">Creative Commons Αναφορά προέλευσης 3.0 Ελλάδα</a>.
+                      <p style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 10px;font-weight: normal;color: #151515">Το υλικό του ΕΛΛΑΚ ΝΕΑ διανέμεται με την άδεια χρήσης:<br/><img src="https://newsletter.ellak.gr/images/cc_BY.png" width="88"/><br/><a href="https://creativecommons.org/licenses/by/3.0/gr/">Creative Commons Αναφορά προέλευσης 3.0 Ελλάδα</a>.
 
                       </p>
 

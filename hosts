@@ -1,3 +1,10 @@
+[metrics]
+grafana.ellak.gr
+munin.ellak.gr
+
+[munin]
+munin.ellak.gr
+
 [adminvm]
 adminvm.ellak.gr
 
@@ -7,7 +14,11 @@ devvm.ellak.gr
 [owncloud]
 macloud.ellak.gr
 
+[db]
+db1.ellak.gr
+
 [web]
+web1.ellak.gr
 www1.ellak.gr
 www2.ellak.gr
 
@@ -23,17 +34,25 @@ guest1.ellak.gr
 [radio]
 ccradio.ellak.gr
 
-[wiki]
+[wikis]
 wiki.ellak.gr
+wiki-dev.ellak.gr
 
 [mail]
 mail1.ellak.gr ansible_ssh_port=2022
 
 [maellak]
 ma.ellak.gr ansible_ssh_port=2223
+ma-dev.ellak.gr ansible_ssh_port=22
 
 [guests]
 guest[1:4].ellak.gr
+
+[parsoid]
+parsoid.ellak.gr
+
+[bacula]
+bacula.ellak.gr
 
 [okeanos:children]
 web
@@ -43,8 +62,10 @@ devvm
 owncloud
 redmine
 radio
-wiki
+wikis
 gitlab
+bacula
+munin
 
 [ellak:children]
 web
@@ -53,10 +74,28 @@ redmine
 radio
 mail
 maellak
-wiki
+wikis
 gitlab
 adminvm
 devvm
+db
+bacula
+
+[debian:children]
+web
+owncloud
+redmine
+radio
+mail
+maellak
+wikis
+gitlab
+adminvm
+devvm
+bacula
+
+[centos:children]
+db
 
 [vima:children]
 mail
@@ -65,6 +104,9 @@ maellak
 [targets:children]
 vima
 okeanos
+
+[development]
+wiki-dev.ellak.gr
 
 ; Variables
 [okeanos:vars]

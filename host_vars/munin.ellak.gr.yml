@@ -1,0 +1,17 @@
+---
+## postinstall
+hostname: munin.ellak.gr
+fqdn: "{{ hostname }}"
+
+## munin
+munin_hosts:
+  - {
+    name: "localhost",
+    address: "127.0.0.1",
+    extra: ["use_node_name yes"]
+    }
+  - {
+    name: "www2",
+    address: "10.19.91.3",
+    extra: ["use_node_name yes"]
+    }

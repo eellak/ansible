@@ -2,7 +2,7 @@
 # tasks file for dnsmasq
 
 - name: Install dnsmasq
-  apt: name=dnsmasq state=present update_cache=yes
+  apt: name=dnsmasq state=present update_cache=yes cache_valid_time=3600
 
 - name: Copy config files
   template:

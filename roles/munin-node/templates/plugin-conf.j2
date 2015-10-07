@@ -1,0 +1,7 @@
+{% for section,directives in munin_node_config.iteritems() %}
+[{{section}}]
+{% for name,val in directives.iteritems() %}
+{{ name }} {{ val }}
+{% endfor %}
+
+{% endfor %}

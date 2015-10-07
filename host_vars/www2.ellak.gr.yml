@@ -1,0 +1,58 @@
+---
+hostname: www2.ellak.gr
+fqdn: 'ellak.gr'
+
+## Mediawiki
+mw_root_path: '/var/www/vhosts/ellak.gr/site/public_html/wiki'
+mw_sitename: 'Ελεύθερο Λογισμικό / Λογισμικό ανοιχτού κώδικα'
+mw_meta_namespace: 'Ελεύθερο Λογισμικό / Λογισμικό ανοιχτού κώδικα'
+mw_emergency_contact: 'info@ellak.gr'
+mw_password_sender: 'no-repy@ellak.gr'
+mw_secret_key: "{{ MW_SECRET_KEY }}"
+mw_smtp_host: "{{ MW_SMTP_HOST }}"
+mw_smtp_username: "{{ MW_SMTP_USERNAME }}"
+mw_smtp_password: "{{ MW_SMTP_PASSWORD }}"
+mw_smtp_id_host: "{{ fqdn }}"
+mw_script_path: '/wiki'
+
+## MariaDB
+mysql_root_password: "{{ MYSQL_ROOT_PASSWORD }}"
+mysql_databases:
+  - name: mw
+    collation: utf8_general_ci
+    encoding: utf8
+mysql_users:
+  - name: "{{ MYSQL_USERS_NAME_FIRST }}"
+    host: localhost
+    password: "{{ MYSQL_USERS_PASSWORD_FIRST }}"
+    priv: "mw.*:ALL"
+
+## Parsoid
+# TODO do not hardcode
+parsoid_ip: http://83.212.85.21:8000
+parsoid_api_endpoints:
+  - uid: 'ellakgr'
+    uri: 'https://ellak.gr/wiki/api.php'
+
+## Memcached vars
+memcached_memory_limit: 256
+
+## Munin node
+munin_node_bind_host: "{{ ansible_eth2.ipv4.address }}"
+munin_node_bind_port: "4949"
+
+munin_node_host_name: '{{ hostname }}'
+
+# Munin requires IPs be added as regular expressions.
+munin_node_allowed_ips:
+  - '^127\.0\.0\.1$'
+  - '^::1$'
+  - '{{ munin_master_regex_ip }}'
+
+## ufw
+ufw_whitelisted_ipv4_addresses:
+  - {
+    address: "{{ munin_master_ip }}",
+    port: "{{ munin_node_bind_port }}",
+    protocol: tcp
+    }

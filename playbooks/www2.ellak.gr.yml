@@ -1,0 +1,12 @@
+---
+- hosts: www2.ellak.gr
+  sudo: true
+
+  vars_files:
+    - "{{ protected_storage }}/www2.ellak.gr/ufw.yml"
+
+  roles:
+    - { role: ufw, tags: ['ufw', 'firewall'] }
+      #    - hhvm
+    - memcached
+    - { role: munin-node, tags: ['munin-node', 'munin'] }

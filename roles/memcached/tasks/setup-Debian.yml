@@ -4,3 +4,9 @@
 
 - name: Install Memcached.
   apt: name=memcached state=installed
+
+- name: Create memcache user
+  user:
+    name: "{{ memcached_user | default(__memcached_user) }}"
+    #    group: "{{ memcached_user | default(__memcached_user) }}"
+    shell: /sbin/nologin

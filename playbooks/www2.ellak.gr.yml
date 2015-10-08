@@ -5,6 +5,20 @@
   vars_files:
     - "{{ protected_storage }}/www2.ellak.gr/ufw.yml"
 
+  pre_tasks:
+    - name: Set up cron for apt-get update
+      cron:
+        cron_file: apt-get-munin
+        special_time: hourly
+        name: "Required by munin apt_all plugin"
+        job: "apt-get update > /dev/null 2>&1"
+        user: root
+
+    - name: Install debian packages for host
+      apt: name={{ item }} state=present
+      with_items:
+        - libcache-memcached-perl
+
   roles:
     - { role: ufw, tags: ['ufw', 'firewall'] }
       #    - hhvm

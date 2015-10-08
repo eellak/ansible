@@ -49,6 +49,16 @@ munin_node_allowed_ips:
   - '^::1$'
   - '{{ munin_master_regex_ip }}'
 
+# List of munin plugins to enable.
+munin_node_plugins:
+  - name: memcache_rates
+    plugin: memcached_
+  - name: memcache_counters
+    plugin: memcached_
+  - name: memcache_bytes
+    plugin: memcached_
+  - name: apt_all
+
 ## ufw
 ufw_whitelisted_ipv4_addresses:
   - {

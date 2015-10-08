@@ -22,5 +22,5 @@
   roles:
     - { role: ufw, tags: ['ufw', 'firewall'] }
       #    - hhvm
-    - memcached
+    - { role: memcached, tags: ['memcache', 'memcached'] }
     - { role: munin-node, tags: ['munin-node', 'munin'] }

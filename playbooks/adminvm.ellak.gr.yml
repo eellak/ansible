@@ -1,0 +1,11 @@
+---
+- hosts: adminvm.ellak.gr
+  sudo: true
+
+  vars_files:
+    - "{{ protected_storage }}/adminvm.ellak.gr/ufw.yml"
+
+  roles:
+    - dnsmasq
+    - { role: munin-node, tags: ['munin-node'] }
+    - { role: ufw, tags: ['ufw'] }

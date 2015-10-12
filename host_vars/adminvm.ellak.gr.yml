@@ -1,0 +1,24 @@
+---
+fqdn: adminvm.ellak.gr
+hostname: "{{ fqdn }}"
+
+
+## Munin node
+munin_node_bind_host: "{{ ansible_eth2.ipv4.address }}"
+munin_node_bind_port: "4949"
+
+munin_node_host_name: '{{ hostname }}'
+
+# Munin requires IPs be added as regular expressions.
+munin_node_allowed_ips:
+  - '^127\.0\.0\.1$'
+  - '^::1$'
+  - '{{ munin_master_regex_private_ip }}'
+
+## ufw
+ufw_whitelisted_ipv4_addresses:
+  - {
+    address: "{{ munin_master_private_ip }}",
+    port: "{{ munin_node_bind_port }}",
+    protocol: tcp
+    }

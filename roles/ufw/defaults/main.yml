@@ -2,6 +2,7 @@
 ufw_connection_rate_limits: [ ]
 ufw_whitelisted_ipv4_addresses: [ ]
 ufw_whitelisted_ipv6_addresses: [ ]
+ufw_whitelisted_port_to_port: [ ]
 ufw_whitelisted_ports:
   -  { port: "{{ SSH_PORT }}",  protocol: tcp }
   -  { port: 80,  protocol: tcp }

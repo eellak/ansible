@@ -34,6 +34,11 @@
 -A ufw-user-input -p {{ tuple.protocol }} --dport {{ tuple.port }} -s {{ tuple.address }} -j ACCEPT
 
 {% endfor %}
+{% for item in ufw_whitelisted_port_to_port %}
+### tuple ### allow {{ item.protocol }} {{ item.port_dest }} 0.0.0.0/0 {{ item.port_src }} 0.0.0.0/0 in
+-A ufw-user-input -p {{ item.protocol }} --dport {{ item.port_dest }} --sport {{ item.port_src }} -j ACCEPT
+
+{% endfor %}
 ### END RULES ###
 
 ### LOGGING ###

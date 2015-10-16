@@ -57,8 +57,22 @@ munin_node_plugins:
     plugin: memcached_
   - name: memcache_bytes
     plugin: memcached_
-  - name: apt_all
+  - name: nginx_status
+  - name: nginx_request
 
+munin_node_config:
+  {
+  "memcached_*":
+    {
+    "env.host": "127.0.0.1",
+    "env.port": "11211",
+    "env.timescale": "3"
+    },
+  "nginx*":
+    {
+    "env.url": "https://ellak.gr/nginx_status"
+    }
+  }
 ## ufw
 ufw_whitelisted_ipv4_addresses:
   - {

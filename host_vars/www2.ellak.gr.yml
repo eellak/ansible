@@ -59,6 +59,14 @@ munin_node_plugins:
     plugin: memcached_
   - name: nginx_status
   - name: nginx_request
+  - name: php-fpm-memory
+    plugin: php-fpm
+  - name: php-fpm-cpu
+    plugin: php-fpm
+  - name: php-fpm-count
+    plugin: php-fpm
+  - name: php-fpm-time
+    plugin: php-fpm
 
 munin_node_config:
   {

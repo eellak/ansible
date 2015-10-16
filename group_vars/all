@@ -1,5 +1,6 @@
 ---
 ssl_cert_path: '/etc/ssl/ellak'
 protected_storage: "{{ lookup('env', 'ELLAK_ANSIBLE_SECRETS') }}"
-munin_master_regex_ip: '^10\.19\.91\.15$'
-munin_master_ip: '10.19.91.15'
+munin_master_regex_private_ip: '^10\.19\.91\.15$'
+munin_master_private_ip: '10.19.91.15'
+munin_master_public_ip: '83.212.119.163'

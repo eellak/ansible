@@ -1,0 +1,36 @@
+# {{ ansible_managed }}
+# Kamaki configuration file v0.13
+[global]
+project_cli = astakos
+quota_cli = astakos
+default_cloud = eellak
+file_cli = pithos
+subnet_cli = network
+history_cli = history
+group_cli = pithos
+log_token = off
+server_cli = cyclades
+container_cli = pithos
+imagecompute_cli = image
+user_cli = astakos
+volume_cli = blockstorage
+membership_cli = astakos
+network_cli = network
+colors = on
+log_pid = off
+resource_cli = astakos
+history_file = /home/rsbkp/.kamaki.history
+config_cli = config
+ip_cli = network
+flavor_cli = cyclades
+sharer_cli = pithos
+snapshot_cli = blockstorage
+log_data = off
+history_limit = 0
+port_cli = network
+image_cli = image
+log_file = /home/rsbkp/.kamaki.log
+
+[cloud "eellak"]
+url = https://accounts.okeanos.grnet.gr/identity/v2.0
+token = {{ kamaki_token }}

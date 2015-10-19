@@ -1,0 +1,8 @@
+---
+- name: Copy kamakirc
+  template:
+    src: kamakirc.j2
+    dest: /home/rsbkp/.kamakirc
+    mode: 0600
+    owner: rsbkp
+    group: rsbkp

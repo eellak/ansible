@@ -1,0 +1,6 @@
+---
+phplist_version: '3.2.0'
+phplist_home_dir: '/var/www/vhosts/newsletters.ellak.gr/site/public_html'
+phplist_download_link: "http://downloads.sourceforge.net/project/phplist/phplist/{{ version }}/phplist-{{ version }}.tgz"
+phplist_bindir: '/var/www/vhosts/newsletters.ellak.gr/bin'
+phplist_user: newsletters

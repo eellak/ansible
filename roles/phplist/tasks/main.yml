@@ -1,0 +1,15 @@
+---
+- name: cron | Configure process queue
+  cron:
+    user: "{{ phplist_user }}"
+    minute: "*/15"
+    job: "{{ phplist_bindir }}/phplist -pprocessqueue >/dev/null"
+    name: processqueue
+
+- name: cron | Configure process queue
+  cron:
+    user: "{{ phplist_user }}"
+    minute: 10
+    hour: 2
+    job: "{{ phplist_bindir }}/phplist -pprocessbounces >/dev/null"
+    name: processbounces

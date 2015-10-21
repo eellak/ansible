@@ -1,0 +1,14 @@
+# {{ ansible_managed }}
+
+SHELL=/bin/sh
+VHOST=/var/www/vhosts/newsletters.ellak.gr
+PATH=$VHOST/bin:/usr/local/bin:/bin:/usr/bin
+USER=newsletters
+
+# m h  dom mon dow   command
+
+# process the queue every 15 mins
+*/15 * * * *    $VHOST/bin/phplist -pprocessqueue >/dev/null
+
+# process bounces daily at 02:10
+10   2 * * *    $VHOST/bin/phplist -pprocessbounces >/dev/null

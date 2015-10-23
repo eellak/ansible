@@ -1,0 +1,14 @@
+---
+- hosts: www1.ellak.gr
+  sudo: true
+
+  vars_files:
+    - "{{ protected_storage }}/www1.ellak.gr/ufw.yml"
+
+  pre_tasks:
+
+  roles:
+    - { role: ufw, tags: ['ufw', 'firewall'] }
+    - { role: munin-node, tags: ['munin-node'] }
+    - { role: ssl, tags: ['ssl'] }
+    - { role: phplist, tags: ['phplist', 'newsletters'] }

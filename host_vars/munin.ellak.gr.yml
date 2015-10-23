@@ -11,6 +11,11 @@ munin_hosts:
     extra: ["use_node_name yes"]
     }
   - {
+    name: "www1",
+    address: "10.19.91.2",
+    extra: ["use_node_name yes"]
+    }
+  - {
     name: "www2",
     address: "10.19.91.3",
     extra: ["use_node_name yes"]

@@ -17,6 +17,10 @@
     owner=root group=root mode=644
   notify: restart munin-node
 
+- name: Include 3d party plugins
+  include: ext_plugins.yml
+  when: (third_party_plugins is defined) and third_party_plugins
+
 - name: Generate plugin configuration.
   template: >
     src=plugin-conf.j2

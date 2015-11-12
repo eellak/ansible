@@ -1,9 +1,8 @@
 ---
 - name: Install 3d party plugins
   copy:
-    src: "plugins/{{ item }}"
-    dest: "{{ munin_plugin_src_path }}/{{ item }}"
+    src: "plugins/"
+    dest: "{{ munin_plugin_src_path }}/"
     owner: root
     group: root
     mode: 0755
-  with_items: third_party_plugins

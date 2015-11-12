@@ -84,8 +84,6 @@ munin_node_plugins:
     plugin: ps_
   - name: ps_newrelic
     plugin: ps_
-  - name: dirsizes
-  - name: apt_all
 
 disable_munin_node_plugins:
   - name: mysql_innodb
@@ -94,6 +92,8 @@ disable_munin_node_plugins:
   - name: mysql_network_traffic
   - name: mysql_slow
   - name: mysql_table_locks
+  - name: apt_all
+  - name: dirsizes
 
 munin_node_config:
   {
@@ -105,12 +105,7 @@ munin_node_config:
     },
   "nginx*":
     {
-    "env.url": "https://www2.ellak.gr/nginx_status"
-    },
-  "dirsizes":
-    {
-    "env.user": "root",
-    "env.watchdirs": "/var/www"
+    "env.url": "https://{{ hostname }}/nginx_status"
     }
   }
 

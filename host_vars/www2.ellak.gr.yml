@@ -67,6 +67,33 @@ munin_node_plugins:
     plugin: php-fpm
   - name: php-fpm-time
     plugin: php-fpm
+  - name: meminfo
+  - name: mysql_queries
+  - name: mysql_slowqueries
+  - name: mysql_threads
+  - name: open_files
+  - name: open_inodes
+  - name: netstat_multi
+  - name: iostat
+  - name: files_
+  - name: ps_php-fpm
+    plugin: ps_
+  - name: ps_nginx
+    plugin: ps_
+  - name: ps_sshd
+    plugin: ps_
+  - name: ps_newrelic
+    plugin: ps_
+  - name: dirsizes
+  - name: apt_all
+
+disable_munin_node_plugins:
+  - name: mysql_innodb
+  - name: mysql_connections
+  - name: mysql_innodb_io
+  - name: mysql_network_traffic
+  - name: mysql_slow
+  - name: mysql_table_locks
 
 munin_node_config:
   {
@@ -78,9 +105,15 @@ munin_node_config:
     },
   "nginx*":
     {
-    "env.url": "https://ellak.gr/nginx_status"
+    "env.url": "https://www2.ellak.gr/nginx_status"
+    },
+  "dirsizes":
+    {
+    "env.user": "root",
+    "env.watchdirs": "/var/www"
     }
   }
+
 ## ufw
 ufw_whitelisted_ipv4_addresses:
   - {

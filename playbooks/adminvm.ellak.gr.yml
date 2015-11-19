@@ -1,11 +1,13 @@
 ---
 - hosts: adminvm.ellak.gr
-  sudo: true
+  become: true
 
   vars_files:
     - "{{ protected_storage }}/adminvm.ellak.gr/ufw.yml"
+    - "{{ protected_storage }}/adminvm.ellak.gr/kamaki.yml"
 
   roles:
     - dnsmasq
+    - { role: kamaki, tags: kamaki }
     - { role: munin-node, tags: ['munin-node'] }
     - { role: ufw, tags: ['ufw'] }

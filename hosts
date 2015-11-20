@@ -14,6 +14,9 @@ devvm.ellak.gr
 [owncloud]
 macloud.ellak.gr
 
+[meet]
+meet.ellak.gr
+
 [db]
 db1.ellak.gr
 
@@ -28,7 +31,7 @@ team.ellak.gr
 [gitlab]
 code.ellak.gr
 
-[python.gr]
+[pythongr]
 guest1.ellak.gr
 
 [radio]
@@ -77,7 +80,6 @@ maellak
 wikis
 gitlab
 adminvm
-devvm
 db
 bacula
 
@@ -91,8 +93,9 @@ maellak
 wikis
 gitlab
 adminvm
-devvm
 bacula
+munin
+pythongr
 
 [centos:children]
 db

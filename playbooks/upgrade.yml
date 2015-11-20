@@ -1,19 +1,21 @@
 ---
 - name: Upgrade
-  hosts: all
-  sudo: true
-  sudo_user: root
+  hosts: "{{ host }}"
+  become: true
   gather_facts: false
 
   tasks:
 
+  - name: Update apt cache
+    apt: update_cache=yes cache_valid_time=3600
+
+  # If python-apt is not installed we cannot make use of the apt module
   - name: Ensure apt-python is installed
     shell: apt-get install -qq python-apt
     changed_when: false
 
-  - name: Update apt cache
-    apt: update_cache=yes cache_valid_time=3600
+  - name: Install aptitude
+    apt: name=aptitude state=latest
 
   - name: Upgrade hosts
     apt: upgrade=safe force=yes
-

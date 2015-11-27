@@ -1,0 +1,15 @@
+---
+- hosts: ma.ellak.gr
+  become: true
+
+  vars_files:
+    - "{{ protected_storage }}/ma.ellak.gr/ufw.yml"
+
+  pre_tasks:
+
+    - name: Update apt cache
+      apt: update_cache=yes cache_valid_time=3600
+
+  roles:
+    - { role: ufw, tags: ['firewall', 'ufw' ] }
+    - { role: munin-node, tags: ['munin-node'] }

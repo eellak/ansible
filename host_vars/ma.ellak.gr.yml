@@ -1,0 +1,52 @@
+---
+hostname: ma.ellak.gr
+fqdn: 'ma.ellak.gr'
+
+## Munin node
+munin_node_bind_host: "{{ ansible_eth0.ipv4.address }}"
+munin_node_bind_port: "4949"
+
+munin_node_host_name: '{{ hostname }}'
+
+# Munin requires IPs be added as regular expressions.
+munin_node_allowed_ips:
+  - '^127\.0\.0\.1$'
+  - '^::1$'
+  - '{{ munin_master_regex_public_ip }}'
+
+# List of munin plugins to enable.
+munin_node_plugins:
+  - name: apache_accesses
+  - name: apache_processes
+  - name: apache_volume
+  - name: meminfo
+  - name: mysql_queries
+  - name: mysql_slowqueries
+  - name: mysql_threads
+  - name: open_files
+  - name: open_inodes
+  - name: netstat_multi
+  - name: iostat
+  - name: files_
+  - name: ps_apache
+    plugin: ps_
+  - name: ps_sshd
+    plugin: ps_
+
+disable_munin_node_plugins:
+  - name: mysql_innodb
+  - name: mysql_connections
+  - name: mysql_innodb_io
+  - name: mysql_network_traffic
+  - name: mysql_slow
+  - name: mysql_table_locks
+  - name: apt_all
+  - name: dirsizes
+
+## ufw
+ufw_whitelisted_ipv4_addresses:
+  - {
+    address: "{{ munin_master_public_ip }}",
+    port: "{{ munin_node_bind_port }}",
+    protocol: tcp
+    }

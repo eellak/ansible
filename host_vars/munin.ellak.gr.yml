@@ -25,3 +25,8 @@ munin_hosts:
     address: "10.19.91.1",
     extra: ["use_node_name yes"]
     }
+  - {
+    name: "maellak",
+    address: "62.217.127.243",
+    extra: ["use_node_name yes"]
+    }

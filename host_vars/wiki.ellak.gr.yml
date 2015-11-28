@@ -1,0 +1,80 @@
+---
+hostname: 'wiki.ellak.gr'
+fqdn: "{{ hostname }}"
+
+# MariaDB vars
+#--------------
+
+# mediawiki
+#--------------
+#TODO: fix nginx_app_root/nginx_fqdn vars
+mw_root_path: "{{ nginx_app_root }}/{{ nginx_fqdn }}/public_html"
+mw_sitename: 'Γνωσιακή Βάση Υπηρεσιών και Διαδικασιών του Δημοσίου Τομέα'
+mw_meta_namespace: 'Υπηρεσίες & Διαδικασίες του Δημοσίου Τομέα'
+mw_emergency_contact: 'info@ellak.gr'
+mw_password_sender: "no-reply@{{ fqdn }}"
+mw_secret_key: "{{ MW_SECRET_KEY }}"
+mw_smtp_host: "{{ MW_SMTP_HOST }}"
+mw_smtp_username: "{{ MW_SMTP_USERNAME }}"
+mw_smtp_password: "{{ MW_SMTP_PASSWORD }}"
+mw_stmp_id_host: "{{ fqdn }}"
+
+# parsoid
+#--------------
+parsoid_api_endpoints:
+  - uid: 'wikiellakgr'
+    uri: 'https://wiki.ellak.gr/api.php'
+
+## munin-node
+#--------------
+munin_node_bind_host: "{{ ansible_eth2.ipv4.address }}"
+munin_node_bind_port: "4949"
+munin_node_host_name: '{{ hostname }}'
+
+# Munin requires IPs be added as regular expressions.
+munin_node_allowed_ips:
+  - '^127\.0\.0\.1$'
+  - '^::1$'
+  - '{{ munin_master_regex_private_ip }}'
+
+# List of munin plugins to enable.
+munin_node_plugins:
+  - name: php-fpm-memory
+    plugin: php-fpm
+  - name: php-fpm-cpu
+    plugin: php-fpm
+  - name: php-fpm-count
+    plugin: php-fpm
+  - name: php-fpm-time
+    plugin: php-fpm
+  - name: meminfo
+  - name: mysql_queries
+  - name: mysql_slowqueries
+  - name: mysql_threads
+  - name: open_files
+  - name: open_inodes
+  - name: netstat_multi
+  - name: iostat
+  - name: ps_php-fpm
+    plugin: ps_
+  - name: ps_sshd
+    plugin: ps_
+
+disable_munin_node_plugins:
+  - name: mysql_innodb
+  - name: mysql_connections
+  - name: mysql_innodb_io
+  - name: mysql_network_traffic
+  - name: mysql_slow
+  - name: mysql_table_locks
+  - name: apt_all
+  - name: dirsizes
+
+# ufw
+#--------------
+ufw_whitelisted_ipv4_addresses:
+  - {
+    address: "{{ munin_master_private_ip }}",
+    port: "{{ munin_node_bind_port }}",
+    protocol: tcp
+    }

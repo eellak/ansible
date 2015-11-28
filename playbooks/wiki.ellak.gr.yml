@@ -1,0 +1,14 @@
+---
+- hosts: wiki.ellak.gr
+  become: true
+
+  vars_files:
+    - "{{ protected_storage }}/wiki.ellak.gr/mariadb.yml"
+    - "{{ protected_storage }}/wiki.ellak.gr/mediawiki.yml"
+    - "{{ protected_storage }}/wiki.ellak.gr/ufw.yml"
+
+  roles:
+    - { role: mariadb, tags: ['mariadb', 'database'] }
+#    - { role: mediawiki, tags: ['wiki'] }
+    - { role: ufw, tags: ['ufw', 'firewall'] }
+    - { role: munin-node, tags: ['munin-node'] }

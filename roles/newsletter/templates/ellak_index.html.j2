@@ -104,10 +104,8 @@ ul > li > a {
         <table class="content" width="780" border="0" cellpadding="0" cellspacing="16" height="130" style="background-color: #f5f5f5"><tbody><tr><td class="sidebar" valign="top" width="192" align="left">
 
 <!-- +++++++   ΕΛ/ΛΑΚ  (start)  ++++++++ -->
-{% if ellak  %}
+{% if ellak is defined and ellak  %}
           <h3>ΕΛ/ΛΑΚ</h3>
-{% endif %}
-
 {% for item in ellak %}
           <ul>
             <li>
@@ -117,11 +115,11 @@ ul > li > a {
             </li>
           </ul>
 {% endfor %}
+{% endif %}
 
 <!-- +++++++   Creative Commons  (start)  +++++++ -->
-{% if cc %}
+{% if cc is defined and cc %}
           <h3>Creative Commons Greece</h3>
-{% endif %}
 {% for item in cc %}
           <ul>
             <li>
@@ -131,11 +129,11 @@ ul > li > a {
             </li>
           </ul>
 {% endfor %}
+{% endif %}
 
 <!-- ++++++  Ανοιχτό Περιεχόμενο  (start)  +++++++ -->
-{% if mycontent %}
+{% if mycontent is defined and mycontent %}
           <h3>Ανοιχτό Περιεχόμενο</h3>
-{% endif %}
 {% for item in mycontent %}
           <ul>
             <li>
@@ -145,11 +143,11 @@ ul > li > a {
             </li>
           </ul>
 {% endfor %}
+{% endif %}
 
 <!-- ++++++  Planet  (start)  +++++++++ -->
-{% if planet %}
+{% if planet is defined and planet %}
           <h3>Πλανήτης ΕΛ/ΛΑΚ</h3>
-{% endif %}
 {% for item in planet %}
           <ul>
             <li>
@@ -159,11 +157,11 @@ ul > li > a {
             </li>
           </ul>
 {% endfor %}
+{% endif %}
 
 <!-- +++++  Opengov  (start)  ++++++ -->
-{% if opengov %}
+{% if opengov is defined and opengov %}
           <h3>Ανοιχτή Διακυβέρνηση</h3>
-{% endif %}
 {% for item in opengov %}
           <ul>
             <li>
@@ -173,11 +171,11 @@ ul > li > a {
             </li>
           </ul>
 {% endfor %}
+{% endif %}
 
 <!-- ++++++  OpenData  (start)  ++++++++ -->
-{% if opendata %}
+{% if opendata is defined and opendata %}
           <h3>Ανοιχτά Δεδομένα</h3>
-{% endif %}
 {% for item in opendata %}
           <ul>
             <li>
@@ -187,11 +185,11 @@ ul > li > a {
             </li>
           </ul>
 {% endfor %}
+{% endif %}
 
 <!-- ++++   OpenDataInstitute  (start)  +++++ -->
-{% if odi %}
+{% if odi is defined and odi %}
           <h3>Open Data Institute – Athens Node</h3>
-{% endif %}
 {% for item in odi %}
           <ul>
             <li>
@@ -201,11 +199,11 @@ ul > li > a {
             </li>
           </ul>
 {% endfor %}
+{% endif %}
 
 <!-- +++++  OBS  (start)  ++++++ -->
-{% if obs %}
+{% if obs is defined and obs %}
           <h3>Διεθνής συνεργασία για τους Ανοιχτούς Προϋπολογισμούς</h3>
-{% endif %}
 {% for item in obs %}
           <ul>
             <li>
@@ -215,11 +213,11 @@ ul > li > a {
             </li>
           </ul>
 {% endfor %}
+{% endif %}
 
 <!-- ++++++  EDU  (start)  +++++ -->
-{% if edu %}
+{% if edu is defined and edu %}
           <h3>Ανοιχτές τεχνολογίες στην εκπαίδευση</h3>
-{% endif %}
 {% for item in edu %}
           <ul>
             <li>
@@ -229,11 +227,11 @@ ul > li > a {
             </li>
           </ul>
 {% endfor %}
+{% endif %}
 
 <!-- +++++  OpenStandards  (start)  +++++ -->
-{% if openstandards %}
+{% if openstandards is defined and openstandards %}
           <h3>OpenStandards</h3>
-{% endif %}
 {% for item in openstandards %}
           <ul>
             <li>
@@ -243,11 +241,11 @@ ul > li > a {
             </li>
           </ul>
 {% endfor %}
+{% endif %}
 
 <!-- +++++  OpenHardware  (start)  +++++ -->
-{% if openhardware %}
+{% if openhardware is defined and openhardware %}
           <h3>Ανοιχτές τεχνολογίες</h3>
-{% endif %}
 {% for item in openhardware %}
           <ul>
             <li>
@@ -257,11 +255,11 @@ ul > li > a {
             </li>
           </ul>
 {% endfor %}
+{% endif %}
 
 <!-- ++++++  OpenWiFi  (start)  +++++++ -->
-{% if openwifi %}
+{% if openwifi is defined and openwifi %}
           <h3>OpenWiFi</h3>
-{% endif %}
 {% for item in openwifi %}
           <ul>
             <li>
@@ -271,11 +269,11 @@ ul > li > a {
             </li>
           </ul>
 {% endfor %}
+{% endif %}
 
 <!-- ++++++  Legal  (start)  ++++++ -->
-{% if legal %}
+{% if legal is defined and legal %}
           <h3>Νομοθεσία</h3>
-{% endif %}
 {% for item in legal %}
           <ul>
             <li>
@@ -285,6 +283,7 @@ ul > li > a {
             </li>
           </ul>
 {% endfor %}
+{% endif %}
 
 <hr>
 <!-- ++++++  Working groups  (start)  ++++++ -->
@@ -292,9 +291,8 @@ ul > li > a {
 <!-- ++++++  Working groups  (stop)  ++++++ -->
 
 <!-- ++++++  WG-opengov  (start)  ++++++ -->
-{% if wg_opengov %}
+{% if wg_opengov is defined and wg_opengov %}
           <h3>Ανοιχτής Διακυβέρνησης</h3>
-{% endif %}
 {% for item in wg_opengov %}
           <ul>
             <li>
@@ -304,11 +302,11 @@ ul > li > a {
             </li>
           </ul>
 {% endfor %}
+{% endif %}
 
 <!-- ++++++  WG-opendata  (start)  ++++++ -->
-{% if wg_opendata %}
+{% if wg_opendata is defined and wg_opendata %}
           <h3>Ανοιχτών Δεδομένων</h3>
-{% endif %}
 {% for item in wg_opendata %}
           <ul>
             <li>
@@ -318,11 +316,11 @@ ul > li > a {
             </li>
           </ul>
 {% endfor %}
+{% endif %}
 
 <!-- ++++++  WG-openstandards  (start)  ++++++ -->
-{% if wg_openstandards %}
+{% if wg_openstandards is defined and wg_openstandards %}
           <h3>Για τα Ανοικτά πρότυπα και Άδειες</h3>
-{% endif %}
 {% for item in wg_openstandards %}
           <ul>
             <li>
@@ -332,11 +330,11 @@ ul > li > a {
             </li>
           </ul>
 {% endfor %}
+{% endif %}
 
 <!-- ++++++  WG-openhardware  (start)  ++++++ -->
-{% if wg_openhardware %}
+{% if wg_openhardware is defined and wg_openhardware %}
           <h3>Για το Ανοικτό hardware και τα Ασύρματα δίκτυα</h3>
-{% endif %}
 {% for item in wg_openhardware %}
           <ul>
             <li>
@@ -346,11 +344,11 @@ ul > li > a {
             </li>
           </ul>
 {% endfor %}
+{% endif %}
 
 <!-- ++++++  WG-privacy  (start)  ++++++ -->
-{% if wg_privacy %}
+{% if wg_privacy is defined and wg_privacy %}
           <h3>Για την Ασφάλεια και την Ιδιωτικότητα</h3>
-{% endif %}
 {% for item in wg_privacy %}
           <ul>
             <li>
@@ -360,11 +358,11 @@ ul > li > a {
             </li>
           </ul>
 {% endfor %}
+{% endif %}
 
 <!-- ++++++  WG-foss  (start)  ++++++ -->
-{% if wg_foss %}
+{% if wg_foss is defined and wg_foss %}
           <h3>Για το Ανοιχτό Λογισμικό</h3>
-{% endif %}
 {% for item in wg_foss %}
           <ul>
             <li>
@@ -374,11 +372,11 @@ ul > li > a {
             </li>
           </ul>
 {% endfor %}
+{% endif %}
 
 <!-- ++++++  WG-oer  (start)  ++++++ -->
-{% if wg_oer %}
+{% if wg_oer is defined and wg_oer %}
           <h3>Για το Ανοιχτό Περιεχόμενο στην εκπαίδευση</h3>
-{% endif %}
 {% for item in wg_oer %}
           <ul>
             <li>
@@ -388,6 +386,7 @@ ul > li > a {
             </li>
           </ul>
 {% endfor %}
+{% endif %}
 
 
           <hr>

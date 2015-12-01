@@ -1,140 +1,137 @@
 ---
-html_title: "Νοέμβριος 2014 - Απρίλιος 2015 | 3ο Ενημερωτικό Δελτίο Μονάδων Αριστείας Ανοιχτού Λογισμικού"
-
-# Τουρισμός
-tourismos:
-  - { title: "Αξιοποίηση open source συστημάτων διαχείρισης περιεχομένου και εικόνας στον Τουρισμό",
-      url: "https://ma.ellak.gr/events/%CF%80%CF%81%CE%BF%CF%83%CE%BA%CE%BB%CE%B7%CF%83%CE%B7-%CF%83%CF%84%CE%BF-%CE%B4%CE%B5%CF%85%CF%84%CE%B5%CF%81%CE%BF-%CF%83%CE%B5%CE%BC%CE%B9%CE%BD%CE%B1%CF%81%CE%B9%CE%BF-%CF%84%CE%BF%CF%85-%CE%B4/",
-      text: "Οι συμμετέχοντες θα ενημερωθούν για την περιφερειακή πολιτική ανάπτυξης του τουρισμού, τον ρόλο των ΤΠΕ, ενώ παράλληλα θα γνωρίσουν και θα εκπαιδευτούν στις λειτουργικότητες του συστήματος Joomla και στην επεξεργασία γραφικών για την προβολή του τουριστικού προϊόντος με χρήση συστημάτων ελ/λακ." }
-  - { title: "Τουρισμος και Τουριστικες Υπηρεσιες: Οι δυνατοτητες του Διαδικτυου και οι ευκαιριες που δινουν οι τεχνολογιες ανοικτου λογισμικου",
-      url: "https://ma.ellak.gr/events/%cf%83%ce%b5%ce%bc%ce%b9%ce%bd%ce%b1%cf%81%ce%b9%ce%bf-%cf%84%ce%bf%cf%85%cf%81%ce%b9%cf%83%ce%bc%cf%8c%cf%82-%ce%ba%ce%b1%ce%b9-%cf%84%ce%bf%cf%85%cf%81%ce%b9%cf%83%cf%84%ce%b9%ce%ba%ce%ad%cf%82-2/",
-      text: "Oι συμμετέχοντες θα κληθούν να εκπαιδευθούν στην πράξη στη χρήση τεχνολογιών ανοικτού λογισμικού, συμμετέχοντας στην ομάδα του Πανεπιστημίου Αιγαίου (i4M Lab – Information Management Lab και συνεργαζόμενοι) που αναπτύσσει θεματικό portal για τη μαστίχα και τα Μαστιχοχώρια της Χίου (tourist destination portal, με βάση το σύστημα διαχείρισης περιεχομένου WordPress) και στρατηγική ψηφιακής προώθησης της μαστίχας (digital marketing) με αιχμή την Wikipedia και χρησιμοποιώντας τις τεχνικές και τις μεθόδους crowdsourcing για την συλλογή πολυμεσικού περιεχομένου με θέμα τη μαστίχα, τον τρόπο παραγωγής, εμπορίας, την ιστορία του προιόντος κλπ." }
-  - { title: "1η Ημερίδα Μονάδας Αριστείας Πανεπιστημίου Κρήτης",
-      url: "https://ma.ellak.gr/events/1%ce%b7-%ce%b7%ce%bc%ce%b5%cf%81%ce%b9%ce%b4%ce%b1-%ce%bc%ce%bf%ce%bd%ce%b1%ce%b4%ce%b1%cf%83-%ce%b1%cf%81%ce%b9%cf%83%cf%84%ce%b5%ce%b9%ce%b1%cf%83-%cf%80%ce%b1%ce%bd%ce%b5%cf%80%ce%b9%cf%83%cf%84/",
-      text: "" }
-  - { title: "Θερινό Σχολείο Κώδικα",
-      url: "https://ma.ellak.gr/events/%CF%80%CF%81%CE%BF%CF%83%CE%BA%CE%BB%CE%B7%CF%83%CE%B7-%CF%83%CF%87%CE%BF%CE%BB%CE%B5%CE%B9%CE%BF-%CE%BA%CF%89%CE%B4%CE%B9%CE%BA%CE%B1/",
-      text: "" }
+html_title: "Μάιος 2015 - Οκτώβριος 2015 | 4ο Ενημερωτικό Δελτίο Μονάδων Αριστείας Ανοιχτού Λογισμικού"
 
 # Πολιτισμός
 politismos:
-  - { title: "2η Ημερίδα ΕΛ/ΛΑΚ Μονάδας Αριστείας Χαροκοπείου Πανεπιστήμιου",
-      url: "https://ma.ellak.gr/events/2%ce%b7-%ce%b7%ce%bc%ce%b5%cf%81%ce%af%ce%b4%ce%b1-%ce%b5%ce%bb%ce%bb%ce%b1%ce%ba-%ce%bc%ce%bf%ce%bd%ce%ac%ce%b4%ce%b1%cf%82-%ce%b1%cf%81%ce%b9%cf%83%cf%84%ce%b5%ce%af%ce%b1%cf%82-%cf%87%ce%b1%cf%81/",
-      text: "" }
-  - { title: "Θερινό Σχολείο Κώδικα ΕΛ/ΛΑΚ",
-      url: "https://ma.ellak.gr/events/2%ce%bf-%ce%b8%ce%b5%cf%81%ce%b9%ce%bd%cf%8c-%cf%83%cf%87%ce%bf%ce%bb%ce%b5%ce%af%ce%bf-%ce%ba%cf%8e%ce%b4%ce%b9%ce%ba%ce%b1-%ce%b5%ce%bb%ce%bb%ce%b1%ce%ba-%cf%87%ce%b1%cf%81%ce%bf%ce%ba%cf%8c-2/",
-      text: "" }
-  - { title: "Δημιουργια και διαχειριση ιστοτοπων και πολιτιστικων συλλογων",
-      url: "",
-      text: "Στο συγκεκριμένο σεμινάριο θα γίνουν εργαστήρια στην πλατφόρμα ανοιχτού λογισμικού WordPress όσον αφορά την δημιουργία ιστοτόπων και στην πλατφόρμα Omeka όσον αφορά την διαχείριση πολιτιστικών συλλογών. Στα εργαστήρια θα γίνει επίδειξη των συγκεκριμένων λογισμικών και ο τρόπος χρήσης του σε πολιτιστικά δεδομένα" }
+  - { title: "Χρήση ΤΠΕ και εργαλείων ΕΛ/ΛΑΚ για πολιτισμική προβολή",
+      url: "https://ma.ellak.gr/events/%CF%80%CF%81%CF%8C%CF%83%CE%BA%CE%BB%CE%B7%CF%83%CE%B7-%CF%83%CF%85%CE%BC%CE%BC%CE%B5%CF%84%CE%BF%CF%87%CE%AE%CF%82-%CF%83%CF%84%CE%BF-%CF%83%CE%B5%CE%BC%CE%B9%CE%BD%CE%AC%CF%81%CE%B9%CE%BF-%CE%BC-4/",
+      text: "To Χαροκόπειο Πανεπιστήμιο στο πλαίσιο του έργου «Μονάδες Αριστείας ΕΛ/ΛΑΚ» σας προσκαλεί στο σεμινάριο που θα πραγματοποιηθεί στο χώρο του Πανεπιστημίου με θέμα Χρήση ΤΠΕ και εργαλείων ΕΛ/ΛΑΚ για πολιτισμική προβολή.
+ Στόχος της Μονάδα Αριστείας ΕΛ/ΛΑΚ του Χαροκοπείου Πανεπιστημίου είναι να ενισχύσει την κοινότητα ΕΛ/ΛΑΚ στην Ελλάδα, φέρνοντας σε επαφή προγραμματιστές και χρήστες, ερευνητές, επαγγελματίες και φορείς που ασχολούνται με το ελεύθερο και ανοικτό λογισμικό ή που έχουν ανάγκες οι οποίες θα μπορούσαν να καλυφθούν από αυτό.
+" }
+  - { title: "Ημερίδα ΕΛ/ΛΑΚ Μονάδας Αριστείας Χαροκοπείου Πανεπιστημίου",
+      url: "https://ma.ellak.gr/events/3%CE%B7-%CE%B7%CE%BC%CE%B5%CF%81%CE%AF%CE%B4%CE%B1-%CE%B5%CE%BB%CE%BB%CE%B1%CE%BA-%CE%BC%CE%BF%CE%BD%CE%AC%CE%B4%CE%B1%CF%82-%CE%B1%CF%81%CE%B9%CF%83%CF%84%CE%B5%CE%AF%CE%B1%CF%82-%CF%87%CE%B1%CF%81/",
+      text: "Στα πλαίσια ολοκλήρωσης του Γ κύκλου σεμιναρίων, η Μονάδα Αριστείας ΕΛ/ΛΑΚ του Χαροκοπείου Πανεπιστημίου. διοργανώνει την 3η ημερίδα ΕΛ/ΛΑΚ. Η ημερίδα θα πραγματοποιηθεί την Δευτέρα 28 Σεπτεμβρίου 2015 και ώρα 17:00 στο αμφιθέατρο του κτιρίου τμήματος Πληροφορικής και Τηλεματικής (1ος όροφος). Κατά την διάρκεια της ημερίδας, θα πραγματοποιηθούν ομιλίες γύρω από το Ελεύθερο Λογισμικό/Λογισμικό Ανοικτού Κώδικα, καθώς και παρουσιάσεις των όσων αναπτύχθηκαν κατά την διάρκεια των σεμιναρίων και του θερινού σχολείου ανάπτυξης κώδικα." }
+
+# Tουρισμός
+tourismos:
+  - { title: "Αξιοποίηση συστημάτων ελ/λακ στον Τουρισμό – Συστήματα διαχείρισης ηλεκτρονικών κρατήσεων",
+      url: "https://ma.ellak.gr/events/%CF%80%CF%81%CE%BF%CF%83%CE%BA%CE%BB%CE%B7%CF%83%CE%B7-%CF%83%CE%B5%CE%BC%CE%B9%CE%BD%CE%B1%CF%81%CE%B9%CE%BF-%CE%B1%CE%BE%CE%B9%CE%BF%CF%80%CE%BF%CE%B9%CE%B7%CF%83%CE%B7-%CF%83%CF%85%CF%83%CF%84/",
+      text: " Το Πανεπιστήμιο Κρήτης προσκαλεί φοιτητές, προγραμματιστές, εργαζόμενους στο τομέα του τουρισμού ή σε σχετικές δραστηριότητες και όλους, όσοι ενδιαφέρονται, ασχολούνται ή επιθυμούν να ασχοληθούν με το ανοικτό λογισμικό στη Θεματική Περιοχή του Τουρισμού, να συμμετάσχουν στο 2ο Σεμινάριο του 3ου Κύκλου Εκπαίδευσης με τίτλο:
+«Αξιοποίηση συστημάτων ελ/λακ στον Τουρισμό – Συστήματα διαχείρισης ηλεκτρονικών κρατήσεων»
+που διοργανώνεται από το Πανεπιστήμιο Κρήτης στα πλαίσια του υποέργου «Μονάδες Αριστείας ΕΛ/ΛΑΚ» του Ε.Π. Ψηφιακή Σύγκλιση (Αναθέτουσα Αρχή: ΕΔΕΤ Α.Ε.).
+" }
+  - { title: "Ημερίδα για τη δημιουργία ανοιχτής κοινότητας για την προώθηση της Μαστίχας με τη χρήση τεχνολογιών ανοικτού λογισμικού",
+      url: "https://ma.ellak.gr/events/online-mastiha-%CE%B7-%CE%B4%CE%B7%CE%BC%CE%B9%CE%BF%CF%85%CF%81%CE%B3%CE%AF%CE%B1-%CE%BC%CE%B9%CE%B1%CF%82-%CE%B1%CE%BD%CE%BF%CE%B9%CE%BA%CF%84%CE%AE%CF%82-%CE%BA%CE%BF%CE%B9%CE%BD%CF%8C%CF%84%CE%B7/",
+      text: "Η εκδήλωση συμπύκνωσε μερικά από τα κύρια συμπεράσματα της μέχρι τώρα πορείας της Μονάδας, κυρίως την πιο σημαντική δραστηριότητα μας, που είναι η δημιουργία ανοιχτής κοινότητας για την πρόθηση στο Ίντερνετ , με τη χρήση τεχνολογιών ανοικτού λογισμικού, της Μαστίχας (του πολύ γνωστού προιόντος της Χίου). Η κοινότητα αυτή (mastiholics) αριθμεί αυτή τη στιγμή περίπου 60 μέλη, και διευρύνεται με την επιδίωξη να γίνει μια βιώσιμη δομή προώθησης της χρήσης των Τεχνολογιών της Πληροφορικής και των Επικοινωνιών (ΤΠΕ)." }
+  - { title: "Ανάπτυξη Διαδικτυακών Εφαρμογών με HTML(5) – CSS(2,3) – MYSQL – PHP",
+      url: " https://ma.ellak.gr/events/%CF%80%CF%81%CE%BF%CF%83%CE%BA%CE%BB%CE%B7%CF%83%CE%B7-%CF%83%CF%87%CE%BF%CE%BB%CE%B5%CE%B9%CE%BF-%CE%BA%CF%89%CE%B4%CE%B9%CE%BA%CE%B1-%CE%B4%CE%B5%CF%85%CF%84%CE%B5%CF%81%CE%BF%CF%85-%CE%BA%CF%85/"}
+  - { title: "Ανάπτυξη Διαδικτυακών Εφαρμογών ΕΛ/ΛΑΚ με JAVA",
+      url: " https://ma.ellak.gr/events/%CF%80%CF%81%CE%BF%CF%83%CE%BA%CE%BB%CE%B7%CF%83%CE%B7-%CF%83%CF%87%CE%BF%CE%BB%CE%B5%CE%B9%CE%BF-%CE%BA%CF%89%CE%B4%CE%B9%CE%BA%CE%B1-%CF%84%CF%81%CE%B9%CF%84%CE%BF%CF%85-%CE%BA%CF%85%CE%BA%CE%BB/"}
+  - { title: "Αξιοποίηση Συστημάτων και Τεχνολογιών Ελεύθερου Λογισμικού/ Λογισμικού Ανοικτού Κώδικα στον Τουρισμό και την Εκπαίδευση",
+      url: " https://ma.ellak.gr/events/2%CE%B7-%CE%B7%CE%BC%CE%B5%CF%81%CE%AF%CE%B4%CE%B1-%CE%BC%CE%BF%CE%BD%CE%AC%CE%B4%CE%B1%CF%82-%CE%B1%CF%81%CE%B9%CF%83%CF%84%CE%B5%CE%AF%CE%B1%CF%82-%CF%80%CE%B1%CE%BD%CE%B5%CF%80%CE%B9%CF%83%CF%84/"}
+  - { title: "ΘΕΡΙΝΟ ΣΧΟΛΕΙΟ ΚΩΔΙΚΑ ΕΛ/ΛΑΚ",
+      url: "https://ma.ellak.gr/events/%CE%B8%CE%B5%CF%81%CE%B9%CE%BD%CE%BF-%CF%83%CF%87%CE%BF%CE%BB%CE%B5%CE%B9%CE%BF-%CE%BA%CF%89%CE%B4%CE%B9%CE%BA%CE%B1-%CE%B5%CE%BB%CE%BB%CE%B1%CE%BA-%CF%83%CF%84%CE%B7%CE%BD-%CE%B8%CE%B5%CE%BC%CE%B1-2/"}
+  - { title: "Αξιοποίηση Συστημάτων και Τεχνολογιών Ελεύθερου Λογισμικού/ Λογισμικού Ανοικτού Κώδικα",
+      url: "https://ma.ellak.gr/events/3%CE%B7-%CE%B7%CE%BC%CE%B5%CF%81%CE%AF%CE%B4%CE%B1-%CE%BC%CE%BF%CE%BD%CE%AC%CE%B4%CE%B1%CF%82-%CE%B1%CF%81%CE%B9%CF%83%CF%84%CE%B5%CE%AF%CE%B1%CF%82-%CF%80%CE%B1%CE%BD%CE%B5%CF%80%CE%B9%CF%83%CF%84/"}
 
 # Συστήματα γεωγραφικών πληροφοριών
 geo:
-  - { title: "Συστήματα Γεωγραφικών Πληροφοριών",
-      url: "http://ma.ellak.gr/events/%cf%83%cf%85%cf%83%cf%84%ce%ae%ce%bc%ce%b1%cf%84%ce%b1-%ce%b3%ce%b5%cf%89%ce%b3%cf%81%ce%b1%cf%86%ce%b9%ce%ba%cf%8e%ce%bd-%cf%80%ce%bb%ce%b7%cf%81%ce%bf%cf%86%ce%bf%cf%81%ce%b9%cf%8e%ce%bd-2/",
-      text: "Σε αυτό τον κύκλο σεμιναρίων θα γίνει γνωριμία με ΕΛ/ΛΑΚ συστήματα διαχείρισης των γεωγραφικών πληροφοριών και θα προσπαθήσουμε να συνεισφέρουμε στο σύνολο των εφαρμογών ΕΛ/ΛΑΚ του OSGeo (osgeo.org), όπως και σε εφαρμογές που χρησιμοποιεί η κοινότητα του OpenStreetMap (openstreetmap.org) για την παραγωγή ανοικτών χαρτών σε όλο τον κόσμο" }
-  - { title: "Συστήματα Γεωγραφικών Πληροφορικών Ανοικτού Κώδικα (Open Source GIS)",
-      url: "https://ma.ellak.gr/events/%CF%83%CF%85%CF%83%CF%84%CE%AE%CE%BC%CE%B1%CF%84%CE%B1-%CE%B3%CE%B5%CF%89%CE%B3%CF%81%CE%B1%CF%86%CE%B9%CE%BA%CF%8E%CE%BD-%CF%80%CE%BB%CE%B7%CF%81%CE%BF%CF%86%CE%BF%CF%81%CE%B9%CF%8E%CE%BD-3-3/",
-      text: "" }
+  - { title: "Τρίτη σειρά εκπαίδευσης στα «Συστήματα Γεωγραφικών Πληροφοριών»",
+      url: "https://ma.ellak.gr/events/%CF%83%CF%85%CF%83%CF%84%CE%AE%CE%BC%CE%B1%CF%84%CE%B1-%CE%B3%CE%B5%CF%89%CE%B3%CF%81%CE%B1%CF%86%CE%B9%CE%BA%CF%8E%CE%BD-%CF%80%CE%BB%CE%B7%CF%81%CE%BF%CF%86%CE%BF%CF%81%CE%B9%CF%8E%CE%BD-3-2/",
+      text: "Ο κύκλος σεμιναρίων έχει ως στόχο την εκπαίδευση και αρωγή των συμμετεχόντων ώστε να συνεισφέρουν οι ίδιοι σε εφαρμογές ΕΛ/ΛΑΚ GIS. Μέσα από στοχευμένα σεμινάρια θα σας δείξουμε πως μπορείτε να γίνετε μέλη της παγκόσμιας κοινότητας ΕΛ/ΛΑΚ και να προσφέρετε με όποιον τρόπο μπορείτε. Τα σεμινάρια θα σας δώσουν τις βασικές αρχές ώστε να επεκτείνετε ένα υφιστάμενο λογισμικό με νέα λειτουργικότητα, να βοηθήσετε στον εξελληνισμό του, ή ακόμη και να αναπτύξετε εκπαιδευτικό υλικό για άλλους!" }
+  - { title: "2 η Ημερίδα για τις Μονάδες Αριστείας ΕΛ/ΛΑΚ",
+      url: "https://ma.ellak.gr/events/2%CE%B7-%CE%B7%CE%BC%CE%B5%CF%81%CE%AF%CE%B4%CE%B1-%CF%84%CE%BF%CF%85-%CE%B9%CF%80%CF%83%CF%85%CE%B5%CE%BA-%CE%B1%CE%B8%CE%B7%CE%BD%CE%AC/" }
+  - { title: "Εισαγωγή στη γεωχωρική πληροφορία και τα GIS",
+      url: "https://ma.ellak.gr/events/%CF%83%CF%85%CF%83%CF%84%CE%AE%CE%BC%CE%B1%CF%84%CE%B1-%CE%B3%CE%B5%CF%89%CE%B3%CF%81%CE%B1%CF%86%CE%B9%CE%BA%CF%8E%CE%BD-%CF%80%CE%BB%CE%B7%CF%81%CE%BF%CF%86%CE%BF%CF%81%CE%B9%CF%8E%CE%BD-4/" }
+  - { title: "3η ημερίδα του ΙΠΣΥ/ΕΚ “Αθηνά”",
+      url: "https://ma.ellak.gr/events/3%CE%B7-%CE%B7%CE%BC%CE%B5%CF%81%CE%AF%CE%B4%CE%B1-%CF%84%CE%BF%CF%85-%CE%B9%CF%80%CF%83%CF%85%CE%B5%CE%BA-%CE%B1%CE%B8%CE%B7%CE%BD%CE%AC/" }
 
 # Αγροτική ανάπτυξη-Περιβάλλον
 agriculture:
-  - { title: "Πρόσκληση συμμετοχής στον Έκτο Κύκλο εκπαιδευτικών σεμιναρίων της Μονάδας Αριστείας ΕΛ/ΛΑΚ Ιωαννίνων",
-      url: "https://ma.ellak.gr/events/%cf%80%cf%81%cf%8c%cf%83%ce%ba%ce%bb%ce%b7%cf%83%ce%b7-%cf%83%cf%85%ce%bc%ce%bc%ce%b5%cf%84%ce%bf%cf%87%ce%ae%cf%82-%cf%83%cf%84%ce%bf%ce%bd-%ce%ad%ce%ba%cf%84%ce%bf-%ce%ba%cf%8d%ce%ba%ce%bb%ce%bf/",
-      text: "Κάθε εκπαιδευόμενος στο σεμινάριο θα αναλάβει την εκτέλεση ενός έργου συνεισφοράς σε έργο ΕΛ/ΛΑΚ με θέμα την Αγροτική Ανάπτυξη, την Υγεία και τη Δημόσια Διοίκηση. Η συνεισφορά θα αφορά ανάπτυξη λογισμικού για προσθήκη κάποιας λειτουργικότητας ή πλήρη εξελληνισμό σε κάποιο υπάρχον έργο ανοιχτού λογισμικού. Η συνεισφορά θα περάσει από τον ποιοτικό έλεγχο του έργου ώστε να γίνει αποδεκτή και να θεωρείται έγκυρη." }
-  - { title: "Πέμπτος Κύκλος εκπαιδευτικών σεμιναρίων της Μονάδας Αριστείας ΕΛ/ΛΑΚ Ιωαννίνων",
-      url: "https://ma.ellak.gr/events/%cf%80%cf%81%cf%8c%cf%83%ce%ba%ce%bb%ce%b7%cf%83%ce%b7-%cf%83%cf%85%ce%bc%ce%bc%ce%b5%cf%84%ce%bf%cf%87%ce%ae%cf%82-%cf%83%cf%84%ce%bf%ce%bd-%cf%80%ce%ad%ce%bc%cf%80%cf%84%ce%bf-%ce%ba%cf%8d%ce%ba/",
+  - { title: "Αξιοποίηση Νέων Τεχνολογιών στην Ανάπτυξη της Αγροτικής Επιχειρηματικότητας",
+      url: "https://ma.ellak.gr/events/1o-%CF%83%CE%B5%CE%BC%CE%B9%CE%BD%CE%B1%CF%81%CE%B9%CE%BF-3%CE%B7%CF%82-%CF%83%CE%B5%CE%B9%CF%81%CE%B1%CF%83-%CE%B1%CE%BE%CE%B9%CE%BF%CF%80%CE%BF%CE%AF%CE%B7%CF%83%CE%B7-%CE%BD%CE%AD%CF%89%CE%BD/",
+      text: "Το Πανεπιστήμιο Μακεδονίας, στα πλαίσια του έργου Μονάδες Αριστείας Ελεύθερου Λογισμικού/Λογισμικού Ανοικτού Κώδικα, διοργανώνει το πρώτο σεμινάριο για την τρίτη σειρά εκπαίδευσης στη θεματική περιοχή Αγροτική Ανάπτυξη – Περιβάλλον σε συνδυασμό με τη θεματική περιοχή των Επιχειρηματικών Εφαρμογών" }
+  - { title: "Προχωρημένα θέματα της γλώσσας προγραμματισμού Python και Bash command line για Linux για χρήση στο RASPBERRY PI",
+      url: "https://ma.ellak.gr/events/%CE%BC%CE%BF%CE%BD%CE%AC%CE%B4%CE%B1-%CE%B1%CF%81%CE%B9%CF%83%CF%84%CE%B5%CE%AF%CE%B1%CF%82-%CE%B5%CE%BB%CE%BB%CE%B1%CE%BA-%CE%B9%CF%89%CE%B1%CE%BD%CE%BD%CE%AF%CE%BD%CF%89%CE%BD-%CE%AD%CE%BA%CF%84/",
+      text: " Η Μονάδα Αριστείας ΕΛ/ΛΑΚ Ιωαννίνων στα πλαίσια του Έκτου Κύκλου εκπαιδευτικών σεμιναρίων με θέμα «Εφαρμογές ΕΛ/ΛΑΚ στην Αγροτική Ανάπτυξη, την Υγεία και τη Δημόσια Διοίκηση», σας καλεί στο Δεύτερο σεμινάριο με αντικείμενο « Προχωρημένα θέματα της γλώσσας προγραμματισμού Python και Bash command line για Linux για χρήση στο RASPBERRY PI»" }
+  - { title: "Ανάπτυξη Εφαρμογών Κινητών Συσκευών και fullstack javascript framework",
+      url: "https://ma.ellak.gr/events/%CE%BC%CE%BF%CE%BD%CE%AC%CE%B4%CE%B1-%CE%B1%CF%81%CE%B9%CF%83%CF%84%CE%B5%CE%AF%CE%B1%CF%82-%CE%B5%CE%BB%CE%BB%CE%B1%CE%BA-%CE%B9%CF%89%CE%B1%CE%BD%CE%BD%CE%AF%CE%BD%CF%89%CE%BD-%CE%AD%CE%BA%CF%84-2/",
       text: "" }
-  - { title: "Δεύτερο Σχολείο Κωδικά της Μονάδας Αριστείας ΕΛ/ΛΑΚ Ιωαννίνων",
-      url: "https://ma.ellak.gr/events/%cf%80%cf%81%cf%8c%cf%83%ce%ba%ce%bb%ce%b7%cf%83%ce%b7-%cf%83%cf%85%ce%bc%ce%bc%ce%b5%cf%84%ce%bf%cf%87%ce%ae%cf%82-%cf%83%cf%84%ce%bf-%ce%b4%ce%b5%cf%8d%cf%84%ce%b5%cf%81%ce%bf-%cf%83%cf%87%ce%bf/",
+  - { title: "WordPress – Διαύγεια API – Java Spring Framework",
+      url: "https://ma.ellak.gr/events/%CE%BC%CE%BF%CE%BD%CE%AC%CE%B4%CE%B1-%CE%B1%CF%81%CE%B9%CF%83%CF%84%CE%B5%CE%AF%CE%B1%CF%82-%CE%B5%CE%BB%CE%BB%CE%B1%CE%BA-%CE%B9%CF%89%CE%B1%CE%BD%CE%BD%CE%AF%CE%BD%CF%89%CE%BD-%CE%AD%CE%BA%CF%84-3/",
       text: "" }
-  - { title: "Τέταρτος Κύκλος εκπαιδευτικών σεμιναριων της Μοναδας Αριστειας ΕΛ/ΛΑΚ Ιωαννινων",
-      url: "https://ma.ellak.gr/events/%cf%80%cf%81%cf%8c%cf%83%ce%ba%ce%bb%ce%b7%cf%83%ce%b7-%cf%83%cf%85%ce%bc%ce%bc%ce%b5%cf%84%ce%bf%cf%87%ce%ae%cf%82-%cf%83%cf%84%ce%bf%ce%bd-%cf%84%ce%ad%cf%84%ce%b1%cf%81%cf%84%ce%bf-%ce%ba%cf%8d/",
+  - { title: "2ο ΘΕΡΙΝΟ ΣΧΟΛΕΙΟ ΑΝΑΠΤΥΞΗΣ ΚΩΔΙΚΑ ΕΛ/ΛΑΚ",
+      url: "https://ma.ellak.gr/events/2%CE%BF-%CE%B8%CE%B5%CF%81%CE%B9%CE%BD%CE%BF-%CF%83%CF%87%CE%BF%CE%BB%CE%B5%CE%B9%CE%BF-%CE%B1%CE%BD%CE%B1%CF%80%CF%84%CF%85%CE%BE%CE%B7%CF%83-%CE%BA%CF%89%CE%B4%CE%B9%CE%BA%CE%B1-%CE%B5%CE%BB%CE%BB/",
+      text: "" }
+  - { title: "Τρίτο Σχολείο Κώδικα της Μονάδας Αριστείας ΕΛ/ΛΑΚ Ιωαννίνων",
+      url: "https://ma.ellak.gr/events/%CF%80%CF%81%CF%8C%CF%83%CE%BA%CE%BB%CE%B7%CF%83%CE%B7-%CF%83%CF%85%CE%BC%CE%BC%CE%B5%CF%84%CE%BF%CF%87%CE%AE%CF%82-%CF%83%CF%84%CE%BF-%CF%84%CF%81%CE%AF%CF%84%CE%BF-%CF%83%CF%87%CE%BF%CE%BB%CE%B5/",
+      text: "" }
+  - { title: "Ημερίδα Μονάδας Αριστείας ΕΛ/ΛΑΚ Ιωαννίνων",
+      url: "https://ma.ellak.gr/events/%CE%B7%CE%BC%CE%B5%CF%81%CE%AF%CE%B4%CE%B1-%CE%BC%CE%BF%CE%BD%CE%AC%CE%B4%CE%B1%CF%82-%CE%B1%CF%81%CE%B9%CF%83%CF%84%CE%B5%CE%AF%CE%B1%CF%82-%CE%B5%CE%BB%CE%BB%CE%B1%CE%BA-%CE%B9%CF%89%CE%B1%CE%BD/",
       text: "" }
 
 # Βασικές εφαρμογές/Εργαλεία ΕΛ/ΛΑΚ
 tools:
-  - { title: "ΜΟΟCs & Αναπτυξη Κωδικα για την Πλατφορμα EdX",
-    url: "https://ma.ellak.gr/events/%ce%ba%cf%8d%ce%ba%ce%bb%ce%bf%cf%82-%ce%b5%ce%ba%cf%80%ce%b1%ce%af%ce%b4%ce%b5%cf%85%cf%83%ce%b7%cf%82-%ce%bc%ce%bf%ce%bfcs-%ce%b1%ce%bd%ce%ac%cf%80%cf%84%cf%85%ce%be%ce%b7-%ce%ba%cf%8e%ce%b4-2/",
-    text: "Στον παρόντα κύκλο εκπαίδευσης θα ασχοληθούμε με τις αρχές που διέπουν το σχεδιασμό και τις υπηρεσίες MOOC, τα πλεονεκτήματα και τα μειονεκτήματά τους και τέλος θα αναφερθούμε στις τεχνολογίες που είναι απαραίτητες για την ανάπτυξή τους." }
-  - { title: "Χτίζοντας στο “διαδίκτυο πραγμάτων” (Internet οf Things) με Arduino II – event-driven programming",
-      url: "https://ma.ellak.gr/events/%ce%ba%cf%8d%ce%ba%ce%bb%ce%bf%cf%82-%ce%b5%ce%ba%cf%80%ce%b1%ce%af%ce%b4%ce%b5%cf%85%cf%83%ce%b7%cf%82-%cf%87%cf%84%ce%af%ce%b6%ce%bf%ce%bd%cf%84%ce%b1%cf%82-%cf%83%cf%84%ce%bf-%ce%b4%ce%b9-3/",
+  - { title: "1ο Κύκλο Εκπαίδευσης ΕΛ/ΛΑΚ της 3ης Περιόδου της Μοναδας Αριστειας του Πανεπιστημιου Πατρων",
+    url: "https://ma.ellak.gr/events/%CF%80%CF%81%CF%8C%CF%83%CE%BA%CE%BB%CE%B7%CF%83%CE%B7-%CF%83%CF%85%CE%BC%CE%BC%CE%B5%CF%84%CE%BF%CF%87%CE%AE%CF%82-%CF%83%CF%84%CE%BF-1%CE%BF-%CE%BA%CF%8D%CE%BA%CE%BB%CE%BF-%CE%B5%CE%BA%CF%80%CE%B1/",
+    text: "Στόχος της Μονάδας Αριστείας ΕΛ/ΛΑΚ του Πανεπιστημίου Πατρών είναι να ενισχύσει την κοινότητα ΕΛ/ΛΑΚ στην Ελλάδα, φέρνοντας σε επαφή χρήστες, προγραμματιστές, ερευνητές, επαγγελματίες και γενικά φορείς που ασχολούνται με το ελεύθερο και ανοικτό λογισμικό ή που έχουν ανάγκες οι οποίες θα μπορούσαν να καλυφθούν από αυτό." }
+  - { title: "1ο θερινό σχολείο με αντικείμενο το λογισμικό οικονομετρικής ανάλυσης gretl.",
+      url: "https://ma.ellak.gr/events/%CF%80%CF%81%CF%8C%CF%83%CE%BA%CE%BB%CE%B7%CF%83%CE%B7-%CF%83%CF%84%CE%BF-1%CE%BF-%CE%B8%CE%B5%CF%81%CE%B9%CE%BD%CF%8C-%CF%83%CF%87%CE%BF%CE%BB%CE%B5%CE%AF%CE%BF-%CE%B5%CE%BB%CE%BB%CE%B1%CE%BA-%CF%84/",
       text: "" }
-  - { title: "Κύκλος Εκπαίδευσης: ΜΟΟCs + ανάπτυξη κώδικα για την πλατφόρμα edX",
-      url: "https://ma.ellak.gr/events/%ce%ba%cf%8d%ce%ba%ce%bb%ce%bf%cf%82-%ce%b5%ce%ba%cf%80%ce%b1%ce%af%ce%b4%ce%b5%cf%85%cf%83%ce%b7%cf%82-%ce%bc%ce%bf%ce%bfcs-%ce%b1%ce%bd%ce%ac%cf%80%cf%84%cf%85%ce%be%ce%b7-%ce%ba%cf%8e%ce%b4/",
+  - { title: "Ημερίδα «Η Μονάδα Αριστείας ΕΛ/ΛΑΚ του Πανεπιστημίου Πατρών και οι δράσεις της για το ελεύθερο λογισμικό gretl»",
+      url: "https://ma.ellak.gr/events/%CE%B7-%CE%BC%CE%BF%CE%BD%CE%AC%CE%B4%CE%B1-%CE%B1%CF%81%CE%B9%CF%83%CF%84%CE%B5%CE%AF%CE%B1%CF%82-%CE%B5%CE%BB%CE%BB%CE%B1%CE%BA-%CF%84%CE%BF%CF%85-%CF%80%CE%B1%CE%BD%CE%B5%CF%80%CE%B9%CF%83%CF%84/",
       text: "" }
-  - { title: "Ημερίδα Μονάδας Αριστείας ΕΛ/ΛΑΚ ΤΕΙ Αθηνας «1η Σειρά Εκπαίδευσης»",
-      url: "https://ma.ellak.gr/events/%ce%b7%ce%bc%ce%b5%cf%81%ce%af%ce%b4%ce%b1-%ce%bc%ce%bf%ce%bd%ce%ac%ce%b4%ce%b1%cf%82-%ce%b1%cf%81%ce%b9%cf%83%cf%84%ce%b5%ce%af%ce%b1%cf%82-%ce%b5%ce%bb%ce%bb%ce%b1%ce%ba-%cf%84%ce%b5%ce%b9-%ce%b1/",
-      text: "" }
-  - { title: "2ο Κύκλο του 2ου Σεμιναρίου ΕΛ/ΛΑΚ της Μονάδας Αριστείας του Πανεπιστημίου Πατρών",
-      url: "https://ma.ellak.gr/events/%cf%80%cf%81%cf%8c%cf%83%ce%ba%ce%bb%ce%b7%cf%83%ce%b7-%cf%83%cf%85%ce%bc%ce%bc%ce%b5%cf%84%ce%bf%cf%87%ce%ae%cf%82-%cf%83%cf%84%ce%bf-2%ce%bf-%ce%ba%cf%8d%ce%ba%ce%bb%ce%bf-%cf%84%ce%bf%cf%85-2%ce%bf/",
-      text: "" }
-  - { title: "Wikidata: Ας μάθουμε την δύναμη των δεδομένων της Wikipedia λίγο καλύτερα",
-      url: "https://ma.ellak.gr/events/wikidata-%ce%b1%cf%82-%ce%bc%ce%ac%ce%b8%ce%bf%cf%85%ce%bc%ce%b5-%cf%84%ce%b7%ce%bd-%ce%b4%cf%8d%ce%bd%ce%b1%ce%bc%ce%b7-%cf%84%cf%89%ce%bd-%ce%b4%ce%b5%ce%b4%ce%bf%ce%bc%ce%ad%ce%bd%cf%89%ce%bd/",
-      text: "" }
-  - { title: "Χτιζοντας στο “Διαδικτυο Πραγματων” (Internet Of Things) με Arduino",
-      url: "https://ma.ellak.gr/events/%ce%ba%cf%8d%ce%ba%ce%bb%ce%bf%cf%82-%ce%b5%ce%ba%cf%80%ce%b1%ce%af%ce%b4%ce%b5%cf%85%cf%83%ce%b7%cf%82-%cf%87%cf%84%ce%af%ce%b6%ce%bf%ce%bd%cf%84%ce%b1%cf%82-%cf%83%cf%84%ce%bf-%ce%b4%ce%b9-2/",
+  - { title: "Προγραμματισμός Arduino για έλεγχο του Diyiot-car (*) & ανάπτυξη WEB περιβάλλοντος για event-driven programming",
+      url: "https://ma.ellak.gr/events/%CE%B8%CE%B5%CF%81%CE%B9%CE%BD%CF%8C-%CF%83%CF%87%CE%BF%CE%BB%CE%B5%CE%AF%CE%BF-%CF%80%CF%81%CE%BF%CE%B3%CF%81%CE%B1%CE%BC%CE%BC%CE%B1%CF%84%CE%B9%CF%83%CE%BC%CF%8C%CF%82-arduino-%CE%B3%CE%B9%CE%B1/",
       text: "" }
 
 # Πληροφοριακά συστήματα υγείας
 health:
-  - { title: "5ος Εκπαιδευτικός Κύκλος Σεμιναρίων ΕΛ/ΛΑΚ Μονάδας Αριστείας Α.Π.Θ.",
-      url: "https://ma.ellak.gr/events/5%ce%bf%cf%82-%ce%b5%ce%ba%cf%80%ce%b1%ce%b9%ce%b4%ce%b5%cf%85%cf%84%ce%b9%ce%ba%cf%8c%cf%82-%ce%ba%cf%8d%ce%ba%ce%bb%ce%bf%cf%82-%cf%83%ce%b5%ce%bc%ce%b9%ce%bd%ce%b1%cf%81%ce%af%cf%89%ce%bd-%ce%b5/",
-      text: "Τα σεμινάρια απευθύνονται σε ελεύθερους επαγγελματίες, εργαζόμενους, στελέχη επιχειρήσεων, στελέχη φορέων της Δημόσιας Διοίκησης και της Υγείας όλων των βαθμίδων, καθηγητές, φοιτητές και φίλους του ελεύθερου λογισμικού." }
-  - { title: "3η Ημερίδα ΕΛ/ΛΑΚ Μονάδας Αριστείας Α.Π.Θ.",
-      url: "https://ma.ellak.gr/events/3%ce%b7-%ce%b7%ce%bc%ce%b5%cf%81%ce%af%ce%b4%ce%b1-%ce%b5%ce%bb%ce%bb%ce%b1%ce%ba-%ce%bc%ce%bf%ce%bd%ce%ac%ce%b4%ce%b1%cf%82-%ce%b1%cf%81%ce%b9%cf%83%cf%84%ce%b5%ce%af%ce%b1%cf%82-%ce%b1-%cf%80/",
-      text: "" }
+  - { title: "6ος Εκπαιδευτικός Κύκλος Σεμιναρίων ΕΛ/ΛΑΚ Μονάδας Αριστείας Α.Π.Θ.",
+      url: "https://ma.ellak.gr/events/6%CE%BF%CF%82-%CE%B5%CE%BA%CF%80%CE%B1%CE%B9%CE%B4%CE%B5%CF%85%CF%84%CE%B9%CE%BA%CF%8C%CF%82-%CE%BA%CF%8D%CE%BA%CE%BB%CE%BF%CF%82-%CF%83%CE%B5%CE%BC%CE%B9%CE%BD%CE%B1%CF%81%CE%AF%CF%89%CE%BD-%CE%B5/",
+      text: "Η Μονάδα Αριστείας ΕΛ/ΛΑΚ του Α.Π.Θ., στα πλαίσια του έργου Μονάδες Αριστείας Ελεύθερου Λογισμικού/Λογισμικού Ανοικτού Κώδικα, διοργανώνει τον δεύτερο κύκλο σεμιναρίων του “Γ κύκλου, 6ος Εκπαιδευτικός Κύκλος σεμιναρίων, με τίτλο Εφαρμογές ΕΛ/ΛΑΚ για αρχαρίους, στη θεματική περιοχή Δημόσια Διοίκηση & Τοπική Αυτοδιοίκηση, τα Πληροφοριακά Συστήματα Υγείας και στις Επιχειρηματικές Εφαρμογές/Υπηρεσίες για Μικρομεσαίες Επιχειρήσεις." }
 
 # Επιχειρηματικές εφαρμογές/Υπηρεσίες για μικρομεσαίες επιχειρήσεις
 business:
-  - { title: "Χτιζοντας στο “διαδικτυο πραγματων” (Internet οf Things) με Arduino II – event-driven programming",
-      url: "https://ma.ellak.gr/events/%ce%ba%cf%8d%ce%ba%ce%bb%ce%bf%cf%82-%ce%b5%ce%ba%cf%80%ce%b1%ce%af%ce%b4%ce%b5%cf%85%cf%83%ce%b7%cf%82-%cf%87%cf%84%ce%af%ce%b6%ce%bf%ce%bd%cf%84%ce%b1%cf%82-%cf%83%cf%84%ce%bf-%ce%b4%ce%b9-3/",
-      text: "Στόχος είναι η εκπαίδευση των συμμετεχόντων με απώτερο σκοπό τη συμμετοχή τους στη συνεργατική ανάπτυξη Έργου συνεισφοράς σε εφαρμογές ΕΛ/ΛΑΚ, σχετικά με “διαδίκτυο πραγμάτων”." }
-  - { title: "3η Ημερίδα ΕΛ/ΛΑΚ Μονάδας Αριστείας Α.Π.Θ.Ημερίδα Μονάδας Αριστείας ΕΛ/ΛΑΚ ΤΕΙ Αθήνας «1η Σειρά Εκπαίδευσης»",
-      url: "https://ma.ellak.gr/events/3%ce%b7-%ce%b7%ce%bc%ce%b5%cf%81%ce%af%ce%b4%ce%b1-%ce%b5%ce%bb%ce%bb%ce%b1%ce%ba-%ce%bc%ce%bf%ce%bd%ce%ac%ce%b4%ce%b1%cf%82-%ce%b1%cf%81%ce%b9%cf%83%cf%84%ce%b5%ce%af%ce%b1%cf%82-%ce%b1-%cf%80/",
-      text: "" }
-  - { title: "2ο Σχολείο Κώδικα Μονάδας Αριστείας Α.Π.Θ",
-      url: "https://ma.ellak.gr/events/2%ce%bf-%cf%83%cf%87%ce%bf%ce%bb%ce%b5%ce%af%ce%bf-%ce%ba%cf%8e%ce%b4%ce%b9%ce%ba%ce%b1-%ce%bc%ce%bf%ce%bd%ce%ac%ce%b4%ce%b1%cf%82-%ce%b1%cf%81%ce%b9%cf%83%cf%84%ce%b5%ce%af%ce%b1%cf%82-%ce%b1-%cf%80/",
-      text: "" }
-  - { title: "Επιχειρηματικές & Εκπαιδευτικές Εφαρμογές/Υπηρεσίες για Μικρομεσαίες Επιχειρήσεις",
-      url: "https://ma.ellak.gr/events/2o-%CF%83%CE%B5%CE%BC%CE%B9%CE%BD%CE%B1%CF%81%CE%B9%CE%BF-1%CE%B7%CF%82-%CF%83%CE%B5%CE%B9%CF%81%CE%B1%CF%83-%CE%B5%CE%BA%CF%80%CE%B1%CE%B9%CE%B4%CE%B5%CF%85%CF%83%CE%B7%CF%83-%CE%B5%CF%80%CE%B9/",
-      text: "" }
-  - { title: "1η Ημερίδα: Επιχειρηματικές & Εκπαιδευτικές Εφαρμογές/Υπηρεσίες για Μικρομεσαίες Επιχειρήσεις",
-      url: "https://ma.ellak.gr/events/2o-%CF%83%CE%B5%CE%BC%CE%B9%CE%BD%CE%B1%CF%81%CE%B9%CE%BF-1%CE%B7%CF%82-%CF%83%CE%B5%CE%B9%CF%81%CE%B1%CF%83-%CE%B5%CE%BA%CF%80%CE%B1%CE%B9%CE%B4%CE%B5%CF%85%CF%83%CE%B7%CF%83-%CE%B5%CF%80%CE%B9/",
-      text: "" }
-
+  - { title: "3ο Σχολείο Κώδικα Μονάδας Αριστείας Α.Π.Θ.",
+      url: "https://ma.ellak.gr/events/3%CE%BF-%CF%83%CF%87%CE%BF%CE%BB%CE%B5%CE%AF%CE%BF-%CE%BA%CF%8E%CE%B4%CE%B9%CE%BA%CE%B1-%CE%BC%CE%BF%CE%BD%CE%AC%CE%B4%CE%B1%CF%82-%CE%B1%CF%81%CE%B9%CF%83%CF%84%CE%B5%CE%AF%CE%B1%CF%82-%CE%B1-%CF%80/",
+      text: "Η Μονάδα Αριστείας ΕΛ/ΛΑΚ του Α.Π.Θ., σε συνεργασία με το Εργαστήριο Πολυμέσων του Τμ. Πληροφορικής Α.Π.Θ., στο πλαίσιο του έργου Μονάδες Αριστείας Ελεύθερου Λογισμικού/Λογισμικού Ανοικτού Κώδικα, διοργανώνει το τρίτο Σχολείο Κώδικα και προσκαλεί φοιτητές, προγραμματιστές, εκπαιδευτικούς, φίλους του ΕΛ/ΛΑΚ και όλους όσους ασχολούνται ή επιθυμούν να ασχοληθούν με το ανοικτό λογισμικό στις Θεματικές Περιοχές της Δημόσιας Διοίκησης & Τοπικής Αυτοδιοίκησης, τα Πληροφοριακά Συστήματα Υγείας και στις Επιχειρηματικές Εφαρμογές/Υπηρεσίες για Μικρομεσαίες Επιχειρήσεις." }
+   
 # Εκπαιδευτικό λογισμικό
 edu:
-  - { title: "2η Ημερίδα ΕΛ/ΛΑΚ Μονάδας Αριστείας Χαροκοπείου Πανεπιστημίου",
-      url: "https://ma.ellak.gr/events/2%ce%b7-%ce%b7%ce%bc%ce%b5%cf%81%ce%af%ce%b4%ce%b1-%ce%b5%ce%bb%ce%bb%ce%b1%ce%ba-%ce%bc%ce%bf%ce%bd%ce%ac%ce%b4%ce%b1%cf%82-%ce%b1%cf%81%ce%b9%cf%83%cf%84%ce%b5%ce%af%ce%b1%cf%82-%cf%87%ce%b1%cf%81/",
-      text: "Κατά την διάρκεια της ημερίδας, θα πραγματοποιηθούν ομιλίες γύρω από το Ελεύθερο Λογισμικό/Λογισμικό Ανοικτού Κώδικα, καθώς και παρουσιάσεις των όσων αναπτύχθηκαν κατά την διάρκεια των σεμιναρίων και του θερινού σχολείου ανάπτυξης κώδικα." }
-  - { title: "1η ημερίδα Πανεπιστημίου Κρήτης",
-      url: "https://ma.ellak.gr/events/1%ce%b7-%ce%b7%ce%bc%ce%b5%cf%81%ce%b9%ce%b4%ce%b1-%ce%bc%ce%bf%ce%bd%ce%b1%ce%b4%ce%b1%cf%83-%ce%b1%cf%81%ce%b9%cf%83%cf%84%ce%b5%ce%b9%ce%b1%cf%83-%cf%80%ce%b1%ce%bd%ce%b5%cf%80%ce%b9%cf%83%cf%84/",
+  - { title: "Αξιοποίηση της Πλατφόρμας Android στην Εκπαίδευση – Το Σεμινάριο",
+      url: "https://ma.ellak.gr/events/%CE%BA%CF%8D%CE%BA%CE%BB%CE%BF%CF%82-%CE%B5%CE%BA%CF%80%CE%B1%CE%AF%CE%B4%CE%B5%CF%85%CF%83%CE%B7%CF%82-%CE%B1%CE%BE%CE%B9%CE%BF%CF%80%CE%BF%CE%AF%CE%B7%CF%83%CE%B7-%CF%84%CE%B7%CF%82-%CF%80%CE%BB-2/",
+      text: "Το σεμινάριο σηματοδοτεί την έναρξη του Κύκλου Εκπαίδευσης,  έχει συνολική διάρκεια 12 ώρες, και υλοποιείται σε έξι δίωρα μαθήματα, τα οποία περιλαμβάνουν θεωρητική διάλεξη και πρακτική εξάσκηση (workshop) για εμπέδωση των θεωρητικών εννοιών. Μετά από κάθε μάθημα θα ακολουθεί επιπλέον πρακτική εξάσκηση, όταν θα κρίνεται απαραίτητο, μέγιστης διάρκειας δύο επιπλέον ωρών." }
+  - { title: "Ημερίδα Μονάδας Αριστείας ΕΛ/ΛΑΚ ΤΕΙ Αθήνας «2η & 3η Σειρά Εκπαίδευσης»",
+      url: "https://ma.ellak.gr/events/%CE%B7%CE%BC%CE%B5%CF%81%CE%AF%CE%B4%CE%B1-%CE%BC%CE%BF%CE%BD%CE%AC%CE%B4%CE%B1%CF%82-%CE%B1%CF%81%CE%B9%CF%83%CF%84%CE%B5%CE%AF%CE%B1%CF%82-%CE%B5%CE%BB%CE%BB%CE%B1%CE%BA-%CF%84%CE%B5%CE%B9-%CE%B1-2/",
       text: "" }
-  - { title: "2ο Θερινό Σχολείο Κώδικα ΕΛ/ΛΑΚ – Χαροκόπειο Πανεπιστήμιο",
-      url: "https://ma.ellak.gr/events/2%ce%bf-%ce%b8%ce%b5%cf%81%ce%b9%ce%bd%cf%8c-%cf%83%cf%87%ce%bf%ce%bb%ce%b5%ce%af%ce%bf-%ce%ba%cf%8e%ce%b4%ce%b9%ce%ba%ce%b1-%ce%b5%ce%bb%ce%bb%ce%b1%ce%ba-%cf%87%ce%b1%cf%81%ce%bf%ce%ba-2/",
+  - { title: "Θερινό Σχολείο: Ανάπτυξη wearable συστήματος βασισμένου σε Arduino για χρήση σε αθλητικές δραστηριότητες",
+      url: "https://ma.ellak.gr/events/%CE%B8%CE%B5%CF%81%CE%B9%CE%BD%CF%8C-%CF%83%CF%87%CE%BF%CE%BB%CE%B5%CE%AF%CE%BF-%CE%B1%CE%BD%CE%AC%CF%80%CF%84%CF%85%CE%BE%CE%B7-wearable-%CF%83%CF%85%CF%83%CF%84%CE%AE%CE%BC%CE%B1%CF%84%CE%BF%CF%82/",
       text: "" }
-
+  
 # Μεταφορές-Ναυτιλία
 ships:
+  - { title: "Σχολείο Ανοικτού Κώδικα ΕΛ / ΛΑΚ σε Τουρισμό – Μεταφορές – Ναυτιλία",
+      url: "https://ma.ellak.gr/events/%CF%83%CF%87%CE%BF%CE%BB%CE%B5%CE%AF%CE%BF-%CE%B1%CE%BD%CE%BF%CE%B9%CE%BA%CF%84%CE%BF%CF%8D-%CE%BA%CF%8E%CE%B4%CE%B9%CE%BA%CE%B1-%CE%B5%CE%BB-%CE%BB%CE%B1%CE%BA-%CF%83%CE%B5-%CF%84%CE%BF%CF%85%CF%81/",
+      text: "Το Πανεπιστήμιο Αιγαίου, στα πλαίσια του έργου Μονάδες Αριστείας Ελεύθερου Λογισμικού / Λογισμικού Ανοικτού Κώδικα (ΕΛ/ΛΑΚ) – A Κύκλος, διοργανώνει Σχολείο Ανοικτού Κώδικα με θέμα «Ένα portal για τη μαστίχα – Υλοποίηση στρατηγικής προώθησης της μαστίχας στο Διαδίκτυο (σε συνεργασία με την Ένωση Μαστιχοπαραγωγών Χϊου) –  Mastiha Portal»." }
   - { title: "Ηλεκτρονικές Υπηρεσίες – Ανοιχτό Λογισμικό στις Μεταφορές και τη Ναυτιλία",
-      url: "https://ma.ellak.gr/events/%CE%BC%CE%B5%CF%84%CE%B1%CF%86%CE%BF%CF%81%CE%AD%CF%82%CE%BD%CE%B1%CF%85%CF%84%CE%B9%CE%BB%CE%AF%CE%B1-3%CE%B7-%CF%83%CE%B5%CE%B9%CF%81%CE%AC-%CE%B5%CE%BA%CF%80%CE%B1%CE%AF%CE%B4%CE%B5%CF%85%CF%83/",
-      text: "Στο πρώτο σεμινάριο θα γίνει εισαγωγή στην έννοια του ΕΛ/ΛΑΚ και παρουσίαση των κυριότερων τύπων άδειας του. Επίσης θα γίνει εισαγωγή στη γεωχωρική πληροφορία παρουσιάζοντας βασικές έννοιες όπως γεωγραφικά συστήματα αναφοράς, τύποι γεωμετρίας, ανοιχτοί και κλειστοί μορφότυποι, συστήματα γεωγραφικών πληροφοριών και είδη διαδικτυακών υπηρεσιών γεωχωρικών δεδομένων. Οι συμμετέχοντες θα έρθουν σε μια πρώτη επαφή με βασικές έννοιες όπως οι λειτουργίες δρομολόγησης, οι συνδυασμένες μεταφορές και τα έγγραφα μεταφοράς." }
+      url: "https://ma.ellak.gr/events/%CF%83%CE%B5%CE%BC%CE%B9%CE%BD%CE%B1%CF%81%CE%B9%CE%BF-%CE%B7%CE%BB%CE%B5%CE%BA%CF%84%CF%81%CE%BF%CE%BD%CE%B9%CE%BA%CE%AD%CF%82-%CF%85%CF%80%CE%B7%CF%81%CE%B5%CF%83%CE%AF%CE%B5%CF%82-%CE%B1%CE%BD-2/"}
+  - { title: "BLUE HACKATHON / Σχολείο Ανοικτού Κώδικα ΕΛ / ΛΑΚ",
+      url: "https://ma.ellak.gr/events/%CF%83%CF%87%CE%BF%CE%BB%CE%B5%CE%AF%CE%BF-%CE%B1%CE%BD%CE%BF%CE%B9%CE%BA%CF%84%CE%BF%CF%8D-%CE%BA%CF%8E%CE%B4%CE%B9%CE%BA%CE%B1-%CE%B5%CE%BB-%CE%BB%CE%B1%CE%BA-%CF%83%CE%B5-%CE%BD%CE%B1%CF%85%CF%84/"}
+  - { title: "Models and Software for Island Economies, Societies, Networks",
+      url: "https://ma.ellak.gr/events/%CF%83%CF%87%CE%BF%CE%BB%CE%B5%CE%AF%CE%BF-%CF%83%CE%B5%CE%BC%CE%B9%CE%BD%CE%AC%CF%81%CE%B9%CE%BF-%CE%B1%CE%BD%CE%BF%CE%B9%CE%BA%CF%84%CE%BF%CF%8D-%CE%BA%CF%8E%CE%B4%CE%B9%CE%BA%CE%B1-%CE%B5%CE%BB/"}
+  - { title: "Ηλεκτρονικές Υπηρεσίες – Ανοιχτό Λογισμικό στις Μεταφορές και τη Ναυτιλία",
+      url: "https://ma.ellak.gr/events/%CF%83%CE%B5%CE%BC%CE%B9%CE%BD%CE%B1%CF%81%CE%B9%CE%BF-%CE%B7%CE%BB%CE%B5%CE%BA%CF%84%CF%81%CE%BF%CE%BD%CE%B9%CE%BA%CE%AD%CF%82-%CF%85%CF%80%CE%B7%CF%81%CE%B5%CF%83%CE%AF%CE%B5%CF%82-%CE%B1%CE%BD/"}
 
 # Δημόσια διοίκηση και τοπική αυτοδιοίκηση
 public:
-  - { title: "3η Ημερίδα ΕΛ/ΛΑΚ Μονάδας Αριστείας Α.Π.Θ.",
-      url: "https://ma.ellak.gr/events/3%ce%b7-%ce%b7%ce%bc%ce%b5%cf%81%ce%af%ce%b4%ce%b1-%ce%b5%ce%bb%ce%bb%ce%b1%ce%ba-%ce%bc%ce%bf%ce%bd%ce%ac%ce%b4%ce%b1%cf%82-%ce%b1%cf%81%ce%b9%cf%83%cf%84%ce%b5%ce%af%ce%b1%cf%82-%ce%b1-%cf%80/",
-      text: "θα επικεντρωθεί στις ενότητες της Δημόσιας Διοίκησης και Αυτοδιοίκησης, τα Πληροφοριακά Συστήματα Υγείας και των Επιχειρηματικών εφαρμογών / υπηρεσιών για μικρομεσαίες επιχειρήσεις. Οι ομιλητές θα είναι προγραμματιστές που θα παρουσιάσουν τις εργασίες που έγιναν στο πλαίσιο του 2ου Σχολείου Κώδικα. Το πρόγραμμα θα ολοκληρώσουν εισηγητές θεμάτων που αφορούν εφαρμογές ΕΛ/ΛΑΚ." }
-  - { title: "Δευτερο Σχολειο Κωδικα της Μοναδας Αριστειας ΕΛ/ΛΑΚ Ιωαννινων",
-      url: "https://ma.ellak.gr/events/%cf%80%cf%81%cf%8c%cf%83%ce%ba%ce%bb%ce%b7%cf%83%ce%b7-%cf%83%cf%85%ce%bc%ce%bc%ce%b5%cf%84%ce%bf%cf%87%ce%ae%cf%82-%cf%83%cf%84%ce%bf-%ce%b4%ce%b5%cf%8d%cf%84%ce%b5%cf%81%ce%bf-%cf%83%cf%87%ce%bf/",
-      text: "Η Μονάδα Αριστείας ΕΛ/ΛΑΚ Ιωαννίνων έχει ως στόχο να εισάγει τους συμμετέχοντες στις εφαρμογές ΕΛ/ΛΑΚ, να τους δώσει τη δυνατότητα να χρησιμοποιήσουν και να αναπτύξουν εφαρμογές ΕΛ/ΛΑΚ με θέμα την Αγροτική Ανάπτυξη, την Υγεία και τη Δημόσια Διοίκηση. Σε συνέχεια των τεσσάρων πρώτων κύκλων  Σεμιναρίων, το σχολείο κώδικα θα παρουσιάσει συγκεκριμένα αντικείμενα και στην συνέχεια θα υπάρχει πρακτική εξάσκηση χωρίς χρονικούς περιορισμούς. Σκοπός είναι η ενεργοποίηση των συμμετεχόντων και η αύξηση του ενδιαφέροντός τους. Τα αντικείμενα που θα διδάσκονται στο δεύτερο σχολείο ανάπτυξης κώδικα θα διδαχθούν από μέλη της κοινότητας που αναπτύσσουν ανάλογο ή αντίστοιχο λογισμικό και έτσι να μεταφέρουν όλη την εμπειρία τους στους εκπαιδευόμενους. Αυτή η προσέγγιση θα ωφελήσει τους εκπαιδευόμενους να κάνουν ουσιώδεις συζητήσεις με έμπειρα και ικανά στελέχη της κοινότητας ΕΛΛΑΚ." }
-  - { title: "4ος Εκπαιδευτικος Κυκλος Σεμιναριων ΕΛ/ΛΑΚ Μοναδας Αριστειας Α.Π.Θ.",
-      url: "https://ma.ellak.gr/events/%cf%80%cf%81%cf%8c%cf%83%ce%ba%ce%bb%ce%b7%cf%83%ce%b7-%cf%83%cf%85%ce%bc%ce%bc%ce%b5%cf%84%ce%bf%cf%87%ce%ae%cf%82-%cf%83%cf%84%ce%bf-%ce%b4%ce%b5%cf%8d%cf%84%ce%b5%cf%81%ce%bf-%cf%83%cf%87%ce%bf/",
-      text: "" }
-  - { title: "2ο Σχολειο Κωδικα Μοναδας Αριστειας Α.Π.Θ. ",
-      url: "https://ma.ellak.gr/events/2%ce%bf-%cf%83%cf%87%ce%bf%ce%bb%ce%b5%ce%af%ce%bf-%ce%ba%cf%8e%ce%b4%ce%b9%ce%ba%ce%b1-%ce%bc%ce%bf%ce%bd%ce%ac%ce%b4%ce%b1%cf%82-%ce%b1%cf%81%ce%b9%cf%83%cf%84%ce%b5%ce%af%ce%b1%cf%82-%ce%b1-%cf%80/",
-      text: "" }
-  - { title: "Πρωτο Σχολειο Κωδικα της Μοναδας Αριστειας ΕΛ/ΛΑΚ Ιωαννινων",
-      url: "https://ma.ellak.gr/events/%cf%80%cf%81%cf%8c%cf%83%ce%ba%ce%bb%ce%b7%cf%83%ce%b7-%cf%83%cf%85%ce%bc%ce%bc%ce%b5%cf%84%ce%bf%cf%87%ce%ae%cf%82-%cf%83%cf%84%ce%bf-%cf%80%cf%81%cf%8e%cf%84%ce%bf-%cf%83%cf%87%ce%bf%ce%bb%ce%b5/",
+  - { title: "e-Identity & e-Government (Hλεκτρονική ταυτότητα στη Δημόσια Διοίκηση και Τοπική Αυτοδιοίκηση)",
+      url: "https://ma.ellak.gr/events/%CF%83%CF%87%CE%BF%CE%BB%CE%B5%CE%AF%CE%BF-%CE%B1%CE%BD%CE%BF%CE%B9%CE%BA%CF%84%CE%BF%CF%8D-%CE%BA%CF%8E%CE%B4%CE%B9%CE%BA%CE%B1-%CE%B5%CE%BB-%CE%BB%CE%B1%CE%BA-e-identity-e-government-h%CE%BB/",
+      text: "Οι συμμετέχοντες θα εξοικοιωθούν με την τεχνολογική βάση της Πανευρωπαικής Διαδικτυακής Πλατφόρμας Διαχείρισης Ηλεκτρονικής Ταυτότητας STORK2.0, με έμφαση στη διασύνδεση Παροχέων Υπηρεσίας (Service Providers – SPs) με την Πλατφόρμα. Το σχολείο περιλαμβάνει παρουσίαση εννοιών, πρακτική εφαρμογή και ασκήσεις διασύνδεσης “τρίτων οντοτήτων”, με στόχο την εξοικείωση των συμμετεχόντων με τις σχετικές τεχνολογίες και την διασύνδεση Παροχέων Υπηρεσίας (SPs), δημόσιων οργανισμών και ιδιωτικών φορέων, με συστήματα διαχείρισης ηλεκτρονικής ταυτότητας (Identity Management Systems)." }
+  - { title: "3ο Σχολείο Κώδικα Μονάδας Αριστείας Α.Π.Θ.",
+      url: "https://ma.ellak.gr/events/3%CE%BF-%CF%83%CF%87%CE%BF%CE%BB%CE%B5%CE%AF%CE%BF-%CE%BA%CF%8E%CE%B4%CE%B9%CE%BA%CE%B1-%CE%BC%CE%BF%CE%BD%CE%AC%CE%B4%CE%B1%CF%82-%CE%B1%CF%81%CE%B9%CF%83%CF%84%CE%B5%CE%AF%CE%B1%CF%82-%CE%B1-%CF%80/",
+      text: "Στόχος είναι η εντατική, πρακτική εκπαίδευση των συμμετεχόντων με απώτερο σκοπό τη συμμετοχή τους στη συνεργατική ανάπτυξη Έργου συνεισφοράς σε εφαρμογές ΕΛ/ΛΑΚ.
+Έμφαση δίνεται στην ανάπτυξη εφαρμογών νοητικής άσκησης (cognitive training) με Python (θεματική περιοχή Υγείας) και κρυπτογραφίας (χρήσιμη για τις τρεις θεματικές περιοχής συνολικά)." }
+  - { title: "6ος Εκπαιδευτικός Κύκλος Σεμιναρίων ΕΛ/ΛΑΚ Μονάδας Αριστείας Α.Π.Θ.",
+      url: "https://ma.ellak.gr/events/6%CE%BF%CF%82-%CE%B5%CE%BA%CF%80%CE%B1%CE%B9%CE%B4%CE%B5%CF%85%CF%84%CE%B9%CE%BA%CF%8C%CF%82-%CE%BA%CF%8D%CE%BA%CE%BB%CE%BF%CF%82-%CF%83%CE%B5%CE%BC%CE%B9%CE%BD%CE%B1%CF%81%CE%AF%CF%89%CE%BD-%CE%B5-2/",
       text: "" }

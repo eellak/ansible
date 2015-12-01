@@ -98,12 +98,12 @@ body {
                   </p>
                   </center>
                   <p style="font-family: Arial, &quot;Lucida Grande&quot;, sans-serif; padding: 0 30px;">
-                    Έως 31 Απριλίου 2015:
+                    Έως 30 Οκτωβρίου 2015:
                     <ul style="margin: 0 0 0 24px;" type="circle">
-                      <li>257 Εκδηλώσεις</li>
-                      <li>848 Μέλη</li>
-                      <li>217 βίντεο και 205 αρχεία για εκπαιδευτικό υλικό και</li>
-                      <li>έχουν αναπτυχθεί 123 έργα</li>
+                      <li>321 Εκδηλώσεις</li>
+                      <li>1179 Μέλη</li>
+                      <li>269 βίντεο και 246 αρχεία για εκπαιδευτικό υλικό και</li>
+                      <li>έχουν αναπτυχθεί 75 έργα ανοιχτών τεχνολογιών</li>
                     </ul>
                   </p>
                   </td>
@@ -123,7 +123,7 @@ body {
                 {{ item.title }}
               </a>
               </br>
-              {% if item.text %}
+              {% if item.text is defined and item.text %}
               {{ item.text }}
               {% endif %}
             </li>
@@ -141,29 +141,13 @@ body {
                 {{ item.title }}
               </a>
               </br>
-              {% if item.text %}
+              {% if item.text is defined and item.text %}
               {{ item.text }}
               {% endif %}
             </li>
           </ul>
 {% endfor %}
-        </br>
-        <img src="../images/thematikes/geo.png" width="70" style="float: left; padding-right: 15px;"/>
-        <h3 style="font-family: Arial, &quot;Lucida Grande&quot;, sans-serif;font-size: 18px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 10px 0">Συστήματα γεωγραφικών πληροφοριών</h3>
-        </br>
-{% for item in geo %}
-          <ul style="margin: 0 0 0 24px;padding: 0" type="circle">
-            <li>
-              <a href="{{ item.url }}" style="font-family: Arial, &quot;Lucida Grande&quot;, sans-serif;font-size: 15px;font-weight: bold;color: #57294C;text-decoration: none">
-                {{ item.title }}
-              </a>
-              </br>
-              {% if item.text %}
-              {{ item.text }}
-              {% endif %}
-            </li>
-          </ul>
-{% endfor %}
+
         </br>
         <img src="../images/thematikes/agriculture.png" width="70" style="float: left; padding-right: 15px;"/>
         <h3 style="font-family: Arial, &quot;Lucida Grande&quot;, sans-serif;font-size: 18px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 10px 0">Αγροτική ανάπτυξη-Περιβάλλον</h3>
@@ -175,7 +159,7 @@ body {
                 {{ item.title }}
               </a>
               </br>
-              {% if item.text %}
+              {% if item.text is defined and item.text %}
               {{ item.text }}
               {% endif %}
             </li>
@@ -192,7 +176,7 @@ body {
                 {{ item.title }}
               </a>
               </br>
-              {% if item.text %}
+              {% if item.text is defined and item.text %}
               {{ item.text }}
               {% endif %}
             </li>
@@ -215,12 +199,13 @@ body {
                 {{ item.title }}
               </a>
               </br>
-              {% if item.text %}
+              {% if item.text is defined and item.text %}
               {{ item.text }}
               {% endif %}
             </li>
           </ul>
 {% endfor %}
+
         </br>
         <img src="../images/thematikes/business.png" width="90" style="float: left; padding-right: 15px;"/>
         <h3 style="font-family: Arial, &quot;Lucida Grande&quot;, sans-serif;font-size: 18px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 10px 0">Επιχειρηματικές εφαρμογές/Υπηρεσίες για μικρομεσαίες επιχειρήσεις</h3>
@@ -232,12 +217,13 @@ body {
                 {{ item.title }}
               </a>
               </br>
-              {% if item.text %}
+              {% if item.text is defined and item.text %}
               {{ item.text }}
               {% endif %}
             </li>
           </ul>
 {% endfor %}
+
         </br>
         <img src="../images/thematikes/edu.png" width="70" style="float: left; padding-right: 15px;"/>
         <h3 style="font-family: Arial, &quot;Lucida Grande&quot;, sans-serif;font-size: 18px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 10px 0">Εκπαιδευτικό λογισμικό</h3>
@@ -249,12 +235,13 @@ body {
                 {{ item.title }}
               </a>
               </br>
-              {% if item.text %}
+              {% if item.text is defined and item.text %}
               {{ item.text }}
               {% endif %}
             </li>
           </ul>
 {% endfor %}
+
         </br>
         <img src="../images/thematikes/ships.png" width="70" style="float: left; padding-right: 15px;"/>
         <h3 style="font-family: Arial, &quot;Lucida Grande&quot;, sans-serif;font-size: 18px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 10px 0">Μεταφορές-Ναυτιλία</h3>
@@ -266,12 +253,13 @@ body {
                 {{ item.title }}
               </a>
               </br>
-              {% if item.text %}
+              {% if item.text is defined and item.text %}
               {{ item.text }}
               {% endif %}
             </li>
           </ul>
 {% endfor %}
+
         </br>
         <img src="../images/thematikes/public.png" width="70" style="float: left; padding-right: 15px;"/>
         <h3 style="font-family: Arial, &quot;Lucida Grande&quot;, sans-serif;font-size: 18px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 10px 0">Δημόσια διοίκηση και τοπική αυτοδιοίκηση</h3>
@@ -283,7 +271,25 @@ body {
                 {{ item.title }}
               </a>
               </br>
-              {% if item.text %}
+              {% if item.text is defined and item.text %}
+              {{ item.text }}
+              {% endif %}
+            </li>
+          </ul>
+{% endfor %}
+
+        </br>
+        <img src="../images/thematikes/geo.png" width="70" style="float: left; padding-right: 15px;"/>
+        <h3 style="font-family: Arial, &quot;Lucida Grande&quot;, sans-serif;font-size: 18px;font-weight: bold;color: #333;margin: 10px 0 14px 0;padding: 10px 0">Συστήματα γεωγραφικών πληροφοριών</h3>
+        </br>
+{% for item in geo %}
+          <ul style="margin: 0 0 0 24px;padding: 0" type="circle">
+            <li>
+              <a href="{{ item.url }}" style="font-family: Arial, &quot;Lucida Grande&quot;, sans-serif;font-size: 15px;font-weight: bold;color: #57294C;text-decoration: none">
+                {{ item.title }}
+              </a>
+              </br>
+              {% if item.text is defined and item.text %}
               {{ item.text }}
               {% endif %}
             </li>

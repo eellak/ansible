@@ -287,7 +287,7 @@ ul > li > a {
 
 <hr>
 <!-- ++++++  Working groups  (start)  ++++++ -->
-<h3>Ομάδες Εργασίας:</h3>
+<center><h3 style="text-decoration: underline;">Ομάδες Εργασίας</h3></center>
 <!-- ++++++  Working groups  (stop)  ++++++ -->
 
 <!-- ++++++  WG-opengov  (start)  ++++++ -->
@@ -432,11 +432,12 @@ ul > li > a {
              </h2>
 
              <p style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #333;margin: 0 0 16px 0;padding: 0">
+             {% if item.img is defined and item.img %}
              <img src="{{ item.img }}" width="160" style="float: left; padding-right: 5px;"/>
-              {{ item.desc }}
-              <a href="{{ item.url }}" style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323;text-decoration: none">Περισσότερα »</a>
+             {% endif %}
+             {{ item.desc }}
+             <a href="{{ item.url }}" style="font-family: &quot;Open Sans&quot;, sans-serif;font-size: 12px;font-weight: normal;color: #a72323;text-decoration: none">Περισσότερα »</a>
              </p>
-             <br />
              <br />
              <br />
              {% endfor %}

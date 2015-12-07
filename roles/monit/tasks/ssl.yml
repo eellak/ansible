@@ -1,0 +1,31 @@
+---
+
+- name: Create certificate
+  command: openssl req -nodes -x509 -sha256 -newkey rsa:4096 -keyout "monit.key" -out "monit.crt" -days 3650 -subj "/C=GR/ST=Greece/L= Athens/O= org/OU= unit/CN=monit.librenet.gr"
+  args:
+    chdir: /etc/ssl/
+    creates: /etc/ssl/monit.key
+  register: ssl_create
+
+- name: Create pem
+  shell: cat monit.key > monit.pem && cat monit.crt >> monit.pem
+  args:
+    chdir: /etc/ssl
+    creates: /etc/ssl/monit.pem
+  register: pem
+
+- name: Append the Diffie-Hellman parameters
+  shell: openssl gendh 2048 > dhmonit.pem && cat dhmonit.pem >> monit.pem
+  args:
+    chdir: /etc/ssl
+    creates: /etc/ssl/dhmonit.pem
+  when: ssl_create|success and pem|success
+  register: dh
+
+- name: Correct permissions
+  file: path=/etc/ssl/{{ item }} owner=root group=root mode=0400
+  with_items:
+    - monit.crt
+    - monit.key
+    - monit.pem
+  when: dh|success

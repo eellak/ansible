@@ -1,0 +1,36 @@
+---
+- name: Install Monit
+  yum: name=monit state=latest
+
+- name: Copy monitrc
+  template: src=etc/monitrc.j2 dest=/etc/monitrc
+            owner=root group=root mode=0700
+  notify: [ 'Test monit and reload' ]
+
+- name: Delete unwanted configs
+  file: state=absent
+        path=/etc/monit.d/{{ item.type | default('base') }}_{{ item.process | default(item.pid | basename | replace('.pid', '')) }}.conf
+  with_flattened:
+    - monit_process_list
+    - monit_process_group_list
+    - monit_process_host_list
+    - monit_process_dependent_list
+  when: item.delete is defined and item.delete and
+        item.pid is defined and item.pid
+  notify: [ 'Test monit and reload' ]
+
+- name: Create configs
+  template: src=etc/conf.d/{{ item.type | default('base') }}.conf.j2
+            dest=/etc/monit.d/{{ item.type | default('base') }}_{{ item.process | default(item.pid | basename | replace('.pid', '')) }}.conf
+            owner=root group=root mode=0644
+  with_flattened:
+    - monit_process_list
+    - monit_process_group_list
+    - monit_process_host_list
+    - monit_process_dependent_list
+  when: item.delete is undefined and not item.delete and
+        item.pid is defined and item.pid
+  notify: [ 'Test monit and reload' ]
+
+- name: Enable Monit service
+  service: name=monit enabled=yes state=started

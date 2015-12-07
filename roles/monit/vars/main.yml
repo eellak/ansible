@@ -1,0 +1,21 @@
+---
+# --- Paths ---
+
+monit_lib: '/var/lib/monit'
+monit_run_state: '/var/run/monit'
+monit_events: '{{ monit_lib }}/events'
+monit_base_process_run_state: '/var/run'
+
+# --- Globals ---
+
+monit_logfile: syslog
+monit_idfile: '{{ monit_lib }}/id'
+monit_statefile: '/root/.monit.state'
+
+# --- HTTP ---
+
+monit_http_bind: 'localhost'
+monit_http_port: {{ MONIT_HTTP_PORT }}
+
+monit_web_user: "{{ MONIT_WEB_USER }}"
+monit_web_pass: "{{ MONIT_WEB_PASS }}"

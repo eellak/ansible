@@ -36,8 +36,8 @@ monit_mail_servers:
     port: 587
 
     # The username, password and encryption default to undefined.
-    username: {{ POSTFIX_USERNAME_RELAY }}
-    password: {{ POSTFIX_SASL_PASSWD }}
+    username: "{{ POSTFIX_USERNAME_RELAY }}"
+    password: "{{ POSTFIX_SASL_PASSWD }}"
 
     # The available encryption types are:
     # SSLAUTO, SSLV2, SSLV3, TLSV1, TLSV11, TLSV12

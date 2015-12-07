@@ -6,9 +6,11 @@
     - "{{ protected_storage }}/wiki.ellak.gr/mariadb.yml"
     - "{{ protected_storage }}/wiki.ellak.gr/mediawiki.yml"
     - "{{ protected_storage }}/wiki.ellak.gr/ufw.yml"
+    - "{{ protected_storage }}/mail1.ellak.gr/postfix.yml"
 
   roles:
     - { role: mariadb, tags: ['mariadb', 'database'] }
 #    - { role: mediawiki, tags: ['wiki'] }
     - { role: ufw, tags: ['ufw', 'firewall'] }
     - { role: munin-node, tags: ['munin-node'] }
+    - { role: monit, tags: ['monit'] }

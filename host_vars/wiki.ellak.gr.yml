@@ -78,3 +78,10 @@ ufw_whitelisted_ipv4_addresses:
     port: "{{ munin_node_bind_port }}",
     protocol: tcp
     }
+
+# monit
+#--------------
+monit_process_list:
+  - pid: 'apache2/apache2.pid'
+
+  - pid: 'mysqld/mysqld.pid'

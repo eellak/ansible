@@ -15,7 +15,7 @@ monit_statefile: '/root/.monit.state'
 # --- HTTP ---
 
 monit_http_bind: 'localhost'
-monit_http_port: {{ MONIT_HTTP_PORT }}
+monit_http_port: "{{ MONIT_HTTP_PORT }}"
 
 monit_web_user: "{{ MONIT_WEB_USER }}"
 monit_web_pass: "{{ MONIT_WEB_PASS }}"

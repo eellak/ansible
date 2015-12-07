@@ -1,15 +1,15 @@
 ---
 - name: Install Monit
-  yum: name=monit state=latest
+  apt: name=monit state=latest update_cache=yes
 
 - name: Copy monitrc
-  template: src=etc/monitrc.j2 dest=/etc/monitrc
+  template: src=etc/monitrc.j2 dest=/etc/monit/monitrc
             owner=root group=root mode=0700
   notify: [ 'Test monit and reload' ]
 
 - name: Delete unwanted configs
   file: state=absent
-        path=/etc/monit.d/{{ item.type | default('base') }}_{{ item.process | default(item.pid | basename | replace('.pid', '')) }}.conf
+        path=/etc/monit/conf.d/{{ item.type | default('base') }}_{{ item.process | default(item.pid | basename | replace('.pid', '')) }}.conf
   with_flattened:
     - monit_process_list
     - monit_process_group_list
@@ -21,7 +21,7 @@
 
 - name: Create configs
   template: src=etc/conf.d/{{ item.type | default('base') }}.conf.j2
-            dest=/etc/monit.d/{{ item.type | default('base') }}_{{ item.process | default(item.pid | basename | replace('.pid', '')) }}.conf
+            dest=/etc/monit/conf.d/{{ item.type | default('base') }}_{{ item.process | default(item.pid | basename | replace('.pid', '')) }}.conf
             owner=root group=root mode=0644
   with_flattened:
     - monit_process_list

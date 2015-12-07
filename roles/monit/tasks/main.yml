@@ -1,5 +1,2 @@
 ---
-- include_vars: private.yml
-
 - include: install.yml
-- include: ssl.yml

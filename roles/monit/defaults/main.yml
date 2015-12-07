@@ -30,18 +30,18 @@ monit_mail_alert_to:
 monit_mail_servers:
 
   # Only the host is required.
-  - host: 'mail1.ellak.gr'
+  - host: 'localhost'
 
     # The port defaults to 25.
-    port: 587
+    #port: 587
 
     # The username, password and encryption default to undefined.
-    username: "{{ POSTFIX_USERNAME_RELAY }}"
-    password: "{{ POSTFIX_SASL_PASSWD }}"
+    #username: "{{ POSTFIX_USERNAME_RELAY }}"
+    #password: "{{ POSTFIX_SASL_PASSWD }}"
 
     # The available encryption types are:
     # SSLAUTO, SSLV2, SSLV3, TLSV1, TLSV11, TLSV12
-    encryption: SSLAUTO
+    #encryption: SSLAUTO
 
 # Who sent it and how should the message be formatted?
 monit_mail_from: 'monit@{{ ansible_fqdn }}'
@@ -110,3 +110,11 @@ monit_http_allow: []
 #monit_http_allow:
   #- user:password
   #- example.com
+
+# --- HTTP ---
+
+monit_http_bind: 'localhost'
+monit_http_port: "{{ MONIT_HTTP_PORT }}"
+
+monit_web_user: "{{ MONIT_WEB_USER }}"
+monit_web_pass: "{{ MONIT_WEB_PASS }}"

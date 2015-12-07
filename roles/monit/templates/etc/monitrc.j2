@@ -77,16 +77,15 @@ set mmonit {{ monit_mmonit_url }}
 
 # Run the http server and allow localhost to view it, this is required to
 # make monit's CLI function.
-set httpd port {{ monit_http_port }}
-  use address {{ monit_http_bind }}
+set httpd port {{ monit_http_port }} and
   allow {{ monit_http_bind }}
   allow {{ monit_web_user }}:{{ monit_web_pass }}
 SSL ENABLE
-PEMFILE /etc/ssl/monit.pem
+PEMFILE /etc/ssl/ellak/monit.pem
 
 # Allow additional hosts to access monit's http interface
 {% for item in monit_http_allow %}
   allow {{ item }}
 {% endfor %}
 
-include /etc/monit.d/*
+include /etc/monit/conf.d/*

@@ -78,10 +78,21 @@ ufw_whitelisted_ipv4_addresses:
     port: "{{ munin_node_bind_port }}",
     protocol: tcp
     }
+ufw_whitelisted_ports:
+  -  { port: "{{ SSH_PORT }}",  protocol: tcp }
+  -  { port: 80,  protocol: tcp }
+  -  { port: 443,  protocol: tcp }
+  -  { port: "{{ MONIT_HTTP_PORT }}",  protocol: tcp }
 
 # monit
 #--------------
+monit_mail_alert_to:
+  - { email: "{{ MONIT_MAIL_ALERT_TO_EMAIL }}" }
+
+monit_http_bind: 0.0.0.0/0.0.0.0
+
 monit_process_list:
   - pid: 'apache2/apache2.pid'
 
   - pid: 'mysqld/mysqld.pid'
+    process: mysql

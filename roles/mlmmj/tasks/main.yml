@@ -3,6 +3,7 @@
 - include_vars: public_lists.yml
   tags:
     - desc
+    - moderators
 
 - name: Create archivist directory
   file:
@@ -84,6 +85,19 @@
     - mlmmj
   tags:
     - cron
+
+- name: Add moderators to all lists
+  template:
+    src: control/moderators.j2
+    dest: "{{ list_path }}/{{ item.name }}/control/moderators"
+    owner: mlmmj
+    group: mlmmj
+    mode: 0644
+  with_items:
+    - "{{ public_lists }}"
+    - "{{ private_lists }}"
+  tags:
+    - moderators
 
 - include: wikiel.yml
   tags:

@@ -78,6 +78,12 @@ ufw_whitelisted_ipv4_addresses:
     port: "{{ munin_node_bind_port }}",
     protocol: tcp
     }
+  - {
+    address: 83.212.84.199,
+    port: 8000,
+    protocol: tcp
+    }
+
 ufw_whitelisted_ports:
   -  { port: "{{ SSH_PORT }}",  protocol: tcp }
   -  { port: 80,  protocol: tcp }

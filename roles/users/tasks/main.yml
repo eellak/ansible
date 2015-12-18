@@ -1,0 +1,16 @@
+---
+
+- include: enforce_root.yml
+  when: users
+
+- include: users.yml
+  when: users
+
+- include: forward.yml
+  when: users
+
+- include: sshkeys.yml
+  when: users
+
+- include: dotfiles.yml
+  when: users

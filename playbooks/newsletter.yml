@@ -1,5 +1,5 @@
 ---
-- hosts: www2.ellak.gr
+- hosts: www1.ellak.gr
   gather_facts: false
   sudo: true
 

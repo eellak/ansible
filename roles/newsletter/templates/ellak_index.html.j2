@@ -285,6 +285,48 @@ ul > li > a {
 {% endfor %}
 {% endif %}
 
+<!-- ++++++  SmartCities  (start)  ++++++ -->
+{% if smartcities is defined and smartcities %}
+          <h3>Έξυπνες Πόλεις</h3>
+{% for item in smartcities %}
+          <ul>
+            <li>
+              <a href="{{ item.url }}">
+                {{ item.desc }}
+              </a>
+            </li>
+          </ul>
+{% endfor %}
+{% endif %}
+
+<!-- ++++++  Advisory  (start)  ++++++ -->
+{% if advisory is defined and advisory %}
+          <h3>Δημόσια Διαβούλευση</h3>
+{% for item in advisory %}
+          <ul>
+            <li>
+              <a href="{{ item.url }}">
+                {{ item.desc }}
+              </a>
+            </li>
+          </ul>
+{% endfor %}
+{% endif %}
+
+<!-- ++++++  Mathe  (start)  ++++++ -->
+{% if mathe is defined and mathe %}
+          <h3>Mάθε για το ΕΛ/ΛΑΚ</h3>
+{% for item in mathe %}
+          <ul>
+            <li>
+              <a href="{{ item.url }}">
+                {{ item.desc }}
+              </a>
+            </li>
+          </ul>
+{% endfor %}
+{% endif %}
+
 <hr>
 <!-- ++++++  Working groups  (start)  ++++++ -->
 <center><h3 style="text-decoration: underline;">Ομάδες Εργασίας</h3></center>

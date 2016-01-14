@@ -1,0 +1,27 @@
+# {{ ansible_managed }}
+#
+# This file MUST be edited with the 'visudo' command as root.
+#
+# See the man page for details on how to write a sudoers file.
+#
+
+Defaults        env_reset
+Defaults        mail_badpass
+Defaults        secure_path="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+
+# Cmnd alias specification
+Cmnd_Alias	RSYNC = /usr/bin/rsync
+
+# User privilege specification
+root    ALL=(ALL:ALL) ALL
+
+# Allow members of the admins group to execute commands
+%admins ALL=(ALL) ALL
+
+# Allow to execute any command without password
+%wheel  ALL=(ALL)  NOPASSWD: ALL
+
+# Rsync back-up user
+rsbkp	ALL=	NOPASSWD: RSYNC
+
+#includedir /etc/sudoers.d

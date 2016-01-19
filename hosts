@@ -2,6 +2,9 @@
 grafana.ellak.gr
 munin.ellak.gr
 
+[pensieve]
+pensieve.lan ansible_connection=ssh ansible_port=2022 ansible_host=127.0.0.1
+
 [munin]
 munin.ellak.gr
 

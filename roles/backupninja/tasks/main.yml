@@ -1,0 +1,35 @@
+---
+- name: Configure apt to install duplicity from jessie
+  template: >
+    src=duplicity_jessie.j2
+    dest=/etc/apt/preferences.d/duplicity
+    owner=root
+    group=root
+    mode=0644
+  when: ansible_distribution == 'Debian' and ansible_distribution_release == 'wheezy'
+
+- name: Set jessie source list in apt
+  template: >
+    src=sources_jessie.j2
+    dest=/etc/apt/sources.list.d/jessie.list
+    owner=root
+    group=root
+    mode=0644
+  when: ansible_distribution == 'Debian' and ansible_distribution_release == 'wheezy'
+
+- name: Update apt's cache
+  apt: update_cache=yes
+
+- name: Install backupninja
+  apt: name=backupninja state=present
+
+- name: Install duplicity
+  apt: name=duplicity state=present
+
+#- name: Copy configuration files
+#  template: >
+#    src=ninja_conf.j2
+#    dest=/etc/backupninja.conf
+#    owner=root
+#    group=root
+#    mode=0644

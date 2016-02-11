@@ -1,6 +1,7 @@
 ---
 - name: Upgrade
-  hosts: "{{ host }}"
+#  hosts: "{{ host }}"
+  hosts: all
   become: true
   gather_facts: false
 

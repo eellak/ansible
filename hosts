@@ -63,6 +63,12 @@ parsoid.ellak.gr
 [bacula]
 bacula.ellak.gr
 
+[epinoo]
+bbbdev.ellak.gr
+epinoovm.ellak.gr
+epinoodev.ellak.gr
+epinoobbb.ellak.gr
+
 [okeanos:children]
 web
 guests

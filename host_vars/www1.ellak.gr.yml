@@ -1,4 +1,5 @@
 ---
+
 hostname: www1.ellak.gr
 fqdn: "{{ hostname }}"
 
@@ -38,7 +39,7 @@ munin_node_config:
     "env.url": "https://{{ hostname }}/nginx_status"
     }
   }
-## ufw
+# ufw
 ufw_whitelisted_ipv4_addresses:
   - {
     address: "{{ munin_master_private_ip }}",

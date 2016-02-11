@@ -1,7 +1,11 @@
 ---
+
 ssl_cert_path: '/etc/ssl/ellak'
 protected_storage: "{{ lookup('env', 'ELLAK_ANSIBLE_SECRETS_PATH') }}"
 munin_master_regex_private_ip: '^10\.19\.91\.15$'
 munin_master_regex_public_ip: '^83\.212\.119\.163$'
 munin_master_private_ip: '10.19.91.15'
 munin_master_public_ip: '83.212.119.163'
+pensieve_host_key: '[pensieve.ellak.gr]:2022 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDL/zbYYgqamYP+hJgmPcPU+zHyB2fgkwgKoH/sWgfrD4rJGtMR47CJCbiUE0WrZhOjMQ4/HXlFdS2KefrJ6WlmMDla7e5NssDEG5iNp3uOAz7nLMsz+M4cXjFNYYKZurxQLlM/437rY9rCWLvEvxVpOaZ+wgACS6oOKsHC/k+XSwhJhBK0Gelo/haLcY4VR0kVMJ9Difsvtpu+nIzeBBN4sjvEmxwtjF0FFbwlvrUbC7ysxanCml5HfHNnQugK7pbt+CK55QgcDjjJjBQUVKvrM/I8i1dGqkDzQ+4MtuyooqWLawAnZtnspY/Dv53694OPrwBZ7GiPHVHIHf89+0VD'
+pensieve_host_config: 'Host pensieve\n  Port 2022\n  IdentityFile /root/.ssh/bkup\n  PreferredAuthentications publickey'
+sftpusers_default_www_prefix: '/var/www/vhosts'

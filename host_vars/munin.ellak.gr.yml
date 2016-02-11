@@ -35,3 +35,8 @@ munin_hosts:
     address: "62.217.127.243",
     extra: ["use_node_name yes"]
     }
+  - {
+    name: "poq",
+    address: "10.19.91.16",
+    extra: ["use_node_name yes"]
+    }

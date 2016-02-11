@@ -3,5 +3,7 @@
   become: true
 
   roles:
-    - sudo
-    - users
+    - { role: sudo , tags: ['users'] }
+    - { role: users , tags: ['users'] }
+    - { role: sftpusers , tags: ['sftp'] }
+    - { role: sshkeys , tags: ['sftp'] }

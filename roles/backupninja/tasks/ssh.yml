@@ -1,0 +1,44 @@
+---
+
+- name: Create ssh directory if it isn't there
+  file:
+    path: "/root/.ssh"
+    state: directory
+    owner: root
+    group: root
+    mode: 0700
+
+- name: Check for pensieve in .ssh/config
+  shell: grep pensieve /root/.ssh/config
+  register: result
+  ignore_errors: True
+  changed_when: false
+
+- name: Insert pensieve host to config if it isn't there
+  command: bash -c "echo -e {{ pensieve_host_config | quote }} >> /root/.ssh/config"
+  when: result|failed
+
+- name: Check for ssh-key
+  shell: cat /root/.ssh/bkup.pub
+  register: result
+  ignore_errors: True
+  changed_when: false
+- debug: var=result.stdout_lines
+
+- name: Create a new ssh-key if there isn't one
+  shell: ssh-keygen -t rsa -b 4096 -N "" -C "BackupKey-$(date -I)" -f /root/.ssh/bkup
+  when: result|failed 
+
+- name: Print the new ssh-key
+  shell: cat /root/.ssh/bkup.pub
+  when: result|failed 
+
+- name: Check if pensieve host-key is known
+  shell: grep pensieve /root/.ssh/known_hosts
+  register: result
+  ignore_errors: True
+  changed_when: false
+
+- name: Insert pensieve host-key if it isn't already there
+  shell: echo {{ pensieve_host_key | quote }} >> /root/.ssh/known_hosts
+  when: result|failed

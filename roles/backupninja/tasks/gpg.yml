@@ -1,0 +1,40 @@
+---
+
+- name: Check if there's already a backup key
+  command: gpg --list-secret-keys backup
+  register: result
+  ignore_errors: True
+  changed_when: false
+
+- name: Copy the "new key" script
+  copy:
+    src: gen_key.sh
+    dest: /usr/local/sbin/gen_key.sh
+    owner: root
+    group: root
+    mode: 0700
+
+- name: Create gpg key for backups if there isn't one
+  shell: /usr/local/sbin/gen_key.sh {{ hostname | quote }}
+  when: result|failed
+
+- name: Get gpg key-id
+  shell: gpg --list-secret-keys backup |grep sec |cut -d ' ' -f 4 |sed 's.4096R/..'
+  register: gpg_id
+  changed_when: false
+
+- name: Get the passphrase for new key
+  shell: grep Passphrase /tmp/{{ hostname | quote }} |cut -d ' ' -f 4
+  register: new_gpg_pass
+  when: result|failed
+  changed_when: false
+- debug: var=new_gpg_pass.stdout_lines
+  when: result|failed
+
+- name: Get the passphrase for existing key
+  shell: grep "^password" /etc/backup.d/99.dup | cut -d ' ' -f 3
+  register: keep_gpg_pass
+  when: result|success
+  changed_when: false
+- debug: var=keep_gpg_pass.stdout_lines
+  when: result|success

@@ -1,0 +1,17 @@
+---
+- hosts: pensieve.lan
+  become: true
+
+  vars_files:
+    - "{{ protected_storage }}/pensieve.lan/ufw.yml"
+    - "{{ protected_storage }}/adminvm.ellak.gr/kamaki.yml"
+
+  pre_tasks:
+
+    - name: Update apt cache
+      apt: update_cache=yes cache_valid_time=3600
+
+  roles:
+    - { role: kamaki, tags: kamaki }
+    - { role: ufw, tags: ['firewall', 'ufw' ] }
+    - { role: munin-node, tags: ['munin-node'] }

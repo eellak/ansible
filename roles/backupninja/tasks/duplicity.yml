@@ -1,0 +1,69 @@
+---
+
+#- name: Create backupninja cron to run every 10 mins
+#  template:
+#    src: backupninja_cron.j2
+#    dest: /etc/cron.d/backupninja
+#    owner: root
+#    group: root
+#    mode: 0644
+
+- name: Create my.cnf file for root
+  template:
+    src: my.cnf.j2
+    dest: /root/.my.cnf
+    owner: root
+    group: root
+    mode: 0600
+  when: my_sql_bkup == "yes"
+
+- name: Delete my.cnf file if no longer needed
+  file:
+    path: /root/.my.cnf
+    state: absent
+  when: my_sql_bkup == "no"
+
+- name: Create mysql backup file
+  template:
+    src: 29.mysql.j2
+    dest: /etc/backup.d/29.mysql
+    owner: root
+    group: root
+    mode: 0600
+  when: my_sql_bkup == "yes"
+
+- name: Delete mysql backup file if no longer needed
+  file:
+    path: /etc/backup.d/29.mysql
+    state: absent
+  when: my_sql_bkup == "no"
+
+- name: Create postgresql backup file
+  template:
+    src: 39.pgsql.j2
+    dest: /etc/backup.d/39.pgsql
+    owner: root
+    group: root
+    mode: 0600
+  when: pg_sql_bkup == "yes"
+
+- name: Delete postgresql backup file if no longer needed
+  file:
+    path: /etc/backup.d/39.pgsql
+    state: absent
+  when: pg_sql_bkup == "no"
+
+- name: Create duplcity backup file
+  template:
+    src: 99.dup.j2
+    dest: /etc/backup.d/99.dup
+    owner: root
+    group: root
+    mode: 0600
+  when: dup_bkup == "yes"
+
+- name: Delete dupliciry backup file if no longer needed
+  file:
+    path: /etc/backup.d/99.dup
+    state: absent
+  when: dup_bkup == "no"

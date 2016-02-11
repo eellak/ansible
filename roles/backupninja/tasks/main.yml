@@ -1,35 +1,50 @@
 ---
-- name: Configure apt to install duplicity from jessie
-  template: >
-    src=duplicity_jessie.j2
-    dest=/etc/apt/preferences.d/duplicity
-    owner=root
-    group=root
-    mode=0644
-  when: ansible_distribution == 'Debian' and ansible_distribution_release == 'wheezy'
 
-- name: Set jessie source list in apt
-  template: >
-    src=sources_jessie.j2
-    dest=/etc/apt/sources.list.d/jessie.list
-    owner=root
-    group=root
-    mode=0644
-  when: ansible_distribution == 'Debian' and ansible_distribution_release == 'wheezy'
+- include: install_packets.yml
+#  when: backupninja
 
-- name: Update apt's cache
-  apt: update_cache=yes
+- include: gpg.yml
 
-- name: Install backupninja
-  apt: name=backupninja state=present
+- include: duplicity.yml
 
-- name: Install duplicity
-  apt: name=duplicity state=present
+- include: ssh.yml
 
-#- name: Copy configuration files
-#  template: >
-#    src=ninja_conf.j2
-#    dest=/etc/backupninja.conf
-#    owner=root
-#    group=root
-#    mode=0644
+################################################################################
+################################################################################
+################################################################################
+
+#- name: Test backupninja mysql backup
+#  shell: backupninja -d -n --run /etc/backup.d/29.mysql
+#  when: my_sql_bkup == "yes"
+#
+#- name: Test backupninja postgressql backup
+#  shell: backupninja -d -n --run /etc/backup.d/39.pgsql
+#  when: pg_sql_bkup == "yes"
+#
+#- name: Test backupninja full backup
+#  shell: backupninja -d -n --run /etc/backup.d/99.dup
+
+################################################################################
+################################################################################
+################################################################################
+
+#- name: Get key fingerpring
+#  shell: gpg --list-secret-keys --with-colons --fingerprint  backup |grep fpr |cut -d ':' -f 10
+#  register: fpr
+#- name: Delete secret gpg key
+#  shell: gpg --batch --delete-secret-keys {{ fpr.stdout | quote }}
+#- name: Delete public gpg key
+#  shell: gpg --batch --delete-keys {{ fpr.stdout | quote }}
+
+#- name: Remove pensive from known hosts
+#  shell: sed -i '/.*pensieve.*/d' /root/.ssh/known_hosts
+
+#- name: Change host
+#  shell: sed -i 's/Host pensieve/Host pensieve.ellak.gr/g' /root/.ssh/config
+
+#- name: Check if postgresql is active
+##  shell: which pg_dump 2>&1 >/dev/null
+#  shell: service postgresql status
+
+#- name: Check if mysql is active
+#  shell: service mysql status

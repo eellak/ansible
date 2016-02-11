@@ -1,0 +1,14 @@
+---
+- hosts: poq.ellak.gr
+  become: true
+
+  vars_files:
+    - "{{ protected_storage }}/poq.ellak.gr/ufw.yml"
+    - "{{ protected_storage }}/poq.ellak.gr/mariadb.yml"
+
+  pre_tasks:
+
+  roles:
+    - { role: ufw, tags: ['ufw', 'firewall'] }
+    - { role: munin-node, tags: ['munin-node', 'munin'] }
+#    - { role: mariadb_server, tags: ['mariadb'] }

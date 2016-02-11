@@ -60,6 +60,7 @@ users_nick:
     password: '$1$SomeSalt$YWSZ0mALVmVhCM0c00uGx/'
     update_password: 'on_create'
     shell: '/bin/zsh'
+
 # --- An example account entry, everything except 'name' is optional
 # List of all recognized values, default value listed first
 #users_admins:

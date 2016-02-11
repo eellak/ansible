@@ -1,7 +1,7 @@
 ---
 - hosts: munin.ellak.gr
-  sudo: true
+  become: true
 
   roles:
-    - postinstall
+#    - postinstall
     - { role: munin, tags: 'munin' }

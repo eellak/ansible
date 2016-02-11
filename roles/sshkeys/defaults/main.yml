@@ -1,0 +1,24 @@
+---
+
+# System-wide authorized_keys directory
+sshkeys_path: '/etc/ssh/authorized_keys'
+
+# Lists of authorized_keys entries for users
+# They will be put in /etc/ssh/authorized_keys/ directory per user
+# Format is the same for all lists
+
+# List for "global" entries
+sshkeys_list: []
+
+  #- name: 'username'
+  #  sshkeys: [ 'ssh-rsa AAAAB3NzaC1...', '{{ lookup("file","~/.ssh/id_rsa.pub") }}' ]
+  #  options: 'key-options'	# optional
+  #  state: 'present'		# optional, choice: present,absent
+
+# List for "group" entries (only 1 group at a time)
+sshkeys_group_list: []
+
+# List for "host" entries
+sshkeys_host_list: []
+
+

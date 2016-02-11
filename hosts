@@ -60,11 +60,20 @@ ma-dev.ellak.gr ansible_ssh_port=22
 [guests]
 guest[1:4].ellak.gr
 
+[apospaseis]
+apospaseis.ellak.gr
+
 [parsoid]
 parsoid.ellak.gr
 
 [bacula]
 bacula.ellak.gr
+
+[epinoo]
+bbbdev.ellak.gr
+epinoovm.ellak.gr
+epinoodev.ellak.gr
+epinoobbb.ellak.gr
 
 [okeanos:children]
 web
@@ -105,6 +114,7 @@ adminvm
 bacula
 munin
 pythongr
+apospaseis
 
 [centos:children]
 db

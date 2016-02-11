@@ -1,9 +1,15 @@
 [metrics]
-grafana.ellak.gr
+#grafana.ellak.gr
 munin.ellak.gr
 
 [pensieve]
 pensieve.lan ansible_connection=ssh ansible_port=2022 ansible_host=127.0.0.1
+
+[poq]
+poq.ellak.gr
+
+[tomcat]
+tomcat.ellak.gr
 
 [munin]
 munin.ellak.gr
@@ -113,6 +119,32 @@ okeanos
 
 [development]
 wiki-dev.ellak.gr
+
+[accessable]
+www1.ellak.gr
+www2.ellak.gr
+macloud.ellak.gr
+team.ellak.gr
+radio.ellak.gr
+guest1.ellak.gr
+ma.ellak.gr
+mail1.ellak.gr
+pensieve.lan
+munin.ellak.gr
+poq.ellak.gr
+wiki.ellak.gr
+adminvm.ellak.gr
+code.ellak.gr
+
+[backup]
+www1.ellak.gr
+www2.ellak.gr
+macloud.ellak.gr
+team.ellak.gr
+radio.ellak.gr
+guest1.ellak.gr
+ma.ellak.gr
+mail1.ellak.gr
 
 ; Variables
 [okeanos:vars]

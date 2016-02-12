@@ -15,6 +15,9 @@
 - hosts: pensieve.lan
   become: true
 
+  vars_files:
+    - ../vars/all_users.yml
+
   roles:
     - sftpusers
     - sshkeys

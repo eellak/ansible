@@ -2,6 +2,9 @@
 - hosts: all
   become: true
 
+  vars_files:
+    - ../vars/all_users.yml
+
   roles:
     - { role: sudo , tags: ['users'] }
     - { role: users , tags: ['users'] }

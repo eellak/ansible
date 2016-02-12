@@ -56,7 +56,7 @@ sftpusers_default_shell: '/usr/sbin/nologin'
 sftpusers_default_groups: [ '{{ sftpusers_system_group }}' ]
 
 # Path to directory where websites are stored
-sftpusers_default_www_prefix: '/srv/www/'
+sftpusers_default_www_prefix: '/srv/www'
 
 # System group which should be allowed access to website directory
 sftpusers_default_www_group: 'www-data'

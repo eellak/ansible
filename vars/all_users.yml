@@ -1,0 +1,93 @@
+---
+
+########## Defaut Users ##########
+users_admins:
+  - users_axil
+  - users_nick
+
+# Groups (normal or system)
+users_groups:
+  - group_wheel
+  - group_admins
+
+group_wheel:
+  - name: 'wheel'
+    systemgroup: yes
+
+group_admins:
+  - name: 'admins'
+    systemgroup: yes
+
+########## System Users ##########
+users_axil:
+  - name: 'axil'
+    groups: ['wheel', 'admins']
+    comment: 'Achilleas Pipinellis'
+    # Add or disable ssh authorized keys (set to False to remove ~/.ssh/authorized_keys
+    sshkeys: [ 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC9wOOtB5YE+J011SwxU3Lzmvj4XxLiY7N+uvKoEYjHl3fDH8AIB4aXqXpnODbQ5v4+4E66zfa66nDAOQVHEqGkWBzc3WSnzQZr9Thok/SeVIsHl/2EJru/caa/EQ2wzF7No6qiWcoeEI5Tjo2VGxFhsGxuwGFxOJ0gFR3KqIUmLm0Npad1uUjRN9K2lLagcB/6JGLLCoE4DgGBIo/CFiEPJyztlZPjrXeHPYNTfH39SygMkN+7gHCHTDXYasd2RLwCv11PP3EaEOGyjYyMCmJe0LGfdqYmmdoaCqXiFKNfYF1666u0WHiqZEuZ2MUSgGMx4uh30XTQYme1YCk3QO2mnCJGhSihpH5cGHdSlX+IBbObxDrFg7fG5/6EWknYXxNdwqisqbMqRXNBO8rxhGXAdYh9kebaTrKL0WQah3yMI1WHpaRUGbtzTydjyMCxZFuZPuiJjHYUNUvkrEgOGAivZpqSrQ34kuTYYxovm25wJvvC5H7UY8FWrODTS7X9veb4mOIscShRQYRfaV2WJRpfMao9/K85XLLkmhOMe3hcuw6PmyB+2D0ODWNoZAH609xGLqE5eyZdNzBGmV/ak4BvFgNXxfryoEULLybLVP/8sWMaVoHeD+NEqSbBGTzQzWVspl4VoB8FMyCT70RG7FovVML5OAjmwoCkPvwtsT7ABQ== eellak' ]
+    password: '$1$SomeSalt$YWSZ0mALVmVhCM0c00uGx/'
+    update_password: 'on_create'
+    shell: '/bin/zsh'
+
+users_nick:
+  - name: 'nick'
+    groups: ['wheel', 'admins']
+    comment: 'Nick'
+    # Add or disable ssh authorized keys (set to False to remove ~/.ssh/authorized_keys
+    sshkeys: [ 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDWspzuqjq5w8b2iKupxySz0zScxN+PRNb+tZtGIrKeFrByeettMjTp/N1ZtduOtqPhcgbIHmdM8HaC5ONgGV4mVOdiuJv9lFYiNvgB/M5jbVysK9LpMN0/dy7FFO6UnnmZvJWXBAhoHgTur7Yv+gkn0Yq/0HSI8MYUYUw0QpEVn2K5sP6DNURkVr310OD1g682JBE8ay7vC+ufj1+IFh4kwfWjJl9DUuV2ZtOtIEwtzXFuwsiKjEOUgiXchpEnq9cs63opLQZQsPcB54ivL6c7ErKbiTUAJuLicP2fFWWbpdLPp9APlhxwpscek7xrRB2d7q2YLoTDt/BvhpKVAdUodLGlpN//eUU2cXM6ww7R1/ZvdyqUcD45Mc3uzBpRfwhBImVXqxmlp4KrIu0fNnA4CR7deBdKzg7nucopGIIRW7o/g6k4u7h7ybm1fnx/fMoJtjoGrJxjOxAJiB1CcMzVlbJ26IOtJbUeqi3AYrqgXPqmOLwZJYgyDHJO0M69sl9hNiGnpWU2atf7eBPo0NmLu3E1tu2rHUOHDRynYP9jYSR9w4vPwOKacJzdZhP/NYOB6cU5ePGvbMBMqODan7RhxUUGwC/omVrsJqN9CblhikCHrtmAkHwPuzBYBDscGpzyNzsGuah+KUMOIs1Hm1lE5kFPIwprZXBwYzCcHw76rw== nick-2015-12-15' ]
+    password: '$1$SomeSalt$YWSZ0mALVmVhCM0c00uGx/'
+    update_password: 'on_create'
+    shell: '/bin/zsh'
+
+users_johnnyxidias:
+   - name: 'johnnyxidias'
+     groups: ['wheel', 'admins']
+     comment: 'Giannis'
+     # Add or disable ssh authorized keys (set to False to remove ~/.ssh/authorized_keys
+     sshkeys: [ 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCYzXECfmXwkc95h0f26ZY/e10mmmYKa6EKKxBjulb45m62wLHweGKc/KOpJdwuXje56XGr0YtoBa0o3PpOr4nLj4qdTnMRIKxNmuQ+hNlP14WBOPcEjNaKUbu57qUTNkfDqD6HK2hWEYl9AgNU6TDIjPc3ANkpv3gQNh6X2H61VpNcarqYXKRZ6MspNQuHGIakhs7TxpRbie/uXix5K+j/IaY8kmD+FlFgyNfKT3o2ab452YDKA/Yu2v7a4kRr/72xX+/oS9chdAIozleeA7/9V8qsib8AF8RcDNcHQo4JmVE8Sn43D2Flfa6eH0nAtOwXDJRXhcGA3fdTXK1kVXwt johnnyxidias@MacBook-Pro-toutes-Ioannis.local' ]
+     password: '$1$SomeSalt$YWSZ0mALVmVhCM0c00uGx/'
+     update_password: 'on_create'
+
+users_rsbkp:
+  - name: 'rsbkp'
+    comment: 'Kamaki User'
+
+########## SSH keys ##########
+sshkeys_afokou:
+  - name: 'afokou'
+    state: 'present'
+    sshkeys: [ 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCpx/+7Mh5FcG7pojquJHQ05ocBbTEFyjwnWiWa2lDPtVv6X0sWd+MzObIIHE+zNUSohrJrufhZdl3fb3FGPbm713/KDiD2O2zuudpRSMkuvuKPzroII8ZNd6G3BCJESoC6sL0TKpYmVAeCwuXwl6X2tqIdqbTLdCVjXyJv+m7uGgbuk383SCciQCX6QgrEkmC0ibGIg5jjXF7qyjDw61JgAz3ef5EPcO7Fx5e7HRg1CcfBUHQp1cUTrLr5C8x8/E/v8NfK1RB6ZAVJ8QT8VU929onleVCwyhD7kigg28Vff5W4qi4Th+GZKy9O7vMAwzIvSafEi4mOQGG/FBK5qW1hafokou@Angelikis-MacBook-Pro.local' ]
+
+sshkeys_dnikoudis:
+  - name: 'dnikoudis'
+    state: 'present'
+    sshkeys: [ 'ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAIBndMV8AoVSpSusxGPu6g8tHzWsHVgtfezGiiJrdmcO50DdrzzjNWDU73mfjOoxaeVPJ36TnzwVn+W4v8ybmSaaYjlRDCKxfDwqBaM+SfX+RmKkKKUANlRI6YFBRL3MaChdZOpA/KTKEG8zZ2yd+kLGw1KDHUPWBkoDjGN/OV/K8w==' ]
+
+########## Backup ##########
+
+# SSH keys
+sshkeys_bkup:
+  - name: 'www1_bkup'
+    state: 'present'
+    sshkeys: [ 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCiDuJhogUj4sc1yQuokJ1SaovCyW/onriWlynWSMfMEeoUUPqb/g69LGrbNj8Sx+exrde6GEBQAIBDZAadcXRUR8+sNoHVmE7WMV97xKayNgZ6fm6nU7/vP2sihSCua1HRoq8Z9NcLw3wk9IzyfAz5nt3T8RBNqG4/rm3zlln/Q66A/lxEQkOnhFB9AcbajduGz6NjAjePmD7d0weFfH836dNjjC2oLfA6Oa1RcJT4zEO0JMU58xVqfyNR5H5+xHReq19GpA/SFHzAA7tZUY8XXXXWOQ1JRaAA1iWSO9pi3X0pfCyxTt3jP1DSy2RSvTme1FU8by0l7vLr63Vxw75bbOZDWIlMdqWemRt+IOR2Rav8vsuM+w8kUVoutCq14eHFltBLcuf/9q5vicI+wKQk1gOcgfH6RYzcUp9GwaqR7kMRDPYP/TeJTDRzNo0aXTPxJ5B09SKkwQPkzHj0e0ZO2+vA7oHQDLo432Uc0OgHLuDFnWpyMBA0nvI25ruUrXkM1/wFBRJZKBMxBF8juD631tzBX6814mVLpiO5Gi2Vyv+p57DQwl0IB9sXbzvCUp+po3QbNi8EVOcgrdblvUlxFxBHcm7wIhUQ5ULhLSiPQoNp/PHGU744j49dydcmmTV+j5XlaodristM5XGpDXb+BwuC8YLYB1gz8Dktr9xUIw== BackupKey-2016-01-25' ]
+  - name: 'www2_bkup'
+    state: 'present'
+    sshkeys: [ 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDYpTWetiskk6yXzmyrwZzoD94wgaEvTJN8LIccWowuCpx0XTMPvxuj/8E5L/fRJiH1yeHLyUficX4de6IwqzMVLdOZDmIetT+6B/iUhG+/iB0xByn3O8jx6a8Zk/sa+WG03rcLw+X4KNmz85jlfYcxKawoVAehNJawLatnVzul0+UFU4mpr8DcuHVlR9nNOm1krSR040VMQ5U1vdm6D9sITganT8cluRIG7ZwPKrCJilAa2So70DwPVHh2UYJ/BvfT6CW1MtzQXkWjo1+yCjZgXDzPEt2IEOySzP08ZqucXin3pDyBgPuQtPGinOPvxm4HCd2Cdhh7kLGVgE9h3mdG6DjUT2idoQ0vP9RUhJDDbOG/52OOcJkGz0RegoNjAaruqL7BDG2OF65m+OjAWbOhRbWHyKhKSAePSYU6RhRDf6NCpQOv+1X6jz3RuxDvK2OivXlEGThjw/jvoEsM400BArrWdRnkiSfMqdjNT/MJggEECCAlpqxv90+tZgRzAWSVQsrG/h6R/Cx3LKGXBG3mZ/CaEieLOeVLYGT0tXDW9EhvxYWdJNMZ/nCEfWCYepjnH+1EyuFnkarHpCRu6EEYJSGnTo6SAG9npbKA6n16T6DlmrC/2GHbi0tui3TXbfmSgu6ZhfAEJx3WXuKKRUSo0gYyQXJQqvKmbOwhI1UdSw== BackupKey-2016-01-26' ]
+  - name: 'macloud_bkup'
+    state: 'present'
+    sshkeys: [ 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCy2Fhfj8si1YpNXOEOX0HuZCaWTKdxHz1nbpQqFGka3HZuxLin+Ra/FxXvY4b2Nh7Uz8si6s2XSrwUcwwCC8jmhBwMurugGPg2vtIEFgTKbN2vPGAI1787oRt2/0bXVIBMgtgAWxmdhK2QHeug86ZUGJZi/fOpzg4SL8fBRGKK/u+Vg5JQnjix4SOBP4K/6FFGN2C2Klnmc6I1gluePG+0fqfWCAIA7iI/p38TvDvgyzZUOyHMOeUCbKmxnqCLLauugR9iUCLazdHLzupjNgnrt2m+e8R0Tnz4bza7rFdIQekjEmb38Pj1hu6dnbcwSuqksiIutGovoMzcXD6A2x67ytWsrYHTOmSOo5a7J+KDIGbiTpWlYS4RvtuRoHdB4ZokDhqxJEDRAfYbWRozElref0N1IDUPvBcS3pew9wSFXo0LSlY+I7TJiWLUDaPei5qclHEFFvD2gcaUVsnEiCqVUUQBHBrIm+hxo12MzkZjEzXNRlAQ8E2r0CX7XvL28fOZhSyXqABF8lcRTfO0MVo2uorHLUF72XFk7AqNwoKv0Fe7PmYc3Gg7/nC4GzXV7/HhbJR1Jc8ya/hqjw6HZ/404b/eAxrBQ+PDqawPxpQJiugLRS1yude4v8sjQfkNEwntrsdZcIBcEiYlQ/qbkZOk/DAxaO7j6AWPmAw2XnaLEQ== BackupKey-2016-01-27' ]
+  - name: 'team_bkup'
+    state: 'present'
+    sshkeys: [ 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC4eO70okbIYE3ScMIf/W3m3IlWJiNe7XXTjeaCG97avR00YFrY9jmV81dHkf7U8Dxs9XvIlaAcUDa2VdX/r4hbyO2IUh6kAdDNKyZQrpPqsm7Rns56bA6AeMIRJThzonmp6ky0gIlAR7JPoB4tnhlJIAqVHNsKzSpeVyzD91Fi+ZFV/VKWbvdBT/IRdgKrhLiBEvc9nprW99jADzdMaXanolJANa3v0ux5FtDJNH0FI9t7aYl67HAy/sOclOoeUJsZtBzZkz+OZh5V830fZlKeWvrPPWQOSM8zgWFqEw/k3qm2PHybfF6n2JVGL3tOpMEbDy/QED9Kcs+CJQ1IM2MKwGKFUnF91HFWcpsGiQ7lxaVcVWe6mmT6kawoMKLrBEimeZOPNmDRk3O03aJHDssL8SWX4VTYBIKceJ5hCAE+SAaken7Biot0mmm1sHbIOpeMJWE/FGcIoZnRWN97JdRL8aozcjmaWIsZTS8O2ScvJByCZOtZeBqFNp7Yf/Q2MrMGV+IGXusifZJiQllGmSrHEyEBfN+KT43PjX0pooDG8ct/g3am7tjvx6ZkxG5Jejf3sogIpUfY/Hjb9lrxVXpZAKz2iIc98NalOEw0YyqjxxJrEjhAt3UvGlv/1/YM8mM9zuCDylg45pds52j00JZfo+Jjf0qb5DAFDwho+aj/qw== BackupKey-2016-01-27' ]
+  - name: 'radio_bkup'
+    state: 'present'
+    sshkeys: [ 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC9wDkMVNLUbVRRwx81XVmlEnXUOuY0InEiO1ctOl7/wAsrbejwPXzAWx+PBKEUWZwfrsIY67FYUvrOaX6AjPSeOENE/Se4uYMTRggvQ9acEW3m1SnH8Hr9d+ZPHKD59e6EKtDnzeTVP0549mE6aeNliyoWhc6TYmVGCl5sWqfaiKa4Kwbce3r53amO5/TycowoX1/r10euQersPAHykfc9G5jcY3ZXxlFZ+u+Boq8dQDe/CdI/VK0c4+bknT+Br7HPicwMDU6A+nodsbWEg3w88WUW2plN2ubX4CoZBaVjOrozHpam7avYUZm4F3JSOwZj59RIvjtnEjS9nF1osYvYGEaVT5/deCgB/26OlCJjYFPzx/YbuPAM2cyeZafHT296BGzUwoetzuGfsa9kEY7vbRfPT5u2b5aexnicOxvZrsUWp+4rHT0f1eQpq/P+fpI7Mkla3HHICup8iAVaoSIkwFiOLZhdllAI5S9qgheq4r1s5KV53Oj7X0jLCmXjJiqdhpjojucXiwesbeo3IJv9ElGD6Soyka1c5m5RoN53A5g+vh9vd4SgPhqhhc+nEO45Zb9B3mSVKtDKsd0pFoEiJlOJq9GVzYO/gHrWz4VVSwUNLxIxYXaMZfg+snLEp4L7LetyUdCvKl78oPxavb5/Lv2ANV/a7KigXUYhf3rq/Q== BackupKey-2016-01-27' ]
+  - name: 'guest1_bkup'
+    state: 'present'
+    sshkeys: [ 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCujkVBbFDgFSpVNKFVdgMB1VTc2+JAAWhwiXhETjDbj4upEflGfBLyXIRVTft1uxB6ZtnuKxH7Ymfx1/cEsOTdLH/VzjLDqAV4cErJpGmERz6SnFt8xCf7BZTJMkvqHCDyWv3BOPXJp4kXEWY+DUZVPg2WlLmkI+79ERoIUPJq3XFwL0tcx0iAvWsg9CoaebvtXRV/2R7weg+fCmq0Y78iCc21uUT1nQN1U0f7qY53y+AZS1KfO1Y/HT/fQAIHNtmwEec/cKCyEIE7EZeL1WAf6/CRiLV/vmhULDufjVLMfAe4exYnfvqLz3Vgl0xIrd1j2ADwtF19l4F533vPqRS6wFWa03pr2GZIp4BbdiXHcSQNTt3Z6CPkdTjhiG7MM2yM5ePwjh5Ngh1ESCj8HwnPxyvcGwWKC/sIGLYAso2zVgxpm8yvi6o+Zh5keLc2pQxjGxyesBRwip9cbUOqaB9WC7QsqE1Y6+BKYV9ol0N1TApC5MXrz6qTpETKMsPM6fwvuivviWRlLAh4SwB9+c8jtXfxBl9SFoh4OA3nrB+lNLZiwktNhjCerAiVk4nG3pz7BPySH5LrF2Q9Nuj2c7W+DEddmP7fN2UApO2bXTEE9pzUpRYdihZh0x+/XCWEm9pc96NUVrgnqSYk7AfvyyZ/R+9fjccTl1h9vFa9/Ux7Vw== BackupKey-2016-01-27' ]
+  - name: 'ma_bkup'
+    state: 'present'
+    sshkeys: [ 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDAyFD4ekQLETQ4yn+pbKleXQqj2/RU/A1LWi2v2VJHO91gl/txF+34/QicR1XtoKIjAppH1Do6l2zxJqaANQu7O5cL2IZopSW8jEtObmo0CZaz5o0evwDCSB33hepyy2Om0po0hLxIytO/nglzomPxw4R7U51Nf5OiO/eeV0IfK/6MetWM1mU1gC/KPCptV6RttKu6zVs09fOoeiaUCrVGLi2BQu+FfaVPIUnNg4TEM4Ft/74yZq3l2/DmOkC0rknI8yFax6xXf/OlW5YgqlGF5bJQZwIRi8vom9GaeTWzwIJ6pUvjOchAaCP4HpMpTCyQ+wgxNSBGK4nEws00BbRrokXWWGi3YbKklWzM9sqQgD4smTBqf7YBTTopuYKTjSFxqPoDc3bzLPt0HBLFnm/6dXdmxx6pukqNMs2K4GRlOHTS58o3QpLNEPoHkYyzU/D2XLUJJGKGsFqCGHgyOhVbR8d73YnCRekwVOrObVw3nFcp/kF+r+VBl4j63238p+xOm3+ivjERZxujoE6hEey3Ur0/jW0sVBB6zMGMdhVpCtL0DxfGDcY7fNMMWNM1XLFhCc2bHQqQFWAVfHqTfbU+XWLkUzYGbNzSCufJbDjMXse5iCRBo4DSrQ/0aLM7B/u8Sky/6m/Bja/4QcPGJFs8Q8gTh9aQoCv7nJI7FCV7JQ== BackupKey-2016-01-27' ]
+  - name: 'mail1_bkup'
+    state: 'present'
+    sshkeys: [ 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDikNyE8kQnkdM14N0dWu8xdCVjGEOWA+VtQj8XeamuAFFFbT6unZNNAaI/wmiggDeqnh+JfSoTD9/8ODun59k7V7dCAcp0IUzSUzQRsYW6PMnjm+vN4hiDZL+JpZ9S84asmT/KvFB0fUYxBJYrqEK4VfSNNxahrjn8COhN5kVAcJw3zYYuyJAuowJChYEQ40EfFVsuvMJg4hB5L5YvF0Y0bPyZYLcdhq7B/OnZtLKMx/XYRvxq8zsyy0jkDVbVHMKDh0D5J94cNpAQaNwgiJ3T5fnSG7oCNNQznBZY3ppvbmQjf4y/3nhP01fVrVI28wZZVD9xeGgNQBpBB2CANiXHRivibFhG1UGyMYwtHN6JSd6Oj/gFtoSkPp9gfA2W/Xu6VYRPcWHbw8RH05a7zg/amKQGtLt/QYodu2R/EkXuremRdbnq/oJxhQnWa7yxE7t5Eu5hwHIWlkzrNxG5NAsUPsz/a0qPtJ6/8bqmJsQXneI4wbJ4BQvqgLKeWRBvD6uGo3BFoJiaA9sWJXk8XoUvwFmZJGE6/tAlMD6jM5N6VxyJDwPjs40KLJ6wYvdDDJvPTsYfQd4f3zhFcZsTbM4iOofKanWbHvYK6oqOq++ZXJdNoKliKwoOr47c56vrfWhVcXqNkiyn18AL3hmo6vgV0sOhzOZEymd5dQXhd+ccdQ== BackupKey-2016-01-27' ]

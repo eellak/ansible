@@ -50,13 +50,7 @@ ufw_whitelisted_ipv4_addresses:
 ## Users
 # System Users
 users_host_list:
-  - name: 'johnnyxidias'
-    groups: ['wheel', 'admins']
-    comment: 'Giannis'
-    # Add or disable ssh authorized keys (set to False to remove ~/.ssh/authorized_keys
-    sshkeys: [ 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCYzXECfmXwkc95h0f26ZY/e10mmmYKa6EKKxBjulb45m62wLHweGKc/KOpJdwuXje56XGr0YtoBa0o3PpOr4nLj4qdTnMRIKxNmuQ+hNlP14WBOPcEjNaKUbu57qUTNkfDqD6HK2hWEYl9AgNU6TDIjPc3ANkpv3gQNh6X2H61VpNcarqYXKRZ6MspNQuHGIakhs7TxpRbie/uXix5K+j/IaY8kmD+FlFgyNfKT3o2ab452YDKA/Yu2v7a4kRr/72xX+/oS9chdAIozleeA7/9V8qsib8AF8RcDNcHQo4JmVE8Sn43D2Flfa6eH0nAtOwXDJRXhcGA3fdTXK1kVXwt johnnyxidias@MacBook-Pro-toutes-Ioannis.local' ]
-    password: '$1$SomeSalt$YWSZ0mALVmVhCM0c00uGx/'
-    update_password: 'on_create'
+  - users_johnnyxidias
 
   - name: 'www-data'
     groups: ['www-poq']
@@ -79,10 +73,5 @@ sftpusers_host_list:
 
 # SSH keys
 sshkeys_host_list:
-  - name: 'afokou'
-    state: 'present'
-    sshkeys: [ 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCpx/+7Mh5FcG7pojquJHQ05ocBbTEFyjwnWiWa2lDPtVv6X0sWd+MzObIIHE+zNUSohrJrufhZdl3fb3FGPbm713/KDiD2O2zuudpRSMkuvuKPzroII8ZNd6G3BCJESoC6sL0TKpYmVAeCwuXwl6X2tqIdqbTLdCVjXyJv+m7uGgbuk383SCciQCX6QgrEkmC0ibGIg5jjXF7qyjDw61JgAz3ef5EPcO7Fx5e7HRg1CcfBUHQp1cUTrLr5C8x8/E/v8NfK1RB6ZAVJ8QT8VU929onleVCwyhD7kigg28Vff5W4qi4Th+GZKy9O7vMAwzIvSafEi4mOQGG/FBK5qW1hafokou@Angelikis-MacBook-Pro.local' ]
-
-  - name: 'dnikoudis'
-    state: 'present'
-    sshkeys: [ 'ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAIBndMV8AoVSpSusxGPu6g8tHzWsHVgtfezGiiJrdmcO50DdrzzjNWDU73mfjOoxaeVPJ36TnzwVn+W4v8ybmSaaYjlRDCKxfDwqBaM+SfX+RmKkKKUANlRI6YFBRL3MaChdZOpA/KTKEG8zZ2yd+kLGw1KDHUPWBkoDjGN/OV/K8w==' ]
+  - sshkeys_afokou
+  - sshkeys_dnikoudis

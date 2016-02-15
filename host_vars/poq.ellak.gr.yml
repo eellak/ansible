@@ -57,14 +57,14 @@ users_host_list:
 
 # SFTP users
 sftpusers_host_list:
-  - name: 'afokou'
+  - name: 'sftp_afokou'
     state: 'present'
     group: 'www-poq'
     comment: 'Angeliki'
     dirs: [ 'files' ]
     sites: [ 'poq.ellak.gr' ]
 
-  - name: 'dnikoudis'
+  - name: 'sftp_dnikoudis'
     state: 'present'
     group: 'www-poq'
     comment: 'DNikoudis'

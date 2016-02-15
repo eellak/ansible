@@ -23,18 +23,3 @@
     - sshkeys
   tags:
     - server
-
-#  tasks:
-#    - name: Copy GPG dir to /tmp
-#      shell: tar -czf /tmp/{{ hostname }}_gpg_dir.tar /root/.gnupg
-# 
-#    - name: Change permissions
-#      shell: chown nick:nick /tmp/{{ hostname }}_gpg_dir.tar
-# 
-#    - name: Fetch files
-#      fetch: src=/tmp/{{ hostname }}_gpg_dir.tar dest=/tmp/bkup_gpg_keys/ flat=yes
-#
-#    - name: Delete file
-#      file:
-#        path: /tmp/{{ hostname }}_gpg_dir.tar
-#        state: absent

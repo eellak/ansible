@@ -1,7 +1,6 @@
 ---
 
 - include: install_packets.yml
-#  when: backupninja
 
 - include: gpg.yml
 

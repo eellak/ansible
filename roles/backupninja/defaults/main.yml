@@ -1,0 +1,44 @@
+---
+
+ # Backupninja
+
+######## Set time to take backups. (this works for all backup actions) ########
+  time: "00:00"
+
+########## Use backupninja mysql backup action ##########
+  my_sql_bkup: "no"
+
+# If my_sql_bkup is yes.
+
+#Enter mysql password
+  sql_pass: "SOME_STRONG_PASSWORD"
+
+########## Use backupninja postgresql backup action ##########
+  pg_sql_bkup: "no"
+
+########## Use backupninja duplicity backup action ##########
+  dup_bkup: "yes"
+
+# If dup_bkyp is yes.
+
+#Included directories to backup
+  bkup_inc:
+    - dir: "/bin"
+    - dir: "/boot"
+    - dir: "/etc"
+    - dir: "/home"
+    - dir: "/lib"
+    - dir: "/lib64"
+    - dir: "/opt"
+    - dir: "/root"
+    - dir: "/sbin"
+    - dir: "/srv"
+    - dir: "/usr"
+    - dir: "/var"
+
+#Excluded directories from backup
+  bkup_exc:
+#    - dir: "/root/.gnupg"
+
+#SFTP user
+  user: "USER"

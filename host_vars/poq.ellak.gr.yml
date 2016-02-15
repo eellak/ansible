@@ -51,6 +51,8 @@ ufw_whitelisted_ipv4_addresses:
 # System Users
 users_host_list:
   - users_johnnyxidias
+  - users_afokou
+  - users_dnikoudis
 
   - name: 'www-data'
     groups: ['www-poq']

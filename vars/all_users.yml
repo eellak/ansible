@@ -48,6 +48,24 @@ users_johnnyxidias:
     password: '$1$SomeSalt$YWSZ0mALVmVhCM0c00uGx/'
     update_password: 'on_create'
 
+users_afokou:
+  - name: 'afokou'
+    groups: ['wheel', 'admins']
+    comment: 'Angeliki'
+    state: 'present'
+    sshkeys: [ 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCpx/+7Mh5FcG7pojquJHQ05ocBbTEFyjwnWiWa2lDPtVv6X0sWd+MzObIIHE+zNUSohrJrufhZdl3fb3FGPbm713/KDiD2O2zuudpRSMkuvuKPzroII8ZNd6G3BCJESoC6sL0TKpYmVAeCwuXwl6X2tqIdqbTLdCVjXyJv+m7uGgbuk383SCciQCX6QgrEkmC0ibGIg5jjXF7qyjDw61JgAz3ef5EPcO7Fx5e7HRg1CcfBUHQp1cUTrLr5C8x8/E/v8NfK1RB6ZAVJ8QT8VU929onleVCwyhD7kigg28Vff5W4qi4Th+GZKy9O7vMAwzIvSafEi4mOQGG/FBK5qW1hafokou@Angelikis-MacBook-Pro.local' ]
+    password: '$1$SomeSalt$YWSZ0mALVmVhCM0c00uGx/'
+    update_password: 'on_create'
+
+users_dnikoudis:
+  - name: 'dnikoudis'
+    groups: ['wheel', 'admins']
+    comment: 'DNikoudis'
+    state: 'present'
+    sshkeys: [ 'ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAIBndMV8AoVSpSusxGPu6g8tHzWsHVgtfezGiiJrdmcO50DdrzzjNWDU73mfjOoxaeVPJ36TnzwVn+W4v8ybmSaaYjlRDCKxfDwqBaM+SfX+RmKkKKUANlRI6YFBRL3MaChdZOpA/KTKEG8zZ2yd+kLGw1KDHUPWBkoDjGN/OV/K8w==' ]
+    password: '$1$SomeSalt$YWSZ0mALVmVhCM0c00uGx/'
+    update_password: 'on_create'
+
 users_rsbkp:
   - name: 'rsbkp'
     comment: 'Kamaki User'

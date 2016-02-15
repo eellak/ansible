@@ -53,35 +53,35 @@ users_host_list:
 ## BackUps users
 # SFTP users
 sftpusers_host_list:
-  - name: 'www1_bkup'
+  - name: 'sftp_www1'
     state: 'present'
     dirs: [ 'files' ]
     sites: [ '' ]
-  - name: 'www2_bkup'
+  - name: 'sftp_www2'
     state: 'present'
     dirs: [ 'files' ]
     sites: [ '' ]
-  - name: 'macloud_bkup'
+  - name: 'sftp_macloud'
     state: 'present'
     dirs: [ 'files' ]
     sites: [ '' ]
-  - name: 'team_bkup'
+  - name: 'sftp_team'
     state: 'present'
     dirs: [ 'files' ]
     sites: [ '' ]
-  - name: 'radio_bkup'
+  - name: 'sftp_radio'
     state: 'present'
     dirs: [ 'files' ]
     sites: [ '' ]
-  - name: 'guest1_bkup'
+  - name: 'sftp_guest1'
     state: 'present'
     dirs: [ 'files' ]
     sites: [ '' ]
-  - name: 'ma_bkup'
+  - name: 'sftp_ma'
     state: 'present'
     dirs: [ 'files' ]
     sites: [ '' ]
-  - name: 'mail1_bkup'
+  - name: 'sftp_mail1'
     state: 'present'
     dirs: [ 'files' ]
     sites: [ '' ]

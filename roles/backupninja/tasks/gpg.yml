@@ -31,6 +31,11 @@
 - debug: var=new_gpg_pass.stdout_lines
   when: result|failed
 
+- name: Delete the new key setup file
+  shell: rm /tmp/{{ hostname | quote }}
+  when: result|failed
+  changed_when: false
+
 - name: Get the passphrase for existing key
   shell: grep "^password" /etc/backup.d/99.dup | cut -d ' ' -f 3
   register: keep_gpg_pass

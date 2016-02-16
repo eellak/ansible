@@ -43,3 +43,25 @@
   changed_when: false
 - debug: var=keep_gpg_pass.stdout_lines
   when: result|success
+
+- name: Copy GPG dir to /tmp
+  shell: tar -czf /tmp/{{ hostname }}_gpg_dir.tar /root/.gnupg
+  tags:
+    - fetch
+ 
+- name: Change permissions
+  shell: chown nick:nick /tmp/{{ hostname }}_gpg_dir.tar
+  tags:
+    - fetch
+ 
+- name: Fetch files
+  fetch: src=/tmp/{{ hostname }}_gpg_dir.tar dest=/tmp/bkup_gpg_keys/ flat=yes
+  tags:
+    - fetch
+
+- name: Delete file
+  file:
+    path: /tmp/{{ hostname }}_gpg_dir.tar
+    state: absent
+  tags:
+    - fetch

@@ -1,13 +1,5 @@
 ---
 
-#- name: Create backupninja cron to run every 10 mins
-#  template:
-#    src: backupninja_cron.j2
-#    dest: /etc/cron.d/backupninja
-#    owner: root
-#    group: root
-#    mode: 0644
-
 - name: Create my.cnf file for root
   template:
     src: my.cnf.j2

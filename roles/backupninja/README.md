@@ -1,4 +1,4 @@
-Role Name
+BackupNinja
 =========
 
 This role will configure the clients to be backed up

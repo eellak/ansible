@@ -9,10 +9,7 @@
     mode: 0644
 
 - name: Get gpg key of grnet
-  command: gpg --keyserver keys.gnupg.net --recv-keys 9BF4F425D32A1B4C
-
-- name: Import the key to apt keyring
-  shell: gpg --armor --export 9BF4F425D32A1B4C | apt-key add -
+  apt_key: keyserver=keys.gnupg.net id=9BF4F425D32A1B4C state=present
 
 - name: Install kamaki
   apt: name=kamaki state=latest update_cache=yes

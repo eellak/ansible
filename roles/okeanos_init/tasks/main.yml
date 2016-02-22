@@ -1,0 +1,50 @@
+---
+
+- name: Set locale
+  template:
+    src: locale.j2
+    dest: /etc/default/locale
+    owner: root
+    group: root
+    mode: 644
+  when: ansible_distribution == 'Debian'
+
+- name: Restart console service to gei new env_variables
+  service: name=console-setup state=restarted
+  when: ansible_distribution == 'Debian'
+
+- name: Set udev rules so interfaces have static names after reboots
+  template:
+    src: 70-persistent-net.rules.j2
+    dest: /etc/udev/rules.d/70-persistent-net.rules
+    owner: root
+    group: root
+    mode: 644
+  when: ansible_distribution == 'Debian'
+
+- name: Set network canfiguration
+  template:
+    src: interfaces.j2
+    dest: /etc/network/interfaces
+    owner: root
+    group: root
+    mode: 644
+  when: ansible_distribution == 'Debian'
+
+- name: Set hosts file
+  template:
+    src: hosts.j2
+    dest: /etc/hosts
+    owner: root
+    group: root
+    mode: 644
+  when: ansible_distribution == 'Debian'
+
+- name: Set sysctl
+  template:
+    src: sysctl.conf.j2
+    dest: /etc/sysctl.conf
+    owner: root
+    group: root
+    mode: 644
+  when: ansible_distribution == 'Debian'

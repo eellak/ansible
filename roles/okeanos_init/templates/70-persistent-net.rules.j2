@@ -1,0 +1,10 @@
+# {{ ansible_managed }}
+#
+# eth0 (ipv6 internet interface)
+SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="{{ ansible_default_ipv6.macaddress }}", ATTR{type}=="1", KERNEL=="eth*", NAME="eth0" 
+#
+# eth1 (ipv4 internet interface)
+SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="{{ ansible_default_ipv4.macaddress }}", ATTR{type}=="1", KERNEL=="eth*", NAME="eth1" 
+#
+# eth2 (internal network interface)
+SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="{{ ansible_eth2.macaddress }}", ATTR{type}=="1", KERNEL=="eth*", NAME="eth2"

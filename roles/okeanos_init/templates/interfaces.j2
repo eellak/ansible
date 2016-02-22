@@ -1,0 +1,25 @@
+# {{ ansible_managed }}
+#
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+source /etc/network/interfaces.d/*
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+iface lo inet6 loopback
+
+# The first network interface (internet ipv6)
+allow-hotplug eth0
+iface eth0 inet6 auto
+
+# The second network interface (internet ipv4)
+allow-hotplug eth1
+iface eth1 inet dhcp
+
+# The third network interface (local network)
+allow-hotplug eth2
+iface eth2 inet dhcp
+# static route
+up route add -net 10.0.0.0/24 gw 10.19.91.1 dev eth2

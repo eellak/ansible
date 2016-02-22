@@ -75,19 +75,6 @@ epinoovm.ellak.gr
 epinoodev.ellak.gr
 epinoobbb.ellak.gr
 
-[okeanos:children]
-web
-guests
-adminvm
-devvm
-owncloud
-redmine
-radio
-wikis
-gitlab
-bacula
-munin
-
 [ellak:children]
 web
 owncloud
@@ -158,6 +145,22 @@ radio.ellak.gr
 guest1.ellak.gr
 ma.ellak.gr
 mail1.ellak.gr
+
+[okeanos]
+www1.ellak.gr
+www2.ellak.gr
+macloud.ellak.gr
+team.ellak.gr
+radio.ellak.gr
+guest1.ellak.gr
+munin.ellak.gr
+poq.ellak.gr
+wiki.ellak.gr
+adminvm.ellak.gr
+code.ellak.gr
+epinoovm.ellak.gr
+epinoodev.ellak.gr
+apospaseis.ellak.gr
 
 ; Variables
 [okeanos:vars]

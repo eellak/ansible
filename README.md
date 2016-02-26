@@ -51,7 +51,7 @@ ansible-playbook playbooks/upgrade.yml -e "host=debian"
 1. Δημιουργία αρχείου `host_vars/name.ellak.gr` με περιεχόμενα:
     ```
     fqdn: name.ellak.gr
-    hostname: name.ellak.gr
+    hostname: name
     ```
 
 ## TODOs

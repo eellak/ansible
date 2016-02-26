@@ -19,7 +19,7 @@
 - name: Hide private lists
   file:
     path: "{{ list_path }}/{{ item.name }}/archivist/homeless"
-    state: touch
+    state: file
     owner: mlmmj
     group: mlmmj
     mode: 0644

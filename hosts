@@ -162,6 +162,11 @@ epinoovm.ellak.gr
 epinoodev.ellak.gr
 apospaseis.ellak.gr
 
+[vpn]
+ma.ellak.gr
+mail1.ellak.gr
+pensieve.lan
+
 ; Variables
 [okeanos:vars]
 ansible_ssh_port=2022

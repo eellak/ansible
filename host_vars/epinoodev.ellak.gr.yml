@@ -1,0 +1,48 @@
+---
+
+hostname: epinoovm
+fqdn: "{{ hostname }}.ellak.gr"
+
+### Munin node
+#munin_node_bind_host: "{{ ansible_eth2.ipv4.address }}"
+#munin_node_bind_port: "4949"
+#
+#munin_node_host_name: '"{{ hostname }}.ellak.gr"'
+#
+## Munin requires IPs be added as regular expressions.
+#munin_node_allowed_ips:
+#  - '^127\.0\.0\.1$'
+#  - '^::1$'
+#  - '{{ munin_master_regex_private_ip }}'
+#
+### List of 3d party plugins to install
+#munin_third_party_plugins:
+#  - php-fpm
+##
+### List of munin plugins to enable.
+#munin_node_plugins:
+#  - name: nginx_status
+#  - name: nginx_request
+#  - name: php-fpm-memory
+#    plugin: php-fpm
+#  - name: php-fpm-cpu
+#    plugin: php-fpm
+#  - name: php-fpm-count
+#    plugin: php-fpm
+#  - name: php-fpm-time
+#    plugin: php-fpm
+#
+#munin_node_config:
+#  {
+#  "nginx*":
+#    {
+#    "env.url": "https://{{ fqdn }}/nginx_status"
+#    }
+#  }
+## ufw
+#ufw_whitelisted_ipv4_addresses:
+#  - {
+#    address: "{{ munin_master_private_ip }}",
+#    port: "{{ munin_node_bind_port }}",
+#    protocol: tcp
+#    }

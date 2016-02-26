@@ -1,0 +1,13 @@
+---
+
+- name: install openVPN
+  apt: name=openvpn state=present
+
+- name: Extract config and keys
+  unarchive: 
+    src: "/tmp/openvpn/{{ fqdn }}.tar.gz"
+    dest: "{{ openvpn_etcdir }}"
+    owner: root
+    group: root
+    mode: 0600
+  notify: [openvpn restart]

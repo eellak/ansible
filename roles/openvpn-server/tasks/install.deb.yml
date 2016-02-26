@@ -1,0 +1,14 @@
+---
+
+- name: Install requirements (Debian)
+  apt: name={{item}}
+  with_items: [openvpn, udev, openssl]
+
+- name: Install dependencies (Debian)
+  apt: name={{item}}
+  when: openvpn_use_pam_users|default(false)
+  with_items: [libpam-pwdfile, python-passlib]
+
+- name: Install LDAP dependencies (Debian)
+  apt: name=openvpn-auth-ldap
+  when: openvpn_use_ldap

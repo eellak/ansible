@@ -49,3 +49,22 @@ ufw_whitelisted_port_to_port:
     port_src: 68,
     protocol: udp
     }
+
+openvpn_client_config_dir: "{{ openvpn_etcdir }}/staticclients"
+openvpn_port: "{{ openvpn_hidden_port }}"
+openvpn_proto: "udp6"
+openvpn_server: "10.0.0.0 255.255.255.0"
+openvpn_max_clients: "10"
+openvpn_user: "root"
+openvpn_group: "root"
+openvpn_client_to_client: yes
+openvpn_server_options: 
+  - push "route 10.19.91.0 255.255.255.0"
+  - client-config-dir "/etc/openvpn/staticclients"
+openvpn_key_country: "GR"
+openvpn_key_province: "not-defined"
+openvpn_key_city: "Athens"
+openvpn_key_org: "Ellak"
+openvpn_key_email: "admin@eellak.gr"
+openvpn_key_size: 2048
+openvpn_use_pam: no

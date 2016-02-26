@@ -1,6 +1,6 @@
 ---
 - hosts: mail1.ellak.gr
-  sudo: true
+  become: true
 
   roles:
     - mlmmj

@@ -1,6 +1,6 @@
 ---
 - hosts: mail1.ellak.gr
-  sudo: true
+  become: true
 
   vars_files:
     - "{{ protected_storage }}/mail1.ellak.gr/postfix.yml"

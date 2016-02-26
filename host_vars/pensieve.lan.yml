@@ -1,12 +1,13 @@
 ---
-hostname: pensieve.lan
-fqdn: "{{ hostname }}"
+
+hostname: pensieve
+fqdn: "{{ hostname }}.ellak.gr"
 
 ## Munin node
 munin_node_bind_host: "{{ ansible_eth0.ipv4.address }}"
 munin_node_bind_port: "4949"
 
-munin_node_host_name: '{{ hostname }}'
+munin_node_host_name: "{{ fqdn }}"
 
 # Munin requires IPs be added as regular expressions.
 munin_node_allowed_ips:
@@ -35,7 +36,7 @@ munin_node_allowed_ips:
 ##  {
 ##  "nginx*":
 ##    {
-##    "env.url": "https://{{ hostname }}/nginx_status"
+##    "env.url": "https://"{{ fqdn }}"/nginx_status"
 ##    }
 ##  }
 # ufw
@@ -89,3 +90,6 @@ sftpusers_host_list:
 # SSH keys
 sshkeys_host_list:
   - sshkeys_bkup
+
+openvpn_proto: "udp6"
+openvpn_remote: "adminvm.ellak.gr 9916"

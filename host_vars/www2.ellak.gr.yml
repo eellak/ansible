@@ -1,6 +1,7 @@
 ---
-hostname: www2.ellak.gr
-fqdn: 'ellak.gr'
+
+hostname: www2
+fqdn: "{{ hostname }}.ellak.gr"
 
 ## Mediawiki
 mw_root_path: '/var/www/vhosts/ellak.gr/site/public_html/wiki'
@@ -41,7 +42,7 @@ memcached_memory_limit: 256
 munin_node_bind_host: "{{ ansible_eth2.ipv4.address }}"
 munin_node_bind_port: "4949"
 
-munin_node_host_name: '{{ hostname }}'
+munin_node_host_name: "{{ fqdn }}"
 
 # Munin requires IPs be added as regular expressions.
 munin_node_allowed_ips:
@@ -105,7 +106,7 @@ munin_node_config:
     },
   "nginx*":
     {
-    "env.url": "https://{{ hostname }}/nginx_status"
+    "env.url": "https://{{ fqdn }}/nginx_status"
     }
   }
 

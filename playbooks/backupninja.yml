@@ -4,7 +4,7 @@
   become: true
 
   vars_files:
-    - "{{ protected_storage }}/{{ hostname }}/bkup.yml"
+    - "{{ protected_storage }}/{{ fqdn }}/bkup.yml"
     - "{{ protected_storage }}/groups/all.yml"
 
   roles:

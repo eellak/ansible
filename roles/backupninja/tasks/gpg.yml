@@ -15,7 +15,7 @@
     mode: 0700
 
 - name: Create gpg key for backups if there isn't one
-  shell: /usr/local/sbin/gen_key.sh {{ hostname | quote }}
+  shell: /usr/local/sbin/gen_key.sh {{ fqdn | quote }}
   when: result|failed
 
 - name: Get gpg key-id
@@ -24,7 +24,7 @@
   changed_when: false
 
 - name: Get the passphrase for new key
-  shell: grep Passphrase /tmp/{{ hostname | quote }} |cut -d ' ' -f 4
+  shell: grep Passphrase /tmp/{{ fqdn | quote }} |cut -d ' ' -f 4
   register: new_gpg_pass
   when: result|failed
   changed_when: false
@@ -32,7 +32,7 @@
   when: result|failed
 
 - name: Delete the new key setup file
-  shell: rm /tmp/{{ hostname | quote }}
+  shell: rm /tmp/{{ fqdn | quote }}
   when: result|failed
   changed_when: false
 
@@ -45,23 +45,23 @@
   when: result|success
 
 - name: Copy GPG dir to /tmp
-  shell: tar -czf /tmp/{{ hostname }}_gpg_dir.tar /root/.gnupg
+  shell: tar -czf /tmp/{{ fqdn }}_gpg_dir.tar /root/.gnupg
   tags:
     - fetch
  
 - name: Change permissions
-  shell: chown nick:nick /tmp/{{ hostname }}_gpg_dir.tar
+  shell: chown nick:nick /tmp/{{ fqdn }}_gpg_dir.tar
   tags:
     - fetch
  
 - name: Fetch files
-  fetch: src=/tmp/{{ hostname }}_gpg_dir.tar dest=/tmp/bkup_gpg_keys/ flat=yes
+  fetch: src=/tmp/{{ fqdn }}_gpg_dir.tar dest=/tmp/bkup_gpg_keys/ flat=yes
   tags:
     - fetch
 
 - name: Delete file
   file:
-    path: /tmp/{{ hostname }}_gpg_dir.tar
+    path: /tmp/{{ fqdn }}_gpg_dir.tar
     state: absent
   tags:
     - fetch

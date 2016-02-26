@@ -1,6 +1,6 @@
 ---
 hostname: db1
-fqdn: db1.ellak.gr
+fqdn: "{{ hostname }}.ellak.gr"
 
 mysql_databases:
   - name: ellakgr

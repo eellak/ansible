@@ -1,7 +1,8 @@
 ---
+
 ## postinstall
-hostname: munin.ellak.gr
-fqdn: "{{ hostname }}"
+hostname: munin
+fqdn: "{{ hostname }}.ellak.gr"
 
 ## munin
 munin_hosts:

@@ -1,12 +1,13 @@
 ---
-hostname: ma.ellak.gr
-fqdn: 'ma.ellak.gr'
+
+hostname: ma
+fqdn: "{{ hostname }}.ellak.gr"
 
 ## Munin node
 munin_node_bind_host: "{{ ansible_eth0.ipv4.address }}"
 munin_node_bind_port: "4949"
 
-munin_node_host_name: '{{ hostname }}'
+munin_node_host_name: "{{ fqdn }}"
 
 # Munin requires IPs be added as regular expressions.
 munin_node_allowed_ips:

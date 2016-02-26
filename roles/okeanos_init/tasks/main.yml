@@ -7,11 +7,9 @@
     owner: root
     group: root
     mode: 644
-  when: ansible_distribution == 'Debian'
 
 - name: Restart console service to gei new env_variables
   service: name=console-setup state=restarted
-  when: ansible_distribution == 'Debian'
 
 - name: Set udev rules so interfaces have static names after reboots
   template:
@@ -20,7 +18,6 @@
     owner: root
     group: root
     mode: 644
-  when: ansible_distribution == 'Debian'
 
 - name: Set network canfiguration
   template:
@@ -29,7 +26,6 @@
     owner: root
     group: root
     mode: 644
-  when: ansible_distribution == 'Debian'
 
 - name: Set hosts file
   template:
@@ -38,7 +34,6 @@
     owner: root
     group: root
     mode: 644
-  when: ansible_distribution == 'Debian'
 
 - name: Set sysctl
   template:
@@ -47,4 +42,3 @@
     owner: root
     group: root
     mode: 644
-  when: ansible_distribution == 'Debian'

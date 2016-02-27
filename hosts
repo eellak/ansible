@@ -70,10 +70,10 @@ parsoid.ellak.gr
 bacula.ellak.gr
 
 [epinoo]
-bbbdev.ellak.gr
+#bbbdev.ellak.gr
+#epinoobbb.ellak.gr
 epinoovm.ellak.gr
 epinoodev.ellak.gr
-epinoobbb.ellak.gr
 
 [ellak:children]
 web

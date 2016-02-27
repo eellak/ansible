@@ -5,6 +5,7 @@
   vars_files:
     - "{{ protected_storage }}/adminvm.ellak.gr/ufw.yml"
     - "{{ protected_storage }}/adminvm.ellak.gr/kamaki.yml"
+    - "{{ protected_storage }}/adminvm.ellak.gr/openvpn.yml"
 
   roles:
     - dnsmasq

@@ -32,14 +32,14 @@
     path={{ munin_plugin_dest_path }}{{ item.name }}
     src={{ munin_plugin_src_path }}{{ item.plugin | default( item.name ) }}
     state=link
-  with_items: munin_node_plugins
+  with_items: "{{ munin_node_plugins }}"
   notify: restart munin-node
 
 - name: Disable unneeded plugins.
   file: >
     path={{ munin_plugin_dest_path }}{{ item.name }}
     state=absent
-  with_items: disable_munin_node_plugins
+  with_items: "{{ disable_munin_node_plugins }}"
   when: disable_munin_node_plugins is defined and disable_munin_node_plugins
   notify: restart munin-node
 

@@ -1,6 +1,6 @@
 ---
 
-hostname: epinoodev
+hostname: epinoovm
 fqdn: "{{ hostname }}.ellak.gr"
 
 ### Munin node

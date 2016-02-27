@@ -7,9 +7,8 @@
     owner: root
     group: root
     mode: 644
+  notify: ['restart console service']
 
-- name: Restart console service to gei new env_variables
-  service: name=console-setup state=restarted
 
 - name: Set udev rules so interfaces have static names after reboots
   template:

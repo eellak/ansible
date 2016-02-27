@@ -25,6 +25,7 @@
     owner: root
     group: root
     mode: 644
+  when: fqdn != 'adminvm.ellak.gr'
 
 - name: Set hosts file
   template:
@@ -33,6 +34,7 @@
     owner: root
     group: root
     mode: 644
+  when: fqdn != 'adminvm.ellak.gr'
 
 - name: Set sysctl
   template:

@@ -50,7 +50,11 @@
     - fetch
  
 - name: Change permissions
-  shell: chown nick:nick /tmp/{{ fqdn }}_gpg_dir.tar
+  file: 
+    path: "/tmp/{{ fqdn }}_gpg_dir.tar"
+    owner: nick
+    group: nick
+    mode: 600
   tags:
     - fetch
  

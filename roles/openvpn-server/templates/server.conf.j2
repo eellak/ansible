@@ -13,7 +13,7 @@ local {{ openvpn_local }}
 port {{ openvpn_port }}
 
 # TCP or UDP server?
-proto {{ openvpn_proto }}
+proto {{ openvpn_proto_s }}
 
 # "dev tun" will create a routed IP tunnel, "dev tap" will create an ethernet
 # tunnel. Use "dev tap0" if you are ethernet bridging and have precreated a

@@ -35,7 +35,7 @@
 #- name: Delete public gpg key
 #  shell: gpg --batch --delete-keys {{ fpr.stdout | quote }}
 
-#- name: Remove pensive from known hosts
+#- name: Remove server from known hosts
 #  shell: sed -i '/.*pensieve.*/d' /root/.ssh/known_hosts
 
 #- name: Change host

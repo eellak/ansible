@@ -30,7 +30,7 @@
 - name: Create client configuration directory if requested
   file: >
     path={{ openvpn_client_config_dir }}
-    mode=755
+    mode=0755
     state=directory
   when: openvpn_client_config_dir is defined
 

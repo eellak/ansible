@@ -23,7 +23,7 @@
   with_items: "{{ openvpn_clients }}"
 
 - name: Revoke Clients keys
-  command: "{{ openvpn_etcdir }}/revoke-client.sh" "{{ item }}"
+  command: "{{ openvpn_etcdir }}/revoke-client.sh {{ item }}"
   args: { removes: "{{ openvpn_keydir }}/{{ item }}.crt" }
   with_items: "{{ openvpn_clients_revoke }}"
 
@@ -46,7 +46,7 @@
 
 - name: Setup PAM
   template: src=openvpn.pam.j2 dest=/etc/pam.d/openvpn
-  when: "{{ openvpn_use_pam }}"
+  when: openvpn_use_pam
 
 - name: Configure users
   htpasswd: path={{ openvpn_etcdir }}/users name={{ item.name }} password={{ item.password }} crypt_scheme=des_crypt
@@ -54,7 +54,7 @@
 
 - name: Setup LDAP
   template: src=auth-ldap.conf.j2 dest=/etc/openvpn/auth-ldap.conf
-  when: "{{ openvpn_use_ldap }}"
+  when: openvpn_use_ldap
 
 - name: Configure server
   template: src=server.conf.j2 dest={{ openvpn_etcdir }}/server.conf

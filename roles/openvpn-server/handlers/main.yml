@@ -4,9 +4,9 @@
   service: name=openvpn state=restarted
 
 - name: openvpn pack clients
-  command: tar cvzf {{openvpn_keydir}}/{{item.item}}.tar.gz -C {{openvpn_keydir}} {{item.item}}.crt {{item.item}}.key {{item.item}}.conf ca.crt ta.key
+  command: "tar cvzf {{openvpn_keydir}}/{{item.item}}.tar.gz -C {{openvpn_keydir}} {{item.item}}.crt {{item.item}}.key {{item.item}}.conf ca.crt ta.key"
   when: item.changed
-  with_items: openvpn_clients_changed.results
+  with_items: "{{ openvpn_clients_changed.results }}"
 
 - name: openvpn fetch clients
   fetch:
@@ -14,4 +14,4 @@
     flat: yes
     dest: "/tmp/openvpn/{{ item }}.tar.gz"
     fail_on_missing: yes
-  with_items: openvpn_clients
+  with_items: "{{ openvpn_clients }}"

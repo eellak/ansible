@@ -56,8 +56,8 @@ ufw_whitelisted_port_to_port:
 
 openvpn_client_config_dir: "{{ openvpn_etcdir }}/staticclients"
 openvpn_port: "{{ openvpn_hidden_port }}"
-openvpn_proto_s: "tcp6-server"
-openvpn_proto_c: "tcp6-client"
+openvpn_proto_s: "tcp"
+openvpn_proto_c: "tcp"
 openvpn_server: "10.0.0.0 255.255.255.0"
 openvpn_max_clients: "10"
 openvpn_user: "root"

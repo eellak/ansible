@@ -3,7 +3,7 @@
 munin.ellak.gr
 
 [pensieve]
-pensieve.lan ansible_connection=ssh ansible_port=2022 ansible_host=127.0.0.1
+pensieve.ellak.lan
 
 [poq]
 poq.ellak.gr

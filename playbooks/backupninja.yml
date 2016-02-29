@@ -12,7 +12,7 @@
   tags:
     - clients
 
-- hosts: pensieve.lan
+- hosts: pensieve.ellak.lan
   become: true
 
   vars_files:

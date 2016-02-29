@@ -1,172 +1,121 @@
-[metrics]
-#grafana.ellak.gr
-munin.ellak.gr
-
 [pensieve]
 pensieve.ellak.lan
 
 [poq]
-poq.ellak.gr
+poq.ellak.lan
 
 [tomcat]
 tomcat.ellak.gr
 
 [munin]
-munin.ellak.gr
+munin.ellak.lan
 
 [adminvm]
-adminvm.ellak.gr
+adminvm.ellak.lan
 
-[devvm]
-devvm.ellak.gr
-
-[owncloud]
-macloud.ellak.gr
+[macloud]
+macloud.ellak.lan
 
 [meet]
-meet.ellak.gr
+meet.ellak.lan
 
-[db]
-db1.ellak.gr
+[www1]
+www1.ellak.lan
 
-[web]
-web1.ellak.gr
-www1.ellak.gr
-www2.ellak.gr
+[www2]
+www2.ellak.lan
 
-[redmine]
-team.ellak.gr
+[team]
+team.ellak.lan
 
-[gitlab]
-code.ellak.gr
+[code]
+code.ellak.lan
 
-[pythongr]
-guest1.ellak.gr
+[guest1]
+guest1.ellak.lan
 
 [radio]
-ccradio.ellak.gr
+radio.ellak.lan
 
-[wikis]
-wiki.ellak.gr
-wiki-dev.ellak.gr
+[wiki]
+wiki.ellak.lan
 
-[mail]
-mail1.ellak.gr ansible_ssh_port=2022
+[mail1]
+mail1.ellak.lan
 
-[maellak]
-ma.ellak.gr ansible_ssh_port=2223
-ma-dev.ellak.gr ansible_ssh_port=22
-
-[guests]
-guest[1:4].ellak.gr
+[ma]
+ma.ellak.lan
 
 [apospaseis]
-apospaseis.ellak.gr
-
-[parsoid]
-parsoid.ellak.gr
-
-[bacula]
-bacula.ellak.gr
+apospaseis.ellak.lan
 
 [epinoo]
-#bbbdev.ellak.gr
-#epinoobbb.ellak.gr
-epinoovm.ellak.gr
-epinoodev.ellak.gr
-
-[ellak:children]
-web
-owncloud
-redmine
-radio
-mail
-maellak
-wikis
-gitlab
-adminvm
-db
-bacula
+epinoovm.ellak.lan
+epinoodev.ellak.lan
 
 [debian:children]
-web
-owncloud
-redmine
+www1
+www2
+macloud
+team
 radio
-mail
-maellak
-wikis
-gitlab
+mail1
+ma
+wiki
+code
 adminvm
-bacula
 munin
-pythongr
+guest1
 apospaseis
 
-[centos:children]
-db
-
 [vima:children]
-mail
-maellak
+mail1
+ma
 
-[targets:children]
-vima
-okeanos
+[accessable:children]
+www1
+www2
+macloud
+team
+radio
+guest1
+ma
+mail1
+pensieve
+munin
+poq
+wiki
+adminvm
+code
+epinoo
+apospaseis
 
-[development]
-wiki-dev.ellak.gr
+[backup:children]
+www1
+www2
+macloud
+team
+radio
+guest1
+ma
+mail1
 
-[accessable]
-www1.ellak.gr
-www2.ellak.gr
-macloud.ellak.gr
-team.ellak.gr
-radio.ellak.gr
-guest1.ellak.gr
-ma.ellak.gr
-mail1.ellak.gr
-pensieve.lan
-munin.ellak.gr
-poq.ellak.gr
-wiki.ellak.gr
-adminvm.ellak.gr
-code.ellak.gr
-epinoovm.ellak.gr
-epinoodev.ellak.gr
-apospaseis.ellak.gr
+[okeanos:children]
+www1
+www2
+macloud
+team
+radio
+guest1
+munin
+poq
+wiki
+adminvm
+code
+epinoo
+apospaseis
 
-[backup]
-www1.ellak.gr
-www2.ellak.gr
-macloud.ellak.gr
-team.ellak.gr
-radio.ellak.gr
-guest1.ellak.gr
-ma.ellak.gr
-mail1.ellak.gr
-
-[okeanos]
-www1.ellak.gr
-www2.ellak.gr
-macloud.ellak.gr
-team.ellak.gr
-radio.ellak.gr
-guest1.ellak.gr
-munin.ellak.gr
-poq.ellak.gr
-wiki.ellak.gr
-adminvm.ellak.gr
-code.ellak.gr
-epinoovm.ellak.gr
-epinoodev.ellak.gr
-apospaseis.ellak.gr
-
-[vpn]
-ma.ellak.gr
-mail1.ellak.gr
-pensieve.lan
-
-; Variables
-[okeanos:vars]
-ansible_ssh_port=2022
+[vpn:children]
+ma
+mail1
+pensieve

@@ -6,7 +6,7 @@
     dest: /etc/default/locale
     owner: root
     group: root
-    mode: 644
+    mode: 0644
   notify: ['restart console service']
 
 
@@ -16,7 +16,7 @@
     dest: /etc/udev/rules.d/70-persistent-net.rules
     owner: root
     group: root
-    mode: 644
+    mode: 0644
 
 - name: Set network canfiguration
   template:
@@ -24,7 +24,7 @@
     dest: /etc/network/interfaces
     owner: root
     group: root
-    mode: 644
+    mode: 0644
   when: fqdn != 'adminvm.ellak.gr'
 
 - name: Set hostname
@@ -37,7 +37,7 @@
     dest: /etc/hosts
     owner: root
     group: root
-    mode: 644
+    mode: 0644
   when: fqdn != 'adminvm.ellak.gr'
 
 - name: Set sysctl
@@ -46,4 +46,4 @@
     dest: /etc/sysctl.conf
     owner: root
     group: root
-    mode: 644
+    mode: 0644

@@ -45,7 +45,7 @@ ufw_whitelisted_ports:
     }
   - {
     port: "{{ openvpn_hidden_port }}",
-    protocol: udp
+    protocol: tcp
     }
 ufw_whitelisted_port_to_port:
   - {

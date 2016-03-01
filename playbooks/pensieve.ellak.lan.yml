@@ -1,9 +1,9 @@
 ---
-- hosts: pensieve.lan
+- hosts: pensieve.ellak.lan
   become: true
 
   vars_files:
-    - "{{ protected_storage }}/pensieve.lan/ufw.yml"
+    - "{{ protected_storage }}/pensieve.ellak.lan/ufw.yml"
     - "{{ protected_storage }}/adminvm.ellak.gr/kamaki.yml"
 
   pre_tasks:

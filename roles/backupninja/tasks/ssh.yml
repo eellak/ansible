@@ -33,10 +33,9 @@
   when: result|failed 
 
 - name: Insert server host-key if it isn't already there
-  lineinfile: 
-    dest: /root/.ssh/known_hosts
-    line: "{{ item }}"
-    owner: root
-    group: root
-    mode: 0600
+  known_hosts: 
+    path: '/root/.ssh/known_hosts'
+    name: "{{ item.name }}"
+    key: "{{ item.key }}"
+    state: present
   with_items: "{{ backupninja_host_key }}"

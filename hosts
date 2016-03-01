@@ -2,56 +2,56 @@
 pensieve.ellak.lan
 
 [poq]
-poq.ellak.lan
+poq.ellak.gr
 
 [tomcat]
 tomcat.ellak.gr
 
 [munin]
-munin.ellak.lan
+munin.ellak.gr
 
 [adminvm]
-adminvm.ellak.lan
+adminvm.ellak.gr
 
 [macloud]
-macloud.ellak.lan
+macloud.ellak.gr
 
 [meet]
-meet.ellak.lan
+meet.ellak.gr
 
 [www1]
-www1.ellak.lan
+www1.ellak.gr
 
 [www2]
-www2.ellak.lan
+www2.ellak.gr
 
 [team]
-team.ellak.lan
+team.ellak.gr
 
 [code]
-code.ellak.lan
+code.ellak.gr
 
 [guest1]
-guest1.ellak.lan
+guest1.ellak.gr
 
 [radio]
-radio.ellak.lan
+radio.ellak.gr
 
 [wiki]
-wiki.ellak.lan
+wiki.ellak.gr
 
 [mail1]
-mail1.ellak.lan
+mail1.ellak.gr
 
 [ma]
-ma.ellak.lan
+ma.ellak.gr
 
 [apospaseis]
-apospaseis.ellak.lan
+apospaseis.ellak.gr
 
 [epinoo]
-epinoovm.ellak.lan
-epinoodev.ellak.lan
+epinoovm.ellak.gr
+epinoodev.ellak.gr
 
 [debian:children]
 www1

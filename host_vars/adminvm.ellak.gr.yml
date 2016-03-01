@@ -66,6 +66,11 @@ openvpn_client_to_client: yes
 openvpn_server_options: 
   - push "route 10.19.91.0 255.255.255.0"
   - client-config-dir "/etc/openvpn/staticclients"
+  - sndbuf 0
+  - rcvbuf 0
+openvpn_server_options:
+  - sndbuf 0
+  - rcvbuf 0
 openvpn_key_country: "GR"
 openvpn_key_province: "not-defined"
 openvpn_key_city: "Athens"

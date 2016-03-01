@@ -7,4 +7,8 @@ SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="{{ ansible_defau
 SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="{{ ansible_default_ipv4.macaddress }}", ATTR{type}=="1", KERNEL=="eth*", NAME="eth1" 
 #
 # eth2 (internal network interface)
+{% if ansible_eth1.ipv4.network == "10.19.91.0" %}
+SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="{{ ansible_eth1.macaddress }}", ATTR{type}=="1", KERNEL=="eth*", NAME="eth2"
+{% elif ansible_eth2.ipv4.network == "10.19.91.0"  %}
 SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="{{ ansible_eth2.macaddress }}", ATTR{type}=="1", KERNEL=="eth*", NAME="eth2"
+{% endif %}

@@ -1,11 +1,10 @@
 ---
 
 - name: Set jessie source list in apt
-  template:
-    src: sources_grnet.j2
-    dest: /etc/apt/sources.list.d/sources_grnet.list
-    owner: root
-    group: root
+  apt_repository: 
+    repo: "deb http://apt.dev.grnet.gr {{ ansible_distribution_release }}/"
+    state: present
+    filename: 'grnet'
     mode: 0644
 
 - name: Get gpg key of grnet

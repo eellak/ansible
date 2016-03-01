@@ -1,0 +1,23 @@
+---
+
+- name: Make sure resolv.conf is there
+  file:                                                                         
+    dest: "/etc/resolv.conf"
+    state: file
+    owner: root
+    group: root
+    mode: 0644
+
+- name: Set immutable attribute
+  command: chattr -i /etc/resolv.conf
+
+- name: Update resolv.conf file
+  template:
+    src: resolv.conf.j2
+    dest: /etc/resolv.conf
+    owner: root
+    group: root
+    mode: 0644
+
+- name: Set immutable attribute
+  command: chattr +i /etc/resolv.conf

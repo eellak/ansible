@@ -1,6 +1,6 @@
 ---
 - hosts: www2.ellak.gr
-  sudo: true
+  become: true
 
   vars_files:
     - "{{ protected_storage }}/www2.ellak.gr/ufw.yml"

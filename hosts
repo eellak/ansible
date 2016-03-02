@@ -99,6 +99,12 @@ radio
 guest1
 ma
 mail1
+adminvm
+munin
+wiki
+code
+poq
+apospaseis
 
 [okeanos:children]
 www1

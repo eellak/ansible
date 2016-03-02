@@ -7,9 +7,11 @@
     owner: root
     group: root
     mode: 0644
+  tags: rm_attr
 
-- name: Set immutable attribute
+- name: Remove immutable attribute
   command: chattr -i /etc/resolv.conf
+  tags: rm_attr
 
 - name: Update resolv.conf file
   template:

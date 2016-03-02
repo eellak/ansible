@@ -3,9 +3,6 @@
 - hosts: adminvm.ellak.gr
   become: true
 
-  roles:
-    - openvpn-server
-
   vars_files:
     - "{{ protected_storage }}/adminvm.ellak.gr/openvpn.yml"
 
@@ -16,11 +13,17 @@
       - mail1.ellak.gr
       - nick.user
 
+  roles:
+    - openvpn-server
+
   tags:
     - server
 
 - hosts: vpn
   become: true
+
+  vars:
+    - openvpn_dns: yes
 
   roles:
     - openvpn-client

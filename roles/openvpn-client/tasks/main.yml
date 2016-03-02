@@ -1,7 +1,11 @@
 ---
 
-- name: install openVPN
+- name: Install openVPN
   apt: name=openvpn state=present
+
+- name: Install resolvconf
+  apt: name=resolvconf state=present
+  when: openvpn_dns
 
 - name: Extract config and keys
   unarchive: 

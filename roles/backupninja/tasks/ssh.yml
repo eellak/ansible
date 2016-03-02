@@ -11,6 +11,7 @@
 - name: Insert server host to config if it isn't there
   blockinfile:
     dest: /root/.ssh/config
+    create: yes
     owner: root
     group: root
     mode: 0600
@@ -22,7 +23,7 @@
   ignore_errors: True
   changed_when: false
 - debug:
-    var : "{{ result.stdout_lines }}"
+    var : result.stdout_lines
 
 - name: Create a new ssh-key if there isn't one
   shell: ssh-keygen -t rsa -b 4096 -N "" -C "BackupKey-$(date -I)" -f /root/.ssh/bkup

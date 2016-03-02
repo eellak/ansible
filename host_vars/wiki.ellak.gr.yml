@@ -86,10 +86,21 @@ ufw_whitelisted_ipv4_addresses:
     }
 
 ufw_whitelisted_ports:
-  -  { port: "{{ SSH_PORT }}",  protocol: tcp }
-  -  { port: 80,  protocol: tcp }
-  -  { port: 443,  protocol: tcp }
-  -  { port: "{{ MONIT_HTTP_PORT }}",  protocol: tcp }
+  -  { 
+     port: "{{ SSH_PORT }}",  
+     protocol: tcp
+     }
+  -  { 
+     port: 80,
+     protocol: tcp
+     }
+  -  { 
+     port: 443,
+     protocol: tcp }
+#  -  { 
+#     port: "{{ MONIT_HTTP_PORT }}",
+#     protocol: tcp
+#     }
 
 # monit
 #--------------

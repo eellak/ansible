@@ -4,7 +4,7 @@ hostname: pensieve
 fqdn: "{{ hostname }}.ellak.gr"
 
 ## Munin node
-munin_node_bind_host: "{{ ansible_eth0.ipv4.address }}"
+munin_node_bind_host: "{{ ansible_tun0.ipv4.address }}"
 munin_node_bind_port: "4949"
 
 munin_node_host_name: "{{ fqdn }}"
@@ -13,7 +13,7 @@ munin_node_host_name: "{{ fqdn }}"
 munin_node_allowed_ips:
   - '^127\.0\.0\.1$'
   - '^::1$'
-  - '{{ munin_master_regex_public_ip }}'
+  - '{{ munin_master_regex_private_ip }}'
 
 # List of 3d party plugins to install
 ##munin_third_party_plugins:
@@ -42,7 +42,7 @@ munin_node_allowed_ips:
 # ufw
 ufw_whitelisted_ipv4_addresses:
   - {
-    address: "{{ munin_master_public_ip }}",
+    address: "{{ munin_master_private_ip }}",
     port: "{{ munin_node_bind_port }}",
     protocol: tcp
     }
@@ -86,10 +86,31 @@ sftpusers_host_list:
     state: 'present'
     dirs: [ 'files' ]
     sites: [ '' ]
+  - name: 'sftp_adminvm'
+    state: 'present'
+    dirs: [ 'files' ]
+    sites: [ '' ]
+  - name: 'sftp_munin'
+    state: 'present'
+    dirs: [ 'files' ]
+    sites: [ '' ]
+  - name: 'sftp_wiki'
+    state: 'present'
+    dirs: [ 'files' ]
+    sites: [ '' ]
+  - name: 'sftp_code'
+    state: 'present'
+    dirs: [ 'files' ]
+    sites: [ '' ]
+  - name: 'sftp_poq'
+    state: 'present'
+    dirs: [ 'files' ]
+    sites: [ '' ]
+  - name: 'sftp_apospaseis'
+    state: 'present'
+    dirs: [ 'files' ]
+    sites: [ '' ]
 
 # SSH keys
 sshkeys_host_list:
   - sshkeys_bkup
-
-openvpn_proto: "udp6"
-openvpn_remote: "adminvm.ellak.gr 9916"

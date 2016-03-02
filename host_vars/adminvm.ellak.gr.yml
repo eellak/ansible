@@ -65,10 +65,15 @@ openvpn_group: "root"
 openvpn_client_to_client: yes
 openvpn_server_options: 
   - push "route 10.19.91.0 255.255.255.0"
+  - push "dhcp-option DNS 10.19.91.1"
+  - push "dhcp-option DOMAIN ellak.lan"
   - client-config-dir "/etc/openvpn/staticclients"
   - sndbuf 0
   - rcvbuf 0
-openvpn_server_options:
+openvpn_client_options:
+  - script-security 2
+  - up /etc/openvpn/update-resolv-conf
+  - down /etc/openvpn/update-resolv-conf
   - sndbuf 0
   - rcvbuf 0
 openvpn_key_country: "GR"

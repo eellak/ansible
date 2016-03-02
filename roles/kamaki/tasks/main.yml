@@ -8,7 +8,10 @@
     mode: 0644
 
 - name: Get gpg key of grnet
-  apt_key: keyserver=keys.gnupg.net id=9BF4F425D32A1B4C state=present
+  apt_key: 
+    keyserver: keys.gnupg.net
+    id: 9BF4F425D32A1B4C 
+    state: present
 
 - name: Install kamaki
   apt: name=kamaki state=latest update_cache=yes

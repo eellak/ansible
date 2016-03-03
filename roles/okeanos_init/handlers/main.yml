@@ -2,3 +2,12 @@
 
 - name: restart console service
   service: name=console-setup state=restarted
+
+- name: restart postfix
+  service: name=postfix state=restarted
+
+- name: create passwd.db
+  shell: postmap /etc/postfix/sasl/passwd
+
+- name: create aliases.db
+  shell: newaliases

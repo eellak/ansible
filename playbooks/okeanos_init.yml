@@ -1,11 +1,10 @@
 ---
 
-# You have to provide two variables, for example:
-#   -e 'fqdn=db1.ellak.gr' -e 'hostname=db1'
-#
 - hosts: okeanos
   become: true
-  become_user: root
+
+  vars_files:
+    - "{{ protected_storage }}/groups/all.yml"
 
   roles:
     - okeanos_init

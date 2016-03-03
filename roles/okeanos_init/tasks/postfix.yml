@@ -1,0 +1,41 @@
+---
+
+- name: Install postfix
+  apt:
+    name: postfix
+    state: present
+    update_cache: yes
+
+- name: Configure postfix to sent through mail1.ellak.gr
+  template:
+    src: main.cf.j2
+    dest: /etc/postfix/main.cf
+    owner: root
+    group: root
+    mode: 0600
+
+- name: Email credentials directory
+  file:
+    path: /etc/postfix/sasl
+    state: directory
+    owner: root
+    group: root
+    mode: 0700
+
+- name: Email credentials file
+  template:
+    src: passwd.j2
+    dest: /etc/postfix/sasl/passwd
+    owner: root
+    group: root
+    mode: 0600
+  notify: ['create passwd.db', 'restart postfix']
+
+- name: Aliases file
+  template:
+    src: aliases.j2
+    dest: /etc/aliases
+    owner: root
+    group: root
+    mode: 0644
+  notify: ['create aliases.db', 'restart postfix']

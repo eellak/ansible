@@ -66,6 +66,15 @@ users_dnikoudis:
     password: '$1$SomeSalt$YWSZ0mALVmVhCM0c00uGx/'
     update_password: 'on_create'
 
+users_stoug:
+  - name: 'stoug'
+    groups: ['wheel', 'admins']
+    comment: 'S.Ougiaroglou'
+    state: 'present'
+    sshkeys: [ 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCykR0X0x9T9+LGsjixx5mXP+DTNPk+KuAjVbeayYO/pfg81skpozF4wMwLeU/0mNjg5xCuvZc44LeeHTYj8TkC44ZM1Yy9EZHdMG0Ibiisf1LXp8NVkngT9V09PwQGgDr85mVD0ETxYCw2PrDzka8o2v9Ws2NTFr/HaU2QfGrHQx0B0Or6zi9DukaMry/2a6G3/M7hfT0gAOMZOq4k6nj3g5MkKsMg/CuyWgfqr+slLWCe9q5yE764e5ZNHWQrVX4j4BzOAaO7BzTBLmNcLXXC54op//Bm9xDQi3J9E47ZVhFpDDCQdGFm9TUIKWxegMh4ponvwrYPJ3qlZLsNunNN apospaseisKey' ]
+    password: '$1$SomeSalt$YWSZ0mALVmVhCM0c00uGx/'
+    update_password: 'on_create'
+
 users_rsbkp:
   - name: 'rsbkp'
     comment: 'Kamaki User'

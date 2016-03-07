@@ -33,11 +33,11 @@ munin_hosts:
     }
   - {
     name: "maellak",
-    address: "62.217.127.243",
+    address: "10.0.0.4",
     extra: ["use_node_name yes"]
     }
   - {
     name: "poq",
-    address: "10.19.91.16",
+    address: "10.19.91.15",
     extra: ["use_node_name yes"]
     }

@@ -13,7 +13,7 @@ munin_node_host_name: "{{ fqdn }}"
 munin_node_allowed_ips:
   - '^127\.0\.0\.1$'
   - '^::1$'
-  - '{{ munin_master_regex_public_ip }}'
+  - '{{ munin_master_regex_private_ip }}'
 
 # List of munin plugins to enable.
 munin_node_plugins:
@@ -47,7 +47,7 @@ disable_munin_node_plugins:
 ## ufw
 ufw_whitelisted_ipv4_addresses:
   - {
-    address: "{{ munin_master_public_ip }}",
+    address: "{{ munin_master_private_ip }}",
     port: "{{ munin_node_bind_port }}",
     protocol: tcp
     }

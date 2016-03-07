@@ -51,7 +51,7 @@ apospaseis.ellak.gr
 
 [epinoo]
 epinoovm.ellak.gr
-epinoodev.ellak.gr
+#epinoodev.ellak.gr
 
 [debian:children]
 www1

@@ -1,18 +1,16 @@
-Stouts.openvpn
+ansible.openvpn
 ==============
-
-[![Build Status](http://img.shields.io/travis/Stouts/Stouts.openvpn.svg?style=flat-square)](https://travis-ci.org/Stouts/Stouts.openvpn)
-[![Galaxy](http://img.shields.io/badge/galaxy-Stouts.openvpn-blue.svg?style=flat-square)](https://galaxy.ansible.com/list#/roles/914)
 
 Ansible role which manage openvpn server
 
 * Install and setup OpenVPN server
-* Create/revoke client's configurations and certificates
+* Create & fetch / Revoke client's configurations and certificates
 * Setup authentication with PAM (System, passwd files)
 
 #### Requirements
 
-Only tested on ubuntu for now.
+Tested on ubuntu and Debian.
+To be used alongside openvpn-client role in Ellak's ansible repo.
 
 #### Variables
 
@@ -106,7 +104,3 @@ Install and copy client's configuration from `/etc/openvpn/keys/myvpn.tar.gz` fi
 #### License
 
 Licensed under the MIT License. See the LICENSE file for details.
-
-#### Feedback, bug-reports, requests, ...
-
-Are [welcome](https://github.com/Stouts/Stouts.openvpn/issues)!

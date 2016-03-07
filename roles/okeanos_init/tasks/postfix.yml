@@ -12,7 +12,7 @@
     dest: /etc/postfix/main.cf
     owner: root
     group: root
-    mode: 0600
+    mode: 0644
 
 - name: Email credentials directory
   file:

@@ -21,5 +21,6 @@ iface eth1 inet dhcp
 # The third network interface (local network)
 allow-hotplug eth2
 iface eth2 inet dhcp
-# static route
+# static route in order for internal ~okeanos network and OpenVPN network
+# to be able to communicate
 up route add -net 10.0.0.0/24 gw 10.19.91.1 dev eth2

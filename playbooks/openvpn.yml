@@ -5,6 +5,7 @@
 
   vars_files:
     - "{{ protected_storage }}/adminvm.ellak.gr/openvpn.yml"
+    - "{{ protected_storage }}/adminvm.ellak.gr/ufw.yml"
 
   vars:
     - openvpn_clients:
@@ -15,6 +16,7 @@
 
   roles:
     - openvpn-server
+    - ufw
 
   tags:
     - server
@@ -23,7 +25,7 @@
   become: true
 
   vars:
-    - openvpn_dns: yes
+    - openvpn_dns: no
 
   roles:
     - openvpn-client

@@ -4,6 +4,9 @@
 - name: Install dnsmasq
   apt: name=dnsmasq state=present update_cache=yes cache_valid_time=3600
 
+- name: Un-immute resolv.conf
+  shell: chattr -i /etc/resolv.conf
+
 - name: Copy config files
   template:
     src: "etc/{{ item.src }}"
@@ -20,6 +23,9 @@
         dest: /etc/resolv.conf }
   notify:
     - restart dnsmasq
+
+- name: Immute resolv.conf
+  shell: chattr +i /etc/resolv.conf
 
 - name: Start and enable dnsmasq service
   service: name=dnsmasq state=started enabled=yes

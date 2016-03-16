@@ -8,10 +8,12 @@
     group: root
     mode: 0644
   tags: rm_attr
+  when: fqdn != 'adminvm.ellak.gr'
 
 - name: Remove immutable attribute
   command: chattr -i /etc/resolv.conf
   tags: rm_attr
+  when: fqdn != 'adminvm.ellak.gr'
 
 - name: Update resolv.conf file
   template:
@@ -20,6 +22,8 @@
     owner: root
     group: root
     mode: 0644
+  when: fqdn != 'adminvm.ellak.gr'
 
 - name: Set immutable attribute
   command: chattr +i /etc/resolv.conf
+  when: fqdn != 'adminvm.ellak.gr'

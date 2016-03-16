@@ -110,6 +110,18 @@ sftpusers_host_list:
     state: 'present'
     dirs: [ 'files' ]
     sites: [ '' ]
+  - name: 'sftp_despoina'
+    state: 'present'
+    dirs: [ 'files' ]
+    sites: [ '' ]
+  - name: 'sftp_kostas'
+    state: 'present'
+    dirs: [ 'files' ]
+    sites: [ '' ]
+  - name: 'sftp_vivi'
+    state: 'present'
+    dirs: [ 'files' ]
+    sites: [ '' ]
 
 # SSH keys
 sshkeys_host_list:

@@ -1,0 +1,4 @@
+---
+
+hostname: despoina
+fqdn: "{{ hostname }}.ellak.tor"

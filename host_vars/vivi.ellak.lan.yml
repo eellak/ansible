@@ -1,0 +1,4 @@
+---
+
+hostname: vivi
+fqdn: "{{ hostname }}.ellak.tor"

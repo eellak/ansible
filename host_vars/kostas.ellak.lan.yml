@@ -1,0 +1,4 @@
+---
+
+hostname: kostas
+fqdn: "{{ hostname }}.ellak.tor"

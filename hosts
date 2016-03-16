@@ -1,3 +1,12 @@
+[despoina]
+despoina.ellak.lan
+
+[kostas]
+kostas.ellak.lan
+
+[vivi]
+vivi.ellak.lan
+
 [pensieve]
 pensieve.ellak.lan
 
@@ -105,6 +114,9 @@ wiki
 code
 poq
 apospaseis
+despoina
+kostas
+vivi
 
 [okeanos:children]
 www1
@@ -125,3 +137,6 @@ apospaseis
 ma
 mail1
 pensieve
+despoina
+kostas
+vivi

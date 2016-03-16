@@ -12,7 +12,11 @@
       - pensieve.ellak.gr
       - ma.ellak.gr
       - mail1.ellak.gr
+      - despoina.ellak.tor
+      - kostas.ellak.tor
+      - vivi.ellak.tor
       - nick.user
+    - openvpn_clients_revoke: []
 
   roles:
     - openvpn-server

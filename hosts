@@ -62,6 +62,9 @@ apospaseis.ellak.gr
 epinoovm.ellak.gr
 #epinoodev.ellak.gr
 
+[www2dev]
+www2dev.ellak.gr
+
 [debian:children]
 www1
 www2
@@ -76,6 +79,8 @@ adminvm
 munin
 guest1
 apospaseis
+meet
+www2dev
 
 [vima:children]
 mail1
@@ -98,6 +103,8 @@ adminvm
 code
 epinoo
 apospaseis
+meet
+www2dev
 
 [backup:children]
 www1
@@ -114,9 +121,9 @@ wiki
 code
 poq
 apospaseis
-despoina
-kostas
-vivi
+#despoina
+#kostas
+#vivi
 
 [okeanos:children]
 www1
@@ -132,6 +139,8 @@ adminvm
 code
 epinoo
 apospaseis
+meet
+www2dev
 
 [vpn:children]
 ma
@@ -140,3 +149,21 @@ pensieve
 despoina
 kostas
 vivi
+
+[web:children]
+www1
+#www2
+macloud
+team
+#radio
+#guest1
+#ma
+#mail1
+munin
+poq
+wiki
+code
+#epinoo
+apospaseis
+meet
+#www2dev

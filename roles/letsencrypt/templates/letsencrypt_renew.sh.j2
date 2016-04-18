@@ -1,0 +1,21 @@
+# {{ ansible_managed }}
+#
+# This script will renew letsencrypt certs
+
+#!/bin/bash
+[[ "$UID" != 0 ]] && { echo "You must be root"; exit 1; }
+
+service nginx stop  # or whatever your webserver is
+
+letsencrypt renew -n --standalone > \
+        /var/log/letsencrypt/renew.log 2>&1
+
+LE_STATUS=$?
+
+service nginx start # or whatever your webserver is
+
+if [ "$LE_STATUS" != 0 ]; then
+    echo Automated renewal failed:
+    cat /var/log/letsencrypt/renew.log
+    exit 1
+fi

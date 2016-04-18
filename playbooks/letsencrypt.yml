@@ -1,0 +1,7 @@
+---
+
+- hosts: web
+  become: true
+
+  roles:
+    - { role: letsencrypt, when: "ansible_distribution == 'Debian' and ansible_distribution_release == 'jessie'" }

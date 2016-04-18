@@ -1,7 +1,7 @@
 ---
 - name: Upgrade
 #  hosts: "{{ host }}"
-  hosts: all
+  hosts: accessable
   become: true
   gather_facts: false
 

@@ -41,3 +41,6 @@ munin_hosts:
     address: "10.19.91.15",
     extra: ["use_node_name yes"]
     }
+
+# LetsEncrypt
+letsenc_domains: "-d munin.ellak.gr -d nagios.ellak.gr"

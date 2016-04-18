@@ -51,3 +51,6 @@ fqdn: "{{ hostname }}.ellak.gr"
 # System Users
 users_host_list:
   - users_stoug
+
+# LetsEncrypt
+letsenc_domains: "-d apospaseis.ellak.gr"

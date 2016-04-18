@@ -1,0 +1,7 @@
+---
+
+hostname: meet
+fqdn: "{{ hostname }}.ellak.gr"
+
+# LetsEncrypt
+letsenc_domains: "-d meet.ellak.gr"

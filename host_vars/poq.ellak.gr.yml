@@ -77,3 +77,6 @@ sftpusers_host_list:
 sshkeys_host_list:
   - sshkeys_afokou
   - sshkeys_dnikoudis
+
+# LetsEncrypt
+letsenc_domains: "-d poq.ellak.gr"

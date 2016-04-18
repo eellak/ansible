@@ -1,35 +1,47 @@
 ---
 
-hostname: wiki
+hostname: www2dev
 fqdn: "{{ hostname }}.ellak.gr"
 
-# MariaDB vars
-#--------------
-
-# mediawiki
-#--------------
-#TODO: fix nginx_app_root/nginx_fqdn vars
-mw_root_path: "{{ nginx_app_root }}/{{ nginx_fqdn }}/public_html"
-mw_sitename: 'Γνωσιακή Βάση Υπηρεσιών και Διαδικασιών του Δημοσίου Τομέα'
-mw_meta_namespace: 'Υπηρεσίες & Διαδικασίες του Δημοσίου Τομέα'
+## Mediawiki
+mw_root_path: '/var/www/vhosts/ellak.gr/site/public_html/wiki'
+mw_sitename: 'Ελεύθερο Λογισμικό / Λογισμικό ανοιχτού κώδικα'
+mw_meta_namespace: 'Ελεύθερο Λογισμικό / Λογισμικό ανοιχτού κώδικα'
 mw_emergency_contact: 'info@ellak.gr'
-mw_password_sender: "no-reply@{{ fqdn }}"
+mw_password_sender: 'no-repy@ellak.gr'
 mw_secret_key: "{{ MW_SECRET_KEY }}"
 mw_smtp_host: "{{ MW_SMTP_HOST }}"
 mw_smtp_username: "{{ MW_SMTP_USERNAME }}"
 mw_smtp_password: "{{ MW_SMTP_PASSWORD }}"
-mw_stmp_id_host: "{{ fqdn }}"
+mw_smtp_id_host: "{{ fqdn }}"
+mw_script_path: '/wiki'
 
-# parsoid
-#--------------
+## MariaDB
+mysql_root_password: "{{ MYSQL_ROOT_PASSWORD }}"
+mysql_databases:
+  - name: mw
+    collation: utf8_general_ci
+    encoding: utf8
+mysql_users:
+  - name: "{{ MYSQL_USERS_NAME_FIRST }}"
+    host: localhost
+    password: "{{ MYSQL_USERS_PASSWORD_FIRST }}"
+    priv: "mw.*:ALL"
+
+## Parsoid
+# TODO do not hardcode
+parsoid_ip: http://83.212.85.21:8000
 parsoid_api_endpoints:
-  - uid: 'wikiellakgr'
-    uri: 'https://wiki.ellak.gr/api.php'
+  - uid: 'ellakgr'
+    uri: 'https://ellak.gr/wiki/api.php'
 
-## munin-node
-#--------------
+## Memcached vars
+memcached_memory_limit: 256
+
+## Munin node
 munin_node_bind_host: "{{ ansible_eth2.ipv4.address }}"
 munin_node_bind_port: "4949"
+
 munin_node_host_name: "{{ fqdn }}"
 
 # Munin requires IPs be added as regular expressions.
@@ -40,6 +52,14 @@ munin_node_allowed_ips:
 
 # List of munin plugins to enable.
 munin_node_plugins:
+  - name: memcache_rates
+    plugin: memcached_
+  - name: memcache_counters
+    plugin: memcached_
+  - name: memcache_bytes
+    plugin: memcached_
+  - name: nginx_status
+  - name: nginx_request
   - name: php-fpm-memory
     plugin: php-fpm
   - name: php-fpm-cpu
@@ -56,9 +76,14 @@ munin_node_plugins:
   - name: open_inodes
   - name: netstat_multi
   - name: iostat
+  - name: files_
   - name: ps_php-fpm
     plugin: ps_
+  - name: ps_nginx
+    plugin: ps_
   - name: ps_sshd
+    plugin: ps_
+  - name: ps_newrelic
     plugin: ps_
 
 disable_munin_node_plugins:
@@ -71,49 +96,24 @@ disable_munin_node_plugins:
   - name: apt_all
   - name: dirsizes
 
-# ufw
-#--------------
+munin_node_config:
+  {
+  "memcached_*":
+    {
+    "env.host": "127.0.0.1",
+    "env.port": "11211",
+    "env.timescale": "3"
+    },
+  "nginx*":
+    {
+    "env.url": "https://{{ fqdn }}/nginx_status"
+    }
+  }
+
+## ufw
 ufw_whitelisted_ipv4_addresses:
   - {
     address: "{{ munin_master_private_ip }}",
     port: "{{ munin_node_bind_port }}",
     protocol: tcp
     }
-  - {
-    address: 83.212.84.199,
-    port: 8000,
-    protocol: tcp
-    }
-
-ufw_whitelisted_ports:
-  -  { 
-     port: "{{ SSH_PORT }}",  
-     protocol: tcp
-     }
-  -  { 
-     port: 80,
-     protocol: tcp
-     }
-  -  { 
-     port: 443,
-     protocol: tcp }
-#  -  { 
-#     port: "{{ MONIT_HTTP_PORT }}",
-#     protocol: tcp
-#     }
-
-# monit
-#--------------
-monit_mail_alert_to:
-  - { email: "{{ MONIT_MAIL_ALERT_TO_EMAIL }}" }
-
-monit_http_bind: 0.0.0.0/0.0.0.0
-
-monit_process_list:
-  - pid: 'apache2/apache2.pid'
-
-  - pid: 'mysqld/mysqld.pid'
-    process: mysql
-
-# LetsEncrypt
-letsenc_domains: "-d wiki.ellak.gr"

@@ -46,3 +46,6 @@ fqdn: "{{ hostname }}.ellak.gr"
 #    port: "{{ munin_node_bind_port }}",
 #    protocol: tcp
 #    }
+
+# LetsEncrypt
+letsenc_domains: "-d macloud.ellak.gr"

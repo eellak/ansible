@@ -1,10 +1,10 @@
 ---
 
-- name: Set jessie source list in apt
+- name: Set grnet source list in apt
   apt_repository: 
     repo: "deb http://apt.dev.grnet.gr {{ ansible_distribution_release }}/"
     state: present
-    filename: 'grnet'
+#    filename: 'grnet'
     mode: 0644
 
 - name: Get gpg key of grnet

@@ -16,6 +16,7 @@
       - kostas.ellak.tor
       - vivi.ellak.tor
       - nick.user
+      - johny.user
     - openvpn_clients_revoke: []
 
   roles:

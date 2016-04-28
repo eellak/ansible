@@ -2,8 +2,8 @@
 
  # Backupninja
 
-######## Set time to take backups. (this works for all backup actions) ########
-  time: "00:00"
+########## Use backupninja sys backup action ##########
+  sys_bkup: "yes"
 
 ########## Use backupninja mysql backup action ##########
   my_sql_bkup: "no"
@@ -19,7 +19,11 @@
 ########## Use backupninja duplicity backup action ##########
   dup_bkup: "yes"
 
-# If dup_bkyp is yes.
+
+######## Set time to take backups. (this works for all backup actions) ########
+  time: "00:00"
+
+# If dup_bkup is yes.
 
 #Included directories to backup
   bkup_inc:

@@ -13,7 +13,7 @@
   apt_repository: 
     repo: "deb ftp://ftp.gr.debian.org/debian/ jessie main"
     state: present
-    filename: 'jessie'
+#    filename: 'jessie'
     mode: 0644
   when: ansible_distribution == 'Debian' and ansible_distribution_release == 'wheezy'
 
@@ -21,7 +21,7 @@
   apt_repository: 
     repo: "deb-src ftp://ftp.gr.debian.org/debian/ jessie main"
     state: present
-    filename: 'jessie'
+#    filename: 'jessie'
     mode: 0644
   when: ansible_distribution == 'Debian' and ansible_distribution_release == 'wheezy'
 
@@ -35,3 +35,9 @@
   apt:
     name: duplicity
     state: latest
+
+- name: Install hwinfo & debconf-utils package
+  apt:
+    name: hwinfo,debconf-utils
+    state: latest
+  when: sys_bkup == "yes"

@@ -65,6 +65,9 @@ epinoovm.ellak.gr
 [www2dev]
 www2dev.ellak.gr
 
+[itminedu]
+itminedu.ellak.gr
+
 [debian:children]
 www1
 www2
@@ -81,6 +84,7 @@ guest1
 apospaseis
 meet
 www2dev
+itminedu
 
 [vima:children]
 mail1
@@ -105,6 +109,7 @@ epinoo
 apospaseis
 meet
 www2dev
+itminedu
 
 [backup:children]
 www1
@@ -141,6 +146,7 @@ epinoo
 apospaseis
 meet
 www2dev
+itminedu
 
 [vpn:children]
 ma

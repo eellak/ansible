@@ -1,0 +1,8 @@
+---
+
+hostname: itminedu
+fqdn: "{{ hostname }}.ellak.gr"
+
+## Users
+users_host_list:
+  - users_git

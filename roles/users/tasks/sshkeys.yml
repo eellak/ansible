@@ -2,7 +2,7 @@
 
 - name: Configure ~/.ssh/authorized_keys for users
   authorized_key:
-    key: '{{ "\n".join(item.sshkeys) | string }}'
+    key: "{{ '\n'.join(item.sshkeys) | string }}"
     state: 'present'
     user: '{{ item.name }}'
   with_flattened:
@@ -12,7 +12,7 @@
     - '{{ users_list }}'
     - '{{ users_group_list }}'
     - '{{ users_host_list }}'
-  when: ((item.name is defined and item.name and item.name != 'root') and
+  when: ((item.name is defined and item.name) and
          (item.state is undefined or (item.state is defined and item.state != 'absent')) and
          (item.createhome is undefined or item.createhome) and
          (item.sshkeys is defined and item.sshkeys))
@@ -29,7 +29,7 @@
     - '{{ users_list }}'
     - '{{ users_group_list }}'
     - '{{ users_host_list }}'
-  when: ((item.name is defined and item.name and item.name != 'root') and
+  when: ((item.name is defined and item.name) and
          (item.state is undefined or (item.state is defined and item.state != 'absent')) and
          (item.createhome is undefined or item.createhome) and
          (item.sshkeys is defined and not item.sshkeys))

@@ -36,8 +36,13 @@
     name: duplicity
     state: latest
 
-- name: Install hwinfo & debconf-utils package
+- name: Install hwinfo package
   apt:
-    name: hwinfo,debconf-utils
+    name: hwinfo
     state: latest
-  when: sys_bkup == "yes"
+  when: sys_bkup == "yes" and ansible_distribution == 'Debian' and ansible_distribution_release == 'wheezy'
+
+- name: Install debconf-utils package
+  apt:
+    name: debconf-utils
+    state: latest

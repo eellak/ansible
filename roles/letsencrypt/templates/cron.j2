@@ -1,8 +1,8 @@
 # {{ ansible_managed }}
 #
 # This cron tab entry is for monthly automatic letsencrypt renewal
-                                                                                   
-PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin                  
-                                                                                   
-# run renewal every month                                                          
-0 0 1 * * root letsencrypt_renew.sh 
+
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+# run renewal every day
+0 11,23 * * * root letsencrypt_renew.sh

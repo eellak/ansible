@@ -18,6 +18,10 @@ group_admins:
   - name: 'admins'
     systemgroup: yes
 
+# User files
+user_files:
+  - nick
+
 ########## System Users ##########
 users_axil:
   - name: 'axil'
@@ -89,6 +93,16 @@ users_git:
     comment: 'Github User'
     shell: '/bin/bash'
 
+users_tomtoump:
+    name: 'tomtoump'
+    groups: ['wheel', 'admins']
+    comment: 'TomToump'
+    state: 'present'
+    sshkeys: [ 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC2BNQAR81qevQ3GnLicJ6stauK+nWZrhFNUTVY23b0uUyuS3mIgZl1o28+UBUdvYjCFZv6KlcgypPBsVYZSKJ2HDiHbcPbjNOfucGczQdKX4d8RSVcNhBBi1PLHIlo74csVk4+luHDxAxFp4s4m3IrkMyfp/Dv/2wYaMG+HeTQv8fFwsxDr+tRRB7dT6hHIOrLWj1rH4fBwc9TRBGPIz6VHckDHeoY8exnw2yTaY8ze46eTRbkewUOFM6JiTi/wzRDZYf58rtH6E4NLK2vnsoyM22o/flHj6kbJ1EUbrATAtUMJf/aLU94Kz9xJsSPvpk2wei/XhlvYH0nx5uwcMT5 tomtoump@thomas-mac.local' ]
+    password: '$1$SomeSalt$YWSZ0mALVmVhCM0c00uGx/'
+    update_password: 'on_create'
+    shell: '/bin/zsh'
+
 ########## SSH keys ##########
 sshkeys_afokou:
   - name: 'sftp_afokou'
@@ -99,6 +113,11 @@ sshkeys_dnikoudis:
   - name: 'sftp_dnikoudis'
     state: 'present'
     sshkeys: [ 'ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAIBndMV8AoVSpSusxGPu6g8tHzWsHVgtfezGiiJrdmcO50DdrzzjNWDU73mfjOoxaeVPJ36TnzwVn+W4v8ybmSaaYjlRDCKxfDwqBaM+SfX+RmKkKKUANlRI6YFBRL3MaChdZOpA/KTKEG8zZ2yd+kLGw1KDHUPWBkoDjGN/OV/K8w==' ]
+
+sshkeys_stoug:
+  - name: 'sftp_stoug'
+    state: 'present'
+    sshkeys: [ 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCykR0X0x9T9+LGsjixx5mXP+DTNPk+KuAjVbeayYO/pfg81skpozF4wMwLeU/0mNjg5xCuvZc44LeeHTYj8TkC44ZM1Yy9EZHdMG0Ibiisf1LXp8NVkngT9V09PwQGgDr85mVD0ETxYCw2PrDzka8o2v9Ws2NTFr/HaU2QfGrHQx0B0Or6zi9DukaMry/2a6G3/M7hfT0gAOMZOq4k6nj3g5MkKsMg/CuyWgfqr+slLWCe9q5yE764e5ZNHWQrVX4j4BzOAaO7BzTBLmNcLXXC54op//Bm9xDQi3J9E47ZVhFpDDCQdGFm9TUIKWxegMh4ponvwrYPJ3qlZLsNunNN apospaseisKey' ]
 
 ########## Backup ##########
 

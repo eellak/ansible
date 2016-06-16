@@ -1,18 +1,35 @@
+#!/bin/bash
 # {{ ansible_managed }}
 #
 # This script will renew letsencrypt certs
 
-#!/bin/bash
 [[ "$UID" != 0 ]] && { echo "You must be root"; exit 1; }
 
-service nginx stop  # or whatever your webserver is
+sleep "$(echo $[ ( $RANDOM % 61 ) ])m"
 
-letsencrypt renew -n --standalone > \
+{% if service_status.stat.exists == 0 and fqdn != 'code.ellak.gr' %}
+service nginx stop
+{% elif service_status.stat.exists == 1 %}
+service apache2 stop
+{% elif fqdn == 'code.ellak.gr' %}
+service gitlab-runsvdir stop
+{% endif %}  
+
+
+echo -e "\n\n-------------------------------------------------------------------------------------\n--------------------------------------$(date -I)-------------------------------------" >> /var/log/letsencrypt/renew.log
+certbot renew -n --standalone >> \
         /var/log/letsencrypt/renew.log 2>&1
+echo -e "----------------------------------------------------------------------------------" >> /var/log/letsencrypt/renew.log
 
 LE_STATUS=$?
 
-service nginx start # or whatever your webserver is
+{% if service_status.stat.exists == 0 and fqdn != 'code.ellak.gr' %}
+service nginx start
+{% elif service_status.stat.exists == 1 %}
+service apache2 start
+{% elif fqdn == 'code.ellak.gr' %}
+service gitlab-runsvdir start
+{% endif %}
 
 if [ "$LE_STATUS" != 0 ]; then
     echo Automated renewal failed:

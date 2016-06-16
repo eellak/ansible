@@ -5,10 +5,10 @@
 ##
 ## Usage example:
 ## For json formatted emails:
-##  ansible-playbook add_to_list.yml -e "path/to/list.json" -e "list=listname"
+##  ansible-playbook add_to_list.yml -e "@/path/to/list.json" -e "list=listname"
 ##
 ## For yaml formatted emails:
-##  ansible-playbook add_to_list.yml -e "path/to/list.yml" -e "list=listname"
+##  ansible-playbook add_to_list.yml -e "@/path/to/list.yml" -e "list=listname"
 ##
 ## Where `listname` the name of the mailing list and `list.json` a json containing
 ## the emails to be added:
@@ -30,10 +30,10 @@
 ##  - http://mlmmj.org/docs/mlmmj-sub/
 ##
 - hosts: mail1.ellak.gr
-  sudo: true
+  become: true
   gather_facts: false
 
   tasks:
   - name: Add users to list
-    command: sudo -u mlmmj /usr/bin/mlmmj-sub -L /var/spool/mlmmj/ellak.gr/{{ list }} -a {{ item }} -sqf
-    with_items: emails
+    command: "sudo -u mlmmj /usr/bin/mlmmj-sub -L /var/spool/mlmmj/ellak.gr/{{ list }} -a {{ item }} -sqf"
+    with_items: "{{ emails }}"

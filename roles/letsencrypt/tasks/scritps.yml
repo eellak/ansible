@@ -1,0 +1,27 @@
+---
+
+- stat:
+    path: /etc/init.d/apache2
+  register: service_status
+
+- name: Delete official cronjob file
+  file:
+    dest: /etc/cron.d/certbot
+    state: absent
+
+- name: Create cronjob for renewal
+  template:
+    src: cron.j2
+    dest: /etc/cron.d/letsencrypt
+    owner: root
+    group: root
+    mode: 0644
+  when: fqdn != 'radiodev.ellak.gr'
+
+- name: Create script for renewal
+  template:
+    src: letsencrypt_renew.sh.j2
+    dest: /usr/local/sbin/letsencrypt_renew.sh
+    owner: root
+    group: root
+    mode: 0711

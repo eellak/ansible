@@ -1,0 +1,27 @@
+---
+
+- name: Add jessie-backports repo
+  apt_repository: 
+    repo: "deb http://ftp.gr.debian.org/debian jessie-backports main contrib non-free"
+    state: present
+    mode: 0644
+
+- name: Install certbot and update apt's cache
+  apt:
+    name: certbot
+    state: latest
+    update_cache: yes
+    default_release: jessie-backports
+
+#- name: Install python-pip, python-dev, gcc
+#  apt:
+#    name: python-pip,gcc,python-dev
+#    state: latest
+#  when: fqdn == 'poq.ellak.gr' or fqdn == 'www2.ellak.gr'
+#
+#- name: Install psutil python package latest version
+#  pip: 
+#    name: psutil
+#    state: present
+#    version: 3.3.0
+#  when: fqdn == 'poq.ellak.gr' or fqdn == 'www2.ellak.gr'

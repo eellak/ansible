@@ -52,5 +52,18 @@ fqdn: "{{ hostname }}.ellak.gr"
 users_host_list:
   - users_stoug
 
+# SFTP users
+sftpusers_host_list:
+  - name: 'sftp_stoug'
+    state: 'present'
+    group: 'www-data'
+    comment: 'Stefanos Ougiaroglou'
+    dirs: [ 'files' ]
+    sites: [ 'apospaseis.ellak.gr' ]
+
+# SSH keys
+sshkeys_host_list:
+  - sshkeys_stoug
+
 # LetsEncrypt
 letsenc_domains: "-d apospaseis.ellak.gr"

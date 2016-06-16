@@ -1,0 +1,12 @@
+---
+- hosts: apospaseis.ellak.gr
+  become: true
+
+  vars_files:
+    - "{{ protected_storage }}/apospaseis.ellak.gr/ufw.yml"
+
+  pre_tasks:
+
+  roles:
+    - { role: ufw, tags: ['ufw', 'firewall'] }
+#    - { role: munin-node, tags: ['munin-node', 'munin'] }

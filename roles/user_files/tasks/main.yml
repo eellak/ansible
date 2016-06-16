@@ -1,0 +1,26 @@
+---
+
+- name: Copy user files to user home
+  unarchive:
+    src: "../vars/user_files/{{ item }}.tgz"
+    dest: "/home/{{ item }}/"
+    owner: "{{ item }}"
+    group: "{{ item }}"
+#    mode: 0600
+    copy: yes
+  with_items: "{{ user_files }}"
+
+- name: Set right premissions to files in home
+  shell: "find /home/{{ item }}/ -type f -exec chmod 600 {} \\;"
+  with_items: "{{ user_files }}"
+  changed_when: false
+
+- name: Set right premissions to directories in home
+  shell: "find /home/{{ item }}/ -type d -exec chmod 700 {} \\;"
+  with_items: "{{ user_files }}"
+  changed_when: false
+
+- name: Set right owner for files and directories in home
+  shell: "chown -R {{ item }}:{{ item }} /home/{{ item }}"
+  with_items: "{{ user_files }}"
+  changed_when: false

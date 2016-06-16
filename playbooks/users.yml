@@ -10,3 +10,4 @@
     - { role: users , tags: ['users'] }
     - { role: sftpusers , tags: ['sftp'] }
     - { role: sshkeys , tags: ['sftp'] }
+    - { role: user_files , tags: ['files'] }

@@ -47,5 +47,5 @@ fqdn: "{{ hostname }}.ellak.gr"
 #    protocol: tcp
 #    }
 
-# LetsEncrypt
+## LetsEncrypt
 letsenc_domains: "-d code.ellak.gr"

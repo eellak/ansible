@@ -54,6 +54,7 @@ ufw_whitelisted_port_to_port:
     protocol: udp
     }
 
+## OpenVPN
 openvpn_client_config_dir: "{{ openvpn_etcdir }}/staticclients"
 openvpn_port: "{{ openvpn_hidden_port }}"
 openvpn_proto_s: "tcp"

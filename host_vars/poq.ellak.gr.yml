@@ -56,6 +56,7 @@ users_host_list:
 
   - name: 'www-data'
     groups: ['www-poq']
+    append: yes
 
 # SFTP users
 sftpusers_host_list:

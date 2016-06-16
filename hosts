@@ -46,6 +46,9 @@ guest1.ellak.gr
 [radio]
 radio.ellak.gr
 
+[radiodev]
+radiodev.ellak.gr
+
 [wiki]
 wiki.ellak.gr
 
@@ -68,12 +71,19 @@ www2dev.ellak.gr
 [itminedu]
 itminedu.ellak.gr
 
+[doli]
+doli.ellak.gr
+
+[panoptis]
+panoptis.ellak.gr
+
 [debian:children]
 www1
 www2
 macloud
 team
 radio
+radiodev
 mail1
 ma
 wiki
@@ -85,6 +95,8 @@ apospaseis
 meet
 www2dev
 itminedu
+#doli
+#panoptis
 
 [vima:children]
 mail1
@@ -96,6 +108,7 @@ www2
 macloud
 team
 radio
+radiodev
 guest1
 ma
 mail1
@@ -107,9 +120,11 @@ adminvm
 code
 epinoo
 apospaseis
-meet
+#meet
 www2dev
 itminedu
+#doli
+#panoptis
 
 [backup:children]
 www1
@@ -136,6 +151,7 @@ www2
 macloud
 team
 radio
+radiodev
 guest1
 munin
 poq
@@ -147,6 +163,8 @@ apospaseis
 meet
 www2dev
 itminedu
+#doli
+#panoptis
 
 [vpn:children]
 ma
@@ -158,13 +176,14 @@ vivi
 
 [web:children]
 www1
-#www2
+www2
 macloud
 team
 #radio
+radiodev
 #guest1
 #ma
-#mail1
+mail1
 munin
 poq
 wiki

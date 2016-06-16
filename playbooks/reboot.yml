@@ -1,7 +1,7 @@
 ---
 # https://support.ansible.com/hc/en-us/articles/201958037-Reboot-a-server-and-wait-for-it-to-come-back
 - name: Reboot
-  hosts: all
+  hosts: accessable
   become: true
   become_user: root
 

@@ -1,0 +1,4 @@
+---
+
+hostname: radiodev
+fqdn: "{{ hostname }}.ellak.gr"

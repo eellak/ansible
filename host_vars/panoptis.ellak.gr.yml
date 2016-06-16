@@ -1,0 +1,7 @@
+---
+
+hostname: panoptis
+fqdn: "{{ hostname }}.ellak.gr"
+
+users_host_list:
+  - users_tomtoump|combine({'sshkeys':false})

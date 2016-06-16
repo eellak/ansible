@@ -1,0 +1,4 @@
+---
+
+hostname: doli
+fqdn: "{{ hostname }}.ellak.gr"

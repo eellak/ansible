@@ -1,5 +1,6 @@
 ---
-- hosts: ma.ellak.gr
+
+- hosts: ma
   become: true
 
   vars_files:

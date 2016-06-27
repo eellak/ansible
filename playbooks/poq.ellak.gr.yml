@@ -1,5 +1,6 @@
 ---
-- hosts: poq.ellak.gr
+
+- hosts: poq
   become: true
 
   vars_files:

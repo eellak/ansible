@@ -1,5 +1,6 @@
 ---
-- hosts: adminvm.ellak.gr
+
+- hosts: adminvm
   become: true
 
   vars_files:

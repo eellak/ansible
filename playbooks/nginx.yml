@@ -1,7 +1,7 @@
 ---
 
-- hosts: mail1
+- hosts: web
   become: true
 
   roles:
-    - mlmmj
+    - nginx

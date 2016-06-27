@@ -1,5 +1,6 @@
 ---
-- hosts: www1.ellak.gr
+
+- hosts: www1
   become: true
 
   vars_files:

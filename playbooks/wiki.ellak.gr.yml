@@ -1,5 +1,6 @@
 ---
-- hosts: wiki.ellak.gr
+
+- hosts: wiki
   become: true
 
   vars_files:

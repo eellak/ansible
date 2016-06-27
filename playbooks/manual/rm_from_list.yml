@@ -1,4 +1,5 @@
 ---
+
 #################################################
 # Remove a list of users from a mailing list.   #
 #################################################
@@ -27,7 +28,7 @@
 ##
 ## More info on using mlmmj: https://team.ellak.gr/projects/sitfn/wiki/Email-mlmmj
 ##
-- hosts: mail1.ellak.gr
+- hosts: mail1
   sudo: true
   sudo_user: root
 

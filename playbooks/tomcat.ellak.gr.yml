@@ -1,5 +1,6 @@
 ---
-- hosts: tomcat.ellak.gr
+
+- hosts: tomcat
   become: true
 
   vars_files:

@@ -1,4 +1,5 @@
 ---
+
 - hosts: db1.ellak.gr
   sudo: yes
 

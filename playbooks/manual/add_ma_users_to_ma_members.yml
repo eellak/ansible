@@ -1,5 +1,6 @@
 ---
-- hosts: ma.ellak.gr
+
+- hosts: ma
   sudo: yes
 
   tasks:
@@ -15,7 +16,7 @@
       validate_checksum: yes
 
 
-- hosts: mail1.ellak.gr
+- hosts: mail1
   sudo: yes
 
   tasks:

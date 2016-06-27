@@ -1,5 +1,6 @@
 ---
-- hosts: wiki.ellak.gr:www2.ellak.gr
+
+- hosts: wiki:www2
   sudo: true
 
   roles:

@@ -1,4 +1,5 @@
 ---
+
 ############################################
 # Add a list of users to a mailing list.   #
 ############################################
@@ -29,7 +30,7 @@
 ##  - https://team.ellak.gr/projects/sitfn/wiki/Email-mlmmj
 ##  - http://mlmmj.org/docs/mlmmj-sub/
 ##
-- hosts: mail1.ellak.gr
+- hosts: mail1
   become: true
   gather_facts: false
 

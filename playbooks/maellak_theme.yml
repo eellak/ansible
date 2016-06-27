@@ -1,4 +1,5 @@
 ---
+
 # Update ma.ellak.gr theme.
 # When no extra variable is provided it fetches the master branch.
 #
@@ -11,7 +12,7 @@
 # Deploy other branch, tag, commit sha:
 #   ansible-playbook playbooks/maellak_theme.yml -e 'version=other_branch'
 #
-- hosts: ma.ellak.gr
+- hosts: ma
   sudo: yes
   sudo_user: www-data
 

@@ -1,5 +1,6 @@
 ---
-- hosts: apospaseis.ellak.gr
+
+- hosts: apospaseis
   become: true
 
   vars_files:

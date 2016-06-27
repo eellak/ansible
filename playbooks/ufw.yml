@@ -1,0 +1,10 @@
+---
+
+- hosts: accessable
+  become: true
+
+  vars_files:
+    - "{{ protected_storage }}/{{ fqdn }}/ufw.yml"
+
+  roles:
+    - ufw

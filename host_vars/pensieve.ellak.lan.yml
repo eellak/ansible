@@ -1,7 +1,7 @@
 ---
 
 hostname: pensieve
-fqdn: "{{ hostname }}.ellak.gr"
+fqdn: "{{ hostname }}.ellak.lan"
 
 ## Munin node
 munin_node_bind_host: "{{ ansible_tun0.ipv4.address }}"
@@ -44,6 +44,11 @@ ufw_whitelisted_ipv4_addresses:
   - {
     address: "{{ munin_master_private_ip }}",
     port: "{{ munin_node_bind_port }}",
+    protocol: tcp
+    }
+ufw_whitelisted_ports:
+  - {
+    port: "{{ SSH_PORT }}",
     protocol: tcp
     }
 

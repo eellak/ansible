@@ -3,6 +3,12 @@
 hostname: itminedu
 fqdn: "{{ hostname }}.ellak.gr"
 
+ufw_whitelisted_ports:
+  - {
+    port: "{{ SSH_PORT }}",
+    protocol: tcp
+    }
+
 ## Users
 users_host_list:
   - users_git

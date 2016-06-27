@@ -46,6 +46,31 @@ fqdn: "{{ hostname }}.ellak.gr"
 #    port: "{{ munin_node_bind_port }}",
 #    protocol: tcp
 #    }
+ufw_whitelisted_ports:
+  - {
+    port: "{{ SSH_PORT }}",
+    protocol: tcp
+    }
+  - {
+    port: 25,
+    protocol: tcp
+    }
+  - {
+    port: 465,
+    protocol: tcp
+    }
+  - {
+    port: 587,
+    protocol: tcp
+    }
+  - {
+    port: 80,
+    protocol: tcp
+    }
+  - {
+    port: 443,
+    protocol: tcp
+    }
 
 # LetsEncrypt
 letsenc_domains: "-d mail1.ellak.gr -d listadmin.ellak.gr -d lists.ellak.gr"
